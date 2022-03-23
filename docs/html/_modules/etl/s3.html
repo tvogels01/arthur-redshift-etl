@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.s3 &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.s3</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Common code around interacting with AWS S3.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">concurrent.futures</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">botocore.exceptions</span>
+<span class="kn">import</span> <span class="nn">botocore.response</span>
+<span class="kn">import</span> <span class="nn">funcy</span>
+<span class="kn">import</span> <span class="nn">simplejson</span> <span class="k">as</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.util.timer</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLRuntimeError</span><span class="p">,</span> <span class="n">S3ServiceError</span>
+<span class="kn">from</span> <span class="nn">etl.json_encoder</span> <span class="kn">import</span> <span class="n">FancyJsonEncoder</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+<span class="n">_resources_for_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return new Bucket object for a bucket that does exist.</span>
+
+<span class="sd">    This bucket is a tied to a per-thread session with S3.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s3</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_resources_for_thread</span><span class="p">,</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">s3</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># When multi-threaded, we can&#39;t use the default session. So keep one per thread.</span>
+        <span class="n">session</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+        <span class="n">s3</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">resource</span><span class="p">(</span><span class="s2">&quot;s3&quot;</span><span class="p">)</span>
+        <span class="n">_resources_for_thread</span><span class="o">.</span><span class="n">s3</span> <span class="o">=</span> <span class="n">s3</span>
+    <span class="k">return</span> <span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="upload_empty_object"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.upload_empty_object">[docs]</a><span class="k">def</span> <span class="nf">upload_empty_object</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Create a key in an S3 bucket with no content.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Creating empty object in &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+        <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">object_key</span><span class="p">)</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">botocore</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ClientError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">error_code</span> <span class="o">=</span> <span class="n">exc</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;Error&quot;</span><span class="p">][</span><span class="s2">&quot;Code&quot;</span><span class="p">]</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error code </span><span class="si">%s</span><span class="s2"> for object &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">error_code</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+        <span class="k">raise</span></div>
+
+
+<div class="viewcode-block" id="S3Uploader"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.S3Uploader">[docs]</a><span class="k">class</span> <span class="nc">S3Uploader</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Upload files from local filesystem into the given S3 folder.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span> <span class="o">=</span> <span class="n">bucket_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback</span> <span class="o">=</span> <span class="n">callback</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_no_op</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span> <span class="o">=</span> <span class="n">dry_run</span>
+
+    <span class="k">def</span> <span class="nf">_no_op</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s2">&quot;Dry-run: Skipping upload of &#39;</span><span class="si">%s</span><span class="s2">&#39; to &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                <span class="n">filename</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span>
+                <span class="n">object_key</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">()</span>
+            <span class="k">return</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Uploading &#39;</span><span class="si">%s</span><span class="s2">&#39; to &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">upload_kwargs</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">upload_acl</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_value</span><span class="p">(</span><span class="s2">&quot;object_store.s3.upload_acl&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">upload_acl</span><span class="p">:</span>
+                <span class="n">upload_kwargs</span><span class="p">[</span><span class="s2">&quot;ExtraArgs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ACL&quot;</span><span class="p">:</span> <span class="n">upload_acl</span><span class="p">}</span>
+            <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">)</span>
+            <span class="n">bucket</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">object_key</span><span class="p">,</span> <span class="o">**</span><span class="n">upload_kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">botocore</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ClientError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="n">error_code</span> <span class="o">=</span> <span class="n">exc</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;Error&quot;</span><span class="p">][</span><span class="s2">&quot;Code&quot;</span><span class="p">]</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                <span class="s2">&quot;Error code </span><span class="si">%s</span><span class="s2"> for object &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">error_code</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span>
+            <span class="p">)</span>
+            <span class="k">raise</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Unknown error occurred during upload&quot;</span><span class="p">,</span> <span class="n">exc_info</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">raise</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="upload_data_to_s3"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.upload_data_to_s3">[docs]</a><span class="k">def</span> <span class="nf">upload_data_to_s3</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write data object (formatted as JSON, readable as YAML) into an S3 object.</span>
+
+<span class="sd">    Although we generally support YAML because it allows adding comments, we prefer</span>
+<span class="sd">    the format and formatting of JSON.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">uploader</span> <span class="o">=</span> <span class="n">S3Uploader</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">local_file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_file</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">FancyJsonEncoder</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="s2">&quot;    &quot;</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">local_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">local_file</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="n">uploader</span><span class="p">(</span><span class="n">local_file</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_keep_common_path</span><span class="p">(</span><span class="n">paths</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return common path shared in the object keys&#39; path, formatted as a prefix (with a &quot;/&quot;).</span>
+
+<span class="sd">    When the list of paths is empty, an empty string is returned.</span>
+
+<span class="sd">    &gt;&gt;&gt; _keep_common_path([&quot;production/schemas/dw/fact_order.sql&quot;])</span>
+<span class="sd">    &#39;production/schemas/dw/fact_order.sql&#39;</span>
+<span class="sd">    &gt;&gt;&gt; _keep_common_path(</span>
+<span class="sd">    ...     [&quot;production/schemas/dw/fact_order.sql&quot;, &quot;production/schemas/dw/fact_order.yaml&quot;]</span>
+<span class="sd">    ... )</span>
+<span class="sd">    &#39;production/schemas/dw/&#39;</span>
+<span class="sd">    &gt;&gt;&gt; _keep_common_path(</span>
+<span class="sd">    ...     [&quot;prod/schemas/dw/fact_order.yaml&quot;, &quot;prod/schemas/web_app/public-orders.yaml&quot;]</span>
+<span class="sd">    ... )</span>
+<span class="sd">    &#39;prod/schemas/&#39;</span>
+<span class="sd">    &gt;&gt;&gt; _keep_common_path([&quot;dev/schemas/oops/longer_than_path/&quot;, &quot;dev/schemas/oops/lo&quot;])</span>
+<span class="sd">    &#39;dev/schemas/oops/&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">common_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">common_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">common_path</span> <span class="o">=</span> <span class="n">path</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">common_path</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">common_path</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="ow">or</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">:</span>
+                <span class="n">common_prefix</span> <span class="o">=</span> <span class="n">common_path</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">slash_index</span> <span class="o">=</span> <span class="n">common_prefix</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+                <span class="n">common_path</span> <span class="o">=</span> <span class="n">common_prefix</span><span class="p">[:</span> <span class="n">slash_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="k">break</span>
+    <span class="k">return</span> <span class="n">common_path</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="upload_files"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.upload_files">[docs]</a><span class="k">def</span> <span class="nf">upload_files</span><span class="p">(</span><span class="n">files</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span> <span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Upload local files to S3 from &quot;local_name&quot; to &quot;s3://bucket_name/prefix/remote_name&quot;.</span>
+
+<span class="sd">    The sequence of files must consist of tuples of (&quot;local_name&quot;, &quot;remote_name&quot;).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">max_workers</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">timer</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">Timer</span><span class="p">()</span>
+
+    <span class="n">common_path</span> <span class="o">=</span> <span class="n">_keep_common_path</span><span class="p">([</span><span class="n">object_key</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">object_key</span> <span class="ow">in</span> <span class="n">files</span><span class="p">])</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Uploading files to S3&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">dry_run</span> <span class="k">else</span> <span class="s2">&quot;Dry-run: Uploading files to S3&quot;</span>
+    <span class="n">tqdm_bar</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">desc</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="p">)</span>
+    <span class="n">uploader</span> <span class="o">=</span> <span class="n">S3Uploader</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">tqdm_bar</span><span class="o">.</span><span class="n">update</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">)</span>
+
+    <span class="c1"># We break out the futures to be able to easily tally up errors.</span>
+    <span class="n">futures</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">Future</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span>
+        <span class="n">max_workers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">,</span> <span class="n">thread_name_prefix</span><span class="o">=</span><span class="s2">&quot;sync-parallel&quot;</span>
+    <span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">local_filename</span><span class="p">,</span> <span class="n">remote_filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">futures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">uploader</span><span class="o">.</span><span class="fm">__call__</span><span class="p">,</span> <span class="n">local_filename</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">remote_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+
+    <span class="n">errors</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">as_completed</span><span class="p">(</span><span class="n">futures</span><span class="p">):</span>
+        <span class="n">exception</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">exception</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">exception</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Failed to upload file: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span>
+            <span class="n">errors</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">tqdm_bar</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">what_happened</span> <span class="o">=</span> <span class="s2">&quot;Uploaded&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">dry_run</span> <span class="k">else</span> <span class="s2">&quot;Dry-run: Skipped uploading&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">what_happened</span><span class="si">}</span><span class="s2"> %d of %d file(s) to &#39;s3://%s/%s/%s&#39; using %d threads (%s)&quot;</span><span class="p">,</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">-</span> <span class="n">errors</span><span class="p">,</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">),</span>
+        <span class="n">bucket_name</span><span class="p">,</span>
+        <span class="n">prefix</span><span class="p">,</span>
+        <span class="n">common_path</span><span class="p">,</span>
+        <span class="n">max_workers</span><span class="p">,</span>
+        <span class="n">timer</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">errors</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There were </span><span class="si">{</span><span class="n">errors</span><span class="si">}</span><span class="s2"> error(s) during upload&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="delete_objects"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.delete_objects">[docs]</a><span class="k">def</span> <span class="nf">delete_objects</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_keys</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">wait</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hdfs_wait</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_retry</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    For each object key in object_keys, attempt to delete the key and its content from an S3 bucket.</span>
+
+<span class="sd">    If the optional parameter &quot;wait&quot; is true, then we&#39;ll wait until the object has actually been</span>
+<span class="sd">    deleted. If optional parameter &quot;hdfs_wait&quot; is true, we will confirm each key&#39;s removal using</span>
+<span class="sd">    `hdfs ls`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+    <span class="n">chunk_size</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">object_keys</span><span class="p">))</span>  <span class="c1"># seemed reasonable at the time</span>
+    <span class="n">timer</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">Timer</span><span class="p">()</span>
+
+    <span class="n">common_prefix</span> <span class="o">=</span> <span class="n">_keep_common_path</span><span class="p">(</span><span class="n">object_keys</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Deleting files in S3&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">dry_run</span> <span class="k">else</span> <span class="s2">&quot;Dry-run: Deleting files in S3&quot;</span>
+    <span class="n">tqdm_bar</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">desc</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">object_keys</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="p">)</span>
+
+    <span class="n">failed</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">this_chunk</span> <span class="ow">in</span> <span class="n">funcy</span><span class="o">.</span><span class="n">chunks</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">object_keys</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">this_chunk</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Dry-run: Skipped deleting &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+                <span class="n">tqdm_bar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+            <span class="k">continue</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">delete_objects</span><span class="p">(</span><span class="n">Delete</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Objects&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;Key&quot;</span><span class="p">:</span> <span class="n">key</span><span class="p">}</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">this_chunk</span><span class="p">]})</span>
+        <span class="k">for</span> <span class="n">deleted</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="s2">&quot;Key&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Deleted&quot;</span><span class="p">,</span> <span class="p">[])):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Deleted &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">deleted</span><span class="p">)</span>
+            <span class="n">tqdm_bar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Errors&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Failed to delete &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39; with </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">bucket_name</span><span class="p">,</span>
+                <span class="n">error</span><span class="p">[</span><span class="s2">&quot;Key&quot;</span><span class="p">],</span>
+                <span class="n">error</span><span class="p">[</span><span class="s2">&quot;Code&quot;</span><span class="p">],</span>
+                <span class="n">error</span><span class="p">[</span><span class="s2">&quot;Message&quot;</span><span class="p">],</span>
+            <span class="p">)</span>
+            <span class="n">failed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">error</span><span class="p">[</span><span class="s2">&quot;Key&quot;</span><span class="p">])</span>
+            <span class="n">tqdm_bar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+    <span class="n">tqdm_bar</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">what_happened</span> <span class="o">=</span> <span class="s2">&quot;Deleted&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">dry_run</span> <span class="k">else</span> <span class="s2">&quot;Dry-run: Skipped deleting&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">what_happened</span><span class="si">}</span><span class="s2"> %d of %d file(s) in &#39;s3://%s/%s&#39; (%s)&quot;</span><span class="p">,</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">object_keys</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">failed</span><span class="p">),</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">object_keys</span><span class="p">),</span>
+        <span class="n">bucket_name</span><span class="p">,</span>
+        <span class="n">common_prefix</span><span class="p">,</span>
+        <span class="n">timer</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">failed</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_retry</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">S3ServiceError</span><span class="p">(</span><span class="s2">&quot;Failed to delete </span><span class="si">%d</span><span class="s2"> file(s)&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">failed</span><span class="p">))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to delete </span><span class="si">%d</span><span class="s2"> object(s), trying one more time in 5s&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">failed</span><span class="p">))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">delete_objects</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">failed</span><span class="p">,</span> <span class="n">_retry</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">wait</span> <span class="ow">and</span> <span class="n">_retry</span><span class="p">:</span>  <span class="c1"># wait only in initial call</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Waiting for </span><span class="si">%d</span><span class="s2"> object(s) to no longer exist&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">object_keys</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">object_keys</span><span class="p">:</span>
+            <span class="n">bucket</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="n">wait_until_not_exists</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hdfs_wait</span> <span class="ow">and</span> <span class="n">_retry</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Verifying </span><span class="si">%d</span><span class="s2"> object(s) no longer exist according to HDFS S3A.&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">object_keys</span><span class="p">))</span>
+        <span class="n">confirmed_deleted</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">total_waits</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">confirmed_deleted</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">object_keys</span><span class="p">)</span> <span class="ow">or</span> <span class="n">total_waits</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">object_keys</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">confirmed_deleted</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+                    <span class="p">[</span><span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> <span class="s2">&quot;fs&quot;</span><span class="p">,</span> <span class="s2">&quot;-ls&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;s3a://</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">process</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;HDFS did not confirm deletion of &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+                    <span class="n">total_waits</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">elif</span> <span class="n">process</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">confirmed_deleted</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">process</span><span class="o">.</span><span class="n">check_returncode</span><span class="p">()</span>
+        <span class="n">nondeleted_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">object_keys</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">confirmed_deleted</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">nondeleted_count</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">S3ServiceError</span><span class="p">(</span><span class="s2">&quot;Failed to confirm deletion of </span><span class="si">%d</span><span class="s2"> file(s)&quot;</span> <span class="o">%</span> <span class="n">nondeleted_count</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_s3_object_last_modified"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.get_s3_object_last_modified">[docs]</a><span class="k">def</span> <span class="nf">get_s3_object_last_modified</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the last_modified datetime timestamp for an S3 Object.</span>
+
+<span class="sd">    If the call errors out, return None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+        <span class="n">s3_object</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">object_key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">wait</span><span class="p">:</span>
+            <span class="n">s3_object</span><span class="o">.</span><span class="n">wait_until_exists</span><span class="p">()</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">s3_object</span><span class="o">.</span><span class="n">last_modified</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Object in &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39; was last modified </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">botocore</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">WaiterError</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Waiting for object in &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39; failed&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">except</span> <span class="n">botocore</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ClientError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">error_code</span> <span class="o">=</span> <span class="n">exc</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;Error&quot;</span><span class="p">][</span><span class="s2">&quot;Code&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">error_code</span> <span class="o">==</span> <span class="s2">&quot;404&quot;</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Object &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39; does not exist&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+            <span class="n">timestamp</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to find &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">,</span> <span class="n">error_code</span><span class="p">)</span>
+            <span class="k">raise</span>
+    <span class="k">return</span> <span class="n">timestamp</span></div>
+
+
+<div class="viewcode-block" id="object_stat"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.object_stat">[docs]</a><span class="k">def</span> <span class="nf">object_stat</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return content_length and last_modified timestamp from the object.</span>
+
+<span class="sd">    It is an error if the object does not exist.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+    <span class="n">s3_object</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">object_key</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s3_object</span><span class="o">.</span><span class="n">content_length</span><span class="p">,</span> <span class="n">s3_object</span><span class="o">.</span><span class="n">last_modified</span></div>
+
+
+<div class="viewcode-block" id="wait_until_object_exists"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.wait_until_object_exists">[docs]</a><span class="k">def</span> <span class="nf">wait_until_object_exists</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+    <span class="n">bucket</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">object_key</span><span class="p">)</span><span class="o">.</span><span class="n">wait_until_exists</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_s3_object_content"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.get_s3_object_content">[docs]</a><span class="k">def</span> <span class="nf">get_s3_object_content</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">object_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">botocore</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">StreamingBody</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return stream for content of s3://bucket_name/object_key .</span>
+
+<span class="sd">    You must close the stream when you&#39;re done with it.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+    <span class="n">s3_object</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">object_key</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">s3_object</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">botocore</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ClientError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">error_code</span> <span class="o">=</span> <span class="n">exc</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;Error&quot;</span><span class="p">][</span><span class="s2">&quot;Code&quot;</span><span class="p">]</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error code </span><span class="si">%s</span><span class="s2"> for object &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">error_code</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+        <span class="k">raise</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Failed to download &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+        <span class="k">raise</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+        <span class="s2">&quot;Received object: &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;, last modified: </span><span class="si">%s</span><span class="s2">, content length: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">bucket_name</span><span class="p">,</span>
+        <span class="n">object_key</span><span class="p">,</span>
+        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;LastModified&quot;</span><span class="p">],</span>
+        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;ContentLength&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Body&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="list_objects_for_prefix"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.list_objects_for_prefix">[docs]</a><span class="k">def</span> <span class="nf">list_objects_for_prefix</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">prefixes</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List all the files in &quot;s3://{bucket_name}/{prefix}&quot; for each given prefix.</span>
+
+<span class="sd">    The prefix is probably a path and not an object key.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">prefixes</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;List of prefixes may not be empty&quot;</span><span class="p">)</span>
+    <span class="n">bucket</span> <span class="o">=</span> <span class="n">_get_s3_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">prefixes</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Looking for files in &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/&#39;&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">prefix</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">bucket</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Prefix</span><span class="o">=</span><span class="n">prefix</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">obj</span><span class="o">.</span><span class="n">key</span></div>
+
+
+<div class="viewcode-block" id="test_object_creation"><a class="viewcode-back" href="../../etl/etl.s3.html#etl.s3.test_object_creation">[docs]</a><span class="k">def</span> <span class="nf">test_object_creation</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">object_key</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/_s3_test&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Testing object creation and deletion using &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+    <span class="n">upload_empty_object</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+    <span class="n">wait_until_object_exists</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">)</span>
+    <span class="n">get_s3_object_last_modified</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_key</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">delete_objects</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="p">[</span><span class="n">object_key</span><span class="p">],</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+
+    <span class="kn">import</span> <span class="nn">etl.logs</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage: </span><span class="si">{}</span><span class="s2"> bucket_name prefix&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This will create a test object under s3://[bucket_name]/[prefix] and delete afterwards.&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">etl</span><span class="o">.</span><span class="n">logs</span><span class="o">.</span><span class="n">configure_logging</span><span class="p">(</span><span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;DEBUG&quot;</span><span class="p">)</span>
+    <span class="n">test_object_creation</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

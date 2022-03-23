@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.errors module &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="etl.explain module" href="etl.explain.html" />
+    <link rel="prev" title="etl.db module" href="etl.db.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   etl
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="etl.html">
+     etl package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/etl/etl.errors.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>etl.errors module</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="module-etl.errors">
+<span id="etl-errors-module"></span><h1>etl.errors module<a class="headerlink" href="#module-etl.errors" title="Permalink to this headline">¶</a></h1>
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.CyclicDependencyError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">CyclicDependencyError</span></span><a class="reference internal" href="../_modules/etl/errors.html#CyclicDependencyError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.CyclicDependencyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLConfigError" title="etl.errors.ETLConfigError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLConfigError</span></code></a></p>
+<p>Exception when evaluation order runs in circles.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.DataExtractError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">DataExtractError</span></span><a class="reference internal" href="../_modules/etl/errors.html#DataExtractError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.DataExtractError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.TransientETLError" title="etl.errors.TransientETLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.TransientETLError</span></code></a></p>
+<p>Exception when extracting from an upstream source fails.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.DataUnloadError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">DataUnloadError</span></span><a class="reference internal" href="../_modules/etl/errors.html#DataUnloadError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.DataUnloadError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Exception when the unload operation fails.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.ETLConfigError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">ETLConfigError</span></span><a class="reference internal" href="../_modules/etl/errors.html#ETLConfigError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.ETLConfigError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLError" title="etl.errors.ETLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLError</span></code></a></p>
+<p>Error in the data warehouse configuration – you’ll need to check your config or schemas.</p>
+<p>This exception should be raised when sync’ing a fixed version might solve the issue.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.ETLDelayedExit">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">ETLDelayedExit</span></span><a class="reference internal" href="../_modules/etl/errors.html#ETLDelayedExit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.ETLDelayedExit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLError" title="etl.errors.ETLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLError</span></code></a></p>
+<p>Exception raised when errors were suppressed during “keep going” processing.</p>
+<p>The errors triggering this unseemly end could be either of the config or runtime variety.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.ETLError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">ETLError</span></span><a class="reference internal" href="../_modules/etl/errors.html#ETLError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.ETLError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Parent to all ETL-oriented exceptions which allows to write effective except statements.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.ETLRuntimeError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">ETLRuntimeError</span></span><a class="reference internal" href="../_modules/etl/errors.html#ETLRuntimeError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.ETLRuntimeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLError" title="etl.errors.ETLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLError</span></code></a></p>
+<p>Error found at runtime – you might be able to just try again or need to fix something upstream.</p>
+<p>This exception should be raised when the show-stopper lies outside of code or configuration.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.ETLSystemError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">ETLSystemError</span></span><a class="reference internal" href="../_modules/etl/errors.html#ETLSystemError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.ETLSystemError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLError" title="etl.errors.ETLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLError</span></code></a></p>
+<p>Blunder in the ETL code – you’ll need to check the ETL code, sorry about that.</p>
+<p>This exception should be raised when rolling back ETL code might solve the issue.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.FailedConstraintError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">FailedConstraintError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">examples</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/errors.html#FailedConstraintError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.FailedConstraintError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.RelationDataError" title="etl.errors.RelationDataError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.RelationDataError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.InvalidArgumentError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">InvalidArgumentError</span></span><a class="reference internal" href="../_modules/etl/errors.html#InvalidArgumentError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.InvalidArgumentError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Exception when arguments are detected to be invalid by the command callback.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.InvalidEnvironmentError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">InvalidEnvironmentError</span></span><a class="reference internal" href="../_modules/etl/errors.html#InvalidEnvironmentError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.InvalidEnvironmentError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Exception when environment settings are invalid.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.MissingCsvFilesError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">MissingCsvFilesError</span></span><a class="reference internal" href="../_modules/etl/errors.html#MissingCsvFilesError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.MissingCsvFilesError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.DataExtractError" title="etl.errors.DataExtractError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.DataExtractError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.MissingExtractEventError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">MissingExtractEventError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extracted_targets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/errors.html#MissingExtractEventError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.MissingExtractEventError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.RelationDataError" title="etl.errors.RelationDataError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.RelationDataError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.MissingManifestError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">MissingManifestError</span></span><a class="reference internal" href="../_modules/etl/errors.html#MissingManifestError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.MissingManifestError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.RelationDataError" title="etl.errors.RelationDataError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.RelationDataError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.MissingQueryError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">MissingQueryError</span></span><a class="reference internal" href="../_modules/etl/errors.html#MissingQueryError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.MissingQueryError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLConfigError" title="etl.errors.ETLConfigError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLConfigError</span></code></a></p>
+<p>Exception when the query (SQL file) is missing.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.MissingValueTemplateError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">MissingValueTemplateError</span></span><a class="reference internal" href="../_modules/etl/errors.html#MissingValueTemplateError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.MissingValueTemplateError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLSystemError" title="etl.errors.ETLSystemError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLSystemError</span></code></a></p>
+<p>Exception when a template cannot be rendered because a configuration setting is missing.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.RelationConstructionError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">RelationConstructionError</span></span><a class="reference internal" href="../_modules/etl/errors.html#RelationConstructionError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.RelationConstructionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Exception when we fail to drop or create a relation.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.RelationDataError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">RelationDataError</span></span><a class="reference internal" href="../_modules/etl/errors.html#RelationDataError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.RelationDataError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Parent of exceptions that occur while trying to load or loading a relation.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.RequiredRelationLoadError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">RequiredRelationLoadError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">failed_relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_apple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/errors.html#RequiredRelationLoadError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.RequiredRelationLoadError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.RetriesExhaustedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">RetriesExhaustedError</span></span><a class="reference internal" href="../_modules/etl/errors.html#RetriesExhaustedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.RetriesExhaustedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Raised when all retry attempts have been exhausted.</p>
+<p>The causing exception should be passed to this one to complete the chain of failure
+accountability. For example:
+&gt;&gt;&gt; raise RetriesExhaustedError from ETLRuntimeError(“Boom!”)
+Traceback (most recent call last):</p>
+<blockquote>
+<div><p>…</p>
+</div></blockquote>
+<p>etl.errors.RetriesExhaustedError</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.S3ServiceError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">S3ServiceError</span></span><a class="reference internal" href="../_modules/etl/errors.html#S3ServiceError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.S3ServiceError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Exception when we encounter problems with S3.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.SchemaInvalidError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">SchemaInvalidError</span></span><a class="reference internal" href="../_modules/etl/errors.html#SchemaInvalidError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.SchemaInvalidError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLSystemError" title="etl.errors.ETLSystemError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLSystemError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.SchemaValidationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">SchemaValidationError</span></span><a class="reference internal" href="../_modules/etl/errors.html#SchemaValidationError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.SchemaValidationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLConfigError" title="etl.errors.ETLConfigError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLConfigError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.SelfTestError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">SelfTestError</span></span><a class="reference internal" href="../_modules/etl/errors.html#SelfTestError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.SelfTestError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLSystemError" title="etl.errors.ETLSystemError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLSystemError</span></code></a></p>
+<p>Exception when one of the built-in test suites fails.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.SqoopExecutionError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">SqoopExecutionError</span></span><a class="reference internal" href="../_modules/etl/errors.html#SqoopExecutionError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.SqoopExecutionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.DataExtractError" title="etl.errors.DataExtractError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.DataExtractError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.TableDesignError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">TableDesignError</span></span><a class="reference internal" href="../_modules/etl/errors.html#TableDesignError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.TableDesignError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLConfigError" title="etl.errors.ETLConfigError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLConfigError</span></code></a></p>
+<p>Exception when a table design file is incorrect.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.TableDesignParseError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">TableDesignParseError</span></span><a class="reference internal" href="../_modules/etl/errors.html#TableDesignParseError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.TableDesignParseError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.TableDesignError" title="etl.errors.TableDesignError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.TableDesignError</span></code></a></p>
+<p>Exception when a table design file cannot be parsed.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.TableDesignSemanticError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">TableDesignSemanticError</span></span><a class="reference internal" href="../_modules/etl/errors.html#TableDesignSemanticError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.TableDesignSemanticError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.TableDesignError" title="etl.errors.TableDesignError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.TableDesignError</span></code></a></p>
+<p>Exception when a table design file does not pass logic checks.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.TableDesignSyntaxError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">TableDesignSyntaxError</span></span><a class="reference internal" href="../_modules/etl/errors.html#TableDesignSyntaxError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.TableDesignSyntaxError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.TableDesignError" title="etl.errors.TableDesignError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.TableDesignError</span></code></a></p>
+<p>Exception when a table design file does not pass schema validation.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.TableDesignValidationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">TableDesignValidationError</span></span><a class="reference internal" href="../_modules/etl/errors.html#TableDesignValidationError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.TableDesignValidationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.TableDesignError" title="etl.errors.TableDesignError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.TableDesignError</span></code></a></p>
+<p>Exception when a table design does not pass validation.</p>
+<p>Reasons to fail validation includes issues against upstream sources or other table designs.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.TransientETLError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">TransientETLError</span></span><a class="reference internal" href="../_modules/etl/errors.html#TransientETLError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.TransientETLError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Error found at runtime which we might overcome by retrying the operation.</p>
+<p>Represents all types of runtime errors that should be retryable due to the cause being
+something in the external environment that might change over time.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.UnknownTableSizeError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">UnknownTableSizeError</span></span><a class="reference internal" href="../_modules/etl/errors.html#UnknownTableSizeError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.UnknownTableSizeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.DataExtractError" title="etl.errors.DataExtractError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.DataExtractError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.UpdateTableError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">UpdateTableError</span></span><a class="reference internal" href="../_modules/etl/errors.html#UpdateTableError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.UpdateTableError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.RelationDataError" title="etl.errors.RelationDataError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.RelationDataError</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="etl.errors.UpstreamValidationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.errors.</span></span><span class="sig-name descname"><span class="pre">UpstreamValidationError</span></span><a class="reference internal" href="../_modules/etl/errors.html#UpstreamValidationError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.errors.UpstreamValidationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.errors.ETLRuntimeError" title="etl.errors.ETLRuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.errors.ETLRuntimeError</span></code></a></p>
+<p>Exception when validation against upstream database fails.</p>
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="etl.db.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">etl.db module</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="etl.explain.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">etl.explain module</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

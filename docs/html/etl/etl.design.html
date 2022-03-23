@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.design package &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="etl.design.bootstrap module" href="etl.design.bootstrap.html" />
+    <link rel="prev" title="etl.config.settings module" href="etl.config.settings.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   etl
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="etl.html">
+     etl package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 current active has-children">
+      <a class="current reference internal" href="#">
+       etl.design package
+      </a>
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/etl/etl.design.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>etl.design package</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="module-etl.design">
+<span id="etl-design-package"></span><h1>etl.design package<a class="headerlink" href="#module-etl.design" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.design.Attribute">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.design.</span></span><span class="sig-name descname"><span class="pre">Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sql_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">not_null</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#Attribute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.Attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Most basic description of a database “attribute”, a.k.a. column.</p>
+<p>Attributes are purely based on information that we find in upstream databases.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.Attribute.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#etl.design.Attribute.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.Attribute.not_null">
+<span class="sig-name descname"><span class="pre">not_null</span></span><a class="headerlink" href="#etl.design.Attribute.not_null" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.Attribute.sql_type">
+<span class="sig-name descname"><span class="pre">sql_type</span></span><a class="headerlink" href="#etl.design.Attribute.sql_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.design.</span></span><span class="sig-name descname"><span class="pre">ColumnDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_sql_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sql_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">not_null</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#ColumnDefinition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.ColumnDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>More granular description of a column in a table.</p>
+<p>These are ready to be sent to a table design or come from a table design file.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.encoding">
+<span class="sig-name descname"><span class="pre">encoding</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.encoding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.expression">
+<span class="sig-name descname"><span class="pre">expression</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.expression" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.from_attribute">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_is_att_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast_needed_att_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_att_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#ColumnDefinition.from_attribute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.ColumnDefinition.from_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn a table attribute into a “column” of a table design.</p>
+<p>This adds the generic type and possibly a cast into a supported type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.from_dict">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#ColumnDefinition.from_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.ColumnDefinition.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#etl.design.ColumnDefinition" title="etl.design.ColumnDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">ColumnDefinition</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.identity">
+<span class="sig-name descname"><span class="pre">identity</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.identity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.not_null">
+<span class="sig-name descname"><span class="pre">not_null</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.not_null" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.source_sql_type">
+<span class="sig-name descname"><span class="pre">source_sql_type</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.source_sql_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.sql_type">
+<span class="sig-name descname"><span class="pre">sql_type</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.sql_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#ColumnDefinition.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.ColumnDefinition.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.design.ColumnDefinition.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#etl.design.ColumnDefinition.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.design.TableDesign">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.design.</span></span><span class="sig-name descname"><span class="pre">TableDesign</span></span><a class="reference internal" href="../_modules/etl/design.html#TableDesign"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.TableDesign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Placeholder until we turn dict-based table designs into a class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.design.TableDesign.as_string">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_design</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#TableDesign.as_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.TableDesign.as_string" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.design.TableDesign.make_item_sorter">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">make_item_sorter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#TableDesign.make_item_sorter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.TableDesign.make_item_sorter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return function that allows sorting keys that appear in any “object” (JSON-speak for dict).</p>
+<p>The sort order makes the resulting order of keys easier to digest by humans.</p>
+<p>Input to the sorter is a tuple of (key, value) from turning a dict into a list of items.
+Output (return value) of the sorter is a tuple of (preferred order, key name).
+If a key is not known, it’s sorted alphabetically (ignoring case) after all known ones.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.design.diff_table_designs">
+<span class="sig-prename descclassname"><span class="pre">etl.design.</span></span><span class="sig-name descname"><span class="pre">diff_table_designs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_design</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_design</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/design.html#diff_table_designs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.design.diff_table_designs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="etl.design.bootstrap.html">etl.design.bootstrap module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="etl.design.load.html">etl.design.load module</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="etl.config.settings.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">etl.config.settings module</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="etl.design.bootstrap.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">etl.design.bootstrap module</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

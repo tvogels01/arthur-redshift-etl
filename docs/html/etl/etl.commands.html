@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.commands module &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="etl.data_warehouse module" href="etl.data_warehouse.html" />
+    <link rel="prev" title="etl.util.timer module" href="etl.util.timer.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   etl
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="etl.html">
+     etl package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/etl/etl.commands.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>etl.commands module</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="module-etl.commands">
+<span id="etl-commands-module"></span><h1>etl.commands module<a class="headerlink" href="#module-etl.commands" title="Permalink to this headline">¶</a></h1>
+<p>Driver for the ETL based on sub-commands and central place to govern command line args.</p>
+<p>This can be the entry point for a console script.  Some functions are broken out
+so that they can be leveraged by utilities in addition to the top-level script.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.BootstrapSourcesCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">BootstrapSourcesCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#BootstrapSourcesCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.BootstrapSourcesCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.BootstrapSourcesCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#BootstrapSourcesCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.BootstrapSourcesCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.BootstrapSourcesCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#BootstrapSourcesCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.BootstrapSourcesCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.BootstrapTransformationsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">BootstrapTransformationsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#BootstrapTransformationsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.BootstrapTransformationsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.BootstrapTransformationsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#BootstrapTransformationsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.BootstrapTransformationsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.BootstrapTransformationsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#BootstrapTransformationsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.BootstrapTransformationsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.CheckConstraintsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">CheckConstraintsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#CheckConstraintsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CheckConstraintsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CheckConstraintsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CheckConstraintsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CheckConstraintsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CheckConstraintsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CheckConstraintsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CheckConstraintsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.CreateExternalSchemasCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">CreateExternalSchemasCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#CreateExternalSchemasCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateExternalSchemasCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateExternalSchemasCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateExternalSchemasCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateExternalSchemasCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateExternalSchemasCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateExternalSchemasCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateExternalSchemasCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.CreateGroupsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">CreateGroupsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#CreateGroupsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateGroupsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateGroupsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateGroupsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateGroupsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateGroupsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateGroupsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateGroupsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.CreateIndexCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">CreateIndexCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#CreateIndexCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateIndexCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateIndexCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateIndexCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateIndexCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateIndexCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateIndexCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateIndexCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.CreateSchemasCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">CreateSchemasCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#CreateSchemasCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateSchemasCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateSchemasCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateSchemasCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateSchemasCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateSchemasCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateSchemasCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateSchemasCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.CreateUserCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">CreateUserCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#CreateUserCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateUserCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateUserCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateUserCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateUserCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.CreateUserCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#CreateUserCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.CreateUserCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.DeleteFinishedPipelinesCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">DeleteFinishedPipelinesCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#DeleteFinishedPipelinesCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.DeleteFinishedPipelinesCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.DeleteFinishedPipelinesCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#DeleteFinishedPipelinesCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.DeleteFinishedPipelinesCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.DeleteFinishedPipelinesCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#DeleteFinishedPipelinesCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.DeleteFinishedPipelinesCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ExplainQueryCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ExplainQueryCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ExplainQueryCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ExplainQueryCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ExplainQueryCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ExplainQueryCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ExplainQueryCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ExplainQueryCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ExplainQueryCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ExplainQueryCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ExtractToS3Command">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ExtractToS3Command</span></span><a class="reference internal" href="../_modules/etl/commands.html#ExtractToS3Command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ExtractToS3Command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ExtractToS3Command.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ExtractToS3Command.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ExtractToS3Command.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ExtractToS3Command.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ExtractToS3Command.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ExtractToS3Command.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.commands.ExtractToS3Command.uses_monitor">
+<span class="sig-name descname"><span class="pre">uses_monitor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#etl.commands.ExtractToS3Command.uses_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.FancyArgumentParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">FancyArgumentParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#FancyArgumentParser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.FancyArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></p>
+<p>Fancier version of the argument parser supporting <cite>&#64;file</cite> to fetch additional arguments.</p>
+<p>Add feature to read command line arguments from files and support:</p>
+<ul class="simple">
+<li><p>One argument per line (whitespace is trimmed)</p></li>
+<li><p>Comments or empty lines (either are ignored)</p></li>
+</ul>
+<p>This enables direct use of output from show_downstream_dependents and
+show_upstream_dependencies.</p>
+<p class="rubric">Example</p>
+<p>To use this feature, add an argument with “&#64;” and have values ready inside of it, one per line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;</span> <span class="n">tables</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span>
+<span class="n">www</span><span class="o">.</span><span class="n">users</span>
+<span class="n">www</span><span class="o">.</span><span class="n">user_comments</span>
+<span class="n">EOF</span>
+<span class="n">arthur</span><span class="o">.</span><span class="n">py</span> <span class="n">load</span> <span class="nd">@tables</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.FancyArgumentParser.convert_arg_line_to_args">
+<span class="sig-name descname"><span class="pre">convert_arg_line_to_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg_line</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#FancyArgumentParser.convert_arg_line_to_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.FancyArgumentParser.convert_arg_line_to_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return argument from the current line (when arguments are processed from a file).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span> <span class="o">=</span> <span class="n">FancyArgumentParser</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">convert_arg_line_to_args</span><span class="p">(</span><span class="s2">&quot;--verbose&quot;</span><span class="p">)</span>
+<span class="go">[&#39;--verbose&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">convert_arg_line_to_args</span><span class="p">(</span><span class="s2">&quot; schema.table &quot;</span><span class="p">)</span>
+<span class="go">[&#39;schema.table&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">convert_arg_line_to_args</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s2">&quot;show_dependents.output_compatible # CTAS index=1 is_required=true&quot;</span><span class="p">)</span>
+<span class="go">[&#39;show_dependents.output_compatible&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">convert_arg_line_to_args</span><span class="p">(</span><span class="s2">&quot; # single-line comment&quot;</span><span class="p">)</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">convert_arg_line_to_args</span><span class="p">(</span><span class="s2">&quot;--config accidentally_on_one_line&quot;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">ValueError</span>: <span class="n">unrecognizable argument value in line: --config accidentally_on_one_line</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.InitializeSetupCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">InitializeSetupCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#InitializeSetupCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.InitializeSetupCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.InitializeSetupCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#InitializeSetupCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.InitializeSetupCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.InitializeSetupCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#InitializeSetupCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.InitializeSetupCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ListFilesCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ListFilesCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ListFilesCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListFilesCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ListFilesCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ListFilesCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListFilesCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ListFilesCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ListFilesCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListFilesCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ListTagsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ListTagsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ListTagsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListTagsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ListTagsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ListTagsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListTagsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ListTagsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ListTagsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListTagsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ListUsersCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ListUsersCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ListUsersCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListUsersCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ListUsersCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ListUsersCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListUsersCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ListUsersCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ListUsersCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ListUsersCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.LoadDataWarehouseCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">LoadDataWarehouseCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#LoadDataWarehouseCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.LoadDataWarehouseCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.LoadDataWarehouseCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#LoadDataWarehouseCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.LoadDataWarehouseCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.LoadDataWarehouseCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#LoadDataWarehouseCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.LoadDataWarehouseCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.commands.LoadDataWarehouseCommand.uses_monitor">
+<span class="sig-name descname"><span class="pre">uses_monitor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#etl.commands.LoadDataWarehouseCommand.uses_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.PingCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">PingCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#PingCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.PingCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.PingCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#PingCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.PingCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.PingCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#PingCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.PingCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.PromoteSchemasCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">PromoteSchemasCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#PromoteSchemasCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.PromoteSchemasCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.PromoteSchemasCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#PromoteSchemasCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.PromoteSchemasCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.PromoteSchemasCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#PromoteSchemasCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.PromoteSchemasCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.QueryEventsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">QueryEventsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#QueryEventsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.QueryEventsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.QueryEventsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#QueryEventsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.QueryEventsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.QueryEventsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#QueryEventsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.QueryEventsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.RenderTemplateCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">RenderTemplateCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#RenderTemplateCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RenderTemplateCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.RenderTemplateCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#RenderTemplateCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RenderTemplateCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.RenderTemplateCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#RenderTemplateCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RenderTemplateCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.RunQueryCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">RunQueryCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#RunQueryCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RunQueryCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.RunQueryCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#RunQueryCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RunQueryCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.RunQueryCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#RunQueryCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RunQueryCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.RunSqlCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">RunSqlCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#RunSqlCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RunSqlCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.RunSqlCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#RunSqlCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RunSqlCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.RunSqlCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#RunSqlCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.RunSqlCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.SelfTestCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">SelfTestCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#SelfTestCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SelfTestCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SelfTestCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SelfTestCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SelfTestCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SelfTestCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SelfTestCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SelfTestCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowDdlCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowDdlCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowDdlCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowDdlCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowDdlCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowDdlCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowDdlCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowDdlCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowDdlCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowDdlCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowDownstreamDependentsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowDownstreamDependentsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowDownstreamDependentsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowDownstreamDependentsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowDownstreamDependentsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowDownstreamDependentsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowDownstreamDependentsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowDownstreamDependentsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowDownstreamDependentsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowDownstreamDependentsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowHelpCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowHelpCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowHelpCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowHelpCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowHelpCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowHelpCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowHelpCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowHelpCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowHelpCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowHelpCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowPipelinesCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowPipelinesCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowPipelinesCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowPipelinesCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowPipelinesCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowPipelinesCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowPipelinesCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowPipelinesCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowPipelinesCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowPipelinesCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowRandomPassword">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowRandomPassword</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowRandomPassword"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowRandomPassword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowRandomPassword.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowRandomPassword.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowRandomPassword.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowRandomPassword.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowRandomPassword.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowRandomPassword.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowUpstreamDependenciesCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowUpstreamDependenciesCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowUpstreamDependenciesCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowUpstreamDependenciesCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowUpstreamDependenciesCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowUpstreamDependenciesCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowUpstreamDependenciesCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowUpstreamDependenciesCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowUpstreamDependenciesCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowUpstreamDependenciesCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowValueCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowValueCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowValueCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowValueCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowValueCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowValueCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowValueCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowValueCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowValueCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowValueCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ShowVarsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ShowVarsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ShowVarsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowVarsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowVarsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowVarsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowVarsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ShowVarsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ShowVarsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ShowVarsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.StorePatternAsSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">StorePatternAsSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option_strings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">choices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metavar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#StorePatternAsSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.StorePatternAsSelector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.Action</span></code></p>
+<p>Store the list of glob patterns (to pick tables) as a TableSelector instance.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.SubCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">SubCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aliases</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SubCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SubCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract parent class for all commands which add sub-parsers and callbacks.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SubCommand.add_arguments">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SubCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SubCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SubCommand.add_to_parser">
+<span class="sig-name descname"><span class="pre">add_to_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SubCommand.add_to_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SubCommand.add_to_parser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SubCommand.callback">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SubCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SubCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SubCommand.find_relation_descriptions">
+<span class="sig-name descname"><span class="pre">find_relation_descriptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_relation_selector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SubCommand.find_relation_descriptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SubCommand.find_relation_descriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Most commands need to collect file sets and create relation descriptions around those.</p>
+<p>Commands vary slightly as to what error handling they want to do and whether they need all
+possible descriptions or a selected subset.</p>
+<p>If a “required relation” selector is passed in, we first pick up ALL descriptions (to be
+able to build a dependency tree), build the dependency order, then pick out the matching
+descriptions.</p>
+<p>Set the default_scheme to “s3” to leverage the object store – avoid relying on having
+current files locally and instead opt for the “publish first, then use S3” pattern.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SubCommand.location">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SubCommand.location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SubCommand.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decide whether we should focus on local or remote files.</p>
+<p>This returns the appropriate “location” information. This expects args to be a Namespace
+instance from the argument parser with “table_design_dir”, “bucket_name”, “prefix”,
+and hopefully “scheme” as fields.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.commands.SubCommand.uses_monitor">
+<span class="sig-name descname"><span class="pre">uses_monitor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#etl.commands.SubCommand.uses_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.SummarizeEventsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">SummarizeEventsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#SummarizeEventsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SummarizeEventsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SummarizeEventsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SummarizeEventsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SummarizeEventsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SummarizeEventsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SummarizeEventsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SummarizeEventsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.SyncWithS3Command">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">SyncWithS3Command</span></span><a class="reference internal" href="../_modules/etl/commands.html#SyncWithS3Command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SyncWithS3Command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SyncWithS3Command.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SyncWithS3Command.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SyncWithS3Command.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.SyncWithS3Command.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#SyncWithS3Command.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.SyncWithS3Command.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.TailEventsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">TailEventsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#TailEventsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TailEventsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.TailEventsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#TailEventsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TailEventsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.TailEventsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#TailEventsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TailEventsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.TailLogsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">TailLogsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#TailLogsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TailLogsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.TailLogsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#TailLogsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TailLogsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.TailLogsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#TailLogsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TailLogsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.TerminateSessionsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">TerminateSessionsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#TerminateSessionsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TerminateSessionsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.TerminateSessionsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#TerminateSessionsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TerminateSessionsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.TerminateSessionsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#TerminateSessionsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.TerminateSessionsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.UnloadDataToS3Command">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">UnloadDataToS3Command</span></span><a class="reference internal" href="../_modules/etl/commands.html#UnloadDataToS3Command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UnloadDataToS3Command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UnloadDataToS3Command.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UnloadDataToS3Command.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UnloadDataToS3Command.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UnloadDataToS3Command.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UnloadDataToS3Command.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UnloadDataToS3Command.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.commands.UnloadDataToS3Command.uses_monitor">
+<span class="sig-name descname"><span class="pre">uses_monitor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#etl.commands.UnloadDataToS3Command.uses_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.UpdateDataWarehouseCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateDataWarehouseCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#UpdateDataWarehouseCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpdateDataWarehouseCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UpdateDataWarehouseCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UpdateDataWarehouseCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpdateDataWarehouseCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UpdateDataWarehouseCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UpdateDataWarehouseCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpdateDataWarehouseCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.commands.UpdateDataWarehouseCommand.uses_monitor">
+<span class="sig-name descname"><span class="pre">uses_monitor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#etl.commands.UpdateDataWarehouseCommand.uses_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.UpdateUserCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateUserCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#UpdateUserCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpdateUserCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UpdateUserCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UpdateUserCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpdateUserCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UpdateUserCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UpdateUserCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpdateUserCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.UpgradeDataWarehouseCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">UpgradeDataWarehouseCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#UpgradeDataWarehouseCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpgradeDataWarehouseCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UpgradeDataWarehouseCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UpgradeDataWarehouseCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpgradeDataWarehouseCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.UpgradeDataWarehouseCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#UpgradeDataWarehouseCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.UpgradeDataWarehouseCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="etl.commands.UpgradeDataWarehouseCommand.uses_monitor">
+<span class="sig-name descname"><span class="pre">uses_monitor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#etl.commands.UpgradeDataWarehouseCommand.uses_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.VacuumCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">VacuumCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#VacuumCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.VacuumCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.VacuumCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#VacuumCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.VacuumCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.VacuumCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#VacuumCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.VacuumCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.ValidateDesignsCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">ValidateDesignsCommand</span></span><a class="reference internal" href="../_modules/etl/commands.html#ValidateDesignsCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ValidateDesignsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.commands.SubCommand" title="etl.commands.SubCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.commands.SubCommand</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ValidateDesignsCommand.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ValidateDesignsCommand.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ValidateDesignsCommand.add_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.commands.ValidateDesignsCommand.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#ValidateDesignsCommand.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.ValidateDesignsCommand.callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.commands.WideHelpFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">WideHelpFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent_increment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_help_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#WideHelpFormatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.WideHelpFormatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.RawTextHelpFormatter</span></code></p>
+<p>Help formatter for argument parser that sets a wider max for help position.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.commands.add_standard_arguments">
+<span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">add_standard_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_names</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#add_standard_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.add_standard_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add from set of “standard” arguments.</p>
+<p>They are “standard” in that the name and description should be the same when used
+by multiple sub-commands.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.commands.build_basic_parser">
+<span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">build_basic_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#build_basic_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.build_basic_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build basic parser that knows about the configuration setting.</p>
+<p>The <cite>–config</cite> option is central and can be easily avoided using the environment
+variable so is always here (meaning between ‘arthur.py’ and the sub-command).</p>
+<p>Similarly, ‘–submit-to-cluster’ is shared for all sub-commands.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.commands.build_full_parser">
+<span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">build_full_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#build_full_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.build_full_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a parser by adding sub-parsers for sub-commands.</p>
+<p>Other options, even if shared between sub-commands, are in the sub-parsers to avoid
+having to awkwardly insert them between program name and sub-command name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prog_name</strong> – Name that should show up as command name in help</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>instance of ArgumentParser that is ready to parse and run sub-commands</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.commands.execute_or_bail">
+<span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">execute_or_bail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#execute_or_bail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.execute_or_bail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Either execute (the wrapped code) successfully or bail out with a helpful error message.</p>
+<p>Also measures execution time and does some basic error handling so that commands can be
+chained, UNIX-style.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.commands.log_command_line">
+<span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">log_command_line</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#log_command_line"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.log_command_line" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.commands.run_arg_as_command">
+<span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">run_arg_as_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">my_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'arthur.py'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#run_arg_as_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.run_arg_as_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the sub-command’s callback in <cite>func</cite> to actually run the sub-command.</p>
+<p>This function can be used as an entry point for a console script.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.commands.submit_step">
+<span class="sig-prename descclassname"><span class="pre">etl.commands.</span></span><span class="sig-name descname"><span class="pre">submit_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cluster_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/commands.html#submit_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.commands.submit_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send the current arthur command to a cluster instead of running it locally.</p>
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="etl.util.timer.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">etl.util.timer module</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="etl.data_warehouse.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">etl.data_warehouse module</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

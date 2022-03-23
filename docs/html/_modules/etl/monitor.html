@@ -1,0 +1,1479 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.monitor &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.monitor</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Monitoring (and logging) for ETL steps.</span>
+
+<span class="sd">This module provides a context for the ETL that allows to monitor</span>
+<span class="sd">the start time of an ETL step along with its successful or</span>
+<span class="sd">unsuccessful completion.  Events for start, finish or failure</span>
+<span class="sd">may be emitted to a persistence layer.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">http.server</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">queue</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">socketserver</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">from</span> <span class="nn">calendar</span> <span class="kn">import</span> <span class="n">timegm</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span><span class="p">,</span> <span class="n">OrderedDict</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
+<span class="kn">from</span> <span class="nn">http</span> <span class="kn">import</span> <span class="n">HTTPStatus</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">botocore.exceptions</span>
+<span class="kn">import</span> <span class="nn">funcy</span> <span class="k">as</span> <span class="nn">fy</span>
+<span class="kn">import</span> <span class="nn">simplejson</span> <span class="k">as</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">boto3.dynamodb.types</span> <span class="kn">import</span> <span class="n">TypeDeserializer</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">import</span> <span class="nn">etl.assets</span>
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.text</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLRuntimeError</span>
+<span class="kn">from</span> <span class="nn">etl.json_encoder</span> <span class="kn">import</span> <span class="n">FancyJsonEncoder</span>
+<span class="kn">from</span> <span class="nn">etl.util.timer</span> <span class="kn">import</span> <span class="n">Timer</span><span class="p">,</span> <span class="n">elapsed_seconds</span><span class="p">,</span> <span class="n">utc_now</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+
+<span class="n">STEP_START</span> <span class="o">=</span> <span class="s2">&quot;start&quot;</span>
+<span class="n">STEP_FINISH</span> <span class="o">=</span> <span class="s2">&quot;finish&quot;</span>
+<span class="n">STEP_FAIL</span> <span class="o">=</span> <span class="s2">&quot;fail&quot;</span>
+<span class="n">_DUMMY_TARGET</span> <span class="o">=</span> <span class="s2">&quot;#.dummy&quot;</span>
+
+
+<div class="viewcode-block" id="trace_key"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.trace_key">[docs]</a><span class="k">def</span> <span class="nf">trace_key</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a &quot;trace key&quot; suitable to track program execution.</span>
+
+<span class="sd">    It&#39;s most likely unique between invocations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># We will never make a 32-bit operating system.</span>
+    <span class="k">return</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span><span class="o">.</span><span class="n">hex</span><span class="p">[:</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MetaMonitor"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MetaMonitor">[docs]</a><span class="k">class</span> <span class="nc">MetaMonitor</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metaclass to implement read-only attributes of our ETL&#39;s Monitor.</span>
+
+<span class="sd">    If you need to find out the current trace key, call Monitor.etl_id.</span>
+<span class="sd">    If you want to know the &quot;environment&quot; (selected by using --prefix or the user&#39;s login),</span>
+<span class="sd">    then use Monitor.environment.</span>
+<span class="sd">    If you want to know the runtime environment (EMR, instance, step), use Monitor.cluster_info.</span>
+
+<span class="sd">    Behind the scenes, some properties actually do a lazy evaluation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">etl_id</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_trace_key</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_trace_key</span> <span class="o">=</span> <span class="n">trace_key</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_trace_key</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">environment</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_environment</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;value of &#39;environment&#39; is None&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_environment</span>
+
+    <span class="nd">@environment</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">environment</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">_environment</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cluster_info</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_cluster_info</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">job_flow</span> <span class="o">=</span> <span class="s2">&quot;/mnt/var/lib/info/job-flow.json&quot;</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">job_flow</span><span class="p">):</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">job_flow</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+                <span class="n">cluster_info</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;jobFlowId&quot;</span><span class="p">],</span> <span class="s2">&quot;instance_id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;masterInstanceId&quot;</span><span class="p">]}</span>
+                <span class="n">parent_dir</span><span class="p">,</span> <span class="n">current_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+                <span class="k">if</span> <span class="n">parent_dir</span> <span class="o">==</span> <span class="s2">&quot;/mnt/var/lib/hadoop/steps&quot;</span><span class="p">:</span>
+                    <span class="n">cluster_info</span><span class="p">[</span><span class="s2">&quot;step_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_dir</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cluster_info</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_cluster_info</span> <span class="o">=</span> <span class="n">cluster_info</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_cluster_info</span></div>
+
+
+<div class="viewcode-block" id="Monitor"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.Monitor">[docs]</a><span class="k">class</span> <span class="nc">Monitor</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">MetaMonitor</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Context manager to monitor ETL steps for some target table.</span>
+
+<span class="sd">    Monitor instances have these properties which will be stored in the event payload:</span>
+<span class="sd">        environment: a description of the source folder (aka prefix)</span>
+<span class="sd">        etl_id: a UUID for each ETL run (All monitors of the same ETL run with the same &#39;etl_id&#39;.)</span>
+<span class="sd">        target: name of table or view in the data warehouse</span>
+<span class="sd">        step: command that is running, like &#39;dump&#39;, or &#39;load&#39;</span>
+
+<span class="sd">    The payloads will have at least the properties of the Monitor instance and:</span>
+<span class="sd">        event: one of (&#39;start&#39;, &#39;finish&#39;, &#39;fail&#39;)</span>
+<span class="sd">        timestamp: UTC timestamp</span>
+
+<span class="sd">    In case of errors, they are added as an array &#39;errors&#39;.  It is also possible to send</span>
+<span class="sd">    some extra information into monitor payloads.  Anything extra must be of type list,</span>
+<span class="sd">    dict, str, or int (or bad things will happen).</span>
+
+<span class="sd">    Example usage of attributes:</span>
+<span class="sd">    &gt;&gt;&gt; id_ = Monitor.etl_id</span>
+<span class="sd">    &gt;&gt;&gt; isinstance(id_, str)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; Monitor.etl_id == id_</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; Monitor.environment</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">        ...</span>
+<span class="sd">    ValueError: value of &#39;environment&#39; is None</span>
+<span class="sd">    &gt;&gt;&gt; Monitor.environment = &#39;saturn&#39;</span>
+<span class="sd">    &gt;&gt;&gt; Monitor.environment</span>
+<span class="sd">    &#39;saturn&#39;</span>
+
+<span class="sd">    Example use of a monitor instance (with dry_run=True to avoid persistence calls during testing):</span>
+<span class="sd">    &gt;&gt;&gt; m = Monitor(&#39;schema.table&#39;, &#39;frobnicate&#39;, dry_run=True)</span>
+<span class="sd">    &gt;&gt;&gt; payload = MonitorPayload(m, &#39;test&#39;, utc_now())</span>
+<span class="sd">    &gt;&gt;&gt; payload.step</span>
+<span class="sd">    &#39;frobnicate&#39;</span>
+<span class="sd">    &gt;&gt;&gt; payload.event</span>
+<span class="sd">    &#39;test&#39;</span>
+
+<span class="sd">    Normally, you would leave the creation of the payload to the context manager:</span>
+<span class="sd">    &gt;&gt;&gt; with Monitor(&#39;schema.table&#39;, &#39;frobnicate&#39;, dry_run=True):</span>
+<span class="sd">    ...     pass</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># See MetaMonitor class for getters and setters</span>
+    <span class="n">_trace_key</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">_environment</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">_cluster_info</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dry_run</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_monitor_id</span> <span class="o">=</span> <span class="n">trace_key</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_step</span> <span class="o">=</span> <span class="n">step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dry_run</span> <span class="o">=</span> <span class="n">dry_run</span>
+        <span class="c1"># Create a deep copy so that changes made later by the caller don&#39;t alter our payload.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extra</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extra</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Read-only properties (in order of cardinality)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">environment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Monitor</span><span class="o">.</span><span class="n">environment</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cluster_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Monitor</span><span class="o">.</span><span class="n">cluster_info</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">etl_id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">Monitor</span><span class="o">.</span><span class="n">etl_id</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">target</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_step</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">monitor_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_monitor_id</span>
+
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Starting </span><span class="si">%s</span><span class="s2"> step for &#39;</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%d</span><span class="s2">/</span><span class="si">%d</span><span class="s2">)&quot;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">[</span><span class="s2">&quot;current&quot;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">[</span><span class="s2">&quot;final&quot;</span><span class="p">],</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Starting </span><span class="si">%s</span><span class="s2"> step for &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_start_time</span> <span class="o">=</span> <span class="n">utc_now</span><span class="p">()</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">MonitorPayload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">STEP_START</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_time</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_extra</span><span class="p">)</span>
+        <span class="n">payload</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">dry_run</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_dry_run</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">tb</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_end_time</span> <span class="o">=</span> <span class="n">utc_now</span><span class="p">()</span>
+        <span class="n">seconds</span> <span class="o">=</span> <span class="n">elapsed_seconds</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_start_time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end_time</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">exc_type</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">event</span> <span class="o">=</span> <span class="n">STEP_FINISH</span>
+            <span class="n">errors</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Finished </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="si">}</span><span class="s2"> step for &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_target</span><span class="si">}</span><span class="s2">&#39; (</span><span class="si">{</span><span class="n">seconds</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">s)&quot;</span><span class="p">,</span>
+                <span class="n">extra</span><span class="o">=</span><span class="p">{</span>
+                    <span class="s2">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;elapsed&quot;</span><span class="p">:</span> <span class="n">seconds</span><span class="p">,</span>
+                        <span class="s2">&quot;rowcount&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extra</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rowcount&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;step&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">,</span>
+                        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span><span class="p">,</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">event</span> <span class="o">=</span> <span class="n">STEP_FAIL</span>
+            <span class="n">errors</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">exc_type</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">exc_type</span><span class="o">.</span><span class="vm">__qualname__</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span>
+                    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exception_only</span><span class="p">(</span><span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Failed </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="si">}</span><span class="s2"> step for &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_target</span><span class="si">}</span><span class="s2">&#39; (</span><span class="si">{</span><span class="n">seconds</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">s)&quot;</span><span class="p">,</span>
+                <span class="n">extra</span><span class="o">=</span><span class="p">{</span>
+                    <span class="s2">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;elapsed&quot;</span><span class="p">:</span> <span class="n">seconds</span><span class="p">,</span>
+                        <span class="s2">&quot;step&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">,</span>
+                        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span><span class="p">,</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+            <span class="p">)</span>
+
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">MonitorPayload</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end_time</span><span class="p">,</span> <span class="n">elapsed</span><span class="o">=</span><span class="n">seconds</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_extra</span>
+        <span class="p">)</span>
+        <span class="n">payload</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">dry_run</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_dry_run</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Monitor.add_extra"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.Monitor.add_extra">[docs]</a>    <span class="k">def</span> <span class="nf">add_extra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extra</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;duplicate key in &#39;extra&#39; payload&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extra</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
+
+<div class="viewcode-block" id="Monitor.marker_payload"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.Monitor.marker_payload">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">marker_payload</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">monitor</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">_DUMMY_TARGET</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">MonitorPayload</span><span class="p">(</span><span class="n">monitor</span><span class="p">,</span> <span class="n">STEP_FINISH</span><span class="p">,</span> <span class="n">utc_now</span><span class="p">(),</span> <span class="n">elapsed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;is_marker&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span></div></div>
+
+
+<div class="viewcode-block" id="InsertTraceKey"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.InsertTraceKey">[docs]</a><span class="k">class</span> <span class="nc">InsertTraceKey</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Filter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Called as a logging filter: insert the ETL id as the trace key into the logging record.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="InsertTraceKey.filter"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.InsertTraceKey.filter">[docs]</a>    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+        <span class="n">record</span><span class="o">.</span><span class="n">trace_key</span> <span class="o">=</span> <span class="n">Monitor</span><span class="o">.</span><span class="n">etl_id</span>
+        <span class="k">return</span> <span class="kc">True</span></div></div>
+
+
+<div class="viewcode-block" id="PayloadDispatcher"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.PayloadDispatcher">[docs]</a><span class="k">class</span> <span class="nc">PayloadDispatcher</span><span class="p">:</span>
+<div class="viewcode-block" id="PayloadDispatcher.store"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.PayloadDispatcher.store">[docs]</a>    <span class="k">def</span> <span class="nf">store</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Send payload to persistence layer.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;PayloadDispatcher failed to implement store method&quot;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="MonitorPayload"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MonitorPayload">[docs]</a><span class="k">class</span> <span class="nc">MonitorPayload</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Simple class to encapsulate data for Monitor events which knows how to morph into JSON etc.</span>
+
+<span class="sd">    You should consider all attributes to be read-only with the possible exception of &#39;errors&#39;</span>
+<span class="sd">    that may be set to a list of objects (in JSON-terminology) with &#39;code&#39; and &#39;message&#39; fields.</span>
+<span class="sd">    (Which is to say: do not modify the payload object!)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Append instances with a &#39;store&#39; method here (skipping writing a metaclass this time)</span>
+    <span class="n">dispatchers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PayloadDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monitor</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">elapsed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># Basic info</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">environment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etl_id</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">etl_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">target</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">monitor_id</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">monitor_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event</span> <span class="o">=</span> <span class="n">event</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">timestamp</span>
+        <span class="c1"># Premium info (when available)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_info</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">cluster_info</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elapsed</span> <span class="o">=</span> <span class="n">elapsed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">errors</span> <span class="o">=</span> <span class="n">errors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extra</span> <span class="o">=</span> <span class="n">extra</span>
+
+<div class="viewcode-block" id="MonitorPayload.emit"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MonitorPayload.emit">[docs]</a>    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="nb">vars</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="c1"># Delete entries that are often not present:</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;cluster_info&quot;</span><span class="p">,</span> <span class="s2">&quot;elapsed&quot;</span><span class="p">,</span> <span class="s2">&quot;extra&quot;</span><span class="p">,</span> <span class="s2">&quot;errors&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">payload</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="k">del</span> <span class="n">payload</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="n">compact_text</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">FancyJsonEncoder</span><span class="p">,</span> <span class="n">separators</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">),</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Dry-run: payload = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">compact_text</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Monitor payload = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">compact_text</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">MonitorPayload</span><span class="o">.</span><span class="n">dispatchers</span><span class="p">:</span>
+            <span class="n">d</span><span class="o">.</span><span class="n">store</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="DynamoDBStorage"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.DynamoDBStorage">[docs]</a><span class="k">class</span> <span class="nc">DynamoDBStorage</span><span class="p">(</span><span class="n">PayloadDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Store ETL events in a DynamoDB table.</span>
+
+<span class="sd">    Note the table is created if it doesn&#39;t already exist when a payload needs to be stored.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="DynamoDBStorage.factory"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.DynamoDBStorage.factory">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">factory</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s2">&quot;DynamoDBStorage&quot;</span><span class="p">:</span>
+        <span class="n">table_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">-</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_value</span><span class="p">(</span><span class="s2">&quot;resource_prefix&quot;</span><span class="p">),</span> <span class="s2">&quot;events&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">DynamoDBStorage</span><span class="p">(</span>
+            <span class="n">table_name</span><span class="p">,</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_value</span><span class="p">(</span><span class="s2">&quot;etl_events.read_capacity&quot;</span><span class="p">),</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_value</span><span class="p">(</span><span class="s2">&quot;etl_events.write_capacity&quot;</span><span class="p">),</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">read_capacity</span><span class="p">,</span> <span class="n">write_capacity</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table_name</span> <span class="o">=</span> <span class="n">table_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initial_read_capacity</span> <span class="o">=</span> <span class="n">read_capacity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initial_write_capacity</span> <span class="o">=</span> <span class="n">write_capacity</span>
+        <span class="c1"># Avoid default sessions and have one table reference per thread</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local_table</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
+
+<div class="viewcode-block" id="DynamoDBStorage.get_table"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.DynamoDBStorage.get_table">[docs]</a>    <span class="k">def</span> <span class="nf">get_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">create_if_not_exists</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get table reference from DynamoDB or create it (within a new session).&quot;&quot;&quot;</span>
+        <span class="n">session</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Started new boto3 session in region &#39;</span><span class="si">{</span><span class="n">session</span><span class="o">.</span><span class="n">region_name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="n">dynamodb</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">resource</span><span class="p">(</span><span class="s2">&quot;dynamodb&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">dynamodb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="p">)</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">table_status</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Found existing events table &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="si">}</span><span class="s2">&#39; in DynamoDB (status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="n">botocore</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ClientError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="c1"># Check whether this is just a ResourceNotFoundException (sadly a 400, not a 404)</span>
+            <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;ResponseMetadata&quot;</span><span class="p">][</span><span class="s2">&quot;HTTPStatusCode&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">400</span><span class="p">:</span>
+                <span class="k">raise</span>
+            <span class="c1"># Nullify assignment and start over</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;ACTIVE&quot;</span> <span class="ow">or</span> <span class="n">create_if_not_exists</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span>
+                <span class="s2">&quot;DynamoDB table &#39;</span><span class="si">%s</span><span class="s2">&#39; does not exist or is not active&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_name</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">table</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Creating DynamoDB table: &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">dynamodb</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span>
+                <span class="n">TableName</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="p">,</span>
+                <span class="n">KeySchema</span><span class="o">=</span><span class="p">[</span>
+                    <span class="p">{</span><span class="s2">&quot;AttributeName&quot;</span><span class="p">:</span> <span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;KeyType&quot;</span><span class="p">:</span> <span class="s2">&quot;HASH&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;AttributeName&quot;</span><span class="p">:</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;KeyType&quot;</span><span class="p">:</span> <span class="s2">&quot;RANGE&quot;</span><span class="p">},</span>
+                <span class="p">],</span>
+                <span class="n">AttributeDefinitions</span><span class="o">=</span><span class="p">[</span>
+                    <span class="p">{</span><span class="s2">&quot;AttributeName&quot;</span><span class="p">:</span> <span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;AttributeType&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;AttributeName&quot;</span><span class="p">:</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;AttributeType&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">},</span>
+                <span class="p">],</span>
+                <span class="n">ProvisionedThroughput</span><span class="o">=</span><span class="p">{</span>
+                    <span class="s2">&quot;ReadCapacityUnits&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_read_capacity</span><span class="p">,</span>
+                    <span class="s2">&quot;WriteCapacityUnits&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_write_capacity</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">)</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">table_status</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">&quot;ACTIVE&quot;</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Waiting for events table &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="si">}</span><span class="s2">&#39; to become active&quot;</span><span class="p">)</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">wait_until_exists</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Finished creating or updating events table &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="si">}</span><span class="s2">&#39; (arn=</span><span class="si">{</span><span class="n">table</span><span class="o">.</span><span class="n">table_arn</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">table</span></div>
+
+<div class="viewcode-block" id="DynamoDBStorage.store"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.DynamoDBStorage.store">[docs]</a>    <span class="k">def</span> <span class="nf">store</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">_retry</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Actually send the payload to the DynamoDB table.</span>
+
+<span class="sd">        If this is the first call at all, then get a reference to the table, or even create the</span>
+<span class="sd">        table as necessary.</span>
+
+<span class="sd">        This method will try to store the payload a second time if there&#39;s an error in the first</span>
+<span class="sd">        attempt.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_thread_local_table</span><span class="p">,</span> <span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">table</span><span class="p">:</span>
+                <span class="n">table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_table</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local_table</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="n">table</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+            <span class="c1"># Cast timestamp (and elapsed seconds) into Decimal since DynamoDB cannot handle float.</span>
+            <span class="c1"># But decimals maybe finicky when instantiated from float so we make sure to fix the</span>
+            <span class="c1"># number of decimals.</span>
+            <span class="n">item</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">timestamp</span><span class="p">())</span>
+            <span class="k">if</span> <span class="s2">&quot;elapsed&quot;</span> <span class="ow">in</span> <span class="n">item</span><span class="p">:</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;elapsed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;elapsed&quot;</span><span class="p">])</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">put_item</span><span class="p">(</span><span class="n">Item</span><span class="o">=</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">botocore</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ClientError</span><span class="p">:</span>
+            <span class="c1"># Something bad happened while talking to the service ... just try one more time.</span>
+            <span class="k">if</span> <span class="n">_retry</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Trying to store payload a second time after this mishap:&quot;</span><span class="p">,</span> <span class="n">exc_info</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local_table</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">delay</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Snoozing for </span><span class="si">%.1f</span><span class="s2">s&quot;</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">store</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">_retry</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">_ThreadingSimpleServer</span><span class="p">(</span><span class="n">socketserver</span><span class="o">.</span><span class="n">ThreadingMixIn</span><span class="p">,</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">HTTPServer</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<div class="viewcode-block" id="MemoryStorage"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MemoryStorage">[docs]</a><span class="k">class</span> <span class="nc">MemoryStorage</span><span class="p">(</span><span class="n">PayloadDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Store ETL events in memory and make the events accessible via HTTP.</span>
+
+<span class="sd">    When the ETL is running for extract, load, or unload, connect to port 8086.</span>
+
+<span class="sd">    When the ETL is running on a host other than your local computer, say in EC2, then use</span>
+<span class="sd">    port forwarding, to send requests from your host to an address seen on the other host:</span>
+<span class="sd">        ssh -L 8086:localhost:8086 &lt;hostname&gt;</span>
+
+<span class="sd">    The output should pass validator at https://validator.w3.org/#validate_by_input+with_options</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">SERVER_HOST</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># meaning: all that we can bind to locally</span>
+    <span class="n">SERVER_PORT</span> <span class="o">=</span> <span class="mi">8086</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_server</span><span class="p">()</span>
+
+<div class="viewcode-block" id="MemoryStorage.store"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MemoryStorage.store">[docs]</a>    <span class="k">def</span> <span class="nf">store</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_drain_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">payload</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">get_nowait</span><span class="p">()</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extra&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;is_marker&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                    <span class="c1"># Overwrite earlier events by later ones</span>
+                    <span class="n">key</span> <span class="o">=</span> <span class="n">payload</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">],</span> <span class="n">payload</span><span class="p">[</span><span class="s2">&quot;step&quot;</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">payload</span>
+        <span class="k">except</span> <span class="n">queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+<div class="viewcode-block" id="MemoryStorage.get_indices"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MemoryStorage.get_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drain_queue</span><span class="p">()</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">payload</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extra&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="p">{}))</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;N/A&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
+                <span class="n">indices</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">index</span>
+            <span class="k">elif</span> <span class="n">index</span><span class="p">[</span><span class="s2">&quot;current&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">indices</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;current&quot;</span><span class="p">]:</span>
+                <span class="n">indices</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">payload</span><span class="p">[</span><span class="s2">&quot;event&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">STEP_START</span><span class="p">:</span>
+                <span class="n">counter</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">indices</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;counter&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">counter</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="n">indices_as_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">indices</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">indices</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">etl</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">Content</span><span class="p">(</span><span class="n">json</span><span class="o">=</span><span class="n">indices_as_list</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MemoryStorage.get_events"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MemoryStorage.get_events">[docs]</a>    <span class="k">def</span> <span class="nf">get_events</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drain_queue</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">event_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">events_as_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span>
+                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">),</span>
+                <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span> <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="s2">&quot;event&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">STEP_START</span> <span class="k">else</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]),</span>
+                <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">events_as_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;monitor_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">event_id</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">etl</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">Content</span><span class="p">(</span><span class="n">json</span><span class="o">=</span><span class="n">events_as_list</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MemoryStorage.create_handler"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MemoryStorage.create_handler">[docs]</a>    <span class="k">def</span> <span class="nf">create_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a handler that serves our storage content, used as factory method.&quot;&quot;&quot;</span>
+        <span class="n">storage</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="n">http_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;arthur_http&quot;</span><span class="p">)</span>
+
+        <span class="k">class</span> <span class="nc">MonitorHTTPHandler</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">BaseHTTPRequestHandler</span><span class="p">):</span>
+
+            <span class="n">server_version</span> <span class="o">=</span> <span class="s2">&quot;MonitorHTTPServer/1.0&quot;</span>
+            <span class="n">log_error</span> <span class="o">=</span> <span class="n">http_logger</span><span class="o">.</span><span class="n">error</span>
+            <span class="n">log_message</span> <span class="o">=</span> <span class="n">http_logger</span><span class="o">.</span><span class="n">info</span>
+
+            <span class="k">def</span> <span class="nf">do_GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">                Serve a GET (or HEAD) request.</span>
+
+<span class="sd">                We serve assets or JSON via the API.</span>
+<span class="sd">                If the command is HEAD (and not GET), only the header is sent. Duh.</span>
+<span class="sd">                &quot;&quot;&quot;</span>
+                <span class="n">parts</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">))</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="n">parts</span><span class="o">.</span><span class="n">path</span> <span class="ow">or</span> <span class="s2">&quot;/index.html&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;api/etl-id&quot;</span><span class="p">:</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">Content</span><span class="p">(</span><span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">Monitor</span><span class="o">.</span><span class="n">etl_id</span><span class="p">})</span>
+                <span class="k">elif</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;api/indices&quot;</span><span class="p">:</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">get_indices</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;api/events&quot;</span><span class="p">):</span>
+                    <span class="n">segment</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;api/events&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">get_events</span><span class="p">(</span><span class="n">segment</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;api/command-line&quot;</span><span class="p">:</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">Content</span><span class="p">(</span><span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)})</span>
+                <span class="k">elif</span> <span class="n">etl</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">asset_exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">get_asset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># self.send_response(HTTPStatus.NOT_FOUND)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="n">HTTPStatus</span><span class="o">.</span><span class="n">MOVED_PERMANENTLY</span><span class="p">)</span>
+                    <span class="n">new_parts</span> <span class="o">=</span> <span class="p">(</span><span class="n">parts</span><span class="o">.</span><span class="n">scheme</span><span class="p">,</span> <span class="n">parts</span><span class="o">.</span><span class="n">netloc</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                    <span class="n">new_url</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="n">new_parts</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">&quot;Location&quot;</span><span class="p">,</span> <span class="n">new_url</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+                    <span class="k">return</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="n">HTTPStatus</span><span class="o">.</span><span class="n">OK</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">content_type</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">&quot;Content-Length&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">content_length</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">content_encoding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">&quot;Last-Modified&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">last_modified</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">cache_control</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">&quot;Cache-Control&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">cache_control</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;GET&quot;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+            <span class="n">do_HEAD</span> <span class="o">=</span> <span class="n">do_GET</span>
+
+        <span class="k">return</span> <span class="n">MonitorHTTPHandler</span></div>
+
+<div class="viewcode-block" id="MemoryStorage.start_server"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.MemoryStorage.start_server">[docs]</a>    <span class="k">def</span> <span class="nf">start_server</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Start background daemon to serve our events.&quot;&quot;&quot;</span>
+        <span class="n">handler_class</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_handler</span><span class="p">()</span>
+
+        <span class="k">class</span> <span class="nc">BackgroundServer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+            <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;Starting background server for monitor on port </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">MemoryStorage</span><span class="o">.</span><span class="n">SERVER_PORT</span>
+                <span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">httpd</span> <span class="o">=</span> <span class="n">_ThreadingSimpleServer</span><span class="p">(</span>
+                        <span class="p">(</span><span class="n">MemoryStorage</span><span class="o">.</span><span class="n">SERVER_HOST</span><span class="p">,</span> <span class="n">MemoryStorage</span><span class="o">.</span><span class="n">SERVER_PORT</span><span class="p">),</span> <span class="n">handler_class</span>
+                    <span class="p">)</span>
+                    <span class="n">httpd</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Background server stopped: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">thread</span> <span class="o">=</span> <span class="n">BackgroundServer</span><span class="p">(</span><span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to start monitor server:&quot;</span><span class="p">,</span> <span class="n">exc_info</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="start_monitors"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.start_monitors">[docs]</a><span class="k">def</span> <span class="nf">start_monitors</span><span class="p">(</span><span class="n">environment</span><span class="p">):</span>
+    <span class="n">Monitor</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="n">environment</span>
+    <span class="n">memory</span> <span class="o">=</span> <span class="n">MemoryStorage</span><span class="p">()</span>
+    <span class="n">MonitorPayload</span><span class="o">.</span><span class="n">dispatchers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">memory</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_value</span><span class="p">(</span><span class="s2">&quot;etl_events.enabled&quot;</span><span class="p">):</span>
+        <span class="n">ddb</span> <span class="o">=</span> <span class="n">DynamoDBStorage</span><span class="o">.</span><span class="n">factory</span><span class="p">()</span>
+        <span class="n">MonitorPayload</span><span class="o">.</span><span class="n">dispatchers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ddb</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Writing events to a DynamoDB table is disabled in settings.&quot;</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_format_output_column</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;---&quot;</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span>
+        <span class="c1"># Make timestamp readable by turning epoch seconds into a date.</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;elapsed&quot;</span><span class="p">:</span>
+        <span class="c1"># Reduce number of decimals to 2.</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{:6.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;rowcount&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{:9d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+
+<span class="k">def</span> <span class="nf">_query_for_etls</span><span class="p">(</span><span class="n">step</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours_ago</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">days_ago</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Search for ETLs by looking for the &quot;marker&quot; event at the start of an ETL command.&quot;&quot;&quot;</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">days_ago</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="n">hours_ago</span><span class="p">)</span>
+    <span class="n">epoch_seconds</span> <span class="o">=</span> <span class="n">timegm</span><span class="p">(</span><span class="n">start_time</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">())</span>
+    <span class="n">attribute_values</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;:marker&quot;</span><span class="p">:</span> <span class="n">_DUMMY_TARGET</span><span class="p">,</span>
+        <span class="s2">&quot;:epoch_seconds&quot;</span><span class="p">:</span> <span class="n">epoch_seconds</span><span class="p">,</span>
+        <span class="s2">&quot;:finish_event&quot;</span><span class="p">:</span> <span class="n">STEP_FINISH</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">attribute_values</span><span class="p">[</span><span class="s2">&quot;:step&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">step</span>
+    <span class="n">filter_exp</span> <span class="o">=</span> <span class="s2">&quot;event = :finish_event&quot;</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">filter_exp</span> <span class="o">+=</span> <span class="s2">&quot; and step = :step&quot;</span>
+
+    <span class="n">ddb</span> <span class="o">=</span> <span class="n">DynamoDBStorage</span><span class="o">.</span><span class="n">factory</span><span class="p">()</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">ddb</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="n">create_if_not_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="n">ConsistentRead</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">ExpressionAttributeNames</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;#timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">},</span>  <span class="c1"># &quot;timestamp&quot; is a reserved word.</span>
+        <span class="n">ExpressionAttributeValues</span><span class="o">=</span><span class="n">attribute_values</span><span class="p">,</span>
+        <span class="n">KeyConditionExpression</span><span class="o">=</span><span class="s2">&quot;target = :marker and #timestamp &gt; :epoch_seconds&quot;</span><span class="p">,</span>
+        <span class="n">FilterExpression</span><span class="o">=</span><span class="n">filter_exp</span><span class="p">,</span>
+        <span class="n">ProjectionExpression</span><span class="o">=</span><span class="s2">&quot;etl_id, step, #timestamp&quot;</span><span class="p">,</span>
+        <span class="n">ReturnConsumedCapacity</span><span class="o">=</span><span class="s2">&quot;TOTAL&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;LastEvaluatedKey&quot;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;This is is a partial result! Last evaluated key: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;LastEvaluatedKey&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="s2">&quot;Query result: count = </span><span class="si">%d</span><span class="s2">, scanned count = </span><span class="si">%d</span><span class="s2">, consumed capacity = </span><span class="si">%f</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Count&quot;</span><span class="p">],</span>
+        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;ScannedCount&quot;</span><span class="p">],</span>
+        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;ConsumedCapacity&quot;</span><span class="p">][</span><span class="s2">&quot;CapacityUnits&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Items&quot;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="query_for_etl_ids"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.query_for_etl_ids">[docs]</a><span class="k">def</span> <span class="nf">query_for_etl_ids</span><span class="p">(</span><span class="n">hours_ago</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">days_ago</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Show recent ETLs with their step and execution start.</span>
+
+<span class="sd">    This is a callback of a command.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">etl_info</span> <span class="o">=</span> <span class="n">_query_for_etls</span><span class="p">(</span><span class="n">hours_ago</span><span class="o">=</span><span class="n">hours_ago</span><span class="p">,</span> <span class="n">days_ago</span><span class="o">=</span><span class="n">days_ago</span><span class="p">)</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;etl_id&quot;</span><span class="p">,</span> <span class="s2">&quot;step&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">]</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[[</span><span class="n">_format_output_column</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">info</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">]</span> <span class="k">for</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">etl_info</span><span class="p">]</span>
+    <span class="n">rows</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">format_lines</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">header_row</span><span class="o">=</span><span class="n">keys</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="scan_etl_events"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.scan_etl_events">[docs]</a><span class="k">def</span> <span class="nf">scan_etl_events</span><span class="p">(</span><span class="n">etl_id</span><span class="p">,</span> <span class="n">selected_columns</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scan for all events belonging to a specific ETL.</span>
+
+<span class="sd">    If a list of columns is provided, then the output is limited to those columns.</span>
+<span class="sd">    But note that the target (schema.table) and the event are always present.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ddb</span> <span class="o">=</span> <span class="n">DynamoDBStorage</span><span class="o">.</span><span class="n">factory</span><span class="p">()</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">ddb</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="n">create_if_not_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">available_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;step&quot;</span><span class="p">,</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;elapsed&quot;</span><span class="p">,</span> <span class="s2">&quot;rowcount&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">selected_columns</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">selected_columns</span> <span class="o">=</span> <span class="n">available_columns</span>
+    <span class="c1"># We will always select &quot;target&quot; and &quot;event&quot; to have a meaningful output.</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">fy</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">selected_columns</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">([</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;event&quot;</span><span class="p">]),</span> <span class="n">available_columns</span><span class="p">))</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;extra.rowcount&quot;</span> <span class="k">if</span> <span class="n">column</span> <span class="o">==</span> <span class="s2">&quot;rowcount&quot;</span> <span class="k">else</span> <span class="n">column</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">]</span>
+
+    <span class="c1"># We need to scan here since the events are stored by &quot;target&quot; and not by &quot;etl_id&quot;.</span>
+    <span class="c1"># TODO Try to find all the &quot;known&quot; relations and query on them with a filter on the etl_id.</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s2">&quot;dynamodb&quot;</span><span class="p">)</span>
+    <span class="n">paginator</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_paginator</span><span class="p">(</span><span class="s2">&quot;scan&quot;</span><span class="p">)</span>
+    <span class="n">response_iterator</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span>
+        <span class="n">TableName</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">ConsistentRead</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">ExpressionAttributeNames</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;#timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">},</span>
+        <span class="n">ExpressionAttributeValues</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;:etl_id&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;S&quot;</span><span class="p">:</span> <span class="n">etl_id</span><span class="p">},</span>
+            <span class="s2">&quot;:marker&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;S&quot;</span><span class="p">:</span> <span class="n">_DUMMY_TARGET</span><span class="p">},</span>
+            <span class="s2">&quot;:start_event&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;S&quot;</span><span class="p">:</span> <span class="n">STEP_START</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="n">FilterExpression</span><span class="o">=</span><span class="s2">&quot;etl_id = :etl_id and target &lt;&gt; :marker and event &lt;&gt; :start_event&quot;</span><span class="p">,</span>
+        <span class="n">ProjectionExpression</span><span class="o">=</span><span class="s2">&quot;target, step, event, #timestamp, elapsed, extra.rowcount&quot;</span><span class="p">,</span>
+        <span class="n">ReturnConsumedCapacity</span><span class="o">=</span><span class="s2">&quot;TOTAL&quot;</span><span class="p">,</span>
+        <span class="c1"># PaginationConfig={</span>
+        <span class="c1">#     &quot;PageSize&quot;: 100</span>
+        <span class="c1"># }</span>
+    <span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Scanning events table &#39;</span><span class="si">%s</span><span class="s2">&#39; for elapsed times&quot;</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">consumed_capacity</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">scanned_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rows</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">deserialize</span> <span class="o">=</span> <span class="n">TypeDeserializer</span><span class="p">()</span><span class="o">.</span><span class="n">deserialize</span>
+
+    <span class="k">for</span> <span class="n">response</span> <span class="ow">in</span> <span class="n">response_iterator</span><span class="p">:</span>
+        <span class="n">consumed_capacity</span> <span class="o">+=</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;ConsumedCapacity&quot;</span><span class="p">][</span><span class="s2">&quot;CapacityUnits&quot;</span><span class="p">]</span>
+        <span class="n">scanned_count</span> <span class="o">+=</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;ScannedCount&quot;</span><span class="p">]</span>
+        <span class="c1"># We need to turn something like &quot;&#39;event&#39;: {&#39;S&#39;: &#39;finish&#39;}&quot; into &quot;&#39;event&#39;: &#39;finish&#39;&quot;.</span>
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">deserialize</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Items&quot;</span><span class="p">]</span>
+        <span class="p">]</span>
+        <span class="c1"># Lookup &quot;elapsed&quot; or &quot;extra.rowcount&quot; (the latter as [&quot;extra&quot;, &quot;rowcount&quot;]).</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="p">[{</span><span class="n">key</span><span class="p">:</span> <span class="n">fy</span><span class="o">.</span><span class="n">get_in</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">}</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">deserialized</span><span class="p">]</span>
+        <span class="c1"># Scope down to selected keys and format the columns.</span>
+        <span class="n">rows</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">_format_output_column</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="s2">&quot;Scan result: scanned count = </span><span class="si">%d</span><span class="s2">, consumed capacity = </span><span class="si">%f</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">scanned_count</span><span class="p">,</span> <span class="n">consumed_capacity</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;timestamp&quot;</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="n">rows</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rows</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">format_lines</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">header_row</span><span class="o">=</span><span class="n">columns</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="EventsQuery"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.EventsQuery">[docs]</a><span class="k">class</span> <span class="nc">EventsQuery</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;step&quot;</span><span class="p">,</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;elapsed&quot;</span><span class="p">,</span> <span class="s2">&quot;extra.rowcount&quot;</span><span class="p">]</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;:target&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># will be set when called</span>
+            <span class="s2">&quot;:epoch_seconds&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># will be set when called</span>
+            <span class="s2">&quot;:start_event&quot;</span><span class="p">:</span> <span class="n">STEP_START</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="c1"># Only look for finish or fail events</span>
+        <span class="n">filter_exp</span> <span class="o">=</span> <span class="s2">&quot;event &lt;&gt; :start_event&quot;</span>
+        <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">values</span><span class="p">[</span><span class="s2">&quot;:step&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">step</span>
+            <span class="n">filter_exp</span> <span class="o">+=</span> <span class="s2">&quot; and step = :step&quot;</span>
+        <span class="n">base_query</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;ConsistentRead&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;ExpressionAttributeNames&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;#timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">},</span>
+            <span class="s2">&quot;ExpressionAttributeValues&quot;</span><span class="p">:</span> <span class="n">values</span><span class="p">,</span>
+            <span class="s2">&quot;KeyConditionExpression&quot;</span><span class="p">:</span> <span class="s2">&quot;target = :target and #timestamp &gt; :epoch_seconds&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;FilterExpression&quot;</span><span class="p">:</span> <span class="n">filter_exp</span><span class="p">,</span>
+            <span class="s2">&quot;ProjectionExpression&quot;</span><span class="p">:</span> <span class="s2">&quot;target, step, event, #timestamp, elapsed, extra.rowcount&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_base_query</span> <span class="o">=</span> <span class="n">base_query</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keys</span><span class="p">[:]</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">epoch_seconds</span><span class="p">):</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_query</span><span class="p">)</span>
+        <span class="n">query</span><span class="p">[</span><span class="s2">&quot;ExpressionAttributeValues&quot;</span><span class="p">][</span><span class="s2">&quot;:target&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="n">query</span><span class="p">[</span><span class="s2">&quot;ExpressionAttributeValues&quot;</span><span class="p">][</span><span class="s2">&quot;:epoch_seconds&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">epoch_seconds</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="o">**</span><span class="n">query</span><span class="p">)</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">fy</span><span class="o">.</span><span class="n">get_in</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">}</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Items&quot;</span><span class="p">]</span>
+        <span class="p">]</span>
+        <span class="c1"># Return latest event or None</span>
+        <span class="k">if</span> <span class="n">events</span><span class="p">:</span>
+            <span class="n">events</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">events</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="BackgroundQueriesRunner"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.BackgroundQueriesRunner">[docs]</a><span class="k">class</span> <span class="nc">BackgroundQueriesRunner</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An instance of this thread will repeatedly try to run queries on a DynamoDB table.</span>
+
+<span class="sd">    Every time a query returns a result, this result is sent to a queue and the query will no</span>
+<span class="sd">    longer be tried.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">consumer_queue</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">update_interval</span><span class="p">,</span> <span class="n">idle_time_out</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">targets</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">targets</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">consumer_queue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">start_time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_interval</span> <span class="o">=</span> <span class="n">update_interval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idle_time_out</span> <span class="o">=</span> <span class="n">idle_time_out</span>
+
+<div class="viewcode-block" id="BackgroundQueriesRunner.run"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.BackgroundQueriesRunner.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">ddb</span> <span class="o">=</span> <span class="n">DynamoDBStorage</span><span class="o">.</span><span class="n">factory</span><span class="p">()</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">ddb</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="n">create_if_not_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">targets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span>
+        <span class="n">idle</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">targets</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s2">&quot;Waiting for events for </span><span class="si">%d</span><span class="s2"> target(s), start time = &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">targets</span><span class="p">),</span>
+                <span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">start_time</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+            <span class="p">)</span>
+            <span class="n">new_start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># avoid rounding errors</span>
+            <span class="n">query_loop</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">()</span>
+            <span class="n">retired</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">targets</span><span class="p">:</span>
+                <span class="n">latest_event</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">latest_event</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">latest_event</span><span class="p">)</span>
+                    <span class="n">retired</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">latest_event</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">])</span>
+            <span class="n">targets</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">targets</span> <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">retired</span><span class="p">]</span>
+            <span class="n">start_time</span> <span class="o">=</span> <span class="n">timegm</span><span class="p">(</span><span class="n">new_start_time</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">())</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_interval</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">targets</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">retired</span><span class="p">:</span>
+                <span class="n">idle</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">idle_time_out</span> <span class="ow">and</span> <span class="n">idle</span><span class="o">.</span><span class="n">elapsed</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">idle_time_out</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;Idle time-out: Waited for </span><span class="si">%d</span><span class="s2"> seconds but no events arrived, &quot;</span>
+                    <span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> target(s) remaining&quot;</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">idle_time_out</span><span class="p">,</span>
+                    <span class="nb">len</span><span class="p">(</span><span class="n">targets</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">query_loop</span><span class="o">.</span><span class="n">elapsed</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_interval</span><span class="p">:</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_interval</span> <span class="o">-</span> <span class="n">query_loop</span><span class="o">.</span><span class="n">elapsed</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Found events for </span><span class="si">%d</span><span class="s2"> out of </span><span class="si">%d</span><span class="s2"> target(s)&quot;</span><span class="p">,</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">targets</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">targets</span><span class="p">),</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">targets</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="recently_extracted_targets"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.recently_extracted_targets">[docs]</a><span class="k">def</span> <span class="nf">recently_extracted_targets</span><span class="p">(</span><span class="n">source_relations</span><span class="p">,</span> <span class="n">start_time</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Query the events table for &quot;extract&quot; events on the provided source_relations after start_time.</span>
+
+<span class="sd">    Waits for up to an hour, sleeping for 30s between checks.</span>
+<span class="sd">    Return the set of targets (ie, relation.identifier or event[&quot;target&quot;]) with successful extracts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">source_relations</span><span class="p">]</span>
+
+    <span class="n">query</span> <span class="o">=</span> <span class="n">EventsQuery</span><span class="p">(</span><span class="s2">&quot;extract&quot;</span><span class="p">)</span>
+    <span class="n">consumer_queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>  <span class="c1"># type: ignore</span>
+    <span class="n">start_as_epoch</span> <span class="o">=</span> <span class="n">timegm</span><span class="p">(</span><span class="n">start_time</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">())</span>
+    <span class="n">timeout</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span>
+    <span class="n">extract_querying_thread</span> <span class="o">=</span> <span class="n">BackgroundQueriesRunner</span><span class="p">(</span>
+        <span class="n">targets</span><span class="p">,</span>
+        <span class="n">query</span><span class="p">,</span>
+        <span class="n">consumer_queue</span><span class="p">,</span>
+        <span class="n">start_as_epoch</span><span class="p">,</span>
+        <span class="n">update_interval</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+        <span class="n">idle_time_out</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+        <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">extract_querying_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">extracted_targets</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">event</span> <span class="o">=</span> <span class="n">consumer_queue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">event</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;event&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">STEP_FINISH</span><span class="p">:</span>
+                <span class="n">extracted_targets</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="n">queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">extracted_targets</span></div>
+
+
+<div class="viewcode-block" id="summarize_events"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.summarize_events">[docs]</a><span class="k">def</span> <span class="nf">summarize_events</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Summarize latest ETL step for the given relations by showing elapsed time and row count.</span>
+
+<span class="sd">    This is a callback of a command.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">etl_info</span> <span class="o">=</span> <span class="n">_query_for_etls</span><span class="p">(</span><span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span> <span class="n">days_ago</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">etl_info</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Found no ETLs within the last 7 days&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">latest_etl</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">etl_info</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">))[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">latest_start</span> <span class="o">=</span> <span class="n">latest_etl</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Latest ETL: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">latest_etl</span><span class="p">)</span>
+
+    <span class="n">ddb</span> <span class="o">=</span> <span class="n">DynamoDBStorage</span><span class="o">.</span><span class="n">factory</span><span class="p">()</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">ddb</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="n">create_if_not_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">EventsQuery</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+
+    <span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">schema_events</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Decimal</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span>
+        <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Querying for events&quot;</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">iterable</span><span class="o">=</span><span class="n">relations</span><span class="p">,</span> <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;table&quot;</span>
+    <span class="p">):</span>
+        <span class="n">event</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">latest_start</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">event</span><span class="p">:</span>
+            <span class="c1"># Make the column for row counts easier to read by dropping &quot;extra.&quot;.</span>
+            <span class="n">event</span><span class="p">[</span><span class="s2">&quot;rowcount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;extra.rowcount&quot;</span><span class="p">)</span>
+            <span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">relation</span><span class="o">.</span><span class="n">kind</span><span class="p">))</span>
+            <span class="n">schema</span> <span class="o">=</span> <span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span>
+            <span class="k">if</span> <span class="n">schema</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">schema_events</span><span class="p">:</span>
+                <span class="n">schema_events</span><span class="p">[</span><span class="n">schema</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">schema</span><span class="p">,</span>
+                    <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;---&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;step&quot;</span><span class="p">:</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;step&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                    <span class="s2">&quot;event&quot;</span><span class="p">:</span> <span class="s2">&quot;complete&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;elapsed&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                    <span class="s2">&quot;rowcount&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                <span class="p">}</span>
+            <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">schema_events</span><span class="p">[</span><span class="n">schema</span><span class="p">][</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]:</span>
+                <span class="n">schema_events</span><span class="p">[</span><span class="n">schema</span><span class="p">][</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span>
+            <span class="n">schema_events</span><span class="p">[</span><span class="n">schema</span><span class="p">][</span><span class="s2">&quot;elapsed&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;elapsed&quot;</span><span class="p">]</span>
+            <span class="n">schema_events</span><span class="p">[</span><span class="n">schema</span><span class="p">][</span><span class="s2">&quot;rowcount&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;rowcount&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;rowcount&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span>
+
+    <span class="c1"># Collect stats before adding the pseudo events for schemas.</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="s2">&quot;event&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">)</span>
+
+    <span class="c1"># Add pseudo events to show schemas are done.</span>
+    <span class="n">events</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">schema_events</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+    <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;kind&quot;</span><span class="p">,</span> <span class="s2">&quot;step&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span> <span class="s2">&quot;elapsed&quot;</span><span class="p">,</span> <span class="s2">&quot;rowcount&quot;</span><span class="p">]</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[[</span><span class="n">_format_output_column</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">info</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">]</span> <span class="k">for</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">events</span><span class="p">]</span>
+    <span class="n">rows</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">format_lines</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">header_row</span><span class="o">=</span><span class="n">keys</span><span class="p">))</span>
+
+    <span class="c1"># Add stats in log at the end so that we don&#39;t miss any summaries with failed != 0.</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Event count in summary: &quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;start=</span><span class="si">{</span><span class="n">stats</span><span class="p">[</span><span class="n">STEP_START</span><span class="p">]</span><span class="si">}</span><span class="s2">, finish=</span><span class="si">{</span><span class="n">stats</span><span class="p">[</span><span class="n">STEP_FINISH</span><span class="p">]</span><span class="si">}</span><span class="s2">, fail=</span><span class="si">{</span><span class="n">stats</span><span class="p">[</span><span class="n">STEP_FAIL</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="n">level</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span> <span class="k">if</span> <span class="n">stats</span><span class="p">[</span><span class="n">STEP_FAIL</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="tail_events"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.tail_events">[docs]</a><span class="k">def</span> <span class="nf">tail_events</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">update_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">idle_time_out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Tail the events table and show latest finish or fail events coming in.</span>
+
+<span class="sd">    This is a callback of a command.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span><span class="p">]</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">EventsQuery</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+    <span class="n">consumer_queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>  <span class="c1"># type: ignore</span>
+    <span class="n">epoch_seconds</span> <span class="o">=</span> <span class="n">timegm</span><span class="p">(</span><span class="n">start_time</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">())</span>
+
+    <span class="n">thread</span> <span class="o">=</span> <span class="n">BackgroundQueriesRunner</span><span class="p">(</span>
+        <span class="n">targets</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">consumer_queue</span><span class="p">,</span> <span class="n">epoch_seconds</span><span class="p">,</span> <span class="n">update_interval</span><span class="p">,</span> <span class="n">idle_time_out</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+    <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">n_printed</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="n">progress</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">progress</span><span class="o">.</span><span class="n">elapsed</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">event</span> <span class="o">=</span> <span class="n">consumer_queue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">event</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">break</span>
+                <span class="n">event</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+                <span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="c1"># Keep printing tail of table that accumulates the events.</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">n_printed</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">format_lines</span><span class="p">(</span>
+                <span class="p">[[</span><span class="n">event</span><span class="p">[</span><span class="n">header</span><span class="p">]</span> <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">keys</span><span class="p">]</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">],</span> <span class="n">header_row</span><span class="o">=</span><span class="n">query</span><span class="o">.</span><span class="n">keys</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">n_printed</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">n_printed</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">]))</span>  <span class="c1"># skip header and final &quot;(x rows)&quot; line</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>  <span class="c1"># only skip the &quot;(x rows)&quot; line</span>
+            <span class="n">n_printed</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span> <span class="o">-</span> <span class="mi">3</span>  <span class="c1"># header, separator, final = 3 extra rows</span>
+            <span class="k">if</span> <span class="n">done</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="test_run"><a class="viewcode-back" href="../../etl/etl.monitor.html#etl.monitor.test_run">[docs]</a><span class="k">def</span> <span class="nf">test_run</span><span class="p">():</span>
+    <span class="n">Monitor</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>  <span class="c1"># type: ignore</span>
+    <span class="n">memory</span> <span class="o">=</span> <span class="n">MemoryStorage</span><span class="p">()</span>
+    <span class="n">MonitorPayload</span><span class="o">.</span><span class="n">dispatchers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">memory</span><span class="p">)</span>
+
+    <span class="n">schema_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;auburn&quot;</span><span class="p">,</span> <span class="s2">&quot;burgundy&quot;</span><span class="p">,</span> <span class="s2">&quot;cardinal&quot;</span><span class="p">,</span> <span class="s2">&quot;flame&quot;</span><span class="p">,</span> <span class="s2">&quot;fuchsia&quot;</span><span class="p">]</span>
+    <span class="n">table_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cantaloupe&quot;</span><span class="p">,</span> <span class="s2">&quot;durian&quot;</span><span class="p">,</span> <span class="s2">&quot;fig&quot;</span><span class="p">]</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;final&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">schema_names</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">table_names</span><span class="p">)}</span>
+
+    <span class="n">host</span> <span class="o">=</span> <span class="n">MemoryStorage</span><span class="o">.</span><span class="n">SERVER_HOST</span> <span class="k">if</span> <span class="n">MemoryStorage</span><span class="o">.</span><span class="n">SERVER_HOST</span> <span class="k">else</span> <span class="s2">&quot;localhost&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating events ... follow along at http://</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}</span><span class="s2">/&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">MemoryStorage</span><span class="o">.</span><span class="n">SERVER_PORT</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;color.fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;final&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;outer&quot;</span><span class="p">}):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">names</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">schema_names</span><span class="p">,</span> <span class="n">table_names</span><span class="p">)):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">with</span> <span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">names</span><span class="p">),</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">))</span>
+                    <span class="c1"># Create an error on one &quot;table&quot; so that highlighting of errors can be tested:</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">9</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;An error occurred!&quot;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press return (or Ctrl-c) to stop server</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+    <span class="c1"># This allows to test the HTTP server. When running inside a Docker container, make sure</span>
+    <span class="c1"># that port 8086 is exposed. (bin/run_arthur.sh -w).</span>
+    <span class="c1"># Invoke using &quot;python -m etl.monitor&quot; inside the Docker container and follow along</span>
+    <span class="c1"># with &quot;open http://localhost:8086&quot; from your host.</span>
+    <span class="n">test_run</span><span class="p">()</span>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

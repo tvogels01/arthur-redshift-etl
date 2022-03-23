@@ -1,0 +1,7 @@
+etl.util.timer module
+=====================
+
+.. automodule:: etl.util.timer
+   :members:
+   :undoc-members:
+   :show-inheritance:

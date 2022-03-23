@@ -1,0 +1,1050 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.validate &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.validate</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The purpose of &quot;validate&quot; is to exercise the configuration, schemas, and queries.</span>
+
+<span class="sd">This includes static and runtime checks of our the description of the data warehouse.</span>
+
+<span class="sd">As always, the &quot;dry-run&quot; option tries to run as much as possible but doesn&#39;t change any state</span>
+<span class="sd">(i.e. doesn&#39;t write or create tables).</span>
+
+<span class="sd">Validating the warehouse schemas (definition of upstream tables and their transformations) includes:</span>
+<span class="sd">* Syntax checks (valid JSON?, valid against the JSON schema?)</span>
+<span class="sd">* Semantic checks (meaningful design files -- checks that are not described by a JSON schema)</span>
+<span class="sd">* Reload-ability (finds source schemas corresponding to unloaded tables)</span>
+<span class="sd">* Valid SQL in CTAS or views</span>
+<span class="sd"># Correct list of columns in CTAS or views</span>
+<span class="sd">* Correct description of dependencies</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">concurrent.futures</span>
+<span class="kn">import</span> <span class="nn">difflib</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">closing</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">groupby</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">attrgetter</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">from</span> <span class="nn">psycopg2.extensions</span> <span class="kn">import</span> <span class="n">connection</span> <span class="k">as</span> <span class="n">Connection</span>  <span class="c1"># only for type annotation</span>
+
+<span class="kn">import</span> <span class="nn">etl.db</span>
+<span class="kn">import</span> <span class="nn">etl.design.bootstrap</span>
+<span class="kn">import</span> <span class="nn">etl.relation</span>
+<span class="kn">from</span> <span class="nn">etl.config.dw</span> <span class="kn">import</span> <span class="n">DataWarehouseSchema</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ETLConfigError</span><span class="p">,</span>
+    <span class="n">ETLDelayedExit</span><span class="p">,</span>
+    <span class="n">ETLRuntimeError</span><span class="p">,</span>
+    <span class="n">TableDesignValidationError</span><span class="p">,</span>
+    <span class="n">UpstreamValidationError</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">etl.names</span> <span class="kn">import</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">TempTableName</span>
+<span class="kn">from</span> <span class="nn">etl.relation</span> <span class="kn">import</span> <span class="n">RelationDescription</span>
+<span class="kn">from</span> <span class="nn">etl.text</span> <span class="kn">import</span> <span class="n">join_with_single_quotes</span>
+<span class="kn">from</span> <span class="nn">etl.util.timer</span> <span class="kn">import</span> <span class="n">Timer</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+<span class="n">_error_occurred</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="validate_relation_description"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_relation_description">[docs]</a><span class="k">def</span> <span class="nf">validate_relation_description</span><span class="p">(</span>
+    <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load table design (which always also validates against the schema).</span>
+
+<span class="sd">    If we try to keep_going, then we don&#39;t fail but return None for invalid table designs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Loading and validating file &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">relation</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">ETLConfigError</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">keep_going</span><span class="p">:</span>
+            <span class="n">_error_occurred</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span>
+                <span class="s2">&quot;Ignoring failure to validate &#39;</span><span class="si">%s</span><span class="s2">&#39; and proceeding as requested:&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span>
+    <span class="k">return</span> <span class="n">relation</span></div>
+
+
+<div class="viewcode-block" id="validate_semantics"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_semantics">[docs]</a><span class="k">def</span> <span class="nf">validate_semantics</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">keep_going</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load local design files and validate them along the way against schemas and semantics.</span>
+
+<span class="sd">    Return list of successfully validated relations or raise exception on validation error.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># TODO With Python 3.6, we should pass in a thread_name_prefix</span>
+    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">relation</span><span class="p">:</span> <span class="n">validate_relation_description</span><span class="p">(</span><span class="n">relation</span><span class="p">,</span> <span class="n">keep_going</span><span class="p">),</span> <span class="n">relations</span>
+        <span class="p">)</span>
+    <span class="c1"># Drop all relations from the result which returned None (meaning they failed validation).</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>  <span class="c1"># type: ignore</span></div>
+
+
+<div class="viewcode-block" id="compare_query_to_design"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.compare_query_to_design">[docs]</a><span class="k">def</span> <span class="nf">compare_query_to_design</span><span class="p">(</span><span class="n">from_query</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">from_design</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate difference between the two lists and return human-interpretable string.</span>
+
+<span class="sd">    The assumption here is that we can run a query to find dependencies</span>
+<span class="sd">    and compare that list to what is stored in the table design file.</span>
+
+<span class="sd">    &gt;&gt;&gt; compare_query_to_design([&quot;a&quot;, &quot;b&quot;], [&quot;b&quot;, &quot;a&quot;])</span>
+<span class="sd">    &gt;&gt;&gt; compare_query_to_design([&quot;a&quot;, &quot;b&quot;], [&quot;a&quot;])</span>
+<span class="sd">    &quot;not listed in design = &#39;b&#39;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; compare_query_to_design([&quot;a&quot;], [&quot;a&quot;, &quot;b&quot;])</span>
+<span class="sd">    &quot;not found from query = &#39;b&#39;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; compare_query_to_design([&quot;a&quot;, &quot;b&quot;], [&quot;d&quot;, &quot;c&quot;, &quot;a&quot;])</span>
+<span class="sd">    &quot;not listed in design = &#39;b&#39;; not found from query = &#39;c&#39;, &#39;d&#39;&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">actual</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">from_query</span><span class="p">)</span>
+    <span class="n">design</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">from_design</span><span class="p">)</span>
+
+    <span class="n">not_in_design</span> <span class="o">=</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">actual</span> <span class="o">-</span> <span class="n">design</span><span class="p">)</span>
+    <span class="n">not_in_query</span> <span class="o">=</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">design</span> <span class="o">-</span> <span class="n">actual</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">not_in_design</span> <span class="ow">and</span> <span class="n">not_in_query</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;not listed in design = </span><span class="si">{}</span><span class="s2">; not found from query = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">not_in_design</span><span class="p">,</span> <span class="n">not_in_query</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">not_in_design</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;not listed in design = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">not_in_design</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">not_in_query</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;not found from query = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">not_in_query</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="validate_dependencies"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_dependencies">[docs]</a><span class="k">def</span> <span class="nf">validate_dependencies</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">:</span> <span class="n">TempTableName</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Download the dependencies (based on a temporary view) and compare with table design.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">tmp_view_name</span><span class="o">.</span><span class="n">is_late_binding_view</span><span class="p">:</span>
+        <span class="n">dependencies</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">fetch_dependency_hints</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">query_stmt</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dependencies</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Unable to validate &#39;</span><span class="si">%s</span><span class="s2">&#39; which depends on external tables&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span>
+            <span class="p">)</span>
+            <span class="k">return</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Dependencies of &#39;</span><span class="si">%s</span><span class="s2">&#39; per query plan: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">dependencies</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dependencies</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">fetch_dependencies</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Dependencies of &#39;</span><span class="si">%s</span><span class="s2">&#39; per catalog: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">dependencies</span><span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="n">difference</span> <span class="o">=</span> <span class="n">compare_query_to_design</span><span class="p">(</span><span class="n">dependencies</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;depends_on&quot;</span><span class="p">,</span> <span class="p">[]))</span>
+    <span class="k">if</span> <span class="n">difference</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Mismatch in dependencies of &#39;</span><span class="si">{}</span><span class="s2">&#39;: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">difference</span><span class="p">))</span>
+        <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span><span class="s2">&quot;mismatched dependencies in &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Dependencies listing in design file for &#39;</span><span class="si">%s</span><span class="s2">&#39; matches SQL&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_column_ordering"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_column_ordering">[docs]</a><span class="k">def</span> <span class="nf">validate_column_ordering</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">:</span> <span class="n">TempTableName</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Download the column order (using the temporary view) and compare with table design.&quot;&quot;&quot;</span>
+    <span class="n">attributes</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">fetch_attributes</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">)</span>
+    <span class="n">actual_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">attribute</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">actual_columns</span> <span class="ow">and</span> <span class="n">tmp_view_name</span><span class="o">.</span><span class="n">is_late_binding_view</span><span class="p">:</span>
+        <span class="c1"># Thanks to late-binding views it is not an error for a view to not be able to resolve</span>
+        <span class="c1"># its columns.</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Order of columns in design of &#39;</span><span class="si">%s</span><span class="s2">&#39; cannot be validated because external table is missing&quot;</span><span class="p">,</span>
+            <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Identity columns are inserted after the query has been run, so skip them here.</span>
+    <span class="n">expected_columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;identity&quot;</span><span class="p">))</span>
+    <span class="p">]</span>
+
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">get_list_difference</span><span class="p">(</span><span class="n">expected_columns</span><span class="p">,</span> <span class="n">actual_columns</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">diff</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+            <span class="s2">&quot;Order of columns in design of &#39;</span><span class="si">%s</span><span class="s2">&#39; does not match result of running its query&quot;</span><span class="p">,</span>
+            <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+            <span class="s2">&quot;You need to replace, insert and/or delete in &#39;</span><span class="si">%s</span><span class="s2">&#39; some column(s): </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">diff</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span><span class="s2">&quot;invalid columns or column order in &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Order of columns in design of &#39;</span><span class="si">%s</span><span class="s2">&#39; matches result of running SQL query&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_single_transform"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_single_transform">[docs]</a><span class="k">def</span> <span class="nf">validate_single_transform</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">keep_going</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test-run a relation (CTAS or VIEW) by creating a temporary view.</span>
+
+<span class="sd">    With a view created, we can extract dependency information and a list of columns</span>
+<span class="sd">    to make sure table design and query match up.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">has_external_dependencies</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">dependency</span><span class="o">.</span><span class="n">is_external</span> <span class="k">for</span> <span class="n">dependency</span> <span class="ow">in</span> <span class="n">relation</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">relation</span><span class="o">.</span><span class="n">matching_temporary_view</span><span class="p">(</span>
+            <span class="n">conn</span><span class="p">,</span> <span class="n">as_late_binding_view</span><span class="o">=</span><span class="n">has_external_dependencies</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">tmp_view_name</span><span class="p">:</span>
+            <span class="n">validate_dependencies</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">)</span>
+            <span class="n">validate_column_ordering</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="n">ETLConfigError</span><span class="p">,</span> <span class="n">ETLRuntimeError</span><span class="p">,</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">Error</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">keep_going</span><span class="p">:</span>
+            <span class="k">raise</span>
+        <span class="n">_error_occurred</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span>
+            <span class="s2">&quot;Ignoring failure to validate &#39;</span><span class="si">%s</span><span class="s2">&#39; and proceeding as requested:&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_transforms"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_transforms">[docs]</a><span class="k">def</span> <span class="nf">validate_transforms</span><span class="p">(</span>
+    <span class="n">dsn</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">keep_going</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate transforms (CTAS or VIEW relations) by trying to run them in the database.</span>
+
+<span class="sd">    This allows us to check their syntax, their dependencies, etc.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">transforms</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">is_ctas_relation</span> <span class="ow">or</span> <span class="n">relation</span><span class="o">.</span><span class="n">is_view_relation</span>
+    <span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">transforms</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No transforms found or selected, skipping CTAS or VIEW validation&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># TODO Parallelize but use separate connections per thread</span>
+    <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">connection</span><span class="p">(</span><span class="n">dsn</span><span class="p">,</span> <span class="n">autocommit</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
+            <span class="n">validate_single_transform</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_list_difference"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.get_list_difference">[docs]</a><span class="k">def</span> <span class="nf">get_list_difference</span><span class="p">(</span><span class="n">list1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">list2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return list of elements that help turn list1 into list2.</span>
+
+<span class="sd">    This should be a &quot;minimal&quot; list of differences based on changing one list into the other.</span>
+
+<span class="sd">    &gt;&gt;&gt; get_list_difference([&quot;a&quot;, &quot;b&quot;], [&quot;b&quot;, &quot;a&quot;])</span>
+<span class="sd">    [&#39;b&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; get_list_difference([&quot;a&quot;, &quot;b&quot;], [&quot;a&quot;, &quot;c&quot;, &quot;b&quot;])</span>
+<span class="sd">    [&#39;c&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; get_list_difference([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;], [&quot;a&quot;, &quot;c&quot;, &quot;b&quot;, &quot;e&quot;])</span>
+<span class="sd">    [&#39;c&#39;, &#39;d&#39;]</span>
+
+<span class="sd">    The last list happens because the matcher asks to insert &#39;c&#39;, then delete &#39;c&#39; and &#39;d&#39; later.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">matcher</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">)</span>  <span class="c1"># None means skip junk detection</span>
+    <span class="k">for</span> <span class="n">code</span><span class="p">,</span> <span class="n">left1</span><span class="p">,</span> <span class="n">right1</span><span class="p">,</span> <span class="n">left2</span><span class="p">,</span> <span class="n">right2</span> <span class="ow">in</span> <span class="n">matcher</span><span class="o">.</span><span class="n">get_opcodes</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="s2">&quot;equal&quot;</span><span class="p">:</span>
+            <span class="n">diff</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="n">left1</span><span class="p">:</span><span class="n">right1</span><span class="p">])</span>
+            <span class="n">diff</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="n">left2</span><span class="p">:</span><span class="n">right2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_reload"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_reload">[docs]</a><span class="k">def</span> <span class="nf">validate_reload</span><span class="p">(</span>
+    <span class="n">schemas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DataWarehouseSchema</span><span class="p">],</span> <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">keep_going</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Verify that columns between unloaded tables and reloaded tables are the same.</span>
+
+<span class="sd">    Once the designs are validated, we can unload a relation &#39;s.t&#39; with a target &#39;u&#39; and</span>
+<span class="sd">    then extract and load it back into &#39;u.t&#39;.</span>
+
+<span class="sd">    Note that the order matters for these lists of columns.  (Which is also why we can&#39;t take</span>
+<span class="sd">    the (symmetric) difference between columns but must be careful checking the column lists.)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">unloaded_relations</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">is_unloadable</span><span class="p">]</span>
+    <span class="n">target_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">schema</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">schemas</span> <span class="k">if</span> <span class="n">schema</span><span class="o">.</span><span class="n">is_an_unload_target</span><span class="p">}</span>
+    <span class="n">relations_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">d</span><span class="o">.</span><span class="n">identifier</span><span class="p">:</span> <span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">relations</span><span class="p">}</span>
+
+    <span class="k">for</span> <span class="n">unloaded</span> <span class="ow">in</span> <span class="n">unloaded_relations</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">unloaded</span><span class="o">.</span><span class="n">unload_target</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">target_lookup</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span>
+                    <span class="s2">&quot;invalid target &#39;</span><span class="si">{}</span><span class="s2">&#39; in unloadable relation &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">unloaded</span><span class="o">.</span><span class="n">unload_target</span><span class="p">,</span> <span class="n">unloaded</span><span class="o">.</span><span class="n">identifier</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Checking whether &#39;</span><span class="si">%s</span><span class="s2">&#39; is loaded back in&quot;</span><span class="p">,</span> <span class="n">unloaded</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+                <span class="n">reloaded</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="n">unloaded</span><span class="o">.</span><span class="n">unload_target</span><span class="p">,</span> <span class="n">unloaded</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">reloaded</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">in</span> <span class="n">relations_lookup</span><span class="p">:</span>
+                    <span class="n">relation</span> <span class="o">=</span> <span class="n">relations_lookup</span><span class="p">[</span><span class="n">reloaded</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="s2">&quot;Checking for consistency between &#39;</span><span class="si">%s</span><span class="s2">&#39; and &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                        <span class="n">unloaded</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                        <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                    <span class="p">)</span>
+                    <span class="n">unloaded_columns</span> <span class="o">=</span> <span class="n">unloaded</span><span class="o">.</span><span class="n">unquoted_columns</span>
+                    <span class="n">reloaded_columns</span> <span class="o">=</span> <span class="n">relation</span><span class="o">.</span><span class="n">unquoted_columns</span>
+                    <span class="k">if</span> <span class="n">unloaded_columns</span> <span class="o">!=</span> <span class="n">reloaded_columns</span><span class="p">:</span>
+                        <span class="n">diff</span> <span class="o">=</span> <span class="n">get_list_difference</span><span class="p">(</span><span class="n">reloaded_columns</span><span class="p">,</span> <span class="n">unloaded_columns</span><span class="p">)</span>
+                        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                            <span class="s2">&quot;Column difference detected between &#39;</span><span class="si">%s</span><span class="s2">&#39; and &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                            <span class="n">unloaded</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                            <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                        <span class="p">)</span>
+                        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                            <span class="s2">&quot;You need to replace, insert and/or delete in &#39;</span><span class="si">%s</span><span class="s2">&#39; some column(s): </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                            <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">diff</span><span class="p">),</span>
+                        <span class="p">)</span>
+                        <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span>
+                            <span class="s2">&quot;unloaded relation &#39;</span><span class="si">%s</span><span class="s2">&#39; failed to match counterpart&quot;</span> <span class="o">%</span> <span class="n">unloaded</span><span class="o">.</span><span class="n">identifier</span>
+                        <span class="p">)</span>
+        <span class="k">except</span> <span class="n">TableDesignValidationError</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">keep_going</span><span class="p">:</span>
+                <span class="n">_error_occurred</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span>
+                    <span class="s2">&quot;Ignoring failure to validate &#39;</span><span class="si">%s</span><span class="s2">&#39; and proceeding as requested:&quot;</span><span class="p">,</span> <span class="n">unloaded</span><span class="o">.</span><span class="n">identifier</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span></div>
+
+
+<div class="viewcode-block" id="check_select_permission"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.check_select_permission">[docs]</a><span class="k">def</span> <span class="nf">check_select_permission</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check whether permissions on table will allow us to read from database.&quot;&quot;&quot;</span>
+    <span class="c1"># Why mess with querying the permissions table when you can just try to read (EAFP).</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT 1 AS check_permission FROM </span><span class="si">{}</span><span class="s2"> WHERE FALSE&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">statement</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">UpstreamValidationError</span><span class="p">(</span>
+            <span class="s2">&quot;failed to read from upstream table &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span></div>
+
+
+<div class="viewcode-block" id="validate_upstream_columns"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_upstream_columns">[docs]</a><span class="k">def</span> <span class="nf">validate_upstream_columns</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compare columns in upstream table to the table design file.</span>
+
+<span class="sd">    It is an ERROR if the design lists columns that do not exist in the upstream table. Exceptions</span>
+<span class="sd">    here are calculated columns (those starting with etl__) or columns that are marked as skipped.</span>
+
+<span class="sd">    It causes a WARNING to have more columns in the upstream table than are defined in the design</span>
+<span class="sd">    or to have columns skipped in the design that do not exist upstream.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">source_table_name</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">source_table_name</span>
+
+    <span class="n">columns_info</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">fetch_attributes</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">columns_info</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">UpstreamValidationError</span><span class="p">(</span>
+            <span class="s2">&quot;table &#39;</span><span class="si">%s</span><span class="s2">&#39; is gone or has no columns left&quot;</span> <span class="o">%</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Found </span><span class="si">%d</span><span class="s2"> column(s) in relation &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns_info</span><span class="p">),</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+
+    <span class="n">current_columns</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">column</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns_info</span><span class="p">)</span>
+    <span class="n">design_columns</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
+        <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;etl__&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">design_required_columns</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
+        <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">design_columns</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">missing_required_columns</span> <span class="o">=</span> <span class="n">design_required_columns</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">current_columns</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">missing_required_columns</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">UpstreamValidationError</span><span class="p">(</span>
+            <span class="s2">&quot;design of &#39;</span><span class="si">%s</span><span class="s2">&#39; has columns that do not exist upstream: </span><span class="si">%s</span><span class="s2">&quot;</span>
+            <span class="o">%</span> <span class="p">(</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">missing_required_columns</span><span class="p">))</span>
+        <span class="p">)</span>
+
+    <span class="n">extra_design_columns</span> <span class="o">=</span> <span class="n">design_columns</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">current_columns</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">extra_design_columns</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Column(s) that are in the design of &#39;</span><span class="si">%s</span><span class="s2">&#39; but do not exist upstream in &#39;</span><span class="si">%s</span><span class="s2">&#39;: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">source_name</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">extra_design_columns</span><span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="n">missing_design_columns</span> <span class="o">=</span> <span class="n">current_columns</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">design_columns</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">missing_design_columns</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Column(s) that exist upstream in &#39;</span><span class="si">%s</span><span class="s2">&#39; but not in the design &#39;</span><span class="si">%s</span><span class="s2">&#39;: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">source_name</span><span class="p">,</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">missing_design_columns</span><span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="n">current_is_not_null</span> <span class="o">=</span> <span class="p">{</span><span class="n">column</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns_info</span> <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">not_null</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;not_null&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">current_is_not_null</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span>
+                <span class="s2">&quot;not null constraint of column &#39;</span><span class="si">{}</span><span class="s2">&#39; in &#39;</span><span class="si">{}</span><span class="s2">&#39; not enforced upstream&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">table</span><span class="o">.</span><span class="n">identifier</span>
+                <span class="p">)</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_upstream_constraints"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_upstream_constraints">[docs]</a><span class="k">def</span> <span class="nf">validate_upstream_constraints</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compare table constraints between database and table design file.</span>
+
+<span class="sd">    Note that &quot;natural_key&quot; or &quot;surrogate_key&quot; constraints are not valid in upstream</span>
+<span class="sd">    (source) tables. Also, a &quot;primary_key&quot; in upstream may be used as a &quot;unique&quot; constraint</span>
+<span class="sd">    in the design (but not vice versa).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">current_constraint</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">fetch_constraints</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">source_table_name</span><span class="p">)</span>
+    <span class="n">design_constraint</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[])</span>
+
+    <span class="n">current_primary_key</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">col</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">current_constraint</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;primary_key&quot;</span><span class="p">,</span> <span class="p">[]))</span>
+    <span class="n">current_uniques</span> <span class="o">=</span> <span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;unique&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">current_constraint</span> <span class="k">if</span> <span class="s2">&quot;unique&quot;</span> <span class="ow">in</span> <span class="n">c</span><span class="p">]</span>
+
+    <span class="n">design_primary_key</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">col</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">design_constraint</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;primary_key&quot;</span><span class="p">,</span> <span class="p">[]))</span>
+    <span class="n">design_uniques</span> <span class="o">=</span> <span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;unique&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">design_constraint</span> <span class="k">if</span> <span class="s2">&quot;unique&quot;</span> <span class="ow">in</span> <span class="n">c</span><span class="p">]</span>
+
+    <span class="c1"># We&#39;ll pluck from the not_used info and report if anything wasn&#39;t used in the design.</span>
+    <span class="n">not_used</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">current_constraint</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">design_primary_key</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">current_primary_key</span> <span class="o">==</span> <span class="n">design_primary_key</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">not_used</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="s2">&quot;primary_key&quot;</span> <span class="ow">in</span> <span class="n">not_used</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="k">del</span> <span class="n">not_used</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">current_primary_key</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span>
+                <span class="s2">&quot;the primary_key constraint in &#39;</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%s</span><span class="s2">) does not match upstream (</span><span class="si">%s</span><span class="s2">)&quot;</span>
+                <span class="o">%</span> <span class="p">(</span>
+                    <span class="n">table</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                    <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">design_primary_key</span><span class="p">),</span>
+                    <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">current_primary_key</span><span class="p">),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span>
+                <span class="s2">&quot;the primary key constraint in &#39;</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%s</span><span class="s2">) is not enforced upstream&quot;</span>
+                <span class="o">%</span> <span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">design_primary_key</span><span class="p">))</span>
+            <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">design_unique</span> <span class="ow">in</span> <span class="n">design_uniques</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">current_primary_key</span> <span class="o">==</span> <span class="n">design_unique</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">not_used</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="s2">&quot;primary_key&quot;</span> <span class="ow">in</span> <span class="n">not_used</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="k">del</span> <span class="n">not_used</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="k">break</span>
+        <span class="k">if</span> <span class="n">design_unique</span> <span class="ow">in</span> <span class="n">current_uniques</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">not_used</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="s2">&quot;unique&quot;</span> <span class="ow">in</span> <span class="n">not_used</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">not_used</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;unique&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">design_unique</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">not_used</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="k">break</span>
+        <span class="k">if</span> <span class="n">current_primary_key</span> <span class="o">!=</span> <span class="n">design_unique</span> <span class="ow">and</span> <span class="n">design_unique</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">current_uniques</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span>
+                <span class="s2">&quot;the unique constraint in &#39;</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%s</span><span class="s2">) is not enforced upstream&quot;</span>
+                <span class="o">%</span> <span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">design_unique</span><span class="p">))</span>
+            <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">not_used</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">constraint_type</span><span class="p">,</span> <span class="n">columns</span> <span class="ow">in</span> <span class="n">constraint</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Upstream source has additional </span><span class="si">%s</span><span class="s2"> constraint (</span><span class="si">%s</span><span class="s2">) for &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                <span class="n">constraint_type</span><span class="p">,</span>
+                <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">columns</span><span class="p">),</span>
+                <span class="n">table</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">],</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_upstream_table"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_upstream_table">[docs]</a><span class="k">def</span> <span class="nf">validate_upstream_table</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">keep_going</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Validate table design of an upstream table against its source database.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">log_error</span><span class="p">():</span>
+            <span class="n">check_select_permission</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">source_table_name</span><span class="p">)</span>
+            <span class="n">validate_upstream_columns</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+            <span class="n">validate_upstream_constraints</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Successfully validated &#39;</span><span class="si">%s</span><span class="s2">&#39; against its upstream source&quot;</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="n">ETLConfigError</span><span class="p">,</span> <span class="n">ETLRuntimeError</span><span class="p">,</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">Error</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">keep_going</span><span class="p">:</span>
+            <span class="n">_error_occurred</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span>
+                <span class="s2">&quot;Ignoring failure to validate &#39;</span><span class="si">%s</span><span class="s2">&#39; and proceeding as requested:&quot;</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">identifier</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span></div>
+
+
+<div class="viewcode-block" id="validate_upstream_sources"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_upstream_sources">[docs]</a><span class="k">def</span> <span class="nf">validate_upstream_sources</span><span class="p">(</span>
+    <span class="n">schemas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DataWarehouseSchema</span><span class="p">],</span> <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">keep_going</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate the designs (and the current configuration) in comparison to upstream databases.</span>
+
+<span class="sd">    This can fail if</span>
+<span class="sd">    (1) the upstream database is not reachable</span>
+<span class="sd">    (2) the upstream table is not readable</span>
+<span class="sd">    (3) the upstream table does not exist</span>
+<span class="sd">    (4) the upstream columns are not a superset of the columns in the table design</span>
+<span class="sd">    (5) the upstream column does not have the null constraint set while the table design does</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">source_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">schema</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">schema</span> <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">schemas</span> <span class="k">if</span> <span class="n">schema</span><span class="o">.</span><span class="n">is_database_source</span><span class="p">}</span>
+
+    <span class="c1"># Re-sort relations by source so that we need to only connect once to each source</span>
+    <span class="n">upstream_tables</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_name</span> <span class="ow">in</span> <span class="n">source_lookup</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">upstream_tables</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No upstream tables found or selected, skipping source validation&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">upstream_tables</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;source_name&quot;</span><span class="p">))</span>
+
+    <span class="c1"># TODO Parallelize around sources (like extract)</span>
+    <span class="k">for</span> <span class="n">source_name</span><span class="p">,</span> <span class="n">table_group</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="n">upstream_tables</span><span class="p">,</span> <span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;source_name&quot;</span><span class="p">)):</span>
+        <span class="n">tables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">table_group</span><span class="p">)</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="n">source_lookup</span><span class="p">[</span><span class="n">source_name</span><span class="p">]</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Checking </span><span class="si">%d</span><span class="s2"> table(s) in upstream source &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tables</span><span class="p">),</span> <span class="n">source_name</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">connection</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">dsn</span><span class="p">,</span> <span class="n">autocommit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">:</span>
+                <span class="n">validate_upstream_table</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_execution_order"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_execution_order">[docs]</a><span class="k">def</span> <span class="nf">validate_execution_order</span><span class="p">(</span><span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">keep_going</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Make sure we can build an execution order.</span>
+
+<span class="sd">    We&#39;ll catch an exception and set a flag if the keep_going option is true.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ordered_relations</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">relation</span><span class="o">.</span><span class="n">order_by_dependencies</span><span class="p">(</span><span class="n">relations</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">ETLConfigError</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">keep_going</span><span class="p">:</span>
+            <span class="n">_error_occurred</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s2">&quot;Failed to determine evaluation order, proceeding as requested:&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">relations</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span>
+    <span class="k">return</span> <span class="n">ordered_relations</span></div>
+
+
+<div class="viewcode-block" id="validate_designs"><a class="viewcode-back" href="../../etl/etl.validate.html#etl.validate.validate_designs">[docs]</a><span class="k">def</span> <span class="nf">validate_designs</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span>
+    <span class="n">keep_going</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">skip_sources</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">skip_dependencies</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Make sure that all table design files pass the validation checks.</span>
+
+<span class="sd">    See module documentation for list of checks.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span>
+    <span class="n">_error_occurred</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="n">valid_descriptions</span> <span class="o">=</span> <span class="n">validate_semantics</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">)</span>
+    <span class="n">ordered_descriptions</span> <span class="o">=</span> <span class="n">validate_execution_order</span><span class="p">(</span><span class="n">valid_descriptions</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">)</span>
+
+    <span class="n">validate_reload</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">schemas</span><span class="p">,</span> <span class="n">valid_descriptions</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">skip_sources</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Skipping validation of designs against upstream sources&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">Timer</span><span class="p">()</span> <span class="k">as</span> <span class="n">timer</span><span class="p">:</span>
+            <span class="n">validate_upstream_sources</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">schemas</span><span class="p">,</span> <span class="n">ordered_descriptions</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Validated designs against upstream sources (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">timer</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">skip_dependencies</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Skipping validation of transforms against data warehouse&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">Timer</span><span class="p">()</span> <span class="k">as</span> <span class="n">timer</span><span class="p">:</span>
+            <span class="n">validate_transforms</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">dsn_etl</span><span class="p">,</span> <span class="n">ordered_descriptions</span><span class="p">,</span> <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Validated transforms against data warehouse (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">timer</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">_error_occurred</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="n">ETLDelayedExit</span><span class="p">(</span><span class="s2">&quot;At least one error occurred while validating with &#39;keep going&#39; option&quot;</span><span class="p">)</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

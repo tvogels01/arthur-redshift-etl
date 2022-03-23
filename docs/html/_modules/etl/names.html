@@ -1,0 +1,1026 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.names &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.names</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Utility methods to deal with &quot;names&quot; of relations.</span>
+
+<span class="sd">To be safe, we always delimit names in queries but would prefer not to during logging.</span>
+<span class="sd">See TableName.</span>
+
+<span class="sd">There are additional methods and classes here to support the feature of choosing relations</span>
+<span class="sd">by a pattern from the command line.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">fnmatch</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLSystemError</span>
+<span class="kn">from</span> <span class="nn">etl.text</span> <span class="kn">import</span> <span class="n">join_with_single_quotes</span>
+
+
+<div class="viewcode-block" id="as_staging_name"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.as_staging_name">[docs]</a><span class="k">def</span> <span class="nf">as_staging_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transform the schema name to its staging position.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;$&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s2">&quot;etl_staging&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="as_backup_name"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.as_backup_name">[docs]</a><span class="k">def</span> <span class="nf">as_backup_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transform the schema name to its backup position.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;$&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s2">&quot;etl_backup&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="TableName"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableName">[docs]</a><span class="k">class</span> <span class="nc">TableName</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class to automatically create delimited identifiers for tables.</span>
+
+<span class="sd">    Given a table s.t, then the cautious identifier for SQL code is: &quot;s&quot;.&quot;t&quot;</span>
+<span class="sd">    But the more readable name is still: s.t</span>
+<span class="sd">    Note that the preference for logging is to always use single-quotes, &#39;s.t&#39; (see {:x} below).</span>
+
+<span class="sd">    Another, more curious use for instances is to store shell patterns for the schema name</span>
+<span class="sd">    and table name so that we can match against other instances.</span>
+
+<span class="sd">    Comparisons (for schema and table names) are case-insensitive.</span>
+
+<span class="sd">    TableNames have a notion of known &quot;managed&quot; schemas, which include both</span>
+<span class="sd">    sources and transformations listed in configuration files. A TableName</span>
+<span class="sd">    is considered unmanaged if its schema does not belong to the list of</span>
+<span class="sd">    managed schemas, and in that case its schema property is never translated</span>
+<span class="sd">    into a staging version.</span>
+
+<span class="sd">    &gt;&gt;&gt; from etl.config.dw import DataWarehouseSchema</span>
+<span class="sd">    &gt;&gt;&gt; orders = TableName.from_identifier(&quot;www.orders&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; str(orders)</span>
+<span class="sd">    &#39;&quot;www&quot;.&quot;orders&quot;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; orders.identifier</span>
+<span class="sd">    &#39;www.orders&#39;</span>
+<span class="sd">    &gt;&gt;&gt; same_orders = TableName.from_identifier(&quot;WWW.Orders&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; orders == same_orders</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; id(orders) == id(same_orders)</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; hash(orders) == hash(same_orders)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; w3 = TableName.from_identifier(&quot;w3.orders&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; orders == w3</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; purchases = TableName.from_identifier(&quot;www.purchases&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; orders &lt; purchases</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; purchases.managed_schemas = [&#39;www&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; staging_purchases = purchases.as_staging_table_name()</span>
+<span class="sd">    &gt;&gt;&gt; staging_purchases.managed_schemas = [&#39;www&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; # Now the table names are the same but they are in different schemas (staging vs. not)</span>
+<span class="sd">    &gt;&gt;&gt; staging_purchases.table == purchases.table</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; staging_purchases.schema == purchases.schema</span>
+<span class="sd">    False</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;_schema&quot;</span><span class="p">,</span> <span class="s2">&quot;_table&quot;</span><span class="p">,</span> <span class="s2">&quot;_is_staging&quot;</span><span class="p">,</span> <span class="s2">&quot;_managed_schemas&quot;</span><span class="p">,</span> <span class="s2">&quot;_external_schemas&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">table</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_staging</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Concession to subclasses ... schema is optional</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">if</span> <span class="n">schema</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_staging</span> <span class="o">=</span> <span class="n">is_staging</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_managed_schemas</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_external_schemas</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_staging</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_managed</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">as_staging_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_schema</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_table</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_staging</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_staging</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">managed_schemas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">frozenset</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List of schemas that are managed by Arthur.</span>
+
+<span class="sd">        This contains all schemas not just the schema of this relation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_managed_schemas</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">schemas</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span><span class="o">.</span><span class="n">schemas</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">ETLSystemError</span><span class="p">(</span><span class="s2">&quot;dw_config has not been set!&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_managed_schemas</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">schema</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">schemas</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_managed_schemas</span>
+
+    <span class="nd">@managed_schemas</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">managed_schemas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema_names</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># This setter only exists for tests.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_managed_schemas</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">schema_names</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">external_schemas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">frozenset</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;List external schemas that are not managed by us and may not exist during validation.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_external_schemas</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">schemas</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span><span class="o">.</span><span class="n">external_schemas</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">ETLSystemError</span><span class="p">(</span><span class="s2">&quot;dw_config has not been set!&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_external_schemas</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">schema</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">schemas</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_external_schemas</span>
+
+<div class="viewcode-block" id="TableName.to_tuple"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableName.to_tuple">[docs]</a>    <span class="k">def</span> <span class="nf">to_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return schema name and table name as a handy tuple.</span>
+
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;weather&quot;, &quot;temp&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; schema_name, table_name = tn.to_tuple()</span>
+<span class="sd">        &gt;&gt;&gt; schema_name, table_name</span>
+<span class="sd">        (&#39;weather&#39;, &#39;temp&#39;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">identifier</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return simple identifier, like one would use on the command line.</span>
+
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;hello&quot;, &quot;world&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tn.identifier</span>
+<span class="sd">        &#39;hello.world&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">schema</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">identifier_as_re</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a regular expression that would look for the (unquoted) identifier.</span>
+
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;dw&quot;, &quot;fact&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tn.identifier_as_re</span>
+<span class="sd">        &#39;\\bdw\\.fact\\b&#39;</span>
+<span class="sd">        &gt;&gt;&gt; import re</span>
+<span class="sd">        &gt;&gt;&gt; re.match(tn.identifier_as_re, &quot;dw.fact&quot;) is not None</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; re.match(tn.identifier_as_re, &quot;dw_fact&quot;) is None</span>
+<span class="sd">        True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">r</span><span class="s2">&quot;\b</span><span class="si">{}</span><span class="s2">\b&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_managed</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">managed_schemas</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_external</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">external_schemas</span>
+
+<div class="viewcode-block" id="TableName.from_identifier"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableName.from_identifier">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_identifier</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Split identifier into schema and table before creating a new TableName instance.</span>
+
+<span class="sd">        &gt;&gt;&gt; identifier = &quot;ford.mustang&quot;</span>
+<span class="sd">        &gt;&gt;&gt; tn = TableName.from_identifier(identifier)</span>
+<span class="sd">        &gt;&gt;&gt; identifier == tn.identifier</span>
+<span class="sd">        True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">schema</span><span class="p">,</span> <span class="n">table</span> <span class="o">=</span> <span class="n">identifier</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return delimited table identifier with quotes around schema and table name.</span>
+
+<span class="sd">        This safeguards against unscrupulous users who use &quot;default&quot; as table name.</span>
+
+<span class="sd">        &gt;&gt;&gt; import etl.config</span>
+<span class="sd">        &gt;&gt;&gt; from collections import namedtuple</span>
+<span class="sd">        &gt;&gt;&gt; MockDWConfig = namedtuple(&#39;MockDWConfig&#39;, [&#39;schemas&#39;])</span>
+<span class="sd">        &gt;&gt;&gt; MockSchema = namedtuple(&#39;MockSchema&#39;, [&#39;name&#39;])</span>
+<span class="sd">        &gt;&gt;&gt; etl.config._dw_config = MockDWConfig(schemas=[MockSchema(name=&#39;hello&#39;)])</span>
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;hello&quot;, &quot;world&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; str(tn)</span>
+<span class="sd">        &#39;&quot;hello&quot;.&quot;world&quot;&#39;</span>
+<span class="sd">        &gt;&gt;&gt; str(tn.as_staging_table_name())</span>
+<span class="sd">        &#39;&quot;etl_staging$hello&quot;.&quot;world&quot;&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot;.&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__format__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format name as delimited identifier (with quotes) or just as an identifier.</span>
+
+<span class="sd">        With the default or &#39;:s&#39;, it&#39;s a delimited identifier with quotes.</span>
+<span class="sd">        With &#39;:x&quot;, the name is left bare but single quotes are around it.</span>
+
+<span class="sd">        &gt;&gt;&gt; pu = TableName(&quot;public&quot;, &quot;users&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; format(pu)</span>
+<span class="sd">        &#39;&quot;public&quot;.&quot;users&quot;&#39;</span>
+<span class="sd">        &gt;&gt;&gt; format(pu, &#39;x&#39;)</span>
+<span class="sd">        &quot;&#39;public.users&#39;&quot;</span>
+<span class="sd">        &gt;&gt;&gt; &quot;SELECT * FROM {:s}&quot;.format(pu)</span>
+<span class="sd">        &#39;SELECT * FROM &quot;public&quot;.&quot;users&quot;&#39;</span>
+<span class="sd">        &gt;&gt;&gt; &quot;Table {:x} contains users&quot;.format(pu)  # new style with using formatting code</span>
+<span class="sd">        &quot;Table &#39;public.users&#39; contains users&quot;</span>
+<span class="sd">        &gt;&gt;&gt; &quot;Table &#39;{}&#39; contains users&quot;.format(pu.identifier)  # old style by accessing property</span>
+<span class="sd">        &quot;Table &#39;public.users&#39; contains users&quot;</span>
+<span class="sd">        &gt;&gt;&gt; &quot;Oops: {:y}&quot;.format(pu)</span>
+<span class="sd">        Traceback (most recent call last):</span>
+<span class="sd">        ValueError: unknown format code &#39;y&#39; for TableName</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">code</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">code</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&#39;</span><span class="si">{:s}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;unknown format code &#39;</span><span class="si">{}</span><span class="s2">&#39; for </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">TableName</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_tuple</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">to_tuple</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_tuple</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;TableName&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Order two table names, case-insensitive.</span>
+
+<span class="sd">        &gt;&gt;&gt; ta = TableName(&quot;Iowa&quot;, &quot;Cedar Rapids&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tb = TableName(&quot;Iowa&quot;, &quot;Davenport&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; ta &lt; tb</span>
+<span class="sd">        True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">identifier</span>
+
+<div class="viewcode-block" id="TableName.match"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableName.match">[docs]</a>    <span class="k">def</span> <span class="nf">match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;TableName&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Treat yo&#39;self as a tuple of patterns and match against the other table.</span>
+
+<span class="sd">        &gt;&gt;&gt; tp = TableName(&quot;w*&quot;, &quot;o*&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;www&quot;, &quot;orders&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tp.match(tn)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;worldwide&quot;, &quot;octopus&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tp.match(tn)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;sales&quot;, &quot;orders&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tp.match(tn)</span>
+<span class="sd">        False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">other_schema</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">schema</span>
+        <span class="n">other_table</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">table</span>
+        <span class="k">return</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">other_schema</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span> <span class="ow">and</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">other_table</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TableName.match_pattern"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableName.match_pattern">[docs]</a>    <span class="k">def</span> <span class="nf">match_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test whether this table matches the given pattern.</span>
+
+<span class="sd">        &gt;&gt;&gt; tn = TableName(&quot;www&quot;, &quot;orders&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; tn.match_pattern(&quot;w*.o*&quot;)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; tn.match_pattern(&quot;o*.w*&quot;)</span>
+<span class="sd">        False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TableName.as_staging_table_name"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableName.as_staging_table_name">[docs]</a>    <span class="k">def</span> <span class="nf">as_staging_table_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">TableName</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">to_tuple</span><span class="p">(),</span> <span class="n">is_staging</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TempTableName"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TempTableName">[docs]</a><span class="k">class</span> <span class="nc">TempTableName</span><span class="p">(</span><span class="n">TableName</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class to deal with names of temporary relations.</span>
+
+<span class="sd">    Note that temporary views or tables do not have a schema (*) and have a name starting with &#39;#&#39;.</span>
+<span class="sd">    (* = strictly speaking, their schema is one of the pg_temp% schemas. But who&#39;s looking.)</span>
+
+<span class="sd">    &gt;&gt;&gt; temp = TempTableName(&quot;#hello&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; str(temp)</span>
+<span class="sd">    &#39;&quot;#hello&quot;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; temp.identifier</span>
+<span class="sd">    &#39;#hello&#39;</span>
+<span class="sd">    &gt;&gt;&gt; &quot;For SQL: {:s}, for logging: {:x}&quot;.format(temp, temp)</span>
+<span class="sd">    &#39;For SQL: &quot;#hello&quot;, for logging: \&#39;#hello\&#39;&#39;</span>
+
+<span class="sd">    Schema and name comparison in SQL continues to work if you use LIKE for schema names:</span>
+<span class="sd">    &gt;&gt;&gt; temp.schema</span>
+<span class="sd">    &#39;pg_temp%&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">table</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;name of temporary table must start with &#39;#&#39;&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+        <span class="c1"># Enable remembering whether this is a temporary view with late schema binding.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_late_binding_view</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;pg_temp%&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">identifier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&quot;</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+
+<div class="viewcode-block" id="TempTableName.for_table"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TempTableName.for_table">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">for_table</span><span class="p">(</span><span class="n">table</span><span class="p">:</span> <span class="n">TableName</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a valid name for a temporary table that&#39;s derived from the given table name.</span>
+
+<span class="sd">        Leaks Redshift spec in that we make sure that names are less than 127 characters long.</span>
+
+<span class="sd">        &gt;&gt;&gt; example = &quot;public.speakeasy&quot;</span>
+<span class="sd">        &gt;&gt;&gt; tn = TableName.from_identifier(example)</span>
+<span class="sd">        &gt;&gt;&gt; temp = TempTableName.for_table(tn)</span>
+<span class="sd">        &gt;&gt;&gt; temp.identifier</span>
+<span class="sd">        &#39;#public$speakeasy&#39;</span>
+<span class="sd">        &gt;&gt;&gt; str(temp)</span>
+<span class="sd">        &#39;&quot;#public$speakeasy&quot;&#39;</span>
+
+<span class="sd">        &gt;&gt;&gt; too_long = &quot;public.&quot; + &quot;long&quot; * 32</span>
+<span class="sd">        &gt;&gt;&gt; tt = TempTableName.for_table(TableName.from_identifier(too_long))</span>
+<span class="sd">        &gt;&gt;&gt; len(tt.identifier)</span>
+<span class="sd">        127</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">temp_name</span> <span class="o">=</span> <span class="s2">&quot;#</span><span class="si">{0.schema}</span><span class="s2">$</span><span class="si">{0.table}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">127</span><span class="p">:</span>
+            <span class="n">temp_name</span> <span class="o">=</span> <span class="n">temp_name</span><span class="p">[:</span><span class="mi">119</span><span class="p">]</span> <span class="o">+</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span><span class="o">.</span><span class="n">hex</span><span class="p">[:</span><span class="mi">8</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">TempTableName</span><span class="p">(</span><span class="n">temp_name</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TableSelector"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableSelector">[docs]</a><span class="k">class</span> <span class="nc">TableSelector</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class to hold patterns to filter table names.</span>
+
+<span class="sd">    Patterns that are supported are based on &quot;glob&quot; matches, which use *, ?, and [] -- just</span>
+<span class="sd">    like the shell does. But note that all matching is done case-insensitive.</span>
+
+<span class="sd">    There is a concept of &quot;base schemas.&quot;  This list should be based on the configuration and</span>
+<span class="sd">    defines the set of usable schemas.  (&quot;Schemas&quot; here refers to either upstream sources or</span>
+<span class="sd">    schemas storing transformations.) So when base schemas are defined then there is an implied</span>
+<span class="sd">    additional match against them before a table name is tried to be matched against stored</span>
+<span class="sd">    patterns. If no base schemas are set, then we default simply to a list of schemas from the</span>
+<span class="sd">    patterns.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;_patterns&quot;</span><span class="p">,</span> <span class="s2">&quot;_base_schemas&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="TableSelector.__init__"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableSelector.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">patterns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_schemas</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Build pattern instance from list of glob patterns.</span>
+
+<span class="sd">        The list may be empty (or omitted).  This is equivalent to a list of [&quot;*.*&quot;].</span>
+<span class="sd">        Note that each pattern is split on the first &#39;.&#39; to separate out</span>
+<span class="sd">        matches against schema names and table names.</span>
+<span class="sd">        To facilitate case-insensitive matching, patterns are stored in their</span>
+<span class="sd">        lower-case form.</span>
+
+<span class="sd">        The base schemas (if present) basically limit what a &#39;*&#39; means as schema name.</span>
+<span class="sd">        They are stored in their initial order.</span>
+
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector()</span>
+<span class="sd">        &gt;&gt;&gt; str(ts)</span>
+<span class="sd">        &quot;[&#39;*.*&#39;]&quot;</span>
+<span class="sd">        &gt;&gt;&gt; len(ts)</span>
+<span class="sd">        0</span>
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector([&quot;finance&quot;, &quot;www&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; str(ts)</span>
+<span class="sd">        &quot;[&#39;finance.*&#39;, &#39;www.*&#39;]&quot;</span>
+<span class="sd">        &gt;&gt;&gt; len(ts)</span>
+<span class="sd">        2</span>
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector([&quot;www.orders*&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; str(ts)</span>
+<span class="sd">        &quot;[&#39;www.orders*&#39;]&quot;</span>
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector([&quot;www.Users&quot;, &quot;www.Products&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; str(ts)</span>
+<span class="sd">        &quot;[&#39;www.products&#39;, &#39;www.users&#39;]&quot;</span>
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector([&quot;*.orders&quot;, &quot;finance.budget&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; str(ts)</span>
+<span class="sd">        &quot;[&#39;*.orders&#39;, &#39;finance.budget&#39;]&quot;</span>
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector(&quot;www.orders&quot;)</span>
+<span class="sd">        Traceback (most recent call last):</span>
+<span class="sd">        ValueError: patterns must be a list</span>
+
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector([&quot;www.*&quot;, &quot;finance&quot;], [&quot;www&quot;, &quot;finance&quot;, &quot;operations&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; ts.base_schemas</span>
+<span class="sd">        (&#39;www&#39;, &#39;finance&#39;, &#39;operations&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; ts.base_schemas = [&quot;www&quot;, &quot;marketing&quot;]</span>
+<span class="sd">        Traceback (most recent call last):</span>
+<span class="sd">        ValueError: bad pattern (no match against base schemas): finance.*</span>
+<span class="sd">        &gt;&gt;&gt; ts.base_schemas = [&quot;www&quot;, &quot;finance&quot;, &quot;marketing&quot;]</span>
+
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector(base_schemas=[&quot;www&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; ts.match(TableName.from_identifier(&quot;www.orders&quot;))</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; ts.match(TableName.from_identifier(&quot;operations.shipments&quot;))</span>
+<span class="sd">        False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">patterns</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">patterns</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># avoid having a modifiable parameter but still have a for loop</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;patterns must be a list&quot;</span><span class="p">)</span>
+
+        <span class="n">split_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;.&quot;</span> <span class="ow">in</span> <span class="n">pattern</span><span class="p">:</span>
+                <span class="n">schema</span><span class="p">,</span> <span class="n">table</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">split_patterns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TableName</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">split_patterns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TableName</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">split_patterns</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="k">if</span> <span class="n">base_schemas</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base_schemas</span> <span class="o">=</span> <span class="n">base_schemas</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">base_schemas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span>
+
+    <span class="nd">@base_schemas</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">base_schemas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schemas</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add base schemas (names, not patterns) to match against.</span>
+
+<span class="sd">        It is an error to have a pattern that does not match against the base schemas.</span>
+<span class="sd">        (So you cannot retroactively reject a pattern by changing the base schemas.)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Fun fact: you can&#39;t have doctests in docstrings for properties</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">schemas</span><span class="p">)</span>
+
+        <span class="c1"># Make sure that each pattern matches against at least one base schema</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">:</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span><span class="p">,</span> <span class="n">pattern</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;bad pattern (no match against base schemas): </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pattern</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+                <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="c1"># See __init__ for tests</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;[&#39;*.*&#39;]&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;[</span><span class="si">{}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">))</span>
+
+<div class="viewcode-block" id="TableSelector.match_schema"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableSelector.match_schema">[docs]</a>    <span class="k">def</span> <span class="nf">match_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Match this schema name against the patterns.</span>
+
+<span class="sd">        This returns true if any pattern matches the schema name and the schema is part of the</span>
+<span class="sd">        base schemas (if defined).</span>
+
+<span class="sd">        &gt;&gt;&gt; tnp = TableSelector([&quot;www.orders&quot;, &quot;factory.products&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; tnp.match_schema(&quot;www&quot;)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; tnp.match_schema(&quot;finance&quot;)</span>
+<span class="sd">        False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">pattern</span><span class="o">.</span><span class="n">schema</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="TableSelector.selected_schemas"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableSelector.selected_schemas">[docs]</a>    <span class="k">def</span> <span class="nf">selected_schemas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return tuple of schemas from base schemas that match the selection.</span>
+
+<span class="sd">        It is an error if a pattern tries to select a specific table instead of a schema.</span>
+<span class="sd">        This method can thus be called for the side-effect of raising an exception</span>
+<span class="sd">        if you want to test whether the pattern only selects schemas.</span>
+
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector([&quot;www.*&quot;, &quot;marketing&quot;], [&quot;factory&quot;, &quot;marketing&quot;, &quot;www&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; ts.selected_schemas()</span>
+<span class="sd">        (&#39;marketing&#39;, &#39;www&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; tx = TableSelector([&quot;www.orders&quot;], [&quot;www&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; tx.selected_schemas()</span>
+<span class="sd">        Traceback (most recent call last):</span>
+<span class="sd">        ValueError: pattern selects table, not schema: &#39;&quot;www&quot;.&quot;orders&quot;&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pattern</span><span class="o">.</span><span class="n">table</span> <span class="o">!=</span> <span class="s2">&quot;*&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;pattern selects table, not schema: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">pattern</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span> <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">match_schema</span><span class="p">(</span><span class="n">schema</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TableSelector.match"><a class="viewcode-back" href="../../etl/etl.names.html#etl.names.TableSelector.match">[docs]</a>    <span class="k">def</span> <span class="nf">match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Match relation on schema and table patterns (possibly limited to base schemas).</span>
+
+<span class="sd">        This returns true if any pattern matches and the schema is part of the base schemas</span>
+<span class="sd">        (if defined).</span>
+
+<span class="sd">        &gt;&gt;&gt; ts = TableSelector([&quot;www.orders&quot;, &quot;www.prod*&quot;])</span>
+<span class="sd">        &gt;&gt;&gt; name = TableName(&quot;www&quot;, &quot;products&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; ts.match(name)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; name = TableName(&quot;WWW&quot;, &quot;Products&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; ts.match(name)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; name = TableName(&quot;finance&quot;, &quot;products&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; ts.match(name)</span>
+<span class="sd">        False</span>
+<span class="sd">        &gt;&gt;&gt; name = TableName(&quot;www&quot;, &quot;users&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; ts.match(name)</span>
+<span class="sd">        False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">schema</span> <span class="o">=</span> <span class="n">table_name</span><span class="o">.</span><span class="n">schema</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span> <span class="ow">and</span> <span class="n">schema</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_schemas</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">table_name</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span></div></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.extract &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.extract</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Extract data from an upstream source into S3.</span>
+
+<span class="sd">An &quot;extract&quot; refers to the wholesale extraction of data from relation(s) in some number</span>
+<span class="sd">of upstream sources. The data is stored in gzipped CSV form, into a specified keyspace in S3.</span>
+
+<span class="sd">(1) There are two main types of upstream sources: static sources and database sources.</span>
+
+<span class="sd">    (a) Static sources use S3 and have the data ready in gzipped CSV files. No</span>
+<span class="sd">        database connection is required. With these sources, the extract</span>
+<span class="sd">        is simply looking to verify that the data exists. An example use case</span>
+<span class="sd">        is storing historic data in S3 which is no longer in live database sources.</span>
+<span class="sd">    (b) Database sources are tied to tables with data that is changing frequently. Here</span>
+<span class="sd">        we require a database connection to query, dump data from these sources</span>
+<span class="sd">        and write them out to gzipped CSV files. We use Sqoop as the extract tool.</span>
+
+<span class="sd">    Once the data has been extracted, the &quot;extract&quot; job checks for a _SUCCESS file. If</span>
+<span class="sd">    this file is not present in the same keyspace as the data, the &quot;extract&quot; is considered</span>
+<span class="sd">    to have failed, meaning a manifest file will not be written and an error will be logged.</span>
+
+<span class="sd">    If the &quot;--keep-going&quot; flag is used, the failure of a single relation will not kill the</span>
+<span class="sd">    entire extract job.</span>
+
+<span class="sd">(2) Every successful extract writes out a manifest file to the specified S3 keyspace that</span>
+<span class="sd">    contains a list of the locations of the extracted data.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="kn">from</span> <span class="nn">etl.config.dw</span> <span class="kn">import</span> <span class="n">DataWarehouseSchema</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLSystemError</span>
+<span class="kn">from</span> <span class="nn">etl.extract.extractor</span> <span class="kn">import</span> <span class="n">Extractor</span>
+<span class="kn">from</span> <span class="nn">etl.extract.manifest_only</span> <span class="kn">import</span> <span class="n">ManifestOnlyExtractor</span>
+<span class="kn">from</span> <span class="nn">etl.extract.sqoop</span> <span class="kn">import</span> <span class="n">DummySqoopExtractor</span><span class="p">,</span> <span class="n">SqoopExtractor</span>
+<span class="kn">from</span> <span class="nn">etl.extract.static</span> <span class="kn">import</span> <span class="n">StaticExtractor</span>
+<span class="kn">from</span> <span class="nn">etl.relation</span> <span class="kn">import</span> <span class="n">RelationDescription</span>
+<span class="kn">from</span> <span class="nn">etl.text</span> <span class="kn">import</span> <span class="n">join_with_single_quotes</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="extract_upstream_sources"><a class="viewcode-back" href="../../etl/etl.extract.html#etl.extract.extract_upstream_sources">[docs]</a><span class="k">def</span> <span class="nf">extract_upstream_sources</span><span class="p">(</span>
+    <span class="n">extract_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">schemas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DataWarehouseSchema</span><span class="p">],</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span>
+    <span class="n">max_partitions</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">use_sampling</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">keep_going</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extract data from upstream sources to S3.</span>
+
+<span class="sd">    This is the entry point. Static sources are processed first, followed by database</span>
+<span class="sd">    sources for which we determine the extraction technology here.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">static_sources</span> <span class="o">=</span> <span class="p">{</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">source</span> <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">schemas</span> <span class="k">if</span> <span class="n">source</span><span class="o">.</span><span class="n">is_static_source</span><span class="p">}</span>
+    <span class="n">applicable</span> <span class="o">=</span> <span class="n">filter_relations_for_sources</span><span class="p">(</span><span class="n">static_sources</span><span class="p">,</span> <span class="n">relations</span><span class="p">)</span>
+    <span class="n">total_relations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">applicable</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">applicable</span><span class="p">:</span>
+        <span class="n">static_extractor</span> <span class="o">=</span> <span class="n">StaticExtractor</span><span class="p">(</span><span class="n">static_sources</span><span class="p">,</span> <span class="n">applicable</span><span class="p">,</span> <span class="n">keep_going</span><span class="p">,</span> <span class="n">dry_run</span><span class="p">)</span>
+        <span class="n">static_extractor</span><span class="o">.</span><span class="n">extract_sources</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No static sources were selected&quot;</span><span class="p">)</span>
+
+    <span class="n">database_sources</span> <span class="o">=</span> <span class="p">{</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">source</span> <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">schemas</span> <span class="k">if</span> <span class="n">source</span><span class="o">.</span><span class="n">is_database_source</span><span class="p">}</span>
+    <span class="n">applicable</span> <span class="o">=</span> <span class="n">filter_relations_for_sources</span><span class="p">(</span><span class="n">database_sources</span><span class="p">,</span> <span class="n">relations</span><span class="p">)</span>
+    <span class="n">total_relations</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">applicable</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">applicable</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No database sources were selected&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">total_relations</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Found no matching relations for your selection&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="k">if</span> <span class="n">extract_type</span> <span class="o">==</span> <span class="s2">&quot;manifest-only&quot;</span><span class="p">:</span>
+        <span class="n">database_extractor</span><span class="p">:</span> <span class="n">Extractor</span> <span class="o">=</span> <span class="n">ManifestOnlyExtractor</span><span class="p">(</span>
+            <span class="n">database_sources</span><span class="p">,</span> <span class="n">applicable</span><span class="p">,</span> <span class="n">keep_going</span><span class="p">,</span> <span class="n">dry_run</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">extract_type</span> <span class="o">==</span> <span class="s2">&quot;sqoop&quot;</span><span class="p">:</span>
+        <span class="n">database_extractor</span> <span class="o">=</span> <span class="n">SqoopExtractor</span><span class="p">(</span>
+            <span class="n">database_sources</span><span class="p">,</span>
+            <span class="n">applicable</span><span class="p">,</span>
+            <span class="n">max_partitions</span><span class="o">=</span><span class="n">max_partitions</span><span class="p">,</span>
+            <span class="n">use_sampling</span><span class="o">=</span><span class="n">use_sampling</span><span class="p">,</span>
+            <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">,</span>
+            <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">extract_type</span> <span class="o">==</span> <span class="s2">&quot;dummy-sqoop&quot;</span><span class="p">:</span>
+        <span class="n">database_extractor</span> <span class="o">=</span> <span class="n">DummySqoopExtractor</span><span class="p">(</span>
+            <span class="n">database_sources</span><span class="p">,</span>
+            <span class="n">applicable</span><span class="p">,</span>
+            <span class="n">max_partitions</span><span class="o">=</span><span class="n">max_partitions</span><span class="p">,</span>
+            <span class="n">use_sampling</span><span class="o">=</span><span class="n">use_sampling</span><span class="p">,</span>
+            <span class="n">keep_going</span><span class="o">=</span><span class="n">keep_going</span><span class="p">,</span>
+            <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ETLSystemError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;unexpected extraction type: &#39;</span><span class="si">{</span><span class="n">extract_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+    <span class="n">database_extractor</span><span class="o">.</span><span class="n">extract_sources</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="filter_relations_for_sources"><a class="viewcode-back" href="../../etl/etl.extract.html#etl.extract.filter_relations_for_sources">[docs]</a><span class="k">def</span> <span class="nf">filter_relations_for_sources</span><span class="p">(</span>
+    <span class="n">source_lookup</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataWarehouseSchema</span><span class="p">],</span> <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Filter for the relations that a given &quot;extract&quot; stage cares about.&quot;&quot;&quot;</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_name</span> <span class="ow">in</span> <span class="n">source_lookup</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">selected</span><span class="p">:</span>
+        <span class="n">sources</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">source_name</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Selected </span><span class="si">%d</span><span class="s2"> relation(s) from source(s): </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">),</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">sources</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">selected</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

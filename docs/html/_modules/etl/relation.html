@@ -1,0 +1,1389 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.relation &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.relation</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Work with relations: tables, CTAS tables, or views.</span>
+
+<span class="sd">Table descriptions -- model around the notion of relations and their support files</span>
+<span class="sd">    &quot;Table&quot; relations are tables created based on data probably coming from an upstream source.</span>
+<span class="sd">    &quot;CTAS&quot; relations are tables that are created using queries and transform data; unlike</span>
+<span class="sd">        views they have disk storage and thus distributions and column encodings.</span>
+<span class="sd">    &quot;VIEW&quot; relations are views that are queries but unlike CTAS don&#39;t use disk space.</span>
+
+<span class="sd">The descriptions of relations contain access to:</span>
+<span class="sd">    &quot;table designs&quot; which describe the name and columns as well as constraints and attributes</span>
+<span class="sd">         for the table or its columns</span>
+<span class="sd">    &quot;queries&quot; which are the SQL SELECT statements backing the CTAS or VIEW</span>
+<span class="sd">    &quot;manifests&quot; which are lists of data files for tables backed by upstream sources</span>
+
+<span class="sd">When called as a module, dumps the current configuration of table designs.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">concurrent.futures</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">closing</span><span class="p">,</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">attrgetter</span>
+<span class="kn">from</span> <span class="nn">queue</span> <span class="kn">import</span> <span class="n">PriorityQueue</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">FrozenSet</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">funcy</span> <span class="k">as</span> <span class="nn">fy</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.db</span>
+<span class="kn">import</span> <span class="nn">etl.design.load</span>
+<span class="kn">import</span> <span class="nn">etl.file_sets</span>
+<span class="kn">import</span> <span class="nn">etl.s3</span>
+<span class="kn">import</span> <span class="nn">etl.util.timer</span>
+<span class="kn">from</span> <span class="nn">etl.config.dw</span> <span class="kn">import</span> <span class="n">DataWarehouseSchema</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">CyclicDependencyError</span><span class="p">,</span> <span class="n">ETLRuntimeError</span><span class="p">,</span> <span class="n">InvalidArgumentError</span><span class="p">,</span> <span class="n">MissingQueryError</span>
+<span class="kn">from</span> <span class="nn">etl.names</span> <span class="kn">import</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">TableSelector</span><span class="p">,</span> <span class="n">TempTableName</span>
+<span class="kn">from</span> <span class="nn">etl.text</span> <span class="kn">import</span> <span class="n">join_with_single_quotes</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="RelationDescription"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription">[docs]</a><span class="k">class</span> <span class="nc">RelationDescription</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handy object for working with relations (tables or views) created with Arthur.</span>
+
+<span class="sd">    Created from a collection of files that pertain to the same table.</span>
+<span class="sd">    Offers helpful properties for lazily loading contents of relation files.</span>
+<span class="sd">    Modified by other functions in relations module to set attributes related to dependency graph.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Pass-through access to file set underlying the relation description.</span>
+
+<span class="sd">        If the relation doesn&#39;t know about an attribute we&#39;ll pick up the attribute from</span>
+<span class="sd">        the file set.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fileset</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fileset</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+            <span class="s2">&quot;Neither &#39;</span><span class="si">%s</span><span class="s2">&#39; nor &#39;</span><span class="si">%s</span><span class="s2">&#39; has attribute &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span>
+            <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fileset</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">discovered_files</span><span class="p">:</span> <span class="n">etl</span><span class="o">.</span><span class="n">file_sets</span><span class="o">.</span><span class="n">RelationFileSet</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Basic properties to locate files describing the relation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fileset</span> <span class="o">=</span> <span class="n">discovered_files</span>
+        <span class="k">if</span> <span class="n">discovered_files</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;s3&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span> <span class="o">=</span> <span class="n">discovered_files</span><span class="o">.</span><span class="n">netloc</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="n">discovered_files</span><span class="o">.</span><span class="n">path</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># Note the subtle difference to RelationFileSet: the manifest_file_name is always present</span>
+        <span class="c1"># since it&#39;s computed.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manifest_file_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">discovered_files</span><span class="o">.</span><span class="n">path</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_path_name</span> <span class="o">+</span> <span class="s2">&quot;.manifest&quot;</span>
+        <span class="p">)</span>
+        <span class="c1"># Lazy-loading of table design and query statement and any derived information from the</span>
+        <span class="c1"># table design.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_table_design</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_query_stmt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FrozenSet</span><span class="p">[</span><span class="n">TableName</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_execution_level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_execution_order</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_required</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">target_table_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TableName</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fileset</span><span class="o">.</span><span class="n">target_table_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">has_manifest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_s3_object_last_modified</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">identifier</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_path_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__format__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format target table as delimited identifier (with quotes) or just as an identifier.</span>
+
+<span class="sd">        With the default or &#39;:s&#39;, it&#39;s a delimited identifier with quotes.</span>
+<span class="sd">        With &#39;:x&quot;, the name is left bare but single quotes are around it.</span>
+
+<span class="sd">        &gt;&gt;&gt; fs = etl.file_sets.RelationFileSet(TableName(&quot;a&quot;, &quot;b&quot;), TableName(&quot;c&quot;, &quot;b&quot;), None)</span>
+<span class="sd">        &gt;&gt;&gt; relation = RelationDescription(fs)</span>
+<span class="sd">        &gt;&gt;&gt; &quot;As delimited identifier: {:s}, as loggable string: {:x}&quot;.format(relation, relation)</span>
+<span class="sd">        &#39;As delimited identifier: &quot;c&quot;.&quot;b&quot;, as loggable string: \&#39;c.b\&#39;&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">code</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">code</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{:x}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;unsupported format code &#39;</span><span class="si">{}</span><span class="s2">&#39; passed to RelationDescription&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">code</span><span class="p">))</span>
+
+<div class="viewcode-block" id="RelationDescription.load"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.load">[docs]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Force a loading of the table design (which is normally loaded &quot;on demand&quot;).</span>
+
+<span class="sd">        Strictly speaking, this isn&#39;t thread-safe. But if you worry about thread safety here,</span>
+<span class="sd">        rethink your code.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_table_design</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">pass</span>  <span class="c1"># previously (pre-)loaded</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;s3&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_table_design</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">load_table_design_from_s3</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_table_design</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">load_table_design_from_localfile</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">callback</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">callback</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="RelationDescription.load_in_parallel"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.load_in_parallel">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">load_in_parallel</span><span class="p">(</span><span class="n">relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="s2">&quot;RelationDescription&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load all relations&#39; table design file in parallel.</span>
+
+<span class="sd">        If there no relation left which hasn&#39;t loaded the table design, do nothing.</span>
+<span class="sd">        If there is only one relation, then that one is loaded directly and without threads.</span>
+<span class="sd">        If there are only two relations, then both are loaded directly and without threads.</span>
+<span class="sd">        If there are more than two relations, then the first is loaded directly to validate</span>
+<span class="sd">        our setup (in particular the schemas of table designs) and then rest is actually</span>
+<span class="sd">        loaded in parallel using threads.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">remaining_relations</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">_table_design</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="c1"># This section loads threads directly up to the &quot;parallel start index&quot;.</span>
+        <span class="n">timer</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">Timer</span><span class="p">()</span>
+        <span class="n">parallel_start_index</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">remaining_relations</span><span class="p">[:</span><span class="n">parallel_start_index</span><span class="p">]:</span>
+            <span class="n">relation</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">parallel_start_index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Finished loading </span><span class="si">%d</span><span class="s2"> table design file(s) (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">),</span> <span class="n">timer</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="c1"># This section loads the remaining relations from the &quot;parallel start index&quot; onwards</span>
+        <span class="c1"># and shows a pretty loading bar (but only if this goes to a terminal).</span>
+        <span class="n">tqdm_bar</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span>
+            <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Loading table designs&quot;</span><span class="p">,</span>
+            <span class="n">disable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">),</span>
+            <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">tqdm_bar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">parallel_start_index</span><span class="p">)</span>
+        <span class="n">max_workers</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">)</span> <span class="o">-</span> <span class="n">parallel_start_index</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+            <span class="s2">&quot;Starting parallel load of </span><span class="si">%d</span><span class="s2"> table design file(s) on </span><span class="si">%d</span><span class="s2"> workers.&quot;</span><span class="p">,</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">[</span><span class="n">parallel_start_index</span><span class="p">:]),</span>
+            <span class="n">max_workers</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span>
+            <span class="n">max_workers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">,</span> <span class="n">thread_name_prefix</span><span class="o">=</span><span class="s2">&quot;load-parallel&quot;</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+            <span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">relation</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">tqdm_bar</span><span class="o">.</span><span class="n">update</span><span class="p">),</span>
+                <span class="n">remaining_relations</span><span class="p">[</span><span class="n">parallel_start_index</span><span class="p">:],</span>
+            <span class="p">)</span>
+
+        <span class="n">tqdm_bar</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Finished loading </span><span class="si">%d</span><span class="s2"> table design file(s) using </span><span class="si">%d</span><span class="s2"> threads (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">remaining_relations</span><span class="p">),</span>
+            <span class="n">max_workers</span><span class="p">,</span>
+            <span class="n">timer</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@property</span>  <span class="c1"># This property is lazily loaded.</span>
+    <span class="k">def</span> <span class="nf">table_design</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_table_design</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return &quot;kind&quot; of a relation which is either TABlE or VIEW.</span>
+
+<span class="sd">        See also etl.db.relation_kind which uses the existing relation to determine</span>
+<span class="sd">        its kind instead of the table design file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;VIEW&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_view_relation</span> <span class="k">else</span> <span class="s2">&quot;TABLE&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_ctas_relation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CTAS&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_view_relation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;VIEW&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_transformation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;CTAS&quot;</span><span class="p">,</span> <span class="s2">&quot;VIEW&quot;</span><span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_unloadable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;unload_target&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">execution_level</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;All relations of the same level may be loaded in parallel.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execution_level</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span>
+                <span class="s2">&quot;execution level unknown for RelationDescription &#39;</span><span class="si">{0.identifier}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execution_level</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">execution_order</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;All relations can be ordered to load properly in series based on their dependencies.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execution_order</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span>
+                <span class="s2">&quot;execution order unknown for RelationDescription &#39;</span><span class="si">{0.identifier}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execution_order</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_required</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_required</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span>
+                <span class="s2">&quot;state of &#39;is_required&#39; unknown for RelationDescription &#39;</span><span class="si">{0.identifier}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_required</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">unload_target</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;unload_target&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">query_stmt</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_query_stmt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sql_file_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">MissingQueryError</span><span class="p">(</span><span class="s2">&quot;Missing SQL file for &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">))</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">:</span>
+                <span class="k">with</span> <span class="n">closing</span><span class="p">(</span>
+                    <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_s3_object_content</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sql_file_name</span><span class="p">)</span>
+                <span class="p">)</span> <span class="k">as</span> <span class="n">content</span><span class="p">:</span>
+                    <span class="n">query_stmt</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sql_file_name</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">query_stmt</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_query_stmt</span> <span class="o">=</span> <span class="n">query_stmt</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_query_stmt</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FrozenSet</span><span class="p">[</span><span class="n">TableName</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dependencies</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dependent_table_names</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;depends_on&quot;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_dependencies</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">dependent_table_names</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dependencies</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># TODO(tom): Change the name of this property since there&#39;s already table_design[&quot;source_name&quot;]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="c1"># For transformations be specific whether it is CTAS or VIEW.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;CTAS&quot;</span><span class="p">,</span> <span class="s2">&quot;VIEW&quot;</span><span class="p">}:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">schema_config</span><span class="o">.</span><span class="n">source_type</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">schema_config</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataWarehouseSchema</span><span class="p">:</span>
+        <span class="n">dw_config</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">dw_config</span><span class="o">.</span><span class="n">schema_lookup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source_name</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RelationDescription.data_directory"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.data_directory">[docs]</a>    <span class="k">def</span> <span class="nf">data_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Full path to data files (in the schema&#39;s data format).&quot;&quot;&quot;</span>
+        <span class="c1"># TODO(tom): Split between source data and static data</span>
+        <span class="c1"># Either somewhere in S3 for static sources, in S3 for extracted sources or locally.</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">from_prefix</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="ow">or</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source_path_name</span><span class="p">,</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">schema_config</span><span class="o">.</span><span class="n">s3_data_format</span><span class="o">.</span><span class="n">format</span> <span class="ow">or</span> <span class="s2">&quot;CSV&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">unquoted_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;List of the column names of this relation.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">)]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">columns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;List of delimited column names of this relation.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;&quot;</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">column</span><span class="p">)</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">unquoted_columns</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">has_identity_column</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return whether any of the columns is marked as identity column.</span>
+
+<span class="sd">        This should only ever be possible for a CTAS, see validation code.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;identity&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">])</span>
+
+<div class="viewcode-block" id="RelationDescription.from_file_sets"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.from_file_sets">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_file_sets</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">file_sets</span><span class="p">,</span> <span class="n">required_relation_selector</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;RelationDescription&quot;</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a list of relation descriptions based on a list of file sets.</span>
+
+<span class="sd">        If there&#39;s a file set without a table design file, then there&#39;s a warning and that file set</span>
+<span class="sd">        is skipped. (This comes in handy when creating the design file for a CTAS or VIEW</span>
+<span class="sd">        automatically.)</span>
+
+<span class="sd">        If provided, the required_relation_selector will be used to mark dependencies of</span>
+<span class="sd">        high-priority. A failure to dump or load in these relations will end the ETL run.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">relations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">file_sets</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">file_set</span><span class="o">.</span><span class="n">design_file_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">relations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">cls</span><span class="p">(</span><span class="n">file_set</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;Found file(s) without matching table design: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">file_set</span><span class="o">.</span><span class="n">files</span><span class="p">),</span>
+                <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">required_relation_selector</span><span class="p">:</span>
+            <span class="n">set_required_relations</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">required_relation_selector</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">relations</span></div>
+
+<div class="viewcode-block" id="RelationDescription.get_columns_with_casts"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.get_columns_with_casts">[docs]</a>    <span class="k">def</span> <span class="nf">get_columns_with_casts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Pick columns and decide how they are selected (as-is or with an expression).</span>
+
+<span class="sd">        Whether there&#39;s an expression or just a name the resulting column is always</span>
+<span class="sd">        called out delimited.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">selected_columns</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;expression&quot;</span><span class="p">):</span>
+                    <span class="n">selected_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{expression}</span><span class="s1"> AS &quot;</span><span class="si">{name}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">column</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">selected_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="si">{name}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">column</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">selected_columns</span></div>
+
+<div class="viewcode-block" id="RelationDescription.get_columns_with_types"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.get_columns_with_types">[docs]</a>    <span class="k">def</span> <span class="nf">get_columns_with_types</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span>
+        <span class="sd">&quot;&quot;&quot;Return list of dicts that describe non-skipped columns with their name and type.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="n">fy</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">)</span>
+        <span class="p">]</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">num_partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extract_settings&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;num_partitions&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">partition_boundary_query</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the optional boundary query specified in relation extract settings.</span>
+
+<span class="sd">        Sqoop generates evenly-spaced buckets for map tasks in extraction. Users may provide</span>
+<span class="sd">        a separate query that returns the min and max values in that range. The query should select</span>
+<span class="sd">        one row with two fields; the first provides the lower bound, the second the upper bound.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extract_settings&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;boundary_query&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RelationDescription.find_partition_key"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.find_partition_key">[docs]</a>    <span class="k">def</span> <span class="nf">find_partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return valid partition key for a relation.</span>
+
+<span class="sd">        The partition key will fulfill these conditions:</span>
+<span class="sd">        (1) the column is marked as a primary key</span>
+<span class="sd">        (2) the table&#39;s primary key is a single column</span>
+<span class="sd">        (3) the column has a numeric type or can be cast into one (which currently only works for</span>
+<span class="sd">            timestamps).</span>
+
+<span class="sd">        If the table design provides extract_settings with a split_by column setting, provide that</span>
+<span class="sd">        instead. The column will be numeric (int or long) or a timestamp in this case.</span>
+
+<span class="sd">        If no partition key can be found, returns None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">extract_settings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extract_settings&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">split_by_setting</span> <span class="o">=</span> <span class="n">extract_settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;split_by&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">split_by_setting</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="p">[</span><span class="n">partition_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">split_by_setting</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">split_by_setting</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="c1"># Split by expression provided; return immediately</span>
+            <span class="k">return</span> <span class="n">split_by_setting</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Should be impossible given json schema</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;unsupported type in split_by field of extract_settings in </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">split_by_setting</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">partition_key</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Unpacking will fail here if the list of primary keys hasn&#39;t exactly one element.</span>
+                <span class="p">[</span><span class="n">primary_key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="n">col</span> <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">constraints</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">constraint</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;primary_key&quot;</span><span class="p">,</span> <span class="p">[])</span>
+                <span class="p">]</span>
+                <span class="n">partition_key</span> <span class="o">=</span> <span class="n">primary_key</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Found no single-column primary key for table &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">partition_key</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Found no partition key for table &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">column</span> <span class="o">=</span> <span class="n">fy</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="n">fy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">partition_key</span><span class="p">))</span>
+
+        <span class="c1"># We check here the &quot;generic&quot; type which abstracts the SQL types like smallint, int4, etc.</span>
+        <span class="k">if</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="s2">&quot;long&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Partition key for table &#39;</span><span class="si">%s</span><span class="s2">&#39; is &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">partition_key</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">partition_key</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Column &#39;</span><span class="si">%s</span><span class="s2">&#39; is not int, long, date or timestamp so is not usable as a partition key &quot;</span>
+            <span class="s2">&quot;for &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+            <span class="n">partition_key</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="RelationDescription.matching_temporary_view"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.RelationDescription.matching_temporary_view">[docs]</a>    <span class="nd">@contextmanager</span>
+    <span class="k">def</span> <span class="nf">matching_temporary_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">as_late_binding_view</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a temporary view (with a name loosely based around the reference passed in).</span>
+
+<span class="sd">        We look up which temp schema the view landed in so that we can use TableName.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">temp_view</span> <span class="o">=</span> <span class="n">TempTableName</span><span class="o">.</span><span class="n">for_table</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">log_error</span><span class="p">():</span>
+            <span class="n">ddl_stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;CREATE OR REPLACE VIEW </span><span class="si">{}</span><span class="s2"> AS</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">temp_view</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">query_stmt</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">as_late_binding_view</span><span class="p">:</span>
+                <span class="n">temp_view</span><span class="o">.</span><span class="n">is_late_binding_view</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">ddl_stmt</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">WITH NO SCHEMA BINDING&quot;</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Creating view &#39;</span><span class="si">%s</span><span class="s2">&#39; to match relation &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">temp_view</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span>
+            <span class="p">)</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">ddl_stmt</span><span class="p">)</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">temp_view</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;DROP VIEW </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">temp_view</span><span class="p">))</span></div></div>
+
+
+<div class="viewcode-block" id="SortableRelationDescription"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.SortableRelationDescription">[docs]</a><span class="k">class</span> <span class="nc">SortableRelationDescription</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Facade to add modifiable list of dependencies.</span>
+
+<span class="sd">    This adds decoration around relation descriptions so that we can easily</span>
+<span class="sd">    compute the execution order by updating the &quot;dependencies&quot; list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">original_description</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">original_description</span> <span class="o">=</span> <span class="n">original_description</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">original_description</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dependencies</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">original_description</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span> <span class="o">=</span> <span class="n">original_description</span><span class="o">.</span><span class="n">target_table_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<span class="k">def</span> <span class="nf">_sanitize_dependencies</span><span class="p">(</span><span class="n">descriptions</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">SortableRelationDescription</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Pass 1 of ordering -- make sure to drop unknown dependencies.</span>
+
+<span class="sd">    This will change the sortable relations in place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">known_tables</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="n">description</span><span class="o">.</span><span class="n">target_table_name</span> <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">descriptions</span><span class="p">})</span>
+    <span class="n">has_unknown_dependencies</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">has_pg_catalog_dependencies</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">known_unknowns</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">descriptions</span><span class="p">:</span>
+        <span class="n">unmanaged_dependencies</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">dep</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">dep</span><span class="o">.</span><span class="n">is_managed</span><span class="p">)</span>
+        <span class="n">pg_catalog_dependencies</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
+            <span class="n">dep</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span> <span class="k">if</span> <span class="n">dep</span><span class="o">.</span><span class="n">schema</span> <span class="o">==</span> <span class="s2">&quot;pg_catalog&quot;</span>
+        <span class="p">)</span>
+        <span class="n">unknowns</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span> <span class="o">-</span> <span class="n">known_tables</span> <span class="o">-</span> <span class="n">unmanaged_dependencies</span>
+        <span class="k">if</span> <span class="n">unknowns</span><span class="p">:</span>
+            <span class="n">known_unknowns</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">unknowns</span><span class="p">)</span>
+            <span class="n">has_unknown_dependencies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">description</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+            <span class="c1"># Drop the unknowns from the list of dependencies so that the loop below doesn&#39;t wait</span>
+            <span class="c1"># for their resolution.</span>
+            <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">unknowns</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unmanaged_dependencies</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;The following dependencies for relation &#39;</span><span class="si">%s</span><span class="s2">&#39; are not managed by Arthur: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">description</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                <span class="n">join_with_single_quotes</span><span class="p">([</span><span class="n">dep</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">unmanaged_dependencies</span><span class="p">]),</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">pg_catalog_dependencies</span><span class="p">:</span>
+            <span class="n">has_pg_catalog_dependencies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">description</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">has_unknown_dependencies</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;These relations were unknown during dependency ordering: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">([</span><span class="n">dep</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">known_unknowns</span><span class="p">]),</span>
+        <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;This caused these relations to have dependencies that are not known: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">([</span><span class="n">dep</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">has_unknown_dependencies</span><span class="p">]),</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Make tables that depend on tables in pg_catalog depend on all our tables (except those</span>
+    <span class="c1"># depending on pg_catalog tables).</span>
+    <span class="n">has_no_internal_dependencies</span> <span class="o">=</span> <span class="n">known_tables</span> <span class="o">-</span> <span class="n">known_unknowns</span> <span class="o">-</span> <span class="n">has_pg_catalog_dependencies</span>
+    <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">descriptions</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">description</span><span class="o">.</span><span class="n">target_table_name</span> <span class="ow">in</span> <span class="n">has_pg_catalog_dependencies</span><span class="p">:</span>
+            <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">has_no_internal_dependencies</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_sort_by_dependencies</span><span class="p">(</span><span class="n">descriptions</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">SortableRelationDescription</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Pass 2 of ordering -- sort such that dependencies are built before the relation itself is built.</span>
+
+<span class="sd">    This will change the sortable relation in place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># The queue has tuples of (min expected order number, original sort order to break ties,</span>
+    <span class="c1"># relation description).</span>
+    <span class="n">queue</span><span class="p">:</span> <span class="n">PriorityQueue</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">SortableRelationDescription</span><span class="p">]]</span> <span class="o">=</span> <span class="n">PriorityQueue</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">initial_order</span><span class="p">,</span> <span class="n">description</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">descriptions</span><span class="p">):</span>
+        <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">initial_order</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="p">))</span>
+
+    <span class="n">relation_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">description</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">:</span> <span class="n">description</span> <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">descriptions</span><span class="p">}</span>
+    <span class="n">nr_relations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">descriptions</span><span class="p">)</span>
+    <span class="n">latest_order</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">queue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+        <span class="n">minimum_order</span><span class="p">,</span> <span class="n">tie_breaker</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">minimum_order</span> <span class="o">&gt;</span> <span class="n">nr_relations</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">CyclicDependencyError</span><span class="p">(</span><span class="s2">&quot;Cannot determine order, suspect cycle in DAG of dependencies&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">all</span><span class="p">(</span>
+            <span class="n">relation_map</span><span class="p">[</span><span class="n">dep</span><span class="p">]</span><span class="o">.</span><span class="n">order</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span> <span class="k">if</span> <span class="n">dep</span><span class="o">.</span><span class="n">is_managed</span>
+        <span class="p">):</span>
+            <span class="c1"># Relation has no dependencies (all([]) == True) or has all its dependencies evaluated.</span>
+            <span class="n">latest_order</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">description</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">latest_order</span>
+
+            <span class="n">max_preceding_level</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">relation_map</span><span class="p">[</span><span class="n">dep</span><span class="p">]</span><span class="o">.</span><span class="n">level</span> <span class="ow">or</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">description</span><span class="o">.</span><span class="n">dependencies</span> <span class="k">if</span> <span class="n">dep</span><span class="o">.</span><span class="n">is_managed</span><span class="p">),</span>
+                <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">description</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">max_preceding_level</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># &quot;Latest&quot; order is only smaller than the &quot;minimum&quot; during the first run through.</span>
+            <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="nb">max</span><span class="p">(</span><span class="n">latest_order</span><span class="p">,</span> <span class="n">minimum_order</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tie_breaker</span><span class="p">,</span> <span class="n">description</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="order_by_dependencies"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.order_by_dependencies">[docs]</a><span class="k">def</span> <span class="nf">order_by_dependencies</span><span class="p">(</span>
+    <span class="n">relation_descriptions</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sort the relations such that any dependents surely are loaded afterwards.</span>
+
+<span class="sd">    If a table (or view) depends on other tables, then its order is larger</span>
+<span class="sd">    than any of its managed dependencies. Ties are resolved based on the initial order</span>
+<span class="sd">    of the tables.</span>
+
+<span class="sd">    If a table depends on some system catalogs (living in pg_catalog), then the table</span>
+<span class="sd">    is treated as if it depended on all other tables.</span>
+
+<span class="sd">    Provides warnings about:</span>
+<span class="sd">        * relations that directly depend on relations not in the input</span>
+<span class="sd">        * relations that are depended upon but are not in the input</span>
+
+<span class="sd">    Side-effect: the order and level of the relations is set.</span>
+<span class="sd">    (So should this be invoked a second time, we&#39;ll skip computations if order is already set.)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">RelationDescription</span><span class="o">.</span><span class="n">load_in_parallel</span><span class="p">(</span><span class="n">relation_descriptions</span><span class="p">)</span>
+
+    <span class="c1"># Sorting is all-or-nothing so we get away with checking for just one relation&#39;s order.</span>
+    <span class="k">if</span> <span class="n">relation_descriptions</span> <span class="ow">and</span> <span class="n">relation_descriptions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_execution_order</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Reusing previously computed execution order of </span><span class="si">%d</span><span class="s2"> relation(s)&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">relation_descriptions</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sortable_descriptions</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">SortableRelationDescription</span><span class="p">(</span><span class="n">description</span><span class="p">)</span> <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">relation_descriptions</span>
+        <span class="p">]</span>
+        <span class="n">_sanitize_dependencies</span><span class="p">(</span><span class="n">sortable_descriptions</span><span class="p">)</span>
+        <span class="n">_sort_by_dependencies</span><span class="p">(</span><span class="n">sortable_descriptions</span><span class="p">)</span>
+        <span class="c1"># A functional approach would be to create new instances here. Instead we reach back. Shrug.</span>
+        <span class="c1"># TODO Sort by level first, then order.</span>
+        <span class="k">for</span> <span class="n">sortable</span> <span class="ow">in</span> <span class="n">sortable_descriptions</span><span class="p">:</span>
+            <span class="n">sortable</span><span class="o">.</span><span class="n">original_description</span><span class="o">.</span><span class="n">_execution_order</span> <span class="o">=</span> <span class="n">sortable</span><span class="o">.</span><span class="n">order</span>
+            <span class="n">sortable</span><span class="o">.</span><span class="n">original_description</span><span class="o">.</span><span class="n">_execution_level</span> <span class="o">=</span> <span class="n">sortable</span><span class="o">.</span><span class="n">level</span>
+
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">relation_descriptions</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;execution_order&quot;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="set_required_relations"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.set_required_relations">[docs]</a><span class="k">def</span> <span class="nf">set_required_relations</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">required_selector</span><span class="p">:</span> <span class="n">TableSelector</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set the &quot;required&quot; property based on the selector.</span>
+
+<span class="sd">    The &quot;required&quot; property of the relations is set if they are directly or indirectly feeding</span>
+<span class="sd">    into relations selected by the :required_selector.</span>
+
+<span class="sd">    Side-effect: relations are sorted to determine dependencies and their order and level is set.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Loading table design for </span><span class="si">%d</span><span class="s2"> relation(s) to mark required relations&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">relations</span><span class="p">))</span>
+    <span class="n">ordered_descriptions</span> <span class="o">=</span> <span class="n">order_by_dependencies</span><span class="p">(</span><span class="n">relations</span><span class="p">)</span>
+    <span class="c1"># Start with all descriptions that are matching the required selector</span>
+    <span class="n">required_relations</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">description</span>
+        <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">ordered_descriptions</span>
+        <span class="k">if</span> <span class="n">required_selector</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">description</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="c1"># Walk through descriptions in reverse dependency order, expanding required set based on</span>
+    <span class="c1"># dependency fan-out.</span>
+    <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">ordered_descriptions</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">description</span><span class="o">.</span><span class="n">target_table_name</span> <span class="ow">in</span> <span class="n">required</span><span class="o">.</span><span class="n">dependencies</span> <span class="k">for</span> <span class="n">required</span> <span class="ow">in</span> <span class="n">required_relations</span><span class="p">]</span>
+        <span class="p">):</span>
+            <span class="n">required_relations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">ordered_descriptions</span><span class="p">:</span>
+        <span class="n">relation</span><span class="o">.</span><span class="n">_is_required</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">required_relations</span><span class="p">:</span>
+        <span class="n">relation</span><span class="o">.</span><span class="n">_is_required</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="s2">&quot;Marked </span><span class="si">%d</span><span class="s2"> relation(s) as required based on selector: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">required_relations</span><span class="p">),</span>
+        <span class="n">required_selector</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="find_matches"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.find_matches">[docs]</a><span class="k">def</span> <span class="nf">find_matches</span><span class="p">(</span><span class="n">relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">selector</span><span class="p">:</span> <span class="n">TableSelector</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return list of matching relations.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="find_dependents"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.find_dependents">[docs]</a><span class="k">def</span> <span class="nf">find_dependents</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">seed_relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return list of relations that depend on the seed relations (directly or transitively).</span>
+
+<span class="sd">    For this to really work, the list of relations should be sorted in &quot;execution order&quot;!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">seeds</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">seed_relations</span><span class="p">)</span>
+    <span class="n">in_dependency_path</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">seeds</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">dependency</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">in</span> <span class="n">in_dependency_path</span> <span class="k">for</span> <span class="n">dependency</span> <span class="ow">in</span> <span class="n">relation</span><span class="o">.</span><span class="n">dependencies</span><span class="p">):</span>
+            <span class="n">in_dependency_path</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="n">dependents</span> <span class="o">=</span> <span class="n">in_dependency_path</span> <span class="o">-</span> <span class="n">seeds</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">in</span> <span class="n">dependents</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="find_immediate_dependencies"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.find_immediate_dependencies">[docs]</a><span class="k">def</span> <span class="nf">find_immediate_dependencies</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">selector</span><span class="p">:</span> <span class="n">TableSelector</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return list of VIEW relations that directly (or chained) hang off the selected relations.</span>
+
+<span class="sd">    If you &quot;DROP TABLE ...&quot; from the relations, then the returned views would get dropped as well.</span>
+
+<span class="sd">    If the relations are: A (CTAS) -&gt; B (VIEW) -&gt; C (VIEW) -&gt; D (CTAS) and you pass in the</span>
+<span class="sd">    list of A, B, C, D with a selector for A, then this will return the views B and C.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">directly_selected_relations</span> <span class="o">=</span> <span class="n">find_matches</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+
+    <span class="n">directly_selected</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">directly_selected_relations</span><span class="p">)</span>
+    <span class="n">immediate</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">directly_selected</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">is_view_relation</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span>
+            <span class="n">dependency</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">in</span> <span class="n">immediate</span> <span class="k">for</span> <span class="n">dependency</span> <span class="ow">in</span> <span class="n">relation</span><span class="o">.</span><span class="n">dependencies</span>
+        <span class="p">):</span>
+            <span class="n">immediate</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">in</span> <span class="p">(</span><span class="n">immediate</span> <span class="o">-</span> <span class="n">directly_selected</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="select_in_execution_order"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.select_in_execution_order">[docs]</a><span class="k">def</span> <span class="nf">select_in_execution_order</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span>
+    <span class="n">selector</span><span class="p">:</span> <span class="n">TableSelector</span><span class="p">,</span>
+    <span class="n">include_dependents</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">include_immediate_views</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">continue_from</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return list of relations that were selected, optionally adding dependents or skipping forward.</span>
+
+<span class="sd">    The values supported for skipping forward are:</span>
+<span class="sd">      - &#39;*&#39; to start from the beginning</span>
+<span class="sd">      - &#39;:transformations&#39; to only run transformations of selected relations</span>
+<span class="sd">      - a specific relation to continue from that one in the original execution order</span>
+<span class="sd">      - a specific schema to include all relations in that source schema as well as</span>
+<span class="sd">          any originally selected transformation</span>
+
+<span class="sd">    Note that these operate on the list of relations selected by the selector patterns.</span>
+<span class="sd">    The option of &#39;*&#39; exists to we can have a default value in our pipeline definitions.</span>
+<span class="sd">    The last option of specifying a schema is most useful with a source schema when you want</span>
+<span class="sd">    to restart the load step followed by all transformations.</span>
+
+<span class="sd">    No error is raised when the selector does not select any relations.</span>
+<span class="sd">    An error is raised when the &quot;continue from&quot; condition does not resolve to a list of relations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Pondering execution order of </span><span class="si">%d</span><span class="s2"> relation(s)&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">relations</span><span class="p">))</span>
+    <span class="n">execution_order</span> <span class="o">=</span> <span class="n">order_by_dependencies</span><span class="p">(</span><span class="n">relations</span><span class="p">)</span>
+
+    <span class="n">selected</span> <span class="o">=</span> <span class="n">find_matches</span><span class="p">(</span><span class="n">execution_order</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">selected</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Found no relations matching: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">include_dependents</span><span class="p">:</span>
+        <span class="n">dependents</span> <span class="o">=</span> <span class="n">find_dependents</span><span class="p">(</span><span class="n">execution_order</span><span class="p">,</span> <span class="n">selected</span><span class="p">)</span>
+        <span class="n">combined</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">dependents</span><span class="p">)</span>
+        <span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">execution_order</span> <span class="k">if</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">combined</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">include_immediate_views</span><span class="p">:</span>
+        <span class="n">immediate_views</span> <span class="o">=</span> <span class="n">find_immediate_dependencies</span><span class="p">(</span><span class="n">execution_order</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+        <span class="n">combined</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">immediate_views</span><span class="p">)</span>
+        <span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">execution_order</span> <span class="k">if</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">combined</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">continue_from</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">continue_from</span> <span class="o">==</span> <span class="s2">&quot;*&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">selected</span>
+
+    <span class="n">transformations</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">selected</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">is_transformation</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">continue_from</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;:transformations&quot;</span><span class="p">,</span> <span class="s2">&quot;:transformation&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">transformations</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Continuing with </span><span class="si">%d</span><span class="s2"> transformation(s) in selected relations&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">transformations</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">transformations</span>
+        <span class="k">raise</span> <span class="n">InvalidArgumentError</span><span class="p">(</span><span class="s2">&quot;found no transformations to continue from&quot;</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Trying to fast forward to &#39;</span><span class="si">%s</span><span class="s2">&#39; within </span><span class="si">%d</span><span class="s2"> relation(s)&quot;</span><span class="p">,</span> <span class="n">continue_from</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">))</span>
+    <span class="n">starting_from_match</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
+        <span class="n">fy</span><span class="o">.</span><span class="n">dropwhile</span><span class="p">(</span><span class="k">lambda</span> <span class="n">relation</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span> <span class="o">!=</span> <span class="n">continue_from</span><span class="p">,</span> <span class="n">selected</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">starting_from_match</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Continuing with </span><span class="si">%d</span><span class="s2"> relation(s) after skipping </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">starting_from_match</span><span class="p">),</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">starting_from_match</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">starting_from_match</span>
+
+    <span class="n">single_schema</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
+        <span class="n">fy</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">relation</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_name</span> <span class="o">==</span> <span class="n">continue_from</span><span class="p">,</span> <span class="n">selected</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">single_schema</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">transformations</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">InvalidArgumentError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;schema &#39;</span><span class="si">{</span><span class="n">continue_from</span><span class="si">}</span><span class="s2">&#39; contains transformations&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">single_schema</span><span class="p">:</span>
+        <span class="n">combined</span> <span class="o">=</span> <span class="n">single_schema</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">transformations</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Continuing with </span><span class="si">%d</span><span class="s2"> relation(s) in &#39;</span><span class="si">%s</span><span class="s2">&#39; and </span><span class="si">%d</span><span class="s2"> transformation(s)&quot;</span><span class="p">,</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">single_schema</span><span class="p">),</span>
+            <span class="n">continue_from</span><span class="p">,</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">single_schema</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">execution_order</span> <span class="k">if</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">combined</span><span class="p">]</span>
+
+    <span class="k">raise</span> <span class="n">InvalidArgumentError</span><span class="p">(</span><span class="s2">&quot;found no matching relations to continue from&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="create_index"><a class="viewcode-back" href="../../etl/etl.relation.html#etl.relation.create_index">[docs]</a><span class="k">def</span> <span class="nf">create_index</span><span class="p">(</span>
+    <span class="n">relations</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">with_columns</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create an &quot;index&quot; page with Markdown that lists all schemas and their tables.</span>
+
+<span class="sd">    The parameter groups filters schemas to those that can be accessed by those groups.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">group_set</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">groups</span><span class="p">)</span>
+    <span class="n">show_details</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">with_columns</span> <span class="k">else</span> <span class="kc">False</span>
+
+    <span class="c1"># We iterate of the list of relations so that we preserve their order with respect to schemas.</span>
+    <span class="n">schemas</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">group_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">schema_config</span><span class="o">.</span><span class="n">reader_groups</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="n">schema_name</span> <span class="o">=</span> <span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span>
+        <span class="k">if</span> <span class="n">schema_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">schemas</span><span class="p">:</span>
+            <span class="n">schemas</span><span class="p">[</span><span class="n">schema_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">schema_config</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="s2">&quot;relations&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+        <span class="n">schemas</span><span class="p">[</span><span class="n">schema_name</span><span class="p">][</span><span class="s2">&quot;relations&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">relation</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">schemas</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;List of schemas is empty, selected groups: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">group_set</span><span class="p">))</span>
+        <span class="k">return</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# List Of Relations By Schema&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">schema_info</span> <span class="ow">in</span> <span class="n">schemas</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\n</span><span class="s2">## Schema: &quot;</span><span class="si">{</span><span class="n">schema_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">schema_info</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">schema_info</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">rows</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">[</span><span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">table</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">description</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">schema_info</span><span class="p">[</span><span class="s2">&quot;relations&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Relation&quot;</span><span class="p">,</span> <span class="s2">&quot;Description&quot;</span><span class="p">],</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;pipe&quot;</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">show_details</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">schema_info</span><span class="p">[</span><span class="s2">&quot;relations&quot;</span><span class="p">]:</span>
+            <span class="n">relation_kind</span> <span class="o">=</span> <span class="s2">&quot;View&quot;</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">is_view_relation</span> <span class="k">else</span> <span class="s2">&quot;Table&quot;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\n</span><span class="s2">### </span><span class="si">{</span><span class="n">relation_kind</span><span class="si">}</span><span class="s2">: &quot;</span><span class="si">{</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="si">}</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">description</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">relation</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="n">key_columns</span><span class="p">:</span> <span class="n">FrozenSet</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+                <span class="k">for</span> <span class="n">constraint_name</span><span class="p">,</span> <span class="n">constraint_columns</span> <span class="ow">in</span> <span class="n">constraint</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="n">constraint_name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;primary_key&quot;</span><span class="p">,</span> <span class="s2">&quot;surrogate_key&quot;</span><span class="p">):</span>
+                        <span class="n">key_columns</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">constraint_columns</span><span class="p">)</span>
+                        <span class="k">break</span>
+            <span class="n">rows</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="p">[</span>
+                    <span class="s2">&quot;:key:&quot;</span> <span class="k">if</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">key_columns</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                    <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
+                    <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
+                <span class="p">]</span>
+                <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="n">tabulate</span><span class="p">(</span>
+                    <span class="n">rows</span><span class="p">,</span>
+                    <span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Key?&quot;</span><span class="p">,</span> <span class="s2">&quot;Column Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Column Type&quot;</span><span class="p">,</span> <span class="s2">&quot;Column Description&quot;</span><span class="p">],</span>
+                    <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;pipe&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+
+    <span class="kn">import</span> <span class="nn">simplejson</span> <span class="k">as</span> <span class="nn">json</span>
+
+    <span class="kn">import</span> <span class="nn">etl.design</span>
+
+    <span class="n">config_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;DATA_WAREHOUSE_CONFIG&quot;</span><span class="p">,</span> <span class="s2">&quot;./config&quot;</span><span class="p">)</span>
+    <span class="n">uri_parts</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="s2">&quot;schemas&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">&quot;Reading designs from &#39;</span><span class="si">{schema_dir}</span><span class="s2">&#39; with config in &#39;</span><span class="si">{config_dir}</span><span class="s2">&#39;.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">schema_dir</span><span class="o">=</span><span class="n">uri_parts</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">config_dir</span><span class="o">=</span><span class="n">config_dir</span>
+        <span class="p">),</span>
+        <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">load_config</span><span class="p">([</span><span class="n">config_dir</span><span class="p">])</span>
+    <span class="n">dw_config</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span>
+    <span class="n">base_schemas</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dw_config</span><span class="o">.</span><span class="n">schemas</span><span class="p">]</span>
+    <span class="n">selector</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">(</span><span class="n">base_schemas</span><span class="o">=</span><span class="n">base_schemas</span><span class="p">)</span>
+    <span class="n">required_selector</span> <span class="o">=</span> <span class="n">dw_config</span><span class="o">.</span><span class="n">required_in_full_load_selector</span>
+    <span class="n">file_sets</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">file_sets</span><span class="o">.</span><span class="n">find_file_sets</span><span class="p">(</span><span class="n">uri_parts</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+    <span class="n">descriptions</span> <span class="o">=</span> <span class="n">RelationDescription</span><span class="o">.</span><span class="n">from_file_sets</span><span class="p">(</span>
+        <span class="n">file_sets</span><span class="p">,</span> <span class="n">required_relation_selector</span><span class="o">=</span><span class="n">required_selector</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">selector</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="n">descriptions</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">descriptions</span> <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)]</span>
+
+    <span class="n">native</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">table_design</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">descriptions</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">native</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="s2">&quot;    &quot;</span><span class="p">,</span> <span class="n">item_sort_key</span><span class="o">=</span><span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">TableDesign</span><span class="o">.</span><span class="n">make_item_sorter</span><span class="p">()))</span>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

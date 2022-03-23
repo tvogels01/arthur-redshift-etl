@@ -1,0 +1,935 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.names module &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="etl.pipeline module" href="etl.pipeline.html" />
+    <link rel="prev" title="etl.monitor module" href="etl.monitor.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   etl
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="etl.html">
+     etl package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/etl/etl.names.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>etl.names module</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="module-etl.names">
+<span id="etl-names-module"></span><h1>etl.names module<a class="headerlink" href="#module-etl.names" title="Permalink to this headline">¶</a></h1>
+<p>Utility methods to deal with “names” of relations.</p>
+<p>To be safe, we always delimit names in queries but would prefer not to during logging.
+See TableName.</p>
+<p>There are additional methods and classes here to support the feature of choosing relations
+by a pattern from the command line.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.names.TableName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.names.</span></span><span class="sig-name descname"><span class="pre">TableName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_staging</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to automatically create delimited identifiers for tables.</p>
+<p>Given a table s.t, then the cautious identifier for SQL code is: “s”.”t”
+But the more readable name is still: s.t
+Note that the preference for logging is to always use single-quotes, ‘s.t’ (see {:x} below).</p>
+<p>Another, more curious use for instances is to store shell patterns for the schema name
+and table name so that we can match against other instances.</p>
+<p>Comparisons (for schema and table names) are case-insensitive.</p>
+<p>TableNames have a notion of known “managed” schemas, which include both
+sources and transformations listed in configuration files. A TableName
+is considered unmanaged if its schema does not belong to the list of
+managed schemas, and in that case its schema property is never translated
+into a staging version.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">etl.config.dw</span> <span class="kn">import</span> <span class="n">DataWarehouseSchema</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orders</span> <span class="o">=</span> <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="s2">&quot;www.orders&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span>
+<span class="go">&#39;&quot;www&quot;.&quot;orders&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orders</span><span class="o">.</span><span class="n">identifier</span>
+<span class="go">&#39;www.orders&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">same_orders</span> <span class="o">=</span> <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="s2">&quot;WWW.Orders&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orders</span> <span class="o">==</span> <span class="n">same_orders</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">same_orders</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hash</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span> <span class="o">==</span> <span class="nb">hash</span><span class="p">(</span><span class="n">same_orders</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">w3</span> <span class="o">=</span> <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="s2">&quot;w3.orders&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orders</span> <span class="o">==</span> <span class="n">w3</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">purchases</span> <span class="o">=</span> <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="s2">&quot;www.purchases&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orders</span> <span class="o">&lt;</span> <span class="n">purchases</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">purchases</span><span class="o">.</span><span class="n">managed_schemas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;www&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staging_purchases</span> <span class="o">=</span> <span class="n">purchases</span><span class="o">.</span><span class="n">as_staging_table_name</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staging_purchases</span><span class="o">.</span><span class="n">managed_schemas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;www&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now the table names are the same but they are in different schemas (staging vs. not)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staging_purchases</span><span class="o">.</span><span class="n">table</span> <span class="o">==</span> <span class="n">purchases</span><span class="o">.</span><span class="n">table</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staging_purchases</span><span class="o">.</span><span class="n">schema</span> <span class="o">==</span> <span class="n">purchases</span><span class="o">.</span><span class="n">schema</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableName.as_staging_table_name">
+<span class="sig-name descname"><span class="pre">as_staging_table_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableName.as_staging_table_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableName.as_staging_table_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.external_schemas">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">external_schemas</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">frozenset</span></em><a class="headerlink" href="#etl.names.TableName.external_schemas" title="Permalink to this definition">¶</a></dt>
+<dd><p>List external schemas that are not managed by us and may not exist during validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableName.from_identifier">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_identifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableName.from_identifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableName.from_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split identifier into schema and table before creating a new TableName instance.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">identifier</span> <span class="o">=</span> <span class="s2">&quot;ford.mustang&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">identifier</span> <span class="o">==</span> <span class="n">tn</span><span class="o">.</span><span class="n">identifier</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.identifier">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#etl.names.TableName.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return simple identifier, like one would use on the command line.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span><span class="o">.</span><span class="n">identifier</span>
+<span class="go">&#39;hello.world&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.identifier_as_re">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identifier_as_re</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#etl.names.TableName.identifier_as_re" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a regular expression that would look for the (unquoted) identifier.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;dw&quot;</span><span class="p">,</span> <span class="s2">&quot;fact&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span><span class="o">.</span><span class="n">identifier_as_re</span>
+<span class="go">&#39;\\bdw\\.fact\\b&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">re</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">tn</span><span class="o">.</span><span class="n">identifier_as_re</span><span class="p">,</span> <span class="s2">&quot;dw.fact&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">tn</span><span class="o">.</span><span class="n">identifier_as_re</span><span class="p">,</span> <span class="s2">&quot;dw_fact&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.is_external">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_external</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.names.TableName.is_external" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.is_managed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_managed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.names.TableName.is_managed" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.is_staging">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_staging</span></span><a class="headerlink" href="#etl.names.TableName.is_staging" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.managed_schemas">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">managed_schemas</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">frozenset</span></em><a class="headerlink" href="#etl.names.TableName.managed_schemas" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of schemas that are managed by Arthur.</p>
+<p>This contains all schemas not just the schema of this relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableName.match">
+<span class="sig-name descname"><span class="pre">match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableName.match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableName.match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Treat yo’self as a tuple of patterns and match against the other table.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tp</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;w*&quot;</span><span class="p">,</span> <span class="s2">&quot;o*&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span> <span class="s2">&quot;orders&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">tn</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;worldwide&quot;</span><span class="p">,</span> <span class="s2">&quot;octopus&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">tn</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;orders&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">tn</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableName.match_pattern">
+<span class="sig-name descname"><span class="pre">match_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableName.match_pattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableName.match_pattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether this table matches the given pattern.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span> <span class="s2">&quot;orders&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span><span class="o">.</span><span class="n">match_pattern</span><span class="p">(</span><span class="s2">&quot;w*.o*&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span><span class="o">.</span><span class="n">match_pattern</span><span class="p">(</span><span class="s2">&quot;o*.w*&quot;</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.schema">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema</span></span><a class="headerlink" href="#etl.names.TableName.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableName.table">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#etl.names.TableName.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableName.to_tuple">
+<span class="sig-name descname"><span class="pre">to_tuple</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableName.to_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableName.to_tuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return schema name and table name as a handy tuple.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;weather&quot;</span><span class="p">,</span> <span class="s2">&quot;temp&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schema_name</span><span class="p">,</span> <span class="n">table_name</span> <span class="o">=</span> <span class="n">tn</span><span class="o">.</span><span class="n">to_tuple</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schema_name</span><span class="p">,</span> <span class="n">table_name</span>
+<span class="go">(&#39;weather&#39;, &#39;temp&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.names.TableSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.names.</span></span><span class="sig-name descname"><span class="pre">TableSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_schemas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableSelector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to hold patterns to filter table names.</p>
+<p>Patterns that are supported are based on “glob” matches, which use <a href="#id1"><span class="problematic" id="id2">*</span></a>, ?, and [] – just
+like the shell does. But note that all matching is done case-insensitive.</p>
+<p>There is a concept of “base schemas.”  This list should be based on the configuration and
+defines the set of usable schemas.  (“Schemas” here refers to either upstream sources or
+schemas storing transformations.) So when base schemas are defined then there is an implied
+additional match against them before a table name is tried to be matched against stored
+patterns. If no base schemas are set, then we default simply to a list of schemas from the
+patterns.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableSelector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_schemas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableSelector.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableSelector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build pattern instance from list of glob patterns.</p>
+<p>The list may be empty (or omitted).  This is equivalent to a list of [“<em>.</em>”].
+Note that each pattern is split on the first ‘.’ to separate out
+matches against schema names and table names.
+To facilitate case-insensitive matching, patterns are stored in their
+lower-case form.</p>
+<p>The base schemas (if present) basically limit what a ‘*’ means as schema name.
+They are stored in their initial order.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">&quot;[&#39;*.*&#39;]&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;finance&quot;</span><span class="p">,</span> <span class="s2">&quot;www&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">&quot;[&#39;finance.*&#39;, &#39;www.*&#39;]&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;www.orders*&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">&quot;[&#39;www.orders*&#39;]&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;www.Users&quot;</span><span class="p">,</span> <span class="s2">&quot;www.Products&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">&quot;[&#39;www.products&#39;, &#39;www.users&#39;]&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;*.orders&quot;</span><span class="p">,</span> <span class="s2">&quot;finance.budget&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">&quot;[&#39;*.orders&#39;, &#39;finance.budget&#39;]&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">(</span><span class="s2">&quot;www.orders&quot;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">ValueError</span>: <span class="n">patterns must be a list</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;www.*&quot;</span><span class="p">,</span> <span class="s2">&quot;finance&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;www&quot;</span><span class="p">,</span> <span class="s2">&quot;finance&quot;</span><span class="p">,</span> <span class="s2">&quot;operations&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">base_schemas</span>
+<span class="go">(&#39;www&#39;, &#39;finance&#39;, &#39;operations&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">base_schemas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;www&quot;</span><span class="p">,</span> <span class="s2">&quot;marketing&quot;</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">ValueError</span>: <span class="n">bad pattern (no match against base schemas): finance.*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">base_schemas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;www&quot;</span><span class="p">,</span> <span class="s2">&quot;finance&quot;</span><span class="p">,</span> <span class="s2">&quot;marketing&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">(</span><span class="n">base_schemas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;www&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="s2">&quot;www.orders&quot;</span><span class="p">))</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="s2">&quot;operations.shipments&quot;</span><span class="p">))</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TableSelector.base_schemas">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base_schemas</span></span><a class="headerlink" href="#etl.names.TableSelector.base_schemas" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableSelector.match">
+<span class="sig-name descname"><span class="pre">match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableSelector.match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableSelector.match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match relation on schema and table patterns (possibly limited to base schemas).</p>
+<p>This returns true if any pattern matches and the schema is part of the base schemas
+(if defined).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;www.orders&quot;</span><span class="p">,</span> <span class="s2">&quot;www.prod*&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span> <span class="s2">&quot;products&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;WWW&quot;</span><span class="p">,</span> <span class="s2">&quot;Products&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;finance&quot;</span><span class="p">,</span> <span class="s2">&quot;products&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span> <span class="s2">&quot;users&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableSelector.match_schema">
+<span class="sig-name descname"><span class="pre">match_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableSelector.match_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableSelector.match_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match this schema name against the patterns.</p>
+<p>This returns true if any pattern matches the schema name and the schema is part of the
+base schemas (if defined).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tnp</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;www.orders&quot;</span><span class="p">,</span> <span class="s2">&quot;factory.products&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tnp</span><span class="o">.</span><span class="n">match_schema</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tnp</span><span class="o">.</span><span class="n">match_schema</span><span class="p">(</span><span class="s2">&quot;finance&quot;</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TableSelector.selected_schemas">
+<span class="sig-name descname"><span class="pre">selected_schemas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TableSelector.selected_schemas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TableSelector.selected_schemas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return tuple of schemas from base schemas that match the selection.</p>
+<p>It is an error if a pattern tries to select a specific table instead of a schema.
+This method can thus be called for the side-effect of raising an exception
+if you want to test whether the pattern only selects schemas.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;www.*&quot;</span><span class="p">,</span> <span class="s2">&quot;marketing&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;factory&quot;</span><span class="p">,</span> <span class="s2">&quot;marketing&quot;</span><span class="p">,</span> <span class="s2">&quot;www&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span><span class="o">.</span><span class="n">selected_schemas</span><span class="p">()</span>
+<span class="go">(&#39;marketing&#39;, &#39;www&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tx</span> <span class="o">=</span> <span class="n">TableSelector</span><span class="p">([</span><span class="s2">&quot;www.orders&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;www&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tx</span><span class="o">.</span><span class="n">selected_schemas</span><span class="p">()</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">ValueError</span>: <span class="n">pattern selects table, not schema: &#39;&quot;www&quot;.&quot;orders&quot;&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.names.TempTableName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.names.</span></span><span class="sig-name descname"><span class="pre">TempTableName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TempTableName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TempTableName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#etl.names.TableName" title="etl.names.TableName"><code class="xref py py-class docutils literal notranslate"><span class="pre">etl.names.TableName</span></code></a></p>
+<p>Class to deal with names of temporary relations.</p>
+<p>Note that temporary views or tables do not have a schema (*) and have a name starting with ‘#’.
+(* = strictly speaking, their schema is one of the pg_temp% schemas. But who’s looking.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">temp</span> <span class="o">=</span> <span class="n">TempTableName</span><span class="p">(</span><span class="s2">&quot;#hello&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+<span class="go">&#39;&quot;#hello&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">temp</span><span class="o">.</span><span class="n">identifier</span>
+<span class="go">&#39;#hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;For SQL: </span><span class="si">{:s}</span><span class="s2">, for logging: </span><span class="si">{:x}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
+<span class="go">&#39;For SQL: &quot;#hello&quot;, for logging: \&#39;#hello\&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Schema and name comparison in SQL continues to work if you use LIKE for schema names:
+&gt;&gt;&gt; temp.schema
+‘pg_temp%’</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.names.TempTableName.for_table">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">for_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#TempTableName.for_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.TempTableName.for_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a valid name for a temporary table that’s derived from the given table name.</p>
+<p>Leaks Redshift spec in that we make sure that names are less than 127 characters long.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span> <span class="o">=</span> <span class="s2">&quot;public.speakeasy&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">temp</span> <span class="o">=</span> <span class="n">TempTableName</span><span class="o">.</span><span class="n">for_table</span><span class="p">(</span><span class="n">tn</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">temp</span><span class="o">.</span><span class="n">identifier</span>
+<span class="go">&#39;#public$speakeasy&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+<span class="go">&#39;&quot;#public$speakeasy&quot;&#39;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">too_long</span> <span class="o">=</span> <span class="s2">&quot;public.&quot;</span> <span class="o">+</span> <span class="s2">&quot;long&quot;</span> <span class="o">*</span> <span class="mi">32</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tt</span> <span class="o">=</span> <span class="n">TempTableName</span><span class="o">.</span><span class="n">for_table</span><span class="p">(</span><span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="n">too_long</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">tt</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+<span class="go">127</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TempTableName.identifier">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identifier</span></span><a class="headerlink" href="#etl.names.TempTableName.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return simple identifier, like one would use on the command line.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tn</span><span class="o">.</span><span class="n">identifier</span>
+<span class="go">&#39;hello.world&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.names.TempTableName.schema">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema</span></span><a class="headerlink" href="#etl.names.TempTableName.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.names.as_backup_name">
+<span class="sig-prename descclassname"><span class="pre">etl.names.</span></span><span class="sig-name descname"><span class="pre">as_backup_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#as_backup_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.as_backup_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform the schema name to its backup position.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.names.as_staging_name">
+<span class="sig-prename descclassname"><span class="pre">etl.names.</span></span><span class="sig-name descname"><span class="pre">as_staging_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/names.html#as_staging_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.names.as_staging_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform the schema name to its staging position.</p>
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="etl.monitor.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">etl.monitor module</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="etl.pipeline.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">etl.pipeline module</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.dialect.redshift &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.dialect.redshift</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains functions to maintain relations in the &quot;dialect&quot; of AWS Redshift.</span>
+
+<span class="sd">Note that overall we try to have this minimally depend on other data structures -- actually</span>
+<span class="sd">we use only TableName which is handy to get a qualified and quoted name as needed.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">import</span> <span class="nn">psycopg2.extensions</span>
+<span class="kn">from</span> <span class="nn">psycopg2.extensions</span> <span class="kn">import</span> <span class="n">connection</span> <span class="k">as</span> <span class="n">Connection</span>  <span class="c1"># only for type annotation</span>
+
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.db</span>
+<span class="kn">from</span> <span class="nn">etl.design</span> <span class="kn">import</span> <span class="n">ColumnDefinition</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLRuntimeError</span><span class="p">,</span> <span class="n">ETLSystemError</span><span class="p">,</span> <span class="n">TransientETLError</span>
+<span class="kn">from</span> <span class="nn">etl.names</span> <span class="kn">import</span> <span class="n">TableName</span>
+<span class="kn">from</span> <span class="nn">etl.text</span> <span class="kn">import</span> <span class="n">join_with_double_quotes</span><span class="p">,</span> <span class="n">whitespace_cleanup</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="build_column_description"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.build_column_description">[docs]</a><span class="k">def</span> <span class="nf">build_column_description</span><span class="p">(</span><span class="n">column</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">skip_identity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">skip_references</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the description of a table column suitable for a table creation.</span>
+
+<span class="sd">    See build_columns.</span>
+
+<span class="sd">    &gt;&gt;&gt; build_column_description(</span>
+<span class="sd">    ...     {&quot;name&quot;: &quot;key&quot;, &quot;sql_type&quot;: &quot;int&quot;, &quot;not_null&quot;: True, &quot;encoding&quot;: &quot;raw&quot;}</span>
+<span class="sd">    ... )</span>
+<span class="sd">    &#39;&quot;key&quot; INT ENCODE raw NOT NULL&#39;</span>
+<span class="sd">    &gt;&gt;&gt; build_column_description(</span>
+<span class="sd">    ...     {&quot;name&quot;: &quot;my_key&quot;, &quot;sql_type&quot;: &quot;int&quot;, &quot;references&quot;: [&quot;sch.ble&quot;, [&quot;key&quot;]]}</span>
+<span class="sd">    ... )</span>
+<span class="sd">    &#39;&quot;my_key&quot; INT REFERENCES &quot;sch&quot;.&quot;ble&quot; ( &quot;key&quot; )&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">column_ddl</span> <span class="o">=</span> <span class="s1">&#39;&quot;</span><span class="si">{name}</span><span class="s1">&quot; </span><span class="si">{sql_type}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">sql_type</span><span class="o">=</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;identity&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">skip_identity</span><span class="p">:</span>
+        <span class="n">column_ddl</span> <span class="o">+=</span> <span class="s2">&quot; IDENTITY(1, 1)&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;encoding&quot;</span> <span class="ow">in</span> <span class="n">column</span><span class="p">:</span>
+        <span class="n">column_ddl</span> <span class="o">+=</span> <span class="s2">&quot; ENCODE </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;encoding&quot;</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="s2">&quot;auto_encoding&quot;</span> <span class="ow">in</span> <span class="n">column</span><span class="p">:</span>
+        <span class="n">column_ddl</span> <span class="o">+=</span> <span class="s2">&quot; ENCODE </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;auto_encoding&quot;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;not_null&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="n">column_ddl</span> <span class="o">+=</span> <span class="s2">&quot; NOT NULL&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;references&quot;</span> <span class="ow">in</span> <span class="n">column</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">skip_references</span><span class="p">:</span>
+        <span class="c1"># TODO(tom): Fix type definition of column references</span>
+        <span class="p">[</span><span class="n">table_identifier</span><span class="p">,</span> <span class="p">[</span><span class="n">foreign_column</span><span class="p">]]</span> <span class="o">=</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;references&quot;</span><span class="p">]</span>  <span class="c1"># type: ignore</span>
+        <span class="n">foreign_name</span> <span class="o">=</span> <span class="n">TableName</span><span class="o">.</span><span class="n">from_identifier</span><span class="p">(</span><span class="n">table_identifier</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="n">column_ddl</span> <span class="o">+=</span> <span class="s1">&#39; REFERENCES </span><span class="si">{}</span><span class="s1"> ( &quot;</span><span class="si">{}</span><span class="s1">&quot; )&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">foreign_name</span><span class="p">,</span> <span class="n">foreign_column</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+    <span class="k">return</span> <span class="n">column_ddl</span></div>
+
+
+<div class="viewcode-block" id="build_columns"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.build_columns">[docs]</a><span class="k">def</span> <span class="nf">build_columns</span><span class="p">(</span><span class="n">columns</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">is_temp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Build up partial DDL for all non-skipped columns.</span>
+
+<span class="sd">    For our final table, we skip the IDENTITY (which would mess with our row at key==0) but do add</span>
+<span class="sd">    references to other tables.</span>
+<span class="sd">    For temp tables, we use IDENTITY so that the key column is filled in but skip the references.</span>
+
+<span class="sd">    &gt;&gt;&gt; build_columns([{&quot;name&quot;: &quot;key&quot;, &quot;sql_type&quot;: &quot;int&quot;}, {&quot;name&quot;: &quot;?&quot;, &quot;skipped&quot;: True}])</span>
+<span class="sd">    [&#39;&quot;key&quot; INT&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ddl_for_columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">build_column_description</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="n">skip_identity</span><span class="o">=</span><span class="ow">not</span> <span class="n">is_temp</span><span class="p">,</span> <span class="n">skip_references</span><span class="o">=</span><span class="n">is_temp</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">ddl_for_columns</span></div>
+
+
+<div class="viewcode-block" id="build_table_constraints"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.build_table_constraints">[docs]</a><span class="k">def</span> <span class="nf">build_table_constraints</span><span class="p">(</span><span class="n">table_design</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the constraints from the table design, ready to be inserted into a SQL DDL statement.</span>
+
+<span class="sd">    &gt;&gt;&gt; build_table_constraints({})  # no-op</span>
+<span class="sd">    []</span>
+<span class="sd">    &gt;&gt;&gt; build_table_constraints(</span>
+<span class="sd">    ...     {&quot;constraints&quot;: [{&quot;primary_key&quot;: [&quot;id&quot;]}, {&quot;unique&quot;: [&quot;name&quot;, &quot;email&quot;]}]}</span>
+<span class="sd">    ... )</span>
+<span class="sd">    [&#39;PRIMARY KEY ( &quot;id&quot; )&#39;, &#39;UNIQUE ( &quot;name&quot;, &quot;email&quot; )&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table_constraints</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">type_lookup</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;primary_key&quot;</span><span class="p">:</span> <span class="s2">&quot;PRIMARY KEY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;surrogate_key&quot;</span><span class="p">:</span> <span class="s2">&quot;PRIMARY KEY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;unique&quot;</span><span class="p">:</span> <span class="s2">&quot;UNIQUE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;natural_key&quot;</span><span class="p">:</span> <span class="s2">&quot;UNIQUE&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">ddl_for_constraints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">table_constraints</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="p">[[</span><span class="n">constraint_type</span><span class="p">,</span> <span class="n">column_list</span><span class="p">]]</span> <span class="o">=</span> <span class="n">constraint</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="n">ddl_for_constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">type_lookup</span><span class="p">[</span><span class="n">constraint_type</span><span class="p">]</span><span class="si">}</span><span class="s2"> ( </span><span class="si">{</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">column_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> )&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">ddl_for_constraints</span></div>
+
+
+<div class="viewcode-block" id="build_table_attributes"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.build_table_attributes">[docs]</a><span class="k">def</span> <span class="nf">build_table_attributes</span><span class="p">(</span><span class="n">table_design</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the attributes from the table design, ready to be inserted into a SQL DDL statement.</span>
+
+<span class="sd">    &gt;&gt;&gt; build_table_attributes({})</span>
+<span class="sd">    []</span>
+<span class="sd">    &gt;&gt;&gt; build_table_attributes({&quot;attributes&quot;: {&quot;distribution&quot;: &quot;even&quot;}})</span>
+<span class="sd">    [&#39;DISTSTYLE EVEN&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; build_table_attributes({&quot;attributes&quot;: {&quot;distribution&quot;: [&quot;key&quot;], &quot;compound_sort&quot;: [&quot;name&quot;]}})</span>
+<span class="sd">    [&#39;DISTSTYLE KEY&#39;, &#39;DISTKEY ( &quot;key&quot; )&#39;, &#39;COMPOUND SORTKEY ( &quot;name&quot; )&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table_attributes</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attributes&quot;</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="c1"># The default in AWS Redshift is now to have AUTO sort and distribution, see also:</span>
+    <span class="c1"># https://docs.aws.amazon.com/redshift/latest/dg/c_best-practices-sort-key.html</span>
+    <span class="c1"># https://docs.aws.amazon.com/redshift/latest/dg/c_best-practices-best-dist-key.html</span>
+    <span class="n">distribution</span> <span class="o">=</span> <span class="n">table_attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;distribution&quot;</span><span class="p">)</span>
+    <span class="n">compound_sort</span> <span class="o">=</span> <span class="n">table_attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compound_sort&quot;</span><span class="p">)</span>
+    <span class="n">interleaved_sort</span> <span class="o">=</span> <span class="n">table_attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;interleaved_sort&quot;</span><span class="p">)</span>
+
+    <span class="n">ddl_attributes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">distribution</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">ddl_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;DISTSTYLE KEY&quot;</span><span class="p">)</span>
+        <span class="n">ddl_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DISTKEY ( </span><span class="si">{</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">distribution</span><span class="p">)</span><span class="si">}</span><span class="s2"> )&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">distribution</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ddl_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DISTSTYLE </span><span class="si">{</span><span class="n">distribution</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">compound_sort</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">ddl_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;COMPOUND SORTKEY ( </span><span class="si">{</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">compound_sort</span><span class="p">)</span><span class="si">}</span><span class="s2"> )&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">compound_sort</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ddl_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SORTKEY </span><span class="si">{</span><span class="n">compound_sort</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">interleaved_sort</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ddl_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;INTERLEAVED SORTKEY ( </span><span class="si">{</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">interleaved_sort</span><span class="p">)</span><span class="si">}</span><span class="s2"> )&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ddl_attributes</span></div>
+
+
+<div class="viewcode-block" id="add_auto_encoding"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.add_auto_encoding">[docs]</a><span class="k">def</span> <span class="nf">add_auto_encoding</span><span class="p">(</span><span class="n">table_design</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Modify table design in-place to add encodings of columns (in &#39;auto_encoding&#39;).&quot;&quot;&quot;</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">ColumnDefinition</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">column</span><span class="p">)</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]}</span>
+    <span class="c1"># Use any encoding already defined in the table design.</span>
+    <span class="n">encoding</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">column</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">encoding</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+    <span class="p">}</span>
+    <span class="c1"># Find all distribution and sort keys.</span>
+    <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attributes&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">continue</span>  <span class="c1"># skip values like &quot;all&quot; or &quot;auto&quot;</span>
+        <span class="k">for</span> <span class="n">column_name</span> <span class="ow">in</span> <span class="n">attribute</span><span class="p">:</span>
+            <span class="n">encoding</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>
+    <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+        <span class="k">for</span> <span class="n">column_list</span> <span class="ow">in</span> <span class="n">constraint</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">column_name</span> <span class="ow">in</span> <span class="n">column_list</span><span class="p">:</span>
+                <span class="n">encoding</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>
+    <span class="c1"># Find all columns that reference other columns.</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="s2">&quot;references&quot;</span> <span class="ow">in</span> <span class="n">column</span><span class="p">:</span>
+            <span class="n">encoding</span><span class="p">[</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>
+    <span class="c1"># Find the identity column if it exists.</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">identity</span><span class="p">:</span>
+            <span class="n">encoding</span><span class="p">[</span><span class="n">column</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>
+            <span class="k">break</span>
+    <span class="c1"># Assign default encoding based on type.</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">encoding</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span> <span class="s2">&quot;double&quot;</span><span class="p">,</span> <span class="s2">&quot;float&quot;</span><span class="p">):</span>
+            <span class="n">encoding</span><span class="p">[</span><span class="n">column</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>
+        <span class="k">elif</span> <span class="n">column</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;decimal&quot;</span><span class="p">,</span> <span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="s2">&quot;long&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">):</span>
+            <span class="n">encoding</span><span class="p">[</span><span class="n">column</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;az64&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">encoding</span><span class="p">[</span><span class="n">column</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;zstd&quot;</span>
+    <span class="c1"># Copy newly found encoding back to our table design.</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+        <span class="n">column</span><span class="p">[</span><span class="s2">&quot;auto_encoding&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">encoding</span><span class="p">[</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]]</span></div>
+
+
+<div class="viewcode-block" id="build_table_ddl"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.build_table_ddl">[docs]</a><span class="k">def</span> <span class="nf">build_table_ddl</span><span class="p">(</span><span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">table_design</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">is_temp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Assemble the DDL of a table in a Redshift data warehouse.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_value</span><span class="p">(</span><span class="s2">&quot;arthur_settings.redshift.relation_column_encoding&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;ON&quot;</span>
+    <span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;AUTO&quot;</span><span class="p">:</span>
+        <span class="n">add_auto_encoding</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="n">build_columns</span><span class="p">(</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">],</span> <span class="n">is_temp</span><span class="o">=</span><span class="n">is_temp</span><span class="p">)</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">build_table_constraints</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+    <span class="n">attributes</span> <span class="o">=</span> <span class="n">build_table_attributes</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+
+    <span class="n">ddl</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        -- arthur.ddl: </span><span class="si">{table_name.identifier}</span><span class="s2"></span>
+<span class="s2">        CREATE TABLE </span><span class="si">{table_name}</span><span class="s2"> (</span>
+<span class="s2">            </span><span class="si">{columns_and_constraints}</span><span class="s2"></span>
+<span class="s2">        )</span>
+<span class="s2">        </span><span class="si">{attributes}</span><span class="s2"></span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">table_name</span><span class="o">=</span><span class="n">table_name</span><span class="p">,</span>
+        <span class="n">columns_and_constraints</span><span class="o">=</span><span class="s2">&quot;,</span><span class="se">\n</span><span class="s2">            &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">constraints</span><span class="p">)),</span>
+        <span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">        &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">attributes</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">whitespace_cleanup</span><span class="p">(</span><span class="n">ddl</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="build_view_ddl"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.build_view_ddl">[docs]</a><span class="k">def</span> <span class="nf">build_view_ddl</span><span class="p">(</span><span class="n">view_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">columns</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">query_stmt</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Assemble the DDL of a view in a Redshift data warehouse.&quot;&quot;&quot;</span>
+    <span class="n">comma_separated_columns</span> <span class="o">=</span> <span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,</span><span class="se">\n</span><span class="s2">            &quot;</span><span class="p">)</span>
+    <span class="n">ddl_initial</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        -- arthur.ddl: </span><span class="si">{view_name.identifier}</span><span class="s2"></span>
+<span class="s2">        CREATE VIEW </span><span class="si">{view_name}</span><span class="s2"> (</span>
+<span class="s2">            </span><span class="si">{columns}</span><span class="s2"></span>
+<span class="s2">        ) AS</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">view_name</span><span class="o">=</span><span class="n">view_name</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">comma_separated_columns</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">whitespace_cleanup</span><span class="p">(</span><span class="n">ddl_initial</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">query_stmt</span></div>
+
+
+<div class="viewcode-block" id="build_insert_ddl"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.build_insert_ddl">[docs]</a><span class="k">def</span> <span class="nf">build_insert_ddl</span><span class="p">(</span><span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">column_list</span><span class="p">,</span> <span class="n">query_stmt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Assemble the statement to insert data based on a query.&quot;&quot;&quot;</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">column_list</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,</span><span class="se">\n</span><span class="s2">            &quot;</span><span class="p">)</span>
+    <span class="n">insert_stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        -- arthur.insert: </span><span class="si">{table.identifier}</span><span class="s2"></span>
+<span class="s2">        INSERT INTO </span><span class="si">{table}</span><span class="s2"> (</span>
+<span class="s2">            </span><span class="si">{columns}</span><span class="s2"></span>
+<span class="s2">        )</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">table</span><span class="o">=</span><span class="n">table_name</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">whitespace_cleanup</span><span class="p">(</span><span class="n">insert_stmt</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">query_stmt</span></div>
+
+
+<div class="viewcode-block" id="create_external_schema"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.create_external_schema">[docs]</a><span class="k">def</span> <span class="nf">create_external_schema</span><span class="p">(</span>
+    <span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">database</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">iam_role</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># TODO(tom): Need to pass in catalog role as well if it is not the same as IAM role.</span>
+    <span class="n">drop_stmt</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;DROP SCHEMA IF EXISTS &quot;</span><span class="si">{</span><span class="n">schema_name</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+    <span class="n">create_stmt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        -- arthur.ddl: </span><span class="si">{</span><span class="n">schema_name</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">        CREATE EXTERNAL SCHEMA IF NOT EXISTS &quot;</span><span class="si">{</span><span class="n">schema_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">        FROM DATA CATALOG</span>
+<span class="s2">        DATABASE %s</span>
+<span class="s2">        IAM_ROLE %s</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Dry-run: Skipping creating external schema &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">)</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">skip_query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">drop_stmt</span><span class="p">)</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">skip_query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">create_stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">database</span><span class="p">,</span> <span class="n">iam_role</span><span class="p">))</span>
+        <span class="k">return</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Creating external schema &#39;</span><span class="si">%s</span><span class="s2">&#39; (database=&#39;</span><span class="si">%s</span><span class="s2">&#39;)&quot;</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">database</span><span class="p">)</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">drop_stmt</span><span class="p">)</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">create_stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">database</span><span class="p">,</span> <span class="n">iam_role</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="log_load_error"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.log_load_error">[docs]</a><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">log_load_error</span><span class="p">(</span><span class="n">cx</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Log any Redshift LOAD errors during a COPY command.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span>
+    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">log_sql_error</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+        <span class="c1"># For load errors, let&#39;s get some details from Redshift.</span>
+        <span class="k">if</span> <span class="n">cx</span><span class="o">.</span><span class="n">get_transaction_status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">TRANSACTION_STATUS_IDLE</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Cannot retrieve error information from &#39;stl_load_errors&#39; within failed transaction&quot;</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rows</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+                <span class="n">cx</span><span class="p">,</span>
+                <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">                    SELECT session</span>
+<span class="sd">                         , query</span>
+<span class="sd">                         , starttime</span>
+<span class="sd">                         , colname</span>
+<span class="sd">                         , type</span>
+<span class="sd">                         , TRIM(filename) AS filename</span>
+<span class="sd">                         , line_number</span>
+<span class="sd">                         , TRIM(err_reason) AS err_reason</span>
+<span class="sd">                      FROM stl_load_errors</span>
+<span class="sd">                     WHERE session = PG_BACKEND_PID()</span>
+<span class="sd">                     ORDER BY starttime DESC</span>
+<span class="sd">                     LIMIT 1</span>
+<span class="sd">                &quot;&quot;&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">rows</span><span class="p">:</span>
+                <span class="n">row0</span> <span class="o">=</span> <span class="n">rows</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+                <span class="n">max_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">row0</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+                <span class="n">info</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="s2">&quot;{key:</span><span class="si">{width}</span><span class="s2">s} | </span><span class="si">{value}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">k</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">row0</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">max_len</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">row0</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+                <span class="p">]</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Load error information from stl_load_errors:</span><span class="se">\n</span><span class="s2">  </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">info</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;There was no additional information in &#39;stl_load_errors&#39;&quot;</span><span class="p">)</span>
+        <span class="k">raise</span></div>
+
+
+<div class="viewcode-block" id="determine_data_format_parameters"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.determine_data_format_parameters">[docs]</a><span class="k">def</span> <span class="nf">determine_data_format_parameters</span><span class="p">(</span><span class="n">data_format</span><span class="p">,</span> <span class="n">format_option</span><span class="p">,</span> <span class="n">file_compression</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">data_format</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># This is our original data format (which mirrors settings in unload).</span>
+        <span class="k">return</span> <span class="s2">&quot;DELIMITER &#39;,&#39; ESCAPE REMOVEQUOTES GZIP&quot;</span>
+
+    <span class="k">if</span> <span class="n">data_format</span> <span class="o">==</span> <span class="s2">&quot;CSV&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">format_option</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">data_format_parameters</span> <span class="o">=</span> <span class="s2">&quot;CSV&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data_format_parameters</span> <span class="o">=</span> <span class="s2">&quot;CSV QUOTE AS &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">format_option</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">data_format</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;AVRO&quot;</span><span class="p">,</span> <span class="s2">&quot;JSON&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">format_option</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">format_option</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span>
+        <span class="n">data_format_parameters</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> AS &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data_format</span><span class="p">,</span> <span class="n">format_option</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ETLSystemError</span><span class="p">(</span><span class="s2">&quot;found unexpected data format: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data_format</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">file_compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data_format_parameters</span> <span class="o">+=</span> <span class="s2">&quot; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_compression</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data_format_parameters</span></div>
+
+
+<div class="viewcode-block" id="copy_using_manifest"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.copy_using_manifest">[docs]</a><span class="k">def</span> <span class="nf">copy_using_manifest</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span>
+    <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span>
+    <span class="n">column_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="n">s3_uri</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">aws_iam_role</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">data_format</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">format_option</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">file_compression</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">credentials</span> <span class="o">=</span> <span class="s2">&quot;aws_iam_role=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">aws_iam_role</span><span class="p">)</span>
+    <span class="n">data_format_parameters</span> <span class="o">=</span> <span class="n">determine_data_format_parameters</span><span class="p">(</span>
+        <span class="n">data_format</span><span class="p">,</span> <span class="n">format_option</span><span class="p">,</span> <span class="n">file_compression</span>
+    <span class="p">)</span>
+
+    <span class="n">compupdate</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_value</span><span class="p">(</span><span class="s2">&quot;arthur_settings.redshift.relation_column_encoding&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;ON&quot;</span>
+    <span class="k">if</span> <span class="n">compupdate</span> <span class="o">==</span> <span class="s2">&quot;AUTO&quot;</span><span class="p">:</span>
+        <span class="n">compupdate</span> <span class="o">=</span> <span class="s2">&quot;OFF&quot;</span>
+
+    <span class="n">copy_stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        -- arthur.copy: </span><span class="si">{table.identifier}</span><span class="s2"></span>
+<span class="s2">        COPY </span><span class="si">{table}</span><span class="s2"> (</span>
+<span class="s2">            </span><span class="si">{columns}</span><span class="s2"></span>
+<span class="s2">        )</span>
+<span class="s2">        FROM </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">        CREDENTIALS </span><span class="si">%s</span><span class="s2"> MANIFEST</span>
+<span class="s2">        </span><span class="si">{data_format_parameters}</span><span class="s2"></span>
+<span class="s2">        TIMEFORMAT AS &#39;auto&#39;</span>
+<span class="s2">        DATEFORMAT AS &#39;auto&#39;</span>
+<span class="s2">        TRUNCATECOLUMNS</span>
+<span class="s2">        STATUPDATE OFF</span>
+<span class="s2">        COMPUPDATE </span><span class="si">{compupdate}</span><span class="s2"></span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">table</span><span class="o">=</span><span class="n">table_name</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">column_list</span><span class="p">),</span>
+        <span class="n">data_format_parameters</span><span class="o">=</span><span class="n">data_format_parameters</span><span class="p">,</span>
+        <span class="n">compupdate</span><span class="o">=</span><span class="n">compupdate</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Dry-run: Skipping copying data into &#39;</span><span class="si">%s</span><span class="s2">&#39; using &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">s3_uri</span><span class="p">)</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">skip_query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">copy_stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">s3_uri</span><span class="p">,</span> <span class="n">credentials</span><span class="p">))</span>
+        <span class="k">return</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Copying data into &#39;</span><span class="si">%s</span><span class="s2">&#39; using &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">s3_uri</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">log_load_error</span><span class="p">(</span><span class="n">conn</span><span class="p">):</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">copy_stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">s3_uri</span><span class="p">,</span> <span class="n">credentials</span><span class="p">))</span>
+    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">InternalError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">pgcode</span> <span class="o">==</span> <span class="s2">&quot;XX000&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span>
+        <span class="k">raise</span> <span class="n">TransientETLError</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span></div>
+
+
+<div class="viewcode-block" id="query_load_commits"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.query_load_commits">[docs]</a><span class="k">def</span> <span class="nf">query_load_commits</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">s3_uri</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT TRIM(filename) AS filename</span>
+<span class="s2">             , lines_scanned</span>
+<span class="s2">          FROM stl_load_commits</span>
+<span class="s2">         WHERE query = PG_LAST_COPY_ID()</span>
+<span class="s2">         ORDER BY TRIM(filename)</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">skip_query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">)</span>
+    <span class="n">summary</span> <span class="o">=</span> <span class="s2">&quot;    &quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">    &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="s2">&quot;&#39;</span><span class="si">{filename}</span><span class="s2">&#39; (</span><span class="si">{lines_scanned}</span><span class="s2"> line(s))&quot;</span><span class="o">.</span><span class="n">format_map</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span>
+    <span class="p">)</span>
+    <span class="c1"># TODO(tom): Check whether this is redundant with query_load_summary</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Copied </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="si">}</span><span class="s2"> file(s) into &#39;</span><span class="si">{</span><span class="n">table_name</span><span class="si">:</span><span class="s2">x</span><span class="si">}</span><span class="s2">&#39; using manifest &#39;</span><span class="si">{</span><span class="n">s3_uri</span><span class="si">}</span><span class="s2">&#39;:</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">summary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;file_count&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">),</span> <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">}},</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="query_load_summary"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.query_load_summary">[docs]</a><span class="k">def</span> <span class="nf">query_load_summary</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># This query is not guarded by &quot;dry_run&quot; so that we have a copy_id for the other query.</span>
+    <span class="p">[[</span><span class="n">copy_count</span><span class="p">,</span> <span class="n">copy_id</span><span class="p">]]</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;SELECT pg_last_copy_count(), pg_last_copy_id()&quot;</span><span class="p">)</span>
+
+    <span class="n">stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT COUNT(s3.key) AS file_count</span>
+<span class="s2">             , COUNT(DISTINCT s.slice) AS slice_count</span>
+<span class="s2">             , COUNT(DISTINCT s.node) AS node_count</span>
+<span class="s2">             , MAX(wq.slot_count) AS slot_count</span>
+<span class="s2">             , ROUND(MAX(wq.total_queue_time/1000000.0), 2) AS elapsed_queued</span>
+<span class="s2">             , ROUND(MAX(wq.total_exec_time/1000000.0), 2) AS elapsed</span>
+<span class="s2">             , ROUND(SUM(s3.transfer_size)/(1024.0*1024.0), 2) AS total_mb</span>
+<span class="s2">          FROM stl_wlm_query AS wq</span>
+<span class="s2">          JOIN stl_s3client AS s3 USING (query)</span>
+<span class="s2">          JOIN stv_slices AS s USING (slice)</span>
+<span class="s2">         WHERE wq.query = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">        &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">skip_query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">copy_id</span><span class="p">,))</span>
+        <span class="k">return</span>
+
+    <span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">copy_id</span><span class="p">,))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="s2">&quot;Copied </span><span class="si">{copy_count:d}</span><span class="s2"> row(s) into </span><span class="si">{table_name:x}</span><span class="s2"> &quot;</span>
+            <span class="s2">&quot;(files: </span><span class="si">{file_count:d}</span><span class="s2">, slices: </span><span class="si">{slice_count:d}</span><span class="s2">, nodes: </span><span class="si">{node_count:d}</span><span class="s2">, &quot;</span>
+            <span class="s2">&quot;slots: </span><span class="si">{slot_count:d}</span><span class="s2">, elapsed: </span><span class="si">{elapsed}</span><span class="s2">s (</span><span class="si">{elapsed_queued}</span><span class="s2">s queued), &quot;</span>
+            <span class="s2">&quot;size: </span><span class="si">{total_mb}</span><span class="s2">MB)&quot;</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">copy_count</span><span class="o">=</span><span class="n">copy_count</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="n">table_name</span><span class="p">,</span> <span class="o">**</span><span class="n">row</span><span class="p">),</span>
+        <span class="n">extra</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;file_count&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;file_count&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;rows&quot;</span><span class="p">:</span> <span class="n">copy_count</span><span class="p">,</span>
+                <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;total_mb&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="query_insert_summary"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.query_insert_summary">[docs]</a><span class="k">def</span> <span class="nf">query_insert_summary</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># This query sums up over segments of the previously run query.</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT query AS query_id</span>
+<span class="s2">             , SUM(elapsed) AS elapsed</span>
+<span class="s2">             , SUM(s3_scanned_rows) AS s3_scanned_rows</span>
+<span class="s2">             , SUM(s3_scanned_bytes) AS s3_scanned_bytes</span>
+<span class="s2">             , SUM(s3query_returned_rows) AS s3query_returned_rows</span>
+<span class="s2">             , SUM(s3query_returned_bytes) AS s3query_returned_bytes</span>
+<span class="s2">             , SUM(files) AS file_count</span>
+<span class="s2">          FROM svl_s3query_summary</span>
+<span class="s2">         WHERE query = PG_LAST_QUERY_ID()</span>
+<span class="s2">         GROUP BY query</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">skip_query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># For now, just leave if S3 was not involved.</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Summary for query </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;query_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (from loading </span><span class="si">{</span><span class="n">table_name</span><span class="si">:</span><span class="s2">x</span><span class="si">}</span><span class="s2">):</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">format_result</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">skip_rows_count</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">extra</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;elapsed&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;elapsed&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1_000_000.0</span><span class="p">,</span>
+                <span class="s2">&quot;file_count&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;file_count&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;s3_scanned_rows&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;s3_scanned_rows&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;s3_scanned_bytes&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;s3_scanned_bytes&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;s3query_returned_rows&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;s3query_returned_rows&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;s3query_returned_bytes&quot;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;s3query_returned_bytes&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="copy_from_uri"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.copy_from_uri">[docs]</a><span class="k">def</span> <span class="nf">copy_from_uri</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span>
+    <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span>
+    <span class="n">column_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="n">s3_uri</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">aws_iam_role</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">data_format</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">format_option</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">file_compression</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Load data into table in the data warehouse using the COPY command.&quot;&quot;&quot;</span>
+    <span class="n">copy_using_manifest</span><span class="p">(</span>
+        <span class="n">conn</span><span class="p">,</span>
+        <span class="n">table_name</span><span class="p">,</span>
+        <span class="n">column_list</span><span class="p">,</span>
+        <span class="n">s3_uri</span><span class="p">,</span>
+        <span class="n">aws_iam_role</span><span class="p">,</span>
+        <span class="n">data_format</span><span class="p">,</span>
+        <span class="n">format_option</span><span class="p">,</span>
+        <span class="n">file_compression</span><span class="p">,</span>
+        <span class="n">dry_run</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">query_load_commits</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">s3_uri</span><span class="p">,</span> <span class="n">dry_run</span><span class="p">)</span>
+    <span class="n">query_load_summary</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">dry_run</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="insert_from_query"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.insert_from_query">[docs]</a><span class="k">def</span> <span class="nf">insert_from_query</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">column_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">query_stmt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Load data into table in the data warehouse using the INSERT INTO command.&quot;&quot;&quot;</span>
+    <span class="n">retriable_error_codes</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_list</span><span class="p">(</span><span class="s2">&quot;arthur_settings.retriable_error_codes&quot;</span><span class="p">)</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="n">build_insert_ddl</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">column_list</span><span class="p">,</span> <span class="n">query_stmt</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Dry-run: Skipping inserting data into &#39;</span><span class="si">%s</span><span class="s2">&#39; from query&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">skip_query</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Inserting data into &#39;</span><span class="si">%s</span><span class="s2">&#39; from query&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">)</span>
+    <span class="c1"># TODO(tom) Ideally we&#39;d retry these but initial testing ran into issues with closed connections.</span>
+    <span class="c1"># except psycopg2.OperationalError as exc:</span>
+    <span class="c1">#    raise TransientETLError(exc) from exc</span>
+    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">InternalError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">pgcode</span> <span class="ow">in</span> <span class="n">retriable_error_codes</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TransientETLError</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Unretriable SQL Error: pgcode=</span><span class="si">%s</span><span class="s2">, pgerror=</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">exc</span><span class="o">.</span><span class="n">pgcode</span><span class="p">,</span> <span class="n">exc</span><span class="o">.</span><span class="n">pgerror</span><span class="p">)</span>
+        <span class="k">raise</span>
+
+    <span class="n">query_insert_summary</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="set_wlm_slots"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.set_wlm_slots">[docs]</a><span class="k">def</span> <span class="nf">set_wlm_slots</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">slots</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dry_run</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="n">conn</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Using </span><span class="si">{</span><span class="n">slots</span><span class="si">}</span><span class="s2"> WLM queue slot(s)&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;SET wlm_query_slot_count TO </span><span class="si">{</span><span class="n">slots</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="set_statement_timeout"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.set_statement_timeout">[docs]</a><span class="k">def</span> <span class="nf">set_statement_timeout</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">statement_timeout</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dry_run</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">statement_timeout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Using default cluster statement timeout&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="n">conn</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;Setting timeout for statements running in Redshift to </span><span class="si">{</span><span class="n">statement_timeout</span><span class="si">}</span><span class="s2"> ms&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;SET statement_timeout TO </span><span class="si">{</span><span class="n">statement_timeout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="unload"><a class="viewcode-back" href="../../../etl/etl.dialect.redshift.html#etl.dialect.redshift.unload">[docs]</a><span class="k">def</span> <span class="nf">unload</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span>
+    <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span>
+    <span class="n">columns</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="n">unload_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">aws_iam_role</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">allow_overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Execute the UNLOAD command for the given relation (via a select statement).</span>
+
+<span class="sd">    Optionally allow users to overwrite previously unloaded data within the same keyspace.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">credentials</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;aws_iam_role=</span><span class="si">{</span><span class="n">aws_iam_role</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="c1"># TODO(tom): Need to review why we can&#39;t use r&quot;\N&quot;</span>
+    <span class="n">null_string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\\\\</span><span class="s2">N&quot;</span>
+    <span class="c1"># TODO(tom): Add &#39;-- arthur.unload: {table_name.identifier}&#39; at top of query</span>
+    <span class="n">unload_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        UNLOAD (&#39;</span>
+<span class="s2">            SELECT </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">            FROM </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">        &#39;)</span>
+<span class="s2">        TO &#39;</span><span class="si">{}</span><span class="s2">&#39;</span>
+<span class="s2">        CREDENTIALS &#39;</span><span class="si">{}</span><span class="s2">&#39; MANIFEST</span>
+<span class="s2">        DELIMITER &#39;,&#39; ESCAPE ADDQUOTES GZIP NULL AS &#39;</span><span class="si">{}</span><span class="s2">&#39;</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">                 , &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">columns</span><span class="p">),</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">unload_path</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">null_string</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">allow_overwrite</span><span class="p">:</span>
+        <span class="n">unload_statement</span> <span class="o">+=</span> <span class="s2">&quot;ALLOWOVERWRITE&quot;</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Unloading data from &#39;</span><span class="si">%s</span><span class="s2">&#39; to &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">unload_path</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">log_error</span><span class="p">():</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">unload_statement</span><span class="p">)</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

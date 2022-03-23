@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.design.load &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.design.load</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Slurp in &quot;table design&quot; files and validate the relation&#39;s design.</span>
+
+<span class="sd">Table designs describe the columns, like their name and type, as well as how the data</span>
+<span class="sd">should be organized once loaded into Redshift, like the distribution style or sort key.</span>
+
+<span class="sd">Table designs are implemented as dictionaries of dictionaries or lists etc.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">closing</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="kn">import</span> <span class="nn">funcy</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">import</span> <span class="nn">yaml.parser</span>
+
+<span class="c1"># Test whether we can use the faster CSafeLoader.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">yaml</span> <span class="kn">import</span> <span class="n">CSafeLoader</span> <span class="k">as</span> <span class="n">SafeLoader</span>  <span class="c1"># lgtm[py/import-and-import-from]</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">yaml</span> <span class="kn">import</span> <span class="n">SafeLoader</span>  <span class="c1"># type: ignore</span>
+
+<span class="kn">import</span> <span class="nn">etl</span>
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.db</span>
+<span class="kn">import</span> <span class="nn">etl.file_sets</span>
+<span class="kn">import</span> <span class="nn">etl.s3</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">SchemaValidationError</span><span class="p">,</span>
+    <span class="n">TableDesignParseError</span><span class="p">,</span>
+    <span class="n">TableDesignSemanticError</span><span class="p">,</span>
+    <span class="n">TableDesignSyntaxError</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">etl.text</span> <span class="kn">import</span> <span class="n">join_with_single_quotes</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="load_table_design"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.load_table_design">[docs]</a><span class="k">def</span> <span class="nf">load_table_design</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load table design from stream (usually, an open file).</span>
+
+<span class="sd">    The table design is validated before being returned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">table_design</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">SafeLoader</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">yaml</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">ParserError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TableDesignParseError</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span>
+
+    <span class="c1"># We used to specify constraints using an object (before v0.24.0) and then switched to using</span>
+    <span class="c1"># an array of objects (with v0.24.0). This rewrites the constraints into the new format</span>
+    <span class="c1"># as needed.</span>
+    <span class="c1"># TODO(tom): Rewrite current design files and remove this logic!</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">constraints</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="n">constraint_type</span><span class="p">:</span> <span class="n">constraints</span><span class="p">[</span><span class="n">constraint_type</span><span class="p">]}</span> <span class="k">for</span> <span class="n">constraint_type</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">constraints</span><span class="p">)</span>
+        <span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">validate_table_design</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="n">table_name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="load_table_design_from_localfile"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.load_table_design_from_localfile">[docs]</a><span class="k">def</span> <span class="nf">load_table_design_from_localfile</span><span class="p">(</span><span class="n">local_filename</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Load (and validate) table design file in local file system.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">local_filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;local filename is unknown&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">local_filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">table_design</span> <span class="o">=</span> <span class="n">load_table_design</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">table_name</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to load table design from &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">local_filename</span><span class="p">)</span>
+        <span class="k">raise</span>
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="load_table_design_from_s3"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.load_table_design_from_s3">[docs]</a><span class="k">def</span> <span class="nf">load_table_design_from_s3</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">design_file</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Download (and validate) table design from file in S3.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_s3_object_content</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">design_file</span><span class="p">))</span> <span class="k">as</span> <span class="n">content</span><span class="p">:</span>
+        <span class="n">table_design</span> <span class="o">=</span> <span class="n">load_table_design</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">table_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="validate_table_design"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_table_design">[docs]</a><span class="k">def</span> <span class="nf">validate_table_design</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate table design against schema. Raise exception if anything is not right.</span>
+
+<span class="sd">    Phase 1 of validation is based on a schema and json-schema validation.</span>
+<span class="sd">    Phase 2 is built on specific rules that I couldn&#39;t figure out how</span>
+<span class="sd">    to run inside json-schema.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">validate_table_design_syntax</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="n">table_name</span><span class="p">)</span>
+        <span class="n">validate_table_design_semantics</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="n">table_name</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Failed to validate table design for &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+        <span class="k">raise</span>
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="validate_table_design_syntax"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_table_design_syntax">[docs]</a><span class="k">def</span> <span class="nf">validate_table_design_syntax</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate table design based on the (JSON) schema (which can only check syntax but not values).</span>
+
+<span class="sd">    Raise an exception if anything is amiss.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">validate_with_schema</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="s2">&quot;table_design.schema&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">SchemaValidationError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TableDesignSyntaxError</span><span class="p">(</span>
+            <span class="s2">&quot;failed to validate table design for &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+        <span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span></div>
+
+
+<div class="viewcode-block" id="validate_identity_as_surrogate_key"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_identity_as_surrogate_key">[docs]</a><span class="k">def</span> <span class="nf">validate_identity_as_surrogate_key</span><span class="p">(</span><span class="n">table_design</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check whether specification of our identity column is valid and matches surrogate key.&quot;&quot;&quot;</span>
+    <span class="n">identity_columns</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;identity&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;not_null&quot;</span><span class="p">):</span>
+                <span class="c1"># NULL columns may not be primary key (identity)</span>
+                <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;identity column must be set to not null&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">identity_columns</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;only one column should have identity&quot;</span><span class="p">)</span>
+            <span class="n">identity_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">surrogate_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">constraints</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">constraint</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;surrogate_key&quot;</span><span class="p">,</span> <span class="p">[])]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">surrogate_keys</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">surrogate_keys</span> <span class="o">==</span> <span class="n">identity_columns</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;surrogate key must be identity column&quot;</span><span class="p">)</span></div>
+    <span class="c1"># TODO Complain if surrogate_key is missing but identity is present</span>
+
+
+<div class="viewcode-block" id="validate_column_references"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_column_references">[docs]</a><span class="k">def</span> <span class="nf">validate_column_references</span><span class="p">(</span><span class="n">table_design</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Make sure that table attributes and constraints only reference columns that actually exist.&quot;&quot;&quot;</span>
+    <span class="n">valid_columns</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
+        <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Rewrite the attributes to have the same shape as constraints (list of dicts, each dict having</span>
+    <span class="c1"># one item, which is the name and some columns). Note that some attributes have tokens like ALL.</span>
+    <span class="n">attributes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="n">attribute</span><span class="p">:</span> <span class="n">columns</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">columns</span> <span class="ow">in</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attributes&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">constraints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[])</span>
+
+    <span class="k">for</span> <span class="n">outer_name</span><span class="p">,</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">funcy</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+        <span class="nb">zip</span><span class="p">(</span><span class="n">funcy</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;attributes&quot;</span><span class="p">),</span> <span class="n">attributes</span><span class="p">),</span> <span class="nb">zip</span><span class="p">(</span><span class="n">funcy</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">),</span> <span class="n">constraints</span><span class="p">)</span>
+    <span class="p">):</span>
+        <span class="p">[[</span><span class="n">inner_name</span><span class="p">,</span> <span class="n">this_columns</span><span class="p">]]</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="n">unknown</span> <span class="o">=</span> <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">this_columns</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">valid_columns</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">unknown</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;unknown </span><span class="si">{</span><span class="n">inner_name</span><span class="si">}</span><span class="s2"> column(s) in table </span><span class="si">{</span><span class="n">outer_name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">unknown</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_semantics_of_view"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_semantics_of_view">[docs]</a><span class="k">def</span> <span class="nf">validate_semantics_of_view</span><span class="p">(</span><span class="n">table_design</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check for semantics that only apply to views.</span>
+
+<span class="sd">    Basically, definitions of views may only contain column names or descriptions.</span>
+<span class="sd">    Note that validation doesn&#39;t catch this since we didn&#39;t completely separate</span>
+<span class="sd">    the schema for CTAS and VIEW but have that distinction only on the source_name.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># This error occurs when you change from CTAS to VIEW and then forget to remove the extra</span>
+    <span class="c1"># information for the columns, like type or sql_type.</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+        <span class="n">unwanted_fields</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">column</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">((</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">unwanted_fields</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+                <span class="s2">&quot;too much information for column of a VIEW: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">unwanted_fields</span><span class="p">)</span>
+            <span class="p">)</span>
+    <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="s2">&quot;attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;extract_settings&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> not supported for a VIEW&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="validate_semantics_of_table_or_ctas"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_semantics_of_table_or_ctas">[docs]</a><span class="k">def</span> <span class="nf">validate_semantics_of_table_or_ctas</span><span class="p">(</span><span class="n">table_design</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check for semantics that apply to tables that are in source schemas or are a CTAS.&quot;&quot;&quot;</span>
+    <span class="n">validate_identity_as_surrogate_key</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+    <span class="n">validate_column_references</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+
+    <span class="c1"># Make sure that constraints other than unique constraint appear only once</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">seen_constraint_types</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">constraints</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">constraint_type</span> <span class="ow">in</span> <span class="n">constraint</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">constraint_type</span> <span class="ow">in</span> <span class="n">seen_constraint_types</span> <span class="ow">and</span> <span class="n">constraint_type</span> <span class="o">!=</span> <span class="s2">&quot;unique&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;multiple constraints of type </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">constraint_type</span><span class="p">))</span>
+            <span class="n">seen_constraint_types</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">constraint_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_semantics_of_ctas"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_semantics_of_ctas">[docs]</a><span class="k">def</span> <span class="nf">validate_semantics_of_ctas</span><span class="p">(</span><span class="n">table_design</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check for semantics that apply only to CTAS.&quot;&quot;&quot;</span>
+    <span class="n">validate_semantics_of_table_or_ctas</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;extract_settings&quot;</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;Extract settings not supported for transformations&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_semantics_of_table"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_semantics_of_table">[docs]</a><span class="k">def</span> <span class="nf">validate_semantics_of_table</span><span class="p">(</span><span class="n">table_design</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check for semantics that apply to tables in source schemas.&quot;&quot;&quot;</span>
+    <span class="n">validate_semantics_of_table_or_ctas</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;depends_on&quot;</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+            <span class="s2">&quot;upstream table &#39;</span><span class="si">%s</span><span class="s2">&#39; has dependencies listed&quot;</span> <span class="o">%</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">constraint_types_in_design</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">constraint_type</span> <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">constraints</span> <span class="k">for</span> <span class="n">constraint_type</span> <span class="ow">in</span> <span class="n">constraint</span>
+    <span class="p">]</span>
+    <span class="k">for</span> <span class="n">constraint_type</span> <span class="ow">in</span> <span class="n">constraint_types_in_design</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">constraint_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;natural_key&quot;</span><span class="p">,</span> <span class="s2">&quot;surrogate_key&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+                <span class="s2">&quot;upstream table &#39;</span><span class="si">{}</span><span class="s2">&#39; has unexpected </span><span class="si">{}</span><span class="s2"> constraint&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">constraint_type</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+    <span class="n">split_by_settings</span> <span class="o">=</span> <span class="n">table_design</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extract_settings&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;split_by&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">split_by_settings</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span>  <span class="c1"># Not validating split_by expressions</span>
+    <span class="p">[</span><span class="n">split_by_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">split_by_settings</span>
+    <span class="k">if</span> <span class="n">split_by_name</span><span class="p">:</span>
+        <span class="n">split_by_column</span> <span class="o">=</span> <span class="n">funcy</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="n">funcy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">split_by_name</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">split_by_column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;split-by column must not be skipped&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">split_by_column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;not_null&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span><span class="s2">&quot;split-by column must have not-null constraint&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">split_by_column</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="s2">&quot;long&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+                <span class="s2">&quot;type of split-by column must be int, long, date or timestamp, not &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">split_by_column</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span>
+                <span class="p">)</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="validate_table_design_semantics"><a class="viewcode-back" href="../../../etl/etl.design.load.html#etl.design.load.validate_table_design_semantics">[docs]</a><span class="k">def</span> <span class="nf">validate_table_design_semantics</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate table design against rule set based on values (e.g. name of columns).</span>
+
+<span class="sd">    Raise an exception if anything is amiss.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+            <span class="s2">&quot;name in table design must match target &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="n">schema</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span><span class="o">.</span><span class="n">schema_lookup</span><span class="p">(</span><span class="n">table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;VIEW&quot;</span><span class="p">:</span>
+        <span class="n">validate_semantics_of_view</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">schema</span><span class="o">.</span><span class="n">is_upstream_source</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+                <span class="s2">&quot;invalid upstream source &#39;</span><span class="si">{}</span><span class="s2">&#39; in view &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CTAS&quot;</span><span class="p">:</span>
+        <span class="n">validate_semantics_of_ctas</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">schema</span><span class="o">.</span><span class="n">is_upstream_source</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+                <span class="s2">&quot;invalid source name &#39;</span><span class="si">{}</span><span class="s2">&#39; in upstream table &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">],</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">validate_semantics_of_table</span><span class="p">(</span><span class="n">table_design</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">schema</span><span class="o">.</span><span class="n">is_upstream_source</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TableDesignSemanticError</span><span class="p">(</span>
+                <span class="s2">&quot;invalid source name &#39;</span><span class="si">{}</span><span class="s2">&#39; in transformation &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">],</span> <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span>
+                <span class="p">)</span>
+            <span class="p">)</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

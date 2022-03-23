@@ -1,0 +1,953 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.file_sets &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.file_sets</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Utilities to interact with Amazon S3 and occasionally the local file system.</span>
+
+<span class="sd">The basic location of a file depends on the data source and can be one of:</span>
+<span class="sd">.../schemas/{source_or_schema_name}/{source_schema_name}-{table_name}.yaml -- for table design files</span>
+<span class="sd">.../schemas/{schema_name}/{source_schema_name}-{table_name}.sql -- for queries for CTAS or views</span>
+<span class="sd">.../data/{source_name}/{source_schema_name}-{table_name}.manifest -- for a manifest of data files</span>
+<span class="sd">.../data/{source_name}/{source_schema_name}-{table_name}/csv/part-*.gz -- for the data files</span>
+
+<span class="sd">If the files are in S3, then the start of the path is always s3://{bucket_name}/{prefix}/...</span>
+<span class="sd">If the files are stored locally, then the start of the path is probably simply the current</span>
+<span class="sd">directory (&#39;.&#39;).</span>
+
+<span class="sd">For tables that are backed by upstream sources, the directory after &#39;schemas&#39; or &#39;data&#39; will be the</span>
+<span class="sd">name of the source in the configuration file.</span>
+
+<span class="sd">For CTAS or views, the directory after &#39;schemas&#39; is the name of the schema in the data warehouse</span>
+<span class="sd">configuration. The &#39;source_schema_name&#39; is only used for sorting.</span>
+
+<span class="sd">Files are logically grouped by the target relation that they describe (or help fill with data).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">groupby</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">attrgetter</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.s3</span>
+<span class="kn">import</span> <span class="nn">etl.text</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLSystemError</span>
+<span class="kn">from</span> <span class="nn">etl.names</span> <span class="kn">import</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">TableSelector</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="FileInfo"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.FileInfo">[docs]</a><span class="k">class</span> <span class="nc">FileInfo</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Store file path along with information such as file type, related schema and table names.</span>
+
+<span class="sd">    Known file types:</span>
+<span class="sd">      - yaml: Table design file</span>
+<span class="sd">      - sql: Query for CTAS or VIEW</span>
+<span class="sd">      - manifest: Manifest of data files</span>
+<span class="sd">      - success: Sentinel file to mark complete data</span>
+<span class="sd">      - columns: Meta-info about columns in data files</span>
+<span class="sd">      - data: Data file in Avro, CSV, or JSON format (see data_format property).</span>
+
+<span class="sd">    Note that manifest files can occur twice, once from the extract as:</span>
+<span class="sd">        .../data/{source_name}/{source_schema_name}-{table_name}.manifest</span>
+<span class="sd">    and once after unload:</span>
+<span class="sd">        .../data/{unload_target}/{unloading_schema_name}-{table_name}/csv/manifest</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">filename_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;(?:^schemas|/schemas|^data|/data)</span>
+<span class="sd">            /(?P&lt;schema_name&gt;\w+)</span>
+<span class="sd">            /(?:(?P&lt;source_schema_name&gt;\w+)-)?(?P&lt;table_name&gt;\w+)</span>
+<span class="sd">            (?:[.](?P&lt;file_ext&gt;yaml|sql|manifest)|</span>
+<span class="sd">                /(?P&lt;data_dir&gt;avro|csv|json)/(?P&lt;data_file&gt;[^/]+))$</span>
+<span class="sd">        &quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">source_schema_name</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">file_format</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">schema_name</span> <span class="o">=</span> <span class="n">schema_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source_schema_name</span> <span class="o">=</span> <span class="n">source_schema_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table_name</span> <span class="o">=</span> <span class="n">table_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span> <span class="o">=</span> <span class="n">file_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_format</span> <span class="o">=</span> <span class="n">file_format</span>
+
+<div class="viewcode-block" id="FileInfo.from_filename"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.FileInfo.from_filename">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_filename</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;FileInfo&quot;</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a FileInfo instance with properties derived from the filename.</span>
+
+<span class="sd">        If the filename doesn&#39;t appear to match a file that we can use, return None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">filename_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()</span>
+        <span class="n">schema_name</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;schema_name&quot;</span><span class="p">]</span>
+        <span class="n">source_schema_name</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;source_schema_name&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="n">schema_name</span>
+        <span class="n">table_name</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;table_name&quot;</span><span class="p">]</span>
+
+        <span class="n">file_format</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">file_ext</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;file_ext&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">file_ext</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;sql&quot;</span><span class="p">,</span> <span class="s2">&quot;manifest&quot;</span><span class="p">):</span>
+            <span class="n">file_type</span> <span class="o">=</span> <span class="n">file_ext</span>
+        <span class="k">elif</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;data_file&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;_SUCCESS&quot;</span><span class="p">:</span>
+            <span class="n">file_type</span> <span class="o">=</span> <span class="s2">&quot;success&quot;</span>
+        <span class="k">elif</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;data_file&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;columns.yaml&quot;</span><span class="p">:</span>
+            <span class="n">file_type</span> <span class="o">=</span> <span class="s2">&quot;columns&quot;</span>
+        <span class="k">elif</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;data_file&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;manifest&quot;</span><span class="p">:</span>
+            <span class="n">file_type</span> <span class="o">=</span> <span class="s2">&quot;manifest&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">file_format</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;data_dir&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+            <span class="n">file_type</span> <span class="o">=</span> <span class="s2">&quot;data&quot;</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">source_schema_name</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">file_format</span><span class="p">)</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_find_matching_files_from</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return file information based on source name, source schema, table name and file type.</span>
+
+<span class="sd">    This generator provides all files that are relevant and match the pattern. It</span>
+<span class="sd">    is up to the consumer to ensure consistency (e.g. that a design</span>
+<span class="sd">    file exists or that a SQL file is not present along with a manifest).</span>
+
+<span class="sd">    Files ending in &#39;_$folder$&#39; are ignored. (They are created by some Spark jobs.)</span>
+
+<span class="sd">    &gt;&gt;&gt; found = list(_find_matching_files_from([</span>
+<span class="sd">    ...     &quot;/schemas/store/public-orders.yaml&quot;,</span>
+<span class="sd">    ...     &quot;/data/store/public-orders.manifest&quot;,</span>
+<span class="sd">    ...     &quot;/data/store/public-orders/csv/_SUCCESS&quot;,</span>
+<span class="sd">    ...     &quot;/data/store/public-orders/csv/part-0.gz&quot;,</span>
+<span class="sd">    ...     &quot;/schemas/dw/orders.sql&quot;,</span>
+<span class="sd">    ...     &quot;/schemas/dw/orders.yaml&quot;,</span>
+<span class="sd">    ...     &quot;/data/events/kinesis-stream/json/part-0.gz&quot;,</span>
+<span class="sd">    ...     &quot;/schemas/store/not-selected.yaml&quot;,</span>
+<span class="sd">    ... ], pattern=TableSelector([&quot;dw.*&quot;, &quot;events&quot;, &quot;store.orders&quot;])))</span>
+<span class="sd">    &gt;&gt;&gt; files = {file_info.filename: file_info for file_info in found}</span>
+<span class="sd">    &gt;&gt;&gt; len(files)</span>
+<span class="sd">    7</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/store/public-orders.yaml&quot;].file_type</span>
+<span class="sd">    &#39;yaml&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/store/public-orders.yaml&quot;].schema_name</span>
+<span class="sd">    &#39;store&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/store/public-orders.yaml&quot;].source_schema_name</span>
+<span class="sd">    &#39;public&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/store/public-orders.yaml&quot;].table_name</span>
+<span class="sd">    &#39;orders&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/data/store/public-orders.manifest&quot;].file_type</span>
+<span class="sd">    &#39;manifest&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/data/store/public-orders/csv/_SUCCESS&quot;].file_type</span>
+<span class="sd">    &#39;success&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/data/store/public-orders/csv/part-0.gz&quot;].file_type</span>
+<span class="sd">    &#39;data&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/data/store/public-orders/csv/part-0.gz&quot;].file_format</span>
+<span class="sd">    &#39;CSV&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/dw/orders.sql&quot;].schema_name</span>
+<span class="sd">    &#39;dw&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/dw/orders.sql&quot;].source_schema_name</span>
+<span class="sd">    &#39;dw&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/dw/orders.sql&quot;].table_name</span>
+<span class="sd">    &#39;orders&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/dw/orders.sql&quot;].file_type</span>
+<span class="sd">    &#39;sql&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/schemas/dw/orders.yaml&quot;].file_type</span>
+<span class="sd">    &#39;yaml&#39;</span>
+<span class="sd">    &gt;&gt;&gt; files[&quot;/data/events/kinesis-stream/json/part-0.gz&quot;].file_format</span>
+<span class="sd">    &#39;JSON&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+        <span class="n">file_info</span> <span class="o">=</span> <span class="n">FileInfo</span><span class="o">.</span><span class="n">from_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">file_info</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;_$folder$&quot;</span><span class="p">):</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Found file not matching expected format: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">target_table_name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="n">file_info</span><span class="o">.</span><span class="n">schema_name</span><span class="p">,</span> <span class="n">file_info</span><span class="o">.</span><span class="n">table_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">target_table_name</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">file_info</span>
+
+
+<div class="viewcode-block" id="RelationFileSet"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.RelationFileSet">[docs]</a><span class="k">class</span> <span class="nc">RelationFileSet</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class to hold a relation&#39;s design file, SQL file and data files (including their manifest).</span>
+
+<span class="sd">    RelationFileSet instances have a natural_order based on their schema&#39;s position in the</span>
+<span class="sd">    DataWarehouseConfig&#39;s schema list and their source_table_name. (So we try to sort sources</span>
+<span class="sd">    by their order in the configuration and not alphabetically.)</span>
+
+<span class="sd">    Note that all tables are addressed using their &quot;target name&quot; within the data warehouse, where</span>
+<span class="sd">    the schema name is equal to the source name and the table name is the same as in the upstream</span>
+<span class="sd">    source. To allow for sorting, the original schema name (in the source database) is kept.</span>
+<span class="sd">    For CTAS and VIEWs, the &quot;target name&quot; consists of the schema name within</span>
+<span class="sd">    the data warehouse and the table or view name assigned.  Since there is no source schema, that</span>
+<span class="sd">    portion may be omitted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">,</span> <span class="n">target_table_name</span><span class="p">,</span> <span class="n">natural_order</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source_table_name</span> <span class="o">=</span> <span class="n">source_table_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span> <span class="o">=</span> <span class="n">target_table_name</span>
+        <span class="c1"># Note that a value other than None implies that the file exists (see setters)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">design_file_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sql_file_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manifest_file_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data_files</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Used when binding the files to either local filesystem or S3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">netloc</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># Used to order relations (should be opaque to users)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_natural_order</span> <span class="o">=</span> <span class="n">natural_order</span>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_natural_order</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">_natural_order</span>
+
+    <span class="k">def</span> <span class="nf">__repr_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">extensions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">:</span>
+            <span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;.yaml&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sql_file_name</span><span class="p">:</span>
+            <span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;.sql&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">:</span>
+            <span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;.manifest&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_files</span><span class="p">:</span>
+            <span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;/csv/*&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(&#39;</span><span class="si">{}</span><span class="s2">{{</span><span class="si">{}</span><span class="s2">}}&#39;)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_path_name</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extensions</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="RelationFileSet.bind_to_uri"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.RelationFileSet.bind_to_uri">[docs]</a>    <span class="k">def</span> <span class="nf">bind_to_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">=</span> <span class="n">scheme</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">netloc</span> <span class="o">=</span> <span class="n">netloc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span></div>
+
+<div class="viewcode-block" id="RelationFileSet.uri"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.RelationFileSet.uri">[docs]</a>    <span class="k">def</span> <span class="nf">uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the full URI for the filename (either in S3 or local).&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;s3&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{0.scheme}</span><span class="s2">://</span><span class="si">{0.netloc}</span><span class="s2">/</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;file&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">filename</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ETLSystemError</span><span class="p">(</span><span class="s2">&quot;illegal scheme in file set&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RelationFileSet.stat"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.RelationFileSet.stat">[docs]</a>    <span class="k">def</span> <span class="nf">stat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return file size (in bytes) and timestamp of last modification for this file.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;s3&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">object_stat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">netloc</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;file&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getmtime</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ETLSystemError</span><span class="p">(</span><span class="s2">&quot;illegal scheme in file set&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source_path_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">-</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">table</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="RelationFileSet.norm_path"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.RelationFileSet.norm_path">[docs]</a>    <span class="k">def</span> <span class="nf">norm_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return &quot;normalized&quot; path based on filename of design file or SQL file.</span>
+
+<span class="sd">        Assumption: If the filename ends with .yaml or .sql, then the file belongs under &quot;schemas&quot;.</span>
+<span class="sd">        Else the file belongs under &quot;data&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s2">&quot;.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;.sql&quot;</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="s2">&quot;schemas/</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;data/</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">data_files</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data_files</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RelationFileSet.add_data_file"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.RelationFileSet.add_data_file">[docs]</a>    <span class="k">def</span> <span class="nf">add_data_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">files</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">_files</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">:</span>
+            <span class="n">_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sql_file_name</span><span class="p">:</span>
+            <span class="n">_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sql_file_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">:</span>
+            <span class="n">_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_files</span><span class="p">:</span>
+            <span class="n">_files</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data_files</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">_files</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">files</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="list_local_files"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.list_local_files">[docs]</a><span class="k">def</span> <span class="nf">list_local_files</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List all files in and anywhere below this directory.</span>
+
+<span class="sd">    It is an error if the directory does not exist.</span>
+<span class="sd">    Ignore swap files along the way.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">normed_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">normed_directory</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;Failed to find directory: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">normed_directory</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Looking for files locally in &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">normed_directory</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">normed_directory</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s2">&quot;.swp&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;.DS_Store&quot;</span><span class="p">)):</span>
+                <span class="k">yield</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="find_file_sets"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.find_file_sets">[docs]</a><span class="k">def</span> <span class="nf">find_file_sets</span><span class="p">(</span><span class="n">uri_parts</span><span class="p">,</span> <span class="n">selector</span><span class="p">,</span> <span class="n">allow_empty</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find files related to relations in S3 or locally.</span>
+
+<span class="sd">    This is a generic method to collect files from either</span>
+<span class="sd">    s3://bucket/prefix or file://localhost/directory or ./schemas</span>
+<span class="sd">    based on the tuple describing a parsed URI. So that should be either</span>
+<span class="sd">    (&quot;s3&quot;, &quot;bucket&quot;, &quot;prefix&quot;, ...) or (&quot;file&quot;, &quot;localhost&quot;, &quot;directory&quot;, ...)</span>
+
+<span class="sd">    The selector (as a bare minimum) should have a reasonable set of base schemas.</span>
+
+<span class="sd">    If :allow_empty is True and no files are found in the local filesystem, an empty list</span>
+<span class="sd">    is returned. This is useful for commands supporting local development.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">uri_parts</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;s3&quot;</span><span class="p">:</span>
+        <span class="n">file_sets</span> <span class="o">=</span> <span class="n">_find_file_sets_from</span><span class="p">(</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">list_objects_for_prefix</span><span class="p">(</span><span class="n">netloc</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;/data&quot;</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;/schemas&quot;</span><span class="p">),</span> <span class="n">selector</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">file_sets</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+                <span class="s2">&quot;Found no matching files in &#39;s3://</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&#39; for &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">netloc</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+            <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="n">file_sets</span> <span class="o">=</span> <span class="n">_find_file_sets_from</span><span class="p">(</span><span class="n">list_local_files</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">selector</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">file_sets</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">allow_empty</span><span class="p">:</span>
+                    <span class="n">file_sets</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+                        <span class="s2">&quot;Found no matching files in &#39;</span><span class="si">{}</span><span class="s2">&#39; for &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+                    <span class="p">)</span>
+        <span class="k">elif</span> <span class="n">allow_empty</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to find directory: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+            <span class="n">file_sets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;Failed to find directory: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">path</span><span class="p">)</span>
+    <span class="c1"># Bind the files that were found to where they were found</span>
+    <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">file_sets</span><span class="p">:</span>
+        <span class="n">file_set</span><span class="o">.</span><span class="n">bind_to_uri</span><span class="p">(</span><span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">file_sets</span></div>
+
+
+<span class="k">def</span> <span class="nf">_find_file_sets_from</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">selector</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return list of file sets ordered by (target) schema, (source) schema and (source) table.</span>
+
+<span class="sd">    Remember that the (target) schema name is the same as the source name (for upstream sources).</span>
+<span class="sd">    The selector&#39;s base schemas (if present) will override alphabetical sorting for the source_name.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">target_map</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># Always return files sorted by sources (in original order) and target name.</span>
+    <span class="n">schema_index</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">index</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">selector</span><span class="o">.</span><span class="n">base_schemas</span><span class="p">)}</span>
+
+    <span class="k">for</span> <span class="n">file_info</span> <span class="ow">in</span> <span class="n">_find_matching_files_from</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">selector</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">file_info</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;success&quot;</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">source_table_name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="n">file_info</span><span class="o">.</span><span class="n">source_schema_name</span><span class="p">,</span> <span class="n">file_info</span><span class="o">.</span><span class="n">table_name</span><span class="p">)</span>
+        <span class="n">target_table_name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="n">file_info</span><span class="o">.</span><span class="n">schema_name</span><span class="p">,</span> <span class="n">file_info</span><span class="o">.</span><span class="n">table_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">target_map</span><span class="p">:</span>
+            <span class="n">natural_order</span> <span class="o">=</span> <span class="n">schema_index</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_info</span><span class="o">.</span><span class="n">schema_name</span><span class="p">),</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span>
+            <span class="n">target_map</span><span class="p">[</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span> <span class="o">=</span> <span class="n">RelationFileSet</span><span class="p">(</span>
+                <span class="n">source_table_name</span><span class="p">,</span> <span class="n">target_table_name</span><span class="p">,</span> <span class="n">natural_order</span>
+            <span class="p">)</span>
+
+        <span class="n">file_set</span> <span class="o">=</span> <span class="n">target_map</span><span class="p">[</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">file_info</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;yaml&quot;</span><span class="p">:</span>
+            <span class="n">file_set</span><span class="o">.</span><span class="n">design_file_name</span> <span class="o">=</span> <span class="n">file_info</span><span class="o">.</span><span class="n">filename</span>
+        <span class="k">elif</span> <span class="n">file_info</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;sql&quot;</span><span class="p">:</span>
+            <span class="n">file_set</span><span class="o">.</span><span class="n">sql_file_name</span> <span class="o">=</span> <span class="n">file_info</span><span class="o">.</span><span class="n">filename</span>
+        <span class="k">elif</span> <span class="n">file_info</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;manifest&quot;</span><span class="p">:</span>
+            <span class="n">file_set</span><span class="o">.</span><span class="n">manifest_file_name</span> <span class="o">=</span> <span class="n">file_info</span><span class="o">.</span><span class="n">filename</span>
+        <span class="k">elif</span> <span class="n">file_info</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;data&quot;</span><span class="p">:</span>
+            <span class="n">file_set</span><span class="o">.</span><span class="n">add_data_file</span><span class="p">(</span><span class="n">file_info</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="n">file_sets</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">target_map</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="s2">&quot;Found </span><span class="si">%d</span><span class="s2"> matching file(s) for </span><span class="si">%d</span><span class="s2"> table(s)&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span> <span class="k">for</span> <span class="n">fs</span> <span class="ow">in</span> <span class="n">file_sets</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">file_sets</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">file_sets</span>
+
+
+<div class="viewcode-block" id="find_data_files_in_s3"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.find_data_files_in_s3">[docs]</a><span class="k">def</span> <span class="nf">find_data_files_in_s3</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return paths of data files.&quot;&quot;&quot;</span>
+    <span class="n">iterable</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">list_objects_for_prefix</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">prefix</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">file_info</span> <span class="ow">in</span> <span class="n">_find_matching_files_from</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">TableSelector</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">file_info</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;data&quot;</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">file_info</span><span class="o">.</span><span class="n">filename</span></div>
+
+
+<div class="viewcode-block" id="delete_data_files_in_s3"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.delete_data_files_in_s3">[docs]</a><span class="k">def</span> <span class="nf">delete_data_files_in_s3</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="n">TableSelector</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Delete all data files that match this prefix and selector pattern.&quot;&quot;&quot;</span>
+    <span class="n">data_files</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">list_objects_for_prefix</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;/data&quot;</span><span class="p">)</span>
+    <span class="n">deletable</span> <span class="o">=</span> <span class="p">[</span><span class="n">file_info</span><span class="o">.</span><span class="n">filename</span> <span class="k">for</span> <span class="n">file_info</span> <span class="ow">in</span> <span class="n">_find_matching_files_from</span><span class="p">(</span><span class="n">data_files</span><span class="p">,</span> <span class="n">selector</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">deletable</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Found no matching files in &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/data&#39; to delete&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">prefix</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">delete_objects</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">deletable</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="delete_schemas_files_in_s3"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.delete_schemas_files_in_s3">[docs]</a><span class="k">def</span> <span class="nf">delete_schemas_files_in_s3</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="n">TableSelector</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Delete all table design and SQL files that match this prefix and selector pattern.&quot;&quot;&quot;</span>
+    <span class="n">schemas_files</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">list_objects_for_prefix</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;/schemas&quot;</span><span class="p">)</span>
+    <span class="n">deletable</span> <span class="o">=</span> <span class="p">[</span><span class="n">file_info</span><span class="o">.</span><span class="n">filename</span> <span class="k">for</span> <span class="n">file_info</span> <span class="ow">in</span> <span class="n">_find_matching_files_from</span><span class="p">(</span><span class="n">schemas_files</span><span class="p">,</span> <span class="n">selector</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">deletable</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Found no matching files in &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/schemas&#39; to delete&quot;</span><span class="p">,</span> <span class="n">bucket_name</span><span class="p">,</span> <span class="n">prefix</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">delete_objects</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">deletable</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="list_files"><a class="viewcode-back" href="../../etl/etl.file_sets.html#etl.file_sets.list_files">[docs]</a><span class="k">def</span> <span class="nf">list_files</span><span class="p">(</span><span class="n">file_sets</span><span class="p">,</span> <span class="n">long_format</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sort_by_time</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List files in the given S3 bucket or from current directory.</span>
+
+<span class="sd">    With the long format, shows content length and tallies up the total size in bytes.</span>
+<span class="sd">    When sorted by time, only prints files but sorted by their timestamp.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">sort_by_time</span><span class="p">:</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">file_sets</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">file_set</span><span class="o">.</span><span class="n">files</span><span class="p">:</span>
+                <span class="n">_</span><span class="p">,</span> <span class="n">last_modified</span> <span class="o">=</span> <span class="n">file_set</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+                <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">last_modified</span><span class="p">,</span> <span class="n">file_set</span><span class="o">.</span><span class="n">uri</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">format_lines</span><span class="p">(</span>
+                <span class="p">[(</span><span class="n">uri</span><span class="p">,</span> <span class="n">last_modified</span><span class="p">)</span> <span class="k">for</span> <span class="n">last_modified</span><span class="p">,</span> <span class="n">uri</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">found</span><span class="p">)],</span>
+                <span class="n">header_row</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;Last modified&quot;</span><span class="p">],</span>
+                <span class="n">max_column_width</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">total_length</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">file_group</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="n">file_sets</span><span class="p">,</span> <span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;source_name&quot;</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schema: &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">schema_name</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">file_group</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">file_set</span><span class="o">.</span><span class="n">manifest_file_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    Table: &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_set</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span>
+                        <span class="s2">&quot;    Table: &#39;</span><span class="si">{}</span><span class="s2">&#39; (with data from &#39;</span><span class="si">{}</span><span class="s2">&#39;)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                            <span class="n">file_set</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">file_set</span><span class="o">.</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">file_set</span><span class="o">.</span><span class="n">files</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">long_format</span><span class="p">:</span>
+                        <span class="n">content_length</span><span class="p">,</span> <span class="n">last_modified</span> <span class="o">=</span> <span class="n">file_set</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+                        <span class="n">total_length</span> <span class="o">+=</span> <span class="n">content_length</span>
+                        <span class="nb">print</span><span class="p">(</span>
+                            <span class="s2">&quot;        </span><span class="si">{}</span><span class="s2"> (</span><span class="si">{:d}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                <span class="n">file_set</span><span class="o">.</span><span class="n">uri</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">content_length</span><span class="p">,</span> <span class="n">last_modified</span>
+                            <span class="p">)</span>
+                        <span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;        </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_set</span><span class="o">.</span><span class="n">uri</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">total_length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="s2">&quot;Total size in bytes: </span><span class="si">{:d}</span><span class="s2"> (</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">total_length</span><span class="p">,</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">approx_pretty_size</span><span class="p">(</span><span class="n">total_length</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

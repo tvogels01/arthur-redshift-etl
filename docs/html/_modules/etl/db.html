@@ -1,0 +1,1057 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.db &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.db</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Low-level database routines.</span>
+
+<span class="sd">This is a thin wrapper around Psycopg2 for database access, adding niceties like logging,</span>
+<span class="sd">transaction handling, simple DSN strings, as well as simple commands</span>
+<span class="sd">(for new users, schema creation, etc.)</span>
+
+<span class="sd">For a description of the connection string, take inspiration from:</span>
+<span class="sd">https://www.postgresql.org/docs/9.4/static/libpq-connect.html#LIBPQ-CONNSTRING</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">closing</span><span class="p">,</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">unquote</span>
+
+<span class="kn">import</span> <span class="nn">pgpasslib</span>
+<span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">import</span> <span class="nn">psycopg2.extensions</span>
+<span class="kn">import</span> <span class="nn">psycopg2.extras</span>
+<span class="kn">import</span> <span class="nn">psycopg2.pool</span>
+<span class="kn">from</span> <span class="nn">psycopg2.extensions</span> <span class="kn">import</span> <span class="n">connection</span> <span class="k">as</span> <span class="n">Connection</span>  <span class="c1"># only used for typing</span>
+
+<span class="kn">import</span> <span class="nn">etl.text</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLRuntimeError</span>
+<span class="kn">from</span> <span class="nn">etl.util.timer</span> <span class="kn">import</span> <span class="n">Timer</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+<span class="c1"># Allow Ctrl-C to interrupt a query. See https://www.psycopg.org/docs/faq.html#faq-interrupt-query</span>
+<span class="n">psycopg2</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">set_wait_callback</span><span class="p">(</span><span class="n">psycopg2</span><span class="o">.</span><span class="n">extras</span><span class="o">.</span><span class="n">wait_select</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="parse_connection_string"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.parse_connection_string">[docs]</a><span class="k">def</span> <span class="nf">parse_connection_string</span><span class="p">(</span><span class="n">dsn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extract connection value from JDBC-style connection string.</span>
+
+<span class="sd">    The fields &quot;&quot;host&quot; and &quot;database&quot; will be set.</span>
+<span class="sd">    The fields &quot;user&quot;, &quot;password&quot;, &quot;port&quot; and &quot;sslmode&quot; may be set.</span>
+
+<span class="sd">    &gt;&gt;&gt; dsn_min = parse_connection_string(&quot;postgres://example.com/xyzzy&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; unparse_connection(dsn_min)</span>
+<span class="sd">    &#39;host=example.com port=&lt;default&gt; dbname=xyzzy user=&lt;default&gt; password=***&#39;</span>
+<span class="sd">    &gt;&gt;&gt; dsn_max = parse_connection_string(&quot;postgresql://john.doe:secret@pg.example.com:5432/xyzzy&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; unparse_connection(dsn_max)</span>
+<span class="sd">    &#39;host=pg.example.com port=5432 dbname=xyzzy user=john.doe password=***&#39;</span>
+<span class="sd">    &gt;&gt;&gt; dsn_uu = parse_connection_string(&quot;postgresql://john.doe:%2B-%2B@pg-example.com/xyzzy&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; dsn_uu[&quot;password&quot;]</span>
+<span class="sd">    &#39;+-+&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Some people, when confronted with a problem, think &quot;I know, I&#39;ll use regular expressions.&quot;</span>
+    <span class="c1"># Now they have two problems.</span>
+    <span class="n">dsn_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;(?:jdbc:)?(?P&lt;subprotocol&gt;redshift|postgresql|postgres)://  # accept either type</span>
+<span class="sd">            (?:(?P&lt;user&gt;[-\w.%]+)(?::(?P&lt;password&gt;[-\w.%]+))?@)?  # optional user with password</span>
+<span class="sd">            (?P&lt;host&gt;[-\w.%]+)(:?:(?P&lt;port&gt;\d+))?/  # host and optional port information</span>
+<span class="sd">            (?P&lt;database&gt;[-\w.%]+)  # database (and not dbname)</span>
+<span class="sd">            (?:\?sslmode=(?P&lt;sslmode&gt;\w+))?$&quot;&quot;&quot;</span><span class="p">,</span>  <span class="c1"># sslmode is the only option currently supported</span>
+        <span class="n">re</span><span class="o">.</span><span class="n">ASCII</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">dsn_after_expansion</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>  <span class="c1"># Supports stuff like $USER</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">dsn_re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">dsn_after_expansion</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;value of connection string does not conform to expected format.&quot;</span><span class="p">)</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">unquote</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;strict&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">values</span> <span class="k">if</span> <span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="unparse_connection"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.unparse_connection">[docs]</a><span class="k">def</span> <span class="nf">unparse_connection</span><span class="p">(</span><span class="n">dsn</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return connection string for pretty printing or copying when starting psql.&quot;&quot;&quot;</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+            <span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;default&gt;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;host=</span><span class="si">{host}</span><span class="s2"> port=</span><span class="si">{port}</span><span class="s2"> dbname=</span><span class="si">{database}</span><span class="s2"> user=</span><span class="si">{user}</span><span class="s2"> password=***&quot;</span><span class="o">.</span><span class="n">format_map</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_dsn_connection_values</span><span class="p">(</span><span class="n">dsn_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">application_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a dictionary of parameters that can be used to open a db connection with psycopg2.</span>
+
+<span class="sd">    This includes popping &quot;subprotocol&quot; from our dictionary of parameters extracted</span>
+<span class="sd">    from the connection string, which is not expected by psycopg2.connect().</span>
+
+<span class="sd">    We also set some basic connection parameters here, including connection timeout and</span>
+<span class="sd">    keepalives settings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># See https://www.postgresql.org/docs/10/libpq-connect.html for the keepalive* args.</span>
+    <span class="c1"># and https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-firewall-guidance.html</span>
+    <span class="n">dsn_values</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;application_name&quot;</span><span class="p">:</span> <span class="n">application_name</span><span class="p">,</span>
+        <span class="s2">&quot;connect_timeout&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;cursor_factory&quot;</span><span class="p">:</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">extras</span><span class="o">.</span><span class="n">DictCursor</span><span class="p">,</span>
+        <span class="s2">&quot;keepalives&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;keepalives_idle&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;keepalives_interval&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">dsn_values</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dsn_dict</span><span class="p">)</span>
+    <span class="n">dsn_values</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;subprotocol&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dsn_values</span>
+
+
+<div class="viewcode-block" id="connection"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.connection">[docs]</a><span class="k">def</span> <span class="nf">connection</span><span class="p">(</span>
+    <span class="n">dsn_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">application_name</span><span class="o">=</span><span class="n">psycopg2</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Open a connection to the database described by dsn_string.</span>
+
+<span class="sd">    The dsn_string is expected to look something like</span>
+<span class="sd">    &quot;postgresql://user:password@host:port/database&quot; (see parse_connection_string).</span>
+
+<span class="sd">    Caveat Emptor: By default, this turns off autocommit on the connection. This means that you</span>
+<span class="sd">    have to explicitly commit on the connection object or run your SQL within a transaction context!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dsn_values</span> <span class="o">=</span> <span class="n">_dsn_connection_values</span><span class="p">(</span><span class="n">dsn_dict</span><span class="p">,</span> <span class="n">application_name</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Connecting to: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">unparse_connection</span><span class="p">(</span><span class="n">dsn_values</span><span class="p">))</span>
+    <span class="n">cx</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">**</span><span class="n">dsn_values</span><span class="p">)</span>
+    <span class="n">cx</span><span class="o">.</span><span class="n">set_session</span><span class="p">(</span><span class="n">autocommit</span><span class="o">=</span><span class="n">autocommit</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="n">readonly</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+        <span class="s2">&quot;Connected successfully (backend pid: </span><span class="si">%d</span><span class="s2">, server version: </span><span class="si">%s</span><span class="s2">, is_superuser: </span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span>
+        <span class="n">cx</span><span class="o">.</span><span class="n">get_backend_pid</span><span class="p">(),</span>
+        <span class="n">cx</span><span class="o">.</span><span class="n">server_version</span><span class="p">,</span>
+        <span class="n">cx</span><span class="o">.</span><span class="n">get_parameter_status</span><span class="p">(</span><span class="s2">&quot;is_superuser&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">cx</span></div>
+
+
+<div class="viewcode-block" id="connection_pool"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.connection_pool">[docs]</a><span class="k">def</span> <span class="nf">connection_pool</span><span class="p">(</span><span class="n">max_conn</span><span class="p">,</span> <span class="n">dsn_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">application_name</span><span class="o">=</span><span class="n">psycopg2</span><span class="o">.</span><span class="vm">__name__</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a connection pool with up to max_conn connections.</span>
+
+<span class="sd">    All connections will use the given connection string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dsn_values</span> <span class="o">=</span> <span class="n">_dsn_connection_values</span><span class="p">(</span><span class="n">dsn_dict</span><span class="p">,</span> <span class="n">application_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">ThreadedConnectionPool</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_conn</span><span class="p">,</span> <span class="o">**</span><span class="n">dsn_values</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="extract_dsn"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.extract_dsn">[docs]</a><span class="k">def</span> <span class="nf">extract_dsn</span><span class="p">(</span><span class="n">dsn_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">read_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Break the connection string into a JDBC URL and connection properties.</span>
+
+<span class="sd">    This is necessary since a JDBC URL may not contain all the properties needed</span>
+<span class="sd">    to successfully connect, e.g. username, password.  These properties must</span>
+<span class="sd">    be passed in separately.</span>
+
+<span class="sd">    Use the postgresql subprotocol and driver regardless of whether the connection</span>
+<span class="sd">    string&#39;s protocol was postgres or redshift.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dsn_properties</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dsn_dict</span><span class="p">)</span>  <span class="c1"># so as to not mutate the argument</span>
+    <span class="n">dsn_properties</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;ApplicationName&quot;</span><span class="p">:</span> <span class="vm">__name__</span><span class="p">,</span>
+            <span class="s2">&quot;readOnly&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span> <span class="k">if</span> <span class="n">read_only</span> <span class="k">else</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;driver&quot;</span><span class="p">:</span> <span class="s2">&quot;org.postgresql.Driver&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;port&quot;</span> <span class="ow">in</span> <span class="n">dsn_properties</span><span class="p">:</span>
+        <span class="n">jdbc_url</span> <span class="o">=</span> <span class="s2">&quot;jdbc:postgresql://</span><span class="si">{host}</span><span class="s2">:</span><span class="si">{port}</span><span class="s2">/</span><span class="si">{database}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format_map</span><span class="p">(</span><span class="n">dsn_properties</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">jdbc_url</span> <span class="o">=</span> <span class="s2">&quot;jdbc:postgresql://</span><span class="si">{host}</span><span class="s2">/</span><span class="si">{database}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format_map</span><span class="p">(</span><span class="n">dsn_properties</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">jdbc_url</span><span class="p">,</span> <span class="n">dsn_properties</span></div>
+
+
+<div class="viewcode-block" id="remove_password"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.remove_password">[docs]</a><span class="k">def</span> <span class="nf">remove_password</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Remove any password or credentials information from a query string.</span>
+
+<span class="sd">    &gt;&gt;&gt; s = &#39;&#39;&#39;CREATE USER dw_user IN GROUP etl PASSWORD &#39;horse_staple_battery&#39;;&#39;&#39;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; remove_password(s)</span>
+<span class="sd">    &quot;CREATE USER dw_user IN GROUP etl PASSWORD &#39;&#39;;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; s = &#39;&#39;&#39;copy listing from &#39;s3://mybucket/data/tbl/&#39; credentials &#39;aws_access_key_id=...&#39;;&#39;&#39;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; remove_password(s)</span>
+<span class="sd">    &quot;copy listing from &#39;s3://mybucket/data/tbl/&#39; credentials &#39;&#39;;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; s = &#39;&#39;&#39;COPY LISTING FROM &#39;s3://mybucket/data/listing/&#39; CREDENTIALS &#39;aws_iam_role=...&#39;;&#39;&#39;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; remove_password(s)</span>
+<span class="sd">    &quot;COPY LISTING FROM &#39;s3://mybucket/data/listing/&#39; CREDENTIALS &#39;&#39;;&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(CREDENTIALS|PASSWORD)\s*&#39;([^&#39;]*)&#39;&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">span</span><span class="p">()</span>
+        <span class="n">creds</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="n">start</span><span class="p">]</span> <span class="o">+</span> <span class="n">creds</span> <span class="o">+</span> <span class="s2">&quot; &#39;&#39;&quot;</span> <span class="o">+</span> <span class="n">line</span><span class="p">[</span><span class="n">end</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">line</span></div>
+
+
+<div class="viewcode-block" id="mogrify"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.mogrify">[docs]</a><span class="k">def</span> <span class="nf">mogrify</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">()):</span>
+    <span class="sd">&quot;&quot;&quot;Build the statement by filling in the arguments and cleaning up whitespace along the way.&quot;&quot;&quot;</span>
+    <span class="n">stripped</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">whitespace_cleanup</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">actual_stmt</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">mogrify</span><span class="p">(</span><span class="n">stripped</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">actual_stmt</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">mogrify</span><span class="p">(</span><span class="n">stripped</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">actual_stmt</span></div>
+
+
+<div class="viewcode-block" id="query"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.query">[docs]</a><span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">()):</span>
+    <span class="sd">&quot;&quot;&quot;Send query stmt to connection (with parameters) and return rows.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">return_result</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="execute"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.execute">[docs]</a><span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(),</span> <span class="n">return_result</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Execute query in &#39;stmt&#39; over connection &#39;cx&#39; (with parameters in &#39;args&#39;).</span>
+
+<span class="sd">    Be careful with query statements that have a &#39;%&#39; in them (say for LIKE)</span>
+<span class="sd">    since this will interfere with psycopg2 interpreting parameters.</span>
+
+<span class="sd">    Printing the query will not print AWS credentials IF the string used</span>
+<span class="sd">    matches &quot;CREDENTIALS &#39;[^&#39;]*&#39;&quot;.</span>
+<span class="sd">    So be careful or you&#39;ll end up sending your credentials to the logfile.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">cx</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+        <span class="n">executable_statement</span> <span class="o">=</span> <span class="n">mogrify</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+        <span class="n">printable_stmt</span> <span class="o">=</span> <span class="n">remove_password</span><span class="p">(</span><span class="n">executable_statement</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;QUERY:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s2">;&quot;</span><span class="p">,</span> <span class="n">printable_stmt</span><span class="p">)</span>  <span class="c1"># lgtm[py/clear-text-logging-sensitive-data]</span>
+        <span class="k">with</span> <span class="n">Timer</span><span class="p">()</span> <span class="k">as</span> <span class="n">timer</span><span class="p">:</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">executable_statement</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s2">&quot;QUERY STATUS: </span><span class="si">%s</span><span class="s2"> [rowcount=</span><span class="si">%d</span><span class="s2">] (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">cursor</span><span class="o">.</span><span class="n">statusmessage</span><span class="p">,</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span><span class="p">,</span> <span class="n">timer</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;QUERY STATUS: </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">cursor</span><span class="o">.</span><span class="n">statusmessage</span><span class="p">,</span> <span class="n">timer</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cx</span><span class="o">.</span><span class="n">notices</span> <span class="ow">and</span> <span class="n">logger</span><span class="o">.</span><span class="n">isEnabledFor</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">cx</span><span class="o">.</span><span class="n">notices</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;QUERY &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+            <span class="k">del</span> <span class="n">cx</span><span class="o">.</span><span class="n">notices</span><span class="p">[:]</span>
+        <span class="k">if</span> <span class="n">return_result</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="skip_query"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.skip_query">[docs]</a><span class="k">def</span> <span class="nf">skip_query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">()):</span>
+    <span class="sd">&quot;&quot;&quot;For logging side-effect only ... show which query would have been executed.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">cx</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+        <span class="n">executable_statement</span> <span class="o">=</span> <span class="n">mogrify</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+        <span class="n">printable_stmt</span> <span class="o">=</span> <span class="n">remove_password</span><span class="p">(</span><span class="n">executable_statement</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Skipped QUERY:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s2">;&quot;</span><span class="p">,</span> <span class="n">printable_stmt</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="run"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.run">[docs]</a><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(),</span> <span class="n">return_result</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Execute the query and log the message around it.</span>
+
+<span class="sd">    Or just show what would have been run in dry-run mode.</span>
+<span class="sd">    This will try to use the caller&#39;s logger.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Figure out caller for better logging</span>
+    <span class="n">current_frame</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">currentframe</span><span class="p">()</span>
+    <span class="n">caller_globals</span> <span class="o">=</span> <span class="n">current_frame</span><span class="o">.</span><span class="n">f_back</span><span class="o">.</span><span class="n">f_globals</span>
+    <span class="n">caller_logger</span> <span class="o">=</span> <span class="n">caller_globals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;logger&quot;</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">caller_logger</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">caller_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Dry-run: Skipping </span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">message</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">message</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+        <span class="n">skip_query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">caller_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">return_result</span><span class="o">=</span><span class="n">return_result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="format_result"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.format_result">[docs]</a><span class="k">def</span> <span class="nf">format_result</span><span class="p">(</span><span class="n">dict_rows</span><span class="p">,</span> <span class="n">skip_rows_count</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Format query results into a text table.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dict_rows</span><span class="p">:</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dict_rows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">format_lines</span><span class="p">(</span>
+        <span class="p">[[</span><span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">dict_rows</span><span class="p">],</span>
+        <span class="n">header_row</span><span class="o">=</span><span class="n">keys</span><span class="p">,</span>
+        <span class="n">skip_rows_count</span><span class="o">=</span><span class="n">skip_rows_count</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="print_result"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.print_result">[docs]</a><span class="k">def</span> <span class="nf">print_result</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">dict_rows</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Print query result.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">format_result</span><span class="p">(</span><span class="n">dict_rows</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="explain"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.explain">[docs]</a><span class="k">def</span> <span class="nf">explain</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">()):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return explain plan for the query as a list of steps.</span>
+
+<span class="sd">    We sometimes use this just to test out a query syntax so we are heavy on the logging.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="s2">&quot;EXPLAIN</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">return_result</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">]</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Query plan:</span><span class="se">\n</span><span class="s2"> | &quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> | &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">lines</span></div>
+
+
+<div class="viewcode-block" id="test_connection"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.test_connection">[docs]</a><span class="k">def</span> <span class="nf">test_connection</span><span class="p">(</span><span class="n">cx</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Send a test query to our connection.&quot;&quot;&quot;</span>
+    <span class="n">is_alive</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ping &#39;</span><span class="si">{</span><span class="n">cx</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">dbname</span><span class="si">}</span><span class="s2">&#39;!&quot;</span><span class="p">,</span> <span class="s2">&quot;SELECT 1 AS connection_test&quot;</span><span class="p">,</span> <span class="n">return_result</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="s2">&quot;connection_test&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">is_alive</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">closed</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">OperationalError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">is_alive</span></div>
+
+
+<div class="viewcode-block" id="ping"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.ping">[docs]</a><span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">dsn</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Give me a ping to the database, Vasili; one ping only, please.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">connection</span><span class="p">(</span><span class="n">dsn</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="k">as</span> <span class="n">cx</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">test_connection</span><span class="p">(</span><span class="n">cx</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cx</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">dbname</span><span class="si">}</span><span class="s2"> is alive&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="run_statement_with_args"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.run_statement_with_args">[docs]</a><span class="k">def</span> <span class="nf">run_statement_with_args</span><span class="p">(</span><span class="n">dsn</span><span class="p">,</span> <span class="n">stmt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Run a single statement (possibly with args) and return query results.&quot;&quot;&quot;</span>
+    <span class="c1"># TODO(tom): Switch to named args for all queries.</span>
+    <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">connection</span><span class="p">(</span><span class="n">dsn</span><span class="p">,</span> <span class="n">autocommit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="n">readonly</span><span class="p">))</span> <span class="k">as</span> <span class="n">cx</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">log_error</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="log_sql_error"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.log_sql_error">[docs]</a><span class="k">def</span> <span class="nf">log_sql_error</span><span class="p">(</span><span class="n">exc</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Send information from psycopg2.Error instance to logfile.</span>
+
+<span class="sd">    See PostgreSQL documentation at</span>
+<span class="sd">    https://www.postgresql.org/docs/current/libpq-exec.html#LIBPQ-PQRESULTERRORFIELD</span>
+<span class="sd">    and psycopg2 documentation at https://www.psycopg.org/docs/extensions.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">pgcode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;SQL ERROR &quot;</span><span class="si">%s</span><span class="s1">&quot; </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">exc</span><span class="o">.</span><span class="n">pgcode</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">pgerror</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span>
+        <span class="s2">&quot;severity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sqlstate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;message_primary&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;message_detail&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;message_hint&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;statement_position&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;internal_position&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;internal_query&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;context&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;schema_name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;table_name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;column_name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;datatype_name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;constraint_name&quot;</span><span class="p">,</span>
+        <span class="c1"># &#39;source_file&#39;,</span>
+        <span class="c1"># &#39;source_function&#39;,</span>
+        <span class="c1"># &#39;source_line&#39;,</span>
+    <span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">diag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;DIAG </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="log_error"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.log_error">[docs]</a><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">log_error</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Log any psycopg2 errors using the log_sql_error function before re-raising the exception.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span>
+    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">log_sql_error</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+        <span class="k">raise</span></div>
+
+
+<span class="c1"># ---- DATABASE ----</span>
+
+
+<div class="viewcode-block" id="drop_and_create_database"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.drop_and_create_database">[docs]</a><span class="k">def</span> <span class="nf">drop_and_create_database</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">database</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">owner</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">exists</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;SELECT 1 AS check_database FROM pg_catalog.pg_database WHERE datname = &#39;</span><span class="si">{</span><span class="n">database</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">exists</span><span class="p">:</span>
+        <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP DATABASE </span><span class="si">{}</span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">database</span><span class="p">))</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;CREATE DATABASE </span><span class="si">{}</span><span class="s2"> WITH OWNER </span><span class="si">{}</span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">database</span><span class="p">,</span> <span class="n">owner</span><span class="p">))</span></div>
+
+
+<span class="c1"># ---- USERS and GROUPS ----</span>
+
+
+<div class="viewcode-block" id="create_group"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.create_group">[docs]</a><span class="k">def</span> <span class="nf">create_group</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">group</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;CREATE GROUP &quot;</span><span class="si">{}</span><span class="s2">&quot; &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="group_exists"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.group_exists">[docs]</a><span class="k">def</span> <span class="nf">group_exists</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">group</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        SELECT groname</span>
+<span class="sd">          FROM pg_catalog.pg_group</span>
+<span class="sd">         WHERE groname = %s</span>
+<span class="sd">        &quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">group</span><span class="p">,),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span></div>
+
+
+<span class="k">def</span> <span class="nf">_get_encrypted_password</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return MD5-hashed password if entry is found in PGPASSLIB or None otherwise.&quot;&quot;&quot;</span>
+    <span class="n">dsn_complete</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">kv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">kv</span> <span class="ow">in</span> <span class="n">cx</span><span class="o">.</span><span class="n">dsn</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
+    <span class="n">dsn_partial</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">dsn_complete</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;host&quot;</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span><span class="p">,</span> <span class="s2">&quot;dbname&quot;</span><span class="p">]}</span>
+    <span class="n">dsn_user</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dsn_partial</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">pgpasslib</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="o">**</span><span class="n">dsn_user</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">pgpasslib</span><span class="o">.</span><span class="n">FileNotFound</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Create the file using &#39;touch ~/.pgpass &amp;&amp; chmod go= ~/.pgpass&#39;&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span><span class="s2">&quot;PGPASSFILE file is missing&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span>
+    <span class="k">except</span> <span class="n">pgpasslib</span><span class="o">.</span><span class="n">InvalidPermissions</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Update the permissions using: &#39;chmod go= ~/.pgpass&#39;&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span><span class="s2">&quot;PGPASSFILE file has invalid permissions&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span>
+
+    <span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">()</span>
+    <span class="n">md5</span><span class="o">.</span><span class="n">update</span><span class="p">((</span><span class="n">password</span> <span class="o">+</span> <span class="n">user</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>  <span class="c1"># lgtm[py/weak-sensitive-data-hashing]</span>
+    <span class="k">return</span> <span class="s2">&quot;md5&quot;</span> <span class="o">+</span> <span class="n">md5</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="create_user"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.create_user">[docs]</a><span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">group</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">_get_encrypted_password</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Missing entry in PGPASSFILE file for &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="c1"># SuppressWarnings: We need the user name in the output to be actionable feedback.</span>
+        <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;password missing from PGPASSFILE for user &#39;</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+        <span class="p">)</span>  <span class="c1"># lgtm[py/clear-text-logging-sensitive-data]</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;CREATE USER &quot;</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&quot; IN GROUP &quot;</span><span class="si">{</span><span class="n">group</span><span class="si">}</span><span class="s2">&quot; PASSWORD %s&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">password</span><span class="p">,))</span></div>
+
+
+<div class="viewcode-block" id="alter_password"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.alter_password">[docs]</a><span class="k">def</span> <span class="nf">alter_password</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ignore_missing_password</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">_get_encrypted_password</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to find password in PGPASSFILE for &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">ignore_missing_password</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ETLRuntimeError</span><span class="p">(</span><span class="s2">&quot;password missing from PGPASSFILE for user &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+        <span class="k">return</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;ALTER USER &quot;</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&quot; PASSWORD %s&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">password</span><span class="p">,))</span></div>
+
+
+<div class="viewcode-block" id="alter_group_add_user"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.alter_group_add_user">[docs]</a><span class="k">def</span> <span class="nf">alter_group_add_user</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">group</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;ALTER GROUP &quot;</span><span class="si">{</span><span class="n">group</span><span class="si">}</span><span class="s2">&quot; ADD USER &quot;</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&quot; &quot;&quot;&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="alter_search_path"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.alter_search_path">[docs]</a><span class="k">def</span> <span class="nf">alter_search_path</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schemas</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;ALTER USER &quot;</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&quot; SET SEARCH_PATH TO </span><span class="si">{</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">schemas</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="user_exists"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.user_exists">[docs]</a><span class="k">def</span> <span class="nf">user_exists</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        SELECT usename</span>
+<span class="sd">          FROM pg_catalog.pg_user</span>
+<span class="sd">         WHERE usename = %s</span>
+<span class="sd">        &quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">user</span><span class="p">,),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span></div>
+
+
+<span class="c1"># ---- SCHEMAS ----</span>
+
+
+<div class="viewcode-block" id="select_schemas"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.select_schemas">[docs]</a><span class="k">def</span> <span class="nf">select_schemas</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return the subset of the schema names that actually exist in the database.&quot;&quot;&quot;</span>
+    <span class="c1"># Make sure to evaluate the names arg only once.</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        SELECT nspname AS name</span>
+<span class="sd">          FROM pg_catalog.pg_namespace</span>
+<span class="sd">         WHERE nspname IN %s</span>
+<span class="sd">        &quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">names</span><span class="p">,),</span>
+    <span class="p">)</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">)</span>
+    <span class="c1"># Instead of an ORDER BY clause, keep original order.</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span> <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">found</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="drop_schema"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.drop_schema">[docs]</a><span class="k">def</span> <span class="nf">drop_schema</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;DROP SCHEMA IF EXISTS &quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot; CASCADE&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="alter_schema_rename"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.alter_schema_rename">[docs]</a><span class="k">def</span> <span class="nf">alter_schema_rename</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">old_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">new_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;ALTER SCHEMA </span><span class="si">{</span><span class="n">old_name</span><span class="si">}</span><span class="s1"> RENAME TO &quot;</span><span class="si">{</span><span class="n">new_name</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="create_schema"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.create_schema">[docs]</a><span class="k">def</span> <span class="nf">create_schema</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">owner</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;CREATE SCHEMA IF NOT EXISTS &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">owner</span><span class="p">:</span>
+        <span class="c1"># Because of the &quot;IF NOT EXISTS&quot; we need to expressly set owner in case there&#39;s a change</span>
+        <span class="c1"># in ownership.</span>
+        <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;ALTER SCHEMA &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot; OWNER TO &quot;</span><span class="si">{</span><span class="n">owner</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="grant_usage"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.grant_usage">[docs]</a><span class="k">def</span> <span class="nf">grant_usage</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">quoted_group_list</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;, GROUP &quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;GROUP &quot;</span><span class="p">)</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;GRANT USAGE ON SCHEMA &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot; TO </span><span class="si">{</span><span class="n">quoted_group_list</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="grant_all_on_schema_to_user"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.grant_all_on_schema_to_user">[docs]</a><span class="k">def</span> <span class="nf">grant_all_on_schema_to_user</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;GRANT ALL PRIVILEGES ON SCHEMA &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot; TO &quot;</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="revoke_usage"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.revoke_usage">[docs]</a><span class="k">def</span> <span class="nf">revoke_usage</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">quoted_group_list</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;, GROUP &quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;GROUP &quot;</span><span class="p">)</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;REVOKE USAGE ON SCHEMA &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot; FROM </span><span class="si">{</span><span class="n">quoted_group_list</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="grant_select_on_all_tables_in_schema"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.grant_select_on_all_tables_in_schema">[docs]</a><span class="k">def</span> <span class="nf">grant_select_on_all_tables_in_schema</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">quoted_group_list</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;, GROUP &quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;GROUP &quot;</span><span class="p">)</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;GRANT SELECT ON ALL TABLES IN SCHEMA &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot; TO </span><span class="si">{</span><span class="n">quoted_group_list</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="grant_select_and_write_on_all_tables_in_schema"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.grant_select_and_write_on_all_tables_in_schema">[docs]</a><span class="k">def</span> <span class="nf">grant_select_and_write_on_all_tables_in_schema</span><span class="p">(</span>
+    <span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">quoted_groups</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;, GROUP &quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;GROUP &quot;</span><span class="p">)</span>
+    <span class="n">execute</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s1">&#39;GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot; TO </span><span class="si">{</span><span class="n">quoted_groups</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="revoke_all_on_all_tables_in_schema"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.revoke_all_on_all_tables_in_schema">[docs]</a><span class="k">def</span> <span class="nf">revoke_all_on_all_tables_in_schema</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">quoted_group_list</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">join_with_double_quotes</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;, GROUP &quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;GROUP &quot;</span><span class="p">)</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;REVOKE ALL ON ALL TABLES IN SCHEMA &quot;</span><span class="si">{</span><span class="n">schema</span><span class="si">}</span><span class="s1">&quot; FROM </span><span class="si">{</span><span class="n">quoted_group_list</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<span class="c1"># ---- TABLES ----</span>
+
+
+<div class="viewcode-block" id="relation_kind"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.relation_kind">[docs]</a><span class="k">def</span> <span class="nf">relation_kind</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return &quot;kind&quot; of relation, either &#39;TABLE&#39; or &#39;VIEW&#39; for relations that actually exist.</span>
+
+<span class="sd">    If the relation doesn&#39;t exist, None is returned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        SELECT CASE cls.relkind</span>
+<span class="sd">                 WHEN &#39;r&#39; THEN &#39;TABLE&#39;</span>
+<span class="sd">                 WHEN &#39;v&#39; THEN &#39;VIEW&#39;</span>
+<span class="sd">               END AS relation_kind</span>
+<span class="sd">          FROM pg_catalog.pg_class AS cls</span>
+<span class="sd">          JOIN pg_catalog.pg_namespace AS nsp ON cls.relnamespace = nsp.oid</span>
+<span class="sd">         WHERE nsp.nspname = %s</span>
+<span class="sd">           AND cls.relname = %s</span>
+<span class="sd">           AND cls.relkind IN (&#39;r&#39;, &#39;v&#39;)</span>
+<span class="sd">        &quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="grant_select"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.grant_select">[docs]</a><span class="k">def</span> <span class="nf">grant_select</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">group</span><span class="p">):</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;GRANT SELECT ON &quot;</span><span class="si">{}</span><span class="s2">&quot;.&quot;</span><span class="si">{}</span><span class="s2">&quot; TO GROUP &quot;</span><span class="si">{}</span><span class="s2">&quot; &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">group</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="grant_select_and_write"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.grant_select_and_write">[docs]</a><span class="k">def</span> <span class="nf">grant_select_and_write</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">group</span><span class="p">):</span>
+    <span class="n">execute</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span>
+        <span class="sd">&quot;&quot;&quot;GRANT SELECT, INSERT, UPDATE, DELETE ON &quot;{}&quot;.&quot;{}&quot; TO GROUP &quot;{}&quot; &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">group</span>
+        <span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="grant_all_to_user"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.grant_all_to_user">[docs]</a><span class="k">def</span> <span class="nf">grant_all_to_user</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;GRANT ALL PRIVILEGES ON &quot;</span><span class="si">{}</span><span class="s2">&quot;.&quot;</span><span class="si">{}</span><span class="s2">&quot; TO &quot;</span><span class="si">{}</span><span class="s2">&quot; &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">user</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="revoke_select"><a class="viewcode-back" href="../../etl/etl.db.html#etl.db.revoke_select">[docs]</a><span class="k">def</span> <span class="nf">revoke_select</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">group</span><span class="p">):</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;REVOKE SELECT ON &quot;</span><span class="si">{}</span><span class="s2">&quot;.&quot;</span><span class="si">{}</span><span class="s2">&quot; FROM GROUP &quot;</span><span class="si">{}</span><span class="s2">&quot; &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">group</span><span class="p">))</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

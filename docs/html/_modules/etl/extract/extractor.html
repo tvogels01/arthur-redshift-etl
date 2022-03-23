@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.extract.extractor &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.extract.extractor</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Base classes for preparing data to be loaded.</span>
+
+<span class="sd">Extractors leave usable (ie, COPY-ready) manifests on S3 that reference data files.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">concurrent.futures</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">groupby</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">attrgetter</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Set</span>
+
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.db</span>
+<span class="kn">import</span> <span class="nn">etl.file_sets</span>
+<span class="kn">import</span> <span class="nn">etl.monitor</span>
+<span class="kn">import</span> <span class="nn">etl.s3</span>
+<span class="kn">from</span> <span class="nn">etl.config.dw</span> <span class="kn">import</span> <span class="n">DataWarehouseSchema</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">DataExtractError</span><span class="p">,</span> <span class="n">ETLRuntimeError</span><span class="p">,</span> <span class="n">MissingCsvFilesError</span>
+<span class="kn">from</span> <span class="nn">etl.relation</span> <span class="kn">import</span> <span class="n">RelationDescription</span>
+<span class="kn">from</span> <span class="nn">etl.text</span> <span class="kn">import</span> <span class="n">join_with_single_quotes</span>
+<span class="kn">from</span> <span class="nn">etl.util.retry</span> <span class="kn">import</span> <span class="n">call_with_retry</span>
+<span class="kn">from</span> <span class="nn">etl.util.timer</span> <span class="kn">import</span> <span class="n">Timer</span>
+
+
+<div class="viewcode-block" id="Extractor"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor">[docs]</a><span class="k">class</span> <span class="nc">Extractor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parent class of extractors that organizes per-source extraction.</span>
+
+<span class="sd">    The extractor base class provides the basic mechanics to</span>
+<span class="sd">    * iterate over sources</span>
+<span class="sd">      * iterate over tables in each source</span>
+<span class="sd">        * call a child&#39;s class extract for a single table</span>
+<span class="sd">    It is that method (`extract_table`) that child classes must implement.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schemas</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataWarehouseSchema</span><span class="p">],</span>
+        <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span>
+        <span class="n">keep_going</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">needs_to_wait</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">dry_run</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">schemas</span> <span class="o">=</span> <span class="n">schemas</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relations</span> <span class="o">=</span> <span class="n">relations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keep_going</span> <span class="o">=</span> <span class="n">keep_going</span>
+        <span class="c1"># Decide whether we should wait for some application to finish extracting and writing a</span>
+        <span class="c1"># success file or whether we can proceed immediately when testing for presence of that</span>
+        <span class="c1"># success file.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">needs_to_wait</span> <span class="o">=</span> <span class="n">needs_to_wait</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span> <span class="o">=</span> <span class="n">dry_run</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">failed_sources</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Extractor.options_info"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor.options_info">[docs]</a>    <span class="k">def</span> <span class="nf">options_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return list of &quot;options&quot; that describe the extract.</span>
+
+<span class="sd">        This list will be part of the step monitor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;with-</span><span class="si">{0.name}</span><span class="s2">-extractor&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)]</span></div>
+
+<div class="viewcode-block" id="Extractor.source_info"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor.source_info">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">source_info</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">DataWarehouseSchema</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return info for the job monitor that says from where the data is extracted.</span>
+
+<span class="sd">        Defaults to the relation&#39;s idea of the source but may be overridden by child classes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_name</span><span class="p">,</span>
+            <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span>
+            <span class="s2">&quot;table&quot;</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">table</span><span class="p">,</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="Extractor.extract_table"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor.extract_table">[docs]</a>    <span class="k">def</span> <span class="nf">extract_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="n">DataWarehouseSchema</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+            <span class="s2">&quot;forgot to implement extract_table in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.extract_table_with_retry"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor.extract_table_with_retry">[docs]</a>    <span class="k">def</span> <span class="nf">extract_table_with_retry</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="n">DataWarehouseSchema</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">current_index</span><span class="p">,</span> <span class="n">final_index</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extract a single table and return whether that was successful.</span>
+
+<span class="sd">        Failing to extract a &quot;required&quot; table will raise an exception instead of returning False,</span>
+<span class="sd">        unless the &quot;keep going&quot; option was selected.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">extract_retries</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_int</span><span class="p">(</span><span class="s2">&quot;arthur_settings.extract_retries&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">etl</span><span class="o">.</span><span class="n">monitor</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span>
+                <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                <span class="s2">&quot;extract&quot;</span><span class="p">,</span>
+                <span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options_info</span><span class="p">(),</span>
+                <span class="n">source</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">source_info</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">relation</span><span class="p">),</span>
+                <span class="n">destination</span><span class="o">=</span><span class="p">{</span>
+                    <span class="s2">&quot;bucket_name&quot;</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span>
+                    <span class="s2">&quot;object_key&quot;</span><span class="p">:</span> <span class="n">relation</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="n">index</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="n">current_index</span><span class="p">,</span> <span class="s2">&quot;final&quot;</span><span class="p">:</span> <span class="n">final_index</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">},</span>
+                <span class="n">dry_run</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">,</span>
+            <span class="p">):</span>
+                <span class="n">call_with_retry</span><span class="p">(</span><span class="n">extract_retries</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_table</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">relation</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">ETLRuntimeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">failed_sources</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">relation</span><span class="o">.</span><span class="n">is_required</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;Extract failed for non-required relation &#39;</span><span class="si">%s</span><span class="s2">&#39;:&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">exc_info</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">keep_going</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;Ignoring failure of required relation &#39;</span><span class="si">%s</span><span class="s2">&#39; and proceeding as requested:&quot;</span><span class="p">,</span>
+                    <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                    <span class="n">exc_info</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Extract failed for required relation &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+            <span class="k">raise</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="Extractor.extract_source"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor.extract_source">[docs]</a>    <span class="k">def</span> <span class="nf">extract_source</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="n">DataWarehouseSchema</span><span class="p">,</span> <span class="n">relations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Iterate through given relations to extract data from (upstream) source schemas.</span>
+
+<span class="sd">        This will return a list of tables that failed to extract or raise an exception</span>
+<span class="sd">        if there was just one relation failing, it was required, and &quot;keep going&quot; was not active.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">extract_jitter</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config_int</span><span class="p">(</span><span class="s2">&quot;arthur_settings.extract_jitter&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">extract_jitter</span><span class="p">:</span>
+            <span class="n">jitter_sleep_duration</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">extract_jitter</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Sleeping </span><span class="si">%d</span><span class="s2"> seconds to jitter extraction startup.&quot;</span><span class="p">,</span> <span class="n">jitter_sleep_duration</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">jitter_sleep_duration</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Extracting </span><span class="si">%d</span><span class="s2"> relation(s) from source &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">relations</span><span class="p">),</span> <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">failed_tables</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">with</span> <span class="n">Timer</span><span class="p">()</span> <span class="k">as</span> <span class="n">timer</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">relation</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">relations</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_table_with_retry</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">relations</span><span class="p">)):</span>
+                    <span class="n">failed_tables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Finished extract from source &#39;</span><span class="si">%s</span><span class="s2">&#39;: </span><span class="si">%d</span><span class="s2"> succeeded, </span><span class="si">%d</span><span class="s2"> failed (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span>
+                <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">relations</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">failed_tables</span><span class="p">),</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">failed_tables</span><span class="p">),</span>
+                <span class="n">timer</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">failed_tables</span></div>
+
+<div class="viewcode-block" id="Extractor.extract_sources"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor.extract_sources">[docs]</a>    <span class="k">def</span> <span class="nf">extract_sources</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Iterate over sources to be extracted and parallelize extraction at the source level.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Starting to extract </span><span class="si">%d</span><span class="s2"> relation(s) in </span><span class="si">%d</span><span class="s2"> schema(s)&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">relations</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">schemas</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">failed_sources</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">max_workers</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">schemas</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span>
+            <span class="n">max_workers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">,</span> <span class="n">thread_name_prefix</span><span class="o">=</span><span class="s2">&quot;extract-source&quot;</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+            <span class="n">futures</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">source_name</span><span class="p">,</span> <span class="n">relation_group</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">relations</span><span class="p">,</span> <span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;source_name&quot;</span><span class="p">)):</span>
+                <span class="n">future</span> <span class="o">=</span> <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">extract_source</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">schemas</span><span class="p">[</span><span class="n">source_name</span><span class="p">],</span> <span class="nb">list</span><span class="p">(</span><span class="n">relation_group</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="n">futures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">future</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">keep_going</span><span class="p">:</span>
+                <span class="n">done</span><span class="p">,</span> <span class="n">not_done</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span>
+                    <span class="n">futures</span><span class="p">,</span> <span class="n">return_when</span><span class="o">=</span><span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ALL_COMPLETED</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">done</span><span class="p">,</span> <span class="n">not_done</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span>
+                    <span class="n">futures</span><span class="p">,</span> <span class="n">return_when</span><span class="o">=</span><span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">FIRST_EXCEPTION</span>
+                <span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">failed_sources</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                <span class="s2">&quot;Failed to extract from these source(s): </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">failed_sources</span><span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Note that iterating over result of futures may raise an exception which surfaces</span>
+        <span class="c1"># exceptions from threads. This happens when there is (at least) one required table</span>
+        <span class="c1"># that failed to extract.</span>
+        <span class="n">missing_tables</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">done</span><span class="p">:</span>
+            <span class="n">missing_tables</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="n">missing_tables</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Failed to extract </span><span class="si">%d</span><span class="s2"> relation(s): </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">missing_tables</span><span class="p">),</span>
+                <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">missing_tables</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">not_done</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">DataExtractError</span><span class="p">(</span><span class="s2">&quot;Extract failed to complete for </span><span class="si">{:d}</span><span class="s2"> source(s)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">not_done</span><span class="p">)))</span></div>
+
+<div class="viewcode-block" id="Extractor.write_manifest_file"><a class="viewcode-back" href="../../../etl/etl.extract.extractor.html#etl.extract.extractor.Extractor.write_manifest_file">[docs]</a>    <span class="k">def</span> <span class="nf">write_manifest_file</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">source_bucket</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">source_prefix</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create manifest file to load all the data files for the given relation.</span>
+
+<span class="sd">        The manifest file will be created in the folder ABOVE the data files.</span>
+<span class="sd">        If the data files are in &#39;data/foo/bar/csv/part-r*&#39;,</span>
+<span class="sd">        then the manifest is &#39;data/foo/bar.manifest&#39;.</span>
+
+<span class="sd">        Note that for static sources, we need to check the bucket of that source, not the</span>
+<span class="sd">        bucket where the manifest will be written to.</span>
+
+<span class="sd">        This will also test for the presence of the _SUCCESS file (added by map-reduce jobs).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Preparing manifest file for data in &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">source_bucket</span><span class="p">,</span> <span class="n">source_prefix</span>
+        <span class="p">)</span>
+
+        <span class="n">have_success</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_s3_object_last_modified</span><span class="p">(</span>
+            <span class="n">source_bucket</span><span class="p">,</span> <span class="n">source_prefix</span> <span class="o">+</span> <span class="s2">&quot;/_SUCCESS&quot;</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">needs_to_wait</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">have_success</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;No valid data files (_SUCCESS is missing)&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">MissingCsvFilesError</span><span class="p">(</span><span class="s2">&quot;No valid data files (_SUCCESS is missing)&quot;</span><span class="p">)</span>
+
+        <span class="n">data_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">file_sets</span><span class="o">.</span><span class="n">find_data_files_in_s3</span><span class="p">(</span><span class="n">source_bucket</span><span class="p">,</span> <span class="n">source_prefix</span><span class="p">))</span>
+        <span class="n">remote_paths</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;s3://</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source_bucket</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span> <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">data_files</span><span class="p">]</span>
+        <span class="n">manifest</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;entries&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;mandatory&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">remote_paths</span><span class="p">]}</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">remote_paths</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Dry-run: Found no data files to add to manifest&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;Dry-run: Skipping writing manifest file &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39; for </span><span class="si">%d</span><span class="s2"> data file(s)&quot;</span><span class="p">,</span>
+                    <span class="n">relation</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span>
+                    <span class="n">relation</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">,</span>
+                    <span class="nb">len</span><span class="p">(</span><span class="n">data_files</span><span class="p">),</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">remote_paths</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">MissingCsvFilesError</span><span class="p">(</span><span class="s2">&quot;found no data files to add to manifest&quot;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Writing manifest file to &#39;s3://</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#39; for </span><span class="si">%d</span><span class="s2"> data file(s)&quot;</span><span class="p">,</span>
+                <span class="n">relation</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span>
+                <span class="n">relation</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">,</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">data_files</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">upload_data_to_s3</span><span class="p">(</span><span class="n">manifest</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">)</span>
+
+            <span class="c1"># Make sure file exists before proceeding</span>
+            <span class="n">etl</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_s3_object_last_modified</span><span class="p">(</span>
+                <span class="n">relation</span><span class="o">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">manifest_file_name</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span></div></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

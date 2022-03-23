@@ -1,0 +1,1365 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.design.bootstrap &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../etl/modules.html">
+   etl
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../etl/etl.html">
+     etl package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../etl/etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../etl/etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.relation.html">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../etl/etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for etl.design.bootstrap</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">closing</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">import</span> <span class="nn">psycopg2.errors</span>
+<span class="kn">import</span> <span class="nn">simplejson</span> <span class="k">as</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">psycopg2.extensions</span> <span class="kn">import</span> <span class="n">connection</span> <span class="k">as</span> <span class="n">Connection</span>  <span class="c1"># only for type annotation</span>
+
+<span class="kn">import</span> <span class="nn">etl.config</span>
+<span class="kn">import</span> <span class="nn">etl.db</span>
+<span class="kn">import</span> <span class="nn">etl.design.load</span>
+<span class="kn">import</span> <span class="nn">etl.file_sets</span>
+<span class="kn">import</span> <span class="nn">etl.relation</span>
+<span class="kn">import</span> <span class="nn">etl.s3</span>
+<span class="kn">from</span> <span class="nn">etl.config.dw</span> <span class="kn">import</span> <span class="n">DataWarehouseSchema</span>
+<span class="kn">from</span> <span class="nn">etl.design</span> <span class="kn">import</span> <span class="n">Attribute</span><span class="p">,</span> <span class="n">ColumnDefinition</span><span class="p">,</span> <span class="n">TableDesign</span><span class="p">,</span> <span class="n">diff_table_designs</span>
+<span class="kn">from</span> <span class="nn">etl.errors</span> <span class="kn">import</span> <span class="n">ETLSystemError</span><span class="p">,</span> <span class="n">TableDesignValidationError</span>
+<span class="kn">from</span> <span class="nn">etl.names</span> <span class="kn">import</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">TableSelector</span><span class="p">,</span> <span class="n">TempTableName</span><span class="p">,</span> <span class="n">join_with_single_quotes</span>
+<span class="kn">from</span> <span class="nn">etl.relation</span> <span class="kn">import</span> <span class="n">RelationDescription</span>  <span class="c1"># lgtm[py/import-and-import-from]</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="fetch_tables"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.fetch_tables">[docs]</a><span class="k">def</span> <span class="nf">fetch_tables</span><span class="p">(</span>
+    <span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="n">DataWarehouseSchema</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="n">TableSelector</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">TableName</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve tables (matching selector) for this source, return as a list of TableName instances.</span>
+
+<span class="sd">    The :source configuration contains an &quot;allowlist&quot; (which tables to include) and a</span>
+<span class="sd">    &quot;denylist&quot; (which tables to exclude). Note that &quot;exclude&quot; always overrides &quot;include.&quot;</span>
+<span class="sd">    The list of tables matching the allowlist but not the denylist can be further narrowed</span>
+<span class="sd">    down by the pattern in :selector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Look for relations (&#39;r&#39;, ordinary tables), materialized views (&#39;m&#39;), and views (&#39;v&#39;).</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="n">cx</span><span class="p">,</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        SELECT nsp.nspname AS &quot;schema&quot;</span>
+<span class="sd">             , cls.relname AS &quot;table&quot;</span>
+<span class="sd">          FROM pg_catalog.pg_class AS cls</span>
+<span class="sd">          JOIN pg_catalog.pg_namespace AS nsp ON cls.relnamespace = nsp.oid</span>
+<span class="sd">         WHERE cls.relname NOT LIKE &#39;tmp%%&#39;</span>
+<span class="sd">           AND cls.relname NOT LIKE &#39;pg_%%&#39;</span>
+<span class="sd">           AND cls.relkind IN (&#39;r&#39;, &#39;m&#39;, &#39;v&#39;)</span>
+<span class="sd">         ORDER BY nsp.nspname</span>
+<span class="sd">                , cls.relname</span>
+<span class="sd">         &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+        <span class="n">source_table_name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;schema&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;table&quot;</span><span class="p">])</span>
+        <span class="n">target_table_name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;table&quot;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">reject_pattern</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">exclude_tables</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">match_pattern</span><span class="p">(</span><span class="n">reject_pattern</span><span class="p">):</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Table &#39;</span><span class="si">%s</span><span class="s2">&#39; matches denylist&quot;</span><span class="p">,</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+                <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">accept_pattern</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">include_tables</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">match_pattern</span><span class="p">(</span><span class="n">accept_pattern</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">target_table_name</span><span class="p">):</span>
+                        <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">source_table_name</span><span class="p">)</span>
+                        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                            <span class="s2">&quot;Table &#39;</span><span class="si">%s</span><span class="s2">&#39; is included in result set&quot;</span><span class="p">,</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span>
+                        <span class="p">)</span>
+                        <span class="k">break</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                            <span class="s2">&quot;Table &#39;</span><span class="si">%s</span><span class="s2">&#39; matches allowlist but is not selected&quot;</span><span class="p">,</span>
+                            <span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                        <span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="s2">&quot;Found </span><span class="si">%d</span><span class="s2"> table(s) matching patterns; allowlist=</span><span class="si">%s</span><span class="s2">, denylist=</span><span class="si">%s</span><span class="s2">, subset=&#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">found</span><span class="p">),</span>
+        <span class="n">source</span><span class="o">.</span><span class="n">include_tables</span><span class="p">,</span>
+        <span class="n">source</span><span class="o">.</span><span class="n">exclude_tables</span><span class="p">,</span>
+        <span class="n">selector</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">found</span></div>
+
+
+<div class="viewcode-block" id="fetch_attributes"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.fetch_attributes">[docs]</a><span class="k">def</span> <span class="nf">fetch_attributes</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Attribute</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Retrieve attribute definition (column names and types).&quot;&quot;&quot;</span>
+    <span class="c1"># Make sure to turn on &quot;User Parameters&quot; in the Database settings of PyCharm so that `%s`</span>
+    <span class="c1"># works in the editor.</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">TempTableName</span><span class="p">)</span> <span class="ow">and</span> <span class="n">table_name</span><span class="o">.</span><span class="n">is_late_binding_view</span><span class="p">:</span>
+        <span class="n">stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            SELECT col_name AS &quot;name&quot;</span>
+<span class="s2">                 , col_type AS &quot;sql_type&quot;</span>
+<span class="s2">                 , FALSE AS &quot;not_null&quot;</span>
+<span class="s2">              FROM pg_get_late_binding_view_cols() cols(</span>
+<span class="s2">                       view_schema name</span>
+<span class="s2">                     , view_name name</span>
+<span class="s2">                     , col_name name</span>
+<span class="s2">                     , col_type varchar</span>
+<span class="s2">                     , col_num int)</span>
+<span class="s2">             WHERE view_schema LIKE </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">               AND view_name = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">             ORDER BY col_num</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            SELECT a.attname AS &quot;name&quot;</span>
+<span class="s2">                 , pg_catalog.format_type(t.oid, a.atttypmod) AS &quot;sql_type&quot;</span>
+<span class="s2">                 , a.attnotnull AS &quot;not_null&quot;</span>
+<span class="s2">              FROM pg_catalog.pg_attribute AS a</span>
+<span class="s2">              JOIN pg_catalog.pg_class AS cls ON a.attrelid = cls.oid</span>
+<span class="s2">              JOIN pg_catalog.pg_namespace AS ns ON cls.relnamespace = ns.oid</span>
+<span class="s2">              JOIN pg_catalog.pg_type AS t ON a.atttypid = t.oid</span>
+<span class="s2">             WHERE a.attnum &gt; 0  -- skip system columns</span>
+<span class="s2">               AND NOT a.attisdropped</span>
+<span class="s2">               AND ns.nspname LIKE </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">               AND cls.relname = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">             ORDER BY a.attnum</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+    <span class="n">attributes</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">table</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">Attribute</span><span class="p">(</span><span class="o">**</span><span class="n">att</span><span class="p">)</span> <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="fetch_constraints"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.fetch_constraints">[docs]</a><span class="k">def</span> <span class="nf">fetch_constraints</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve table constraints from database by looking up indices.</span>
+
+<span class="sd">    We will only check primary key constraints and unique constraints. If constraints have</span>
+<span class="sd">    predicates (like a WHERE clause) or use functions (like COALESCE(column, value), we&#39;ll skip</span>
+<span class="sd">    them.</span>
+
+<span class="sd">    (To recreate the constraint, we could use `pg_get_indexdef`.)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># We need to make two trips to the database because Redshift doesn&#39;t support functions</span>
+    <span class="c1"># on int2vector types. So we find out which indices exist (with unique constraints) and how</span>
+    <span class="c1"># many attributes are related to each, then we look up the attribute names with our</span>
+    <span class="c1"># exquisitely hand-rolled &quot;where&quot; clause. See</span>
+    <span class="c1"># http://www.postgresql.org/message-id/10279.1124395722@sss.pgh.pa.us for further explanations.</span>
+    <span class="n">stmt_index</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT i.indexrelid AS index_id</span>
+<span class="s2">             , ic.relname AS index_name</span>
+<span class="s2">             , CASE</span>
+<span class="s2">                   WHEN i.indisprimary THEN &#39;primary_key&#39;</span>
+<span class="s2">                   ELSE &#39;unique&#39;</span>
+<span class="s2">               END AS &quot;constraint_type&quot;</span>
+<span class="s2">             , i.indnatts AS nr_atts</span>
+<span class="s2">          FROM pg_catalog.pg_class AS cls</span>
+<span class="s2">          JOIN pg_catalog.pg_namespace AS ns ON cls.relnamespace = ns.oid</span>
+<span class="s2">          JOIN pg_catalog.pg_index AS i ON cls.oid = i.indrelid</span>
+<span class="s2">          JOIN pg_catalog.pg_class AS ic ON i.indexrelid = ic.oid</span>
+<span class="s2">         WHERE i.indisunique</span>
+<span class="s2">           AND i.indpred IS NULL</span>
+<span class="s2">           AND i.indexprs IS NULL</span>
+<span class="s2">           AND ns.nspname LIKE </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">           AND cls.relname = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">         ORDER BY &quot;constraint_type&quot;, ic.relname&quot;&quot;&quot;</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt_index</span><span class="p">,</span> <span class="p">(</span><span class="n">table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">table</span><span class="p">))</span>
+
+    <span class="n">stmt_att</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT a.attname AS &quot;name&quot;</span>
+<span class="s2">          FROM pg_catalog.pg_attribute AS a</span>
+<span class="s2">          JOIN pg_catalog.pg_index AS i ON a.attrelid = i.indrelid</span>
+<span class="s2">          WHERE i.indexrelid = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">            AND (</span><span class="si">{cond}</span><span class="s2">)</span>
+<span class="s2">          ORDER BY a.attname&quot;&quot;&quot;</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index_id</span><span class="p">,</span> <span class="n">index_name</span><span class="p">,</span> <span class="n">constraint_type</span><span class="p">,</span> <span class="n">nr_atts</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
+        <span class="n">cond</span> <span class="o">=</span> <span class="s2">&quot; OR &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;a.attnum = i.indkey[</span><span class="si">%d</span><span class="s2">]&quot;</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nr_atts</span><span class="p">))</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt_att</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cond</span><span class="o">=</span><span class="n">cond</span><span class="p">),</span> <span class="p">(</span><span class="n">index_id</span><span class="p">,))</span>
+        <span class="k">if</span> <span class="n">attributes</span><span class="p">:</span>
+            <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">att</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">]</span>
+            <span class="n">constraint</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="n">constraint_type</span><span class="p">:</span> <span class="n">columns</span><span class="p">}</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Index &#39;</span><span class="si">%s</span><span class="s2">&#39; of &#39;</span><span class="si">%s</span><span class="s2">&#39; adds constraint </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">index_name</span><span class="p">,</span>
+                <span class="n">table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">constraint</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">constraint</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">found</span></div>
+
+
+<div class="viewcode-block" id="fetch_dependencies"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.fetch_dependencies">[docs]</a><span class="k">def</span> <span class="nf">fetch_dependencies</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Lookup dependencies (other relations).</span>
+
+<span class="sd">    Note that this will return an empty list for a late-binding view.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># See https://github.com/awslabs/amazon-redshift-utils/blob/master/src/AdminViews/v_constraint_dependency.sql  # noqa: E501</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT DISTINCT</span>
+<span class="s2">               target_ns.nspname AS &quot;schema&quot;</span>
+<span class="s2">             , target_cls.relname AS &quot;table&quot;</span>
+<span class="s2">          FROM pg_catalog.pg_class AS cls</span>
+<span class="s2">          JOIN pg_catalog.pg_namespace AS ns ON cls.relnamespace = ns.oid</span>
+<span class="s2">          JOIN pg_catalog.pg_depend AS dep ON cls.oid = dep.refobjid</span>
+<span class="s2">          JOIN pg_catalog.pg_depend AS target_dep ON dep.objid = target_dep.objid</span>
+<span class="s2">          JOIN pg_catalog.pg_class AS target_cls ON target_dep.refobjid = target_cls.oid</span>
+<span class="s2">                                                AND cls.oid &lt;&gt; target_cls.oid</span>
+<span class="s2">          JOIN pg_catalog.pg_namespace AS target_ns ON target_cls.relnamespace = target_ns.oid</span>
+<span class="s2">         WHERE ns.nspname LIKE </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">           AND cls.relname = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">         ORDER BY &quot;schema&quot;, &quot;table&quot;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+    <span class="n">dependencies</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="p">(</span><span class="n">table_name</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="n">table_name</span><span class="o">.</span><span class="n">table</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">TableName</span><span class="p">(</span><span class="o">**</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">dependencies</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="search_query_step"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.search_query_step">[docs]</a><span class="k">def</span> <span class="nf">search_query_step</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return any S3-based tables found in the query step (part of a query plan).</span>
+
+<span class="sd">    &gt;&gt;&gt; plan = &#39;-&gt; S3 Nested Subquery ex_schema.table location:&quot;s3://bucket/...&quot;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; search_query_step(plan)</span>
+<span class="sd">    {&#39;s3_table&#39;: &#39;ex_schema.table&#39;}</span>
+<span class="sd">    &gt;&gt;&gt; plan = &#39;-&gt; S3 Seq Scan ex_schema.table location:&#39;</span>
+<span class="sd">    &gt;&gt;&gt; search_query_step(plan)</span>
+<span class="sd">    {&#39;s3_table&#39;: &#39;ex_schema.table&#39;}</span>
+<span class="sd">    &gt;&gt;&gt; plan = &#39;-&gt; S3 Seq Scan ex_schema.table alias location:&#39;</span>
+<span class="sd">    &gt;&gt;&gt; search_query_step(plan)</span>
+<span class="sd">    {&#39;s3_table&#39;: &#39;ex_schema.table&#39;}</span>
+<span class="sd">    &gt;&gt;&gt; plan = &#39;-&gt; XN Seq Scan on table&#39;</span>
+<span class="sd">    &gt;&gt;&gt; search_query_step(plan)</span>
+<span class="sd">    {&#39;xn_table&#39;: &#39;table&#39;}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ws_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s+&quot;</span><span class="p">)</span>
+    <span class="c1"># Note that in the regex below, whitespace outside &#39;[ ]&#39; or &#39;\ &#39; is ignored.</span>
+    <span class="n">scan_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;-&gt;[ ]</span>
+<span class="sd">            S3\ Nested\ Subquery\ (?P&lt;s3_table_nested&gt;\w+\.\w+)\ location:</span>
+<span class="sd">            | S3\ Seq\ Scan\ (?P&lt;s3_table_seq&gt;\w+\.\w+)(?:\ \w+)?\ location:</span>
+<span class="sd">            | XN\ Seq\ Scan\ on\ (?P&lt;xn_table&gt;\w+)</span>
+<span class="sd">        &quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">scan_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">ws_re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;s3_table_nested&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;s3_table&quot;</span><span class="p">:</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;s3_table_nested&quot;</span><span class="p">]}</span>
+    <span class="k">if</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;s3_table_seq&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;s3_table&quot;</span><span class="p">:</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;s3_table_seq&quot;</span><span class="p">]}</span>
+    <span class="k">if</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;xn_table&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;xn_table&quot;</span><span class="p">:</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;xn_table&quot;</span><span class="p">]}</span>
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="fetch_dependency_hints"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.fetch_dependency_hints">[docs]</a><span class="k">def</span> <span class="nf">fetch_dependency_hints</span><span class="p">(</span><span class="n">cx</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">stmt</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot;Parse a query plan for hints of which relations we might depend on.&quot;&quot;&quot;</span>
+    <span class="n">s3_dependencies</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">xn_dependencies</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Looking at query plan to find dependencies&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">plan</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">explain</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">stmt</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">InvalidSchemaName</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Cannot fetch dependencies: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">plan</span><span class="p">:</span>
+        <span class="n">maybe</span> <span class="o">=</span> <span class="n">search_query_step</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">maybe</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="s2">&quot;s3_table&quot;</span> <span class="ow">in</span> <span class="n">maybe</span><span class="p">:</span>
+            <span class="n">s3_dependencies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">maybe</span><span class="p">[</span><span class="s2">&quot;s3_table&quot;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s2">&quot;xn_table&quot;</span> <span class="ow">in</span> <span class="n">maybe</span><span class="p">:</span>
+            <span class="n">xn_dependencies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">maybe</span><span class="p">[</span><span class="s2">&quot;xn_table&quot;</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">s3_dependencies</span> <span class="ow">and</span> <span class="n">xn_dependencies</span><span class="p">:</span>
+        <span class="c1"># Unfortunately the tables aren&#39;t qualified with a schema so we can&#39;t use the info.</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Found dependencies in S3, but also some without known schema: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">xn_dependencies</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;You will have to manually add the correct tables to the dependencies.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># TODO(tom): Do not allow to continue to mix the two.</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">s3_dependencies</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="create_partial_table_design"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.create_partial_table_design">[docs]</a><span class="k">def</span> <span class="nf">create_partial_table_design</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">target_table_name</span><span class="p">:</span> <span class="n">TableName</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Start a table design for the relation.</span>
+
+<span class="sd">    This returns a partial table design that contains</span>
+<span class="sd">        - the name (identifier of our target table)</span>
+<span class="sd">        - full column information (extracted from database source or data warehouse)</span>
+<span class="sd">        - a description (with a timestamp)</span>
+
+<span class="sd">    What is missing then to make it a valid table design is at least the &quot;source_name&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">type_maps</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span><span class="o">.</span><span class="n">type_maps</span>
+    <span class="n">as_is_attribute_type</span> <span class="o">=</span> <span class="n">type_maps</span><span class="p">[</span><span class="s2">&quot;as_is_att_type&quot;</span><span class="p">]</span>  <span class="c1"># source tables and CTAS</span>
+    <span class="n">cast_needed_attribute_type</span> <span class="o">=</span> <span class="n">type_maps</span><span class="p">[</span><span class="s2">&quot;cast_needed_att_type&quot;</span><span class="p">]</span>  <span class="c1"># only source tables</span>
+    <span class="n">default_attribute_type</span> <span class="o">=</span> <span class="n">type_maps</span><span class="p">[</span><span class="s2">&quot;default_att_type&quot;</span><span class="p">]</span>  <span class="c1"># default (fallback)</span>
+
+    <span class="n">source_attributes</span> <span class="o">=</span> <span class="n">fetch_attributes</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">source_attributes</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;failed to find attributes (check your query)&quot;</span><span class="p">)</span>
+    <span class="n">unique_source_attributes</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">attribute</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">source_attributes</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">source_attributes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_source_attributes</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">source_attributes</span><span class="p">)</span><span class="si">}</span><span class="s2"> attributes but there are duplicates&quot;</span><span class="p">)</span>
+    <span class="n">target_columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">ColumnDefinition</span><span class="o">.</span><span class="n">from_attribute</span><span class="p">(</span>
+            <span class="n">attribute</span><span class="p">,</span> <span class="n">as_is_attribute_type</span><span class="p">,</span> <span class="n">cast_needed_attribute_type</span><span class="p">,</span> <span class="n">default_attribute_type</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">source_attributes</span>
+    <span class="p">]</span>
+    <span class="n">table_design</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">column</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">target_columns</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="create_table_design_for_source"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.create_table_design_for_source">[docs]</a><span class="k">def</span> <span class="nf">create_table_design_for_source</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span>
+    <span class="n">source_table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span>
+    <span class="n">target_table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span>
+    <span class="n">existing_relation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RelationDescription</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create table design for a table in an upstream source.</span>
+
+<span class="sd">    We gather the constraints from the source. (Note that only upstream tables can have constraints</span>
+<span class="sd">    derived from inspecting the database.)</span>
+
+<span class="sd">    If there is an existing table design, it is used to update the one bootstrapped from the source.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table_design</span> <span class="o">=</span> <span class="n">create_partial_table_design</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">,</span> <span class="n">target_table_name</span><span class="p">)</span>
+    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">fetch_constraints</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">constraints</span><span class="p">:</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraints</span>
+    <span class="k">if</span> <span class="n">existing_relation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">table_design</span>
+
+    <span class="n">existing_table_design</span> <span class="o">=</span> <span class="n">existing_relation</span><span class="o">.</span><span class="n">table_design</span>
+    <span class="k">if</span> <span class="s2">&quot;description&quot;</span> <span class="ow">in</span> <span class="n">existing_table_design</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span>
+        <span class="p">(</span><span class="s2">&quot;Automatically generated on&quot;</span><span class="p">,</span> <span class="s2">&quot;Automatically updated on&quot;</span><span class="p">)</span>
+    <span class="p">):</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="n">existing_columns</span> <span class="o">=</span> <span class="p">{</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">column</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]}</span>
+    <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+        <span class="n">column_name</span> <span class="o">=</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">column_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">existing_columns</span><span class="p">:</span>
+            <span class="n">new_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">column</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="n">existing_column</span> <span class="o">=</span> <span class="n">existing_columns</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">existing_column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">new_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">existing_column</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;encoding&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">existing_column</span><span class="p">:</span>
+                <span class="n">column</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">existing_column</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="c1"># When the expression and SQL type have been adjusted, keep that adjustment</span>
+        <span class="c1"># but only for cases where the &quot;default&quot; kicked in.</span>
+        <span class="c1"># TODO(tom): Is there a safer way to keep these modifications?</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">column</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;string&quot;</span>
+            <span class="ow">and</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;source_sql_type&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">existing_column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;source_sql_type&quot;</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">existing_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">]</span>
+        <span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Keeping previous SQL type and expression for &#39;</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">,</span> <span class="n">column_name</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;sql_type&quot;</span><span class="p">,</span> <span class="s2">&quot;expression&quot;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">existing_column</span><span class="p">:</span>
+                    <span class="n">column</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">existing_column</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="n">new_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">column</span><span class="p">)</span>
+    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_columns</span>
+
+    <span class="k">if</span> <span class="s2">&quot;extract_settings&quot;</span> <span class="ow">in</span> <span class="n">existing_table_design</span><span class="p">:</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;extract_settings&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;extract_settings&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="s2">&quot;attributes&quot;</span> <span class="ow">in</span> <span class="n">existing_table_design</span><span class="p">:</span>
+        <span class="c1"># TODO(tom): Should check columns in the attributes here</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;attributes&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;attributes&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="s2">&quot;constraints&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">table_design</span>
+
+    <span class="n">skipped_columns</span> <span class="o">=</span> <span class="p">{</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skipped&quot;</span><span class="p">)}</span>
+    <span class="n">new_constraints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">]:</span>
+        <span class="p">[[</span><span class="n">_</span><span class="p">,</span> <span class="n">constraint_columns</span><span class="p">]]</span> <span class="o">=</span> <span class="n">constraint</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>  <span class="c1"># unpacking list of single dict</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">column</span> <span class="ow">in</span> <span class="n">skipped_columns</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">constraint_columns</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Dropping constraint using skipped columns: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">constraint</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="n">new_constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">constraint</span><span class="p">)</span>
+    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_constraints</span>
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="create_partial_table_design_for_transformation"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.create_partial_table_design_for_transformation">[docs]</a><span class="k">def</span> <span class="nf">create_partial_table_design_for_transformation</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span>
+    <span class="n">tmp_view_name</span><span class="p">:</span> <span class="n">TempTableName</span><span class="p">,</span>
+    <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span>
+    <span class="n">update_keys</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a partial design that&#39;s applicable to transformations.</span>
+
+<span class="sd">    This partial design:</span>
+<span class="sd">        - cleans up the column information (dropping accidental expressions)</span>
+<span class="sd">        - adds dependencies (which only transformations can have)</span>
+<span class="sd">        - and optionally updates from the existing table design</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table_design</span> <span class="o">=</span> <span class="n">create_partial_table_design</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">)</span>
+    <span class="c1"># When working with CTAS or VIEW, the type casting doesn&#39;t make sense but sometimes sneaks in.</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="s2">&quot;expression&quot;</span> <span class="ow">in</span> <span class="n">column</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;expression&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">&quot;source_sql_type&quot;</span> <span class="ow">in</span> <span class="n">column</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;source_sql_type&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">tmp_view_name</span><span class="o">.</span><span class="n">is_late_binding_view</span><span class="p">:</span>
+        <span class="n">dependencies</span> <span class="o">=</span> <span class="n">fetch_dependency_hints</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">query_stmt</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dependencies</span> <span class="o">=</span> <span class="n">fetch_dependencies</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dependencies</span><span class="p">:</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;depends_on&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dependencies</span>
+
+    <span class="k">if</span> <span class="n">update_keys</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">relation</span><span class="o">.</span><span class="n">design_file_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">table_design</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Update of existing table design file for &#39;</span><span class="si">%s</span><span class="s2">&#39; in progress&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="n">existing_table_design</span> <span class="o">=</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span>
+    <span class="n">selected_update_keys</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">update_keys</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="s2">&quot;description&quot;</span> <span class="ow">in</span> <span class="n">selected_update_keys</span>
+        <span class="ow">and</span> <span class="s2">&quot;description&quot;</span> <span class="ow">in</span> <span class="n">existing_table_design</span>
+        <span class="ow">and</span> <span class="ow">not</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span>
+            <span class="p">(</span><span class="s2">&quot;Automatically generated on&quot;</span><span class="p">,</span> <span class="s2">&quot;Automatically updated on&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">):</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="s2">&quot;columns&quot;</span> <span class="ow">in</span> <span class="n">selected_update_keys</span><span class="p">:</span>
+        <span class="c1"># If the old design had added an identity column, we carry it forward</span>
+        <span class="c1"># here (and always as the first column).</span>
+        <span class="n">identity</span> <span class="o">=</span> <span class="p">[</span><span class="n">column</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">column</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;identity&quot;</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">identity</span><span class="p">:</span>
+            <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">][:</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">identity</span>
+            <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;encoding&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>
+
+        <span class="n">existing_column</span> <span class="o">=</span> <span class="p">{</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">column</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]}</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">existing_column</span><span class="p">:</span>
+                <span class="c1"># This modifies in-place until I have more time to fix this.</span>
+                <span class="n">update_column_definition</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">existing_column</span><span class="p">[</span><span class="n">column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]])</span>
+
+    <span class="c1"># Now do the rest of the update keys which require less attention to details.</span>
+    <span class="n">remaining_keys</span> <span class="o">=</span> <span class="n">selected_update_keys</span><span class="o">.</span><span class="n">difference</span><span class="p">((</span><span class="s2">&quot;columns&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span>
+        <span class="n">existing_table_design</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">copy_key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">remaining_keys</span><span class="p">):</span>
+        <span class="c1"># TODO(tom): May have to cleanup columns in constraints and attributes!</span>
+        <span class="n">table_design</span><span class="p">[</span><span class="n">copy_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">existing_table_design</span><span class="p">[</span><span class="n">copy_key</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="update_column_definition"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.update_column_definition">[docs]</a><span class="k">def</span> <span class="nf">update_column_definition</span><span class="p">(</span><span class="n">target_table</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">new_column</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">old_column</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Update (in place) the bootstrapped column definition with existing information.</span>
+
+<span class="sd">    This carefully merges the information from inspecting the view created for the transformation</span>
+<span class="sd">    with information from the existing table design.</span>
+
+<span class="sd">    Copied directly: &quot;description&quot;, &quot;encoding&quot;, &quot;references&quot;, and &quot;not_null&quot;</span>
+<span class="sd">    Updated carefully: &quot;sql_type&quot; and &quot;type&quot; (always together)</span>
+<span class="sd">    In case the user might lose precision or information, a warning is issued.</span>
+
+<span class="sd">    &gt;&gt;&gt; update_column_definition(&quot;s.t&quot;, {</span>
+<span class="sd">    ...     &quot;name&quot;: &quot;doctest&quot;, &quot;sql_type&quot;: &quot;integer&quot;, &quot;type&quot;: &quot;int&quot;</span>
+<span class="sd">    ... }, {</span>
+<span class="sd">    ...     &quot;name&quot;: &quot;doctest&quot;, &quot;sql_type&quot;: &quot;bigint&quot;, &quot;type&quot;: &quot;long&quot;</span>
+<span class="sd">    ... })</span>
+<span class="sd">    {&#39;name&#39;: &#39;doctest&#39;, &#39;sql_type&#39;: &#39;bigint&#39;, &#39;type&#39;: &#39;long&#39;}</span>
+<span class="sd">    &gt;&gt;&gt; update_column_definition(&quot;s.t&quot;, {</span>
+<span class="sd">    ...     &quot;name&quot;: &quot;doctest&quot;, &quot;sql_type&quot;: &quot;numeric(18,4)&quot;, &quot;type&quot;: &quot;string&quot;</span>
+<span class="sd">    ... }, {</span>
+<span class="sd">    ...     &quot;name&quot;: &quot;doctest&quot;, &quot;sql_type&quot;: &quot;DECIMAL(12, 2)&quot;, &quot;type&quot;: &quot;string&quot;</span>
+<span class="sd">    ... })</span>
+<span class="sd">    {&#39;name&#39;: &#39;doctest&#39;, &#39;sql_type&#39;: &#39;numeric(18,4)&#39;, &#39;type&#39;: &#39;string&#39;}</span>
+<span class="sd">    &gt;&gt;&gt; update_column_definition(&quot;s.t&quot;, {</span>
+<span class="sd">    ...     &quot;name&quot;: &quot;doctest&quot;, &quot;sql_type&quot;: &quot;varchar(100)&quot;, &quot;type&quot;: &quot;string&quot;</span>
+<span class="sd">    ... }, {</span>
+<span class="sd">    ...     &quot;name&quot;: &quot;doctest&quot;, &quot;sql_type&quot;: &quot;Varchar(200)&quot;, &quot;type&quot;: &quot;string&quot;</span>
+<span class="sd">    ... })</span>
+<span class="sd">    {&#39;name&#39;: &#39;doctest&#39;, &#39;sql_type&#39;: &#39;character varying(100)&#39;, &#39;type&#39;: &#39;string&#39;}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="n">new_column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">old_column</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">column_name</span>
+
+    <span class="n">ok_to_copy</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="s2">&quot;references&quot;</span><span class="p">,</span> <span class="s2">&quot;not_null&quot;</span><span class="p">})</span>
+    <span class="n">have_old_value</span> <span class="o">=</span> <span class="n">ok_to_copy</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">old_column</span><span class="p">)</span>
+    <span class="n">new_column</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">old_column</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">have_old_value</span><span class="p">})</span>
+
+    <span class="c1"># When we update from VIEW to CTAS, there&#39;s not much to copy from.</span>
+    <span class="k">if</span> <span class="s2">&quot;sql_type&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">old_column</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">new_column</span>
+
+    <span class="n">new_sql_type</span> <span class="o">=</span> <span class="n">new_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">]</span>
+    <span class="n">old_sql_type</span> <span class="o">=</span> <span class="n">old_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+        <span class="s2">&quot;Trying to update column &#39;</span><span class="si">%s</span><span class="s2">&#39;: new=&#39;</span><span class="si">%s</span><span class="s2">&#39;, old=&#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">new_sql_type</span><span class="p">,</span> <span class="n">old_sql_type</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Upgrade to &quot;larger&quot; type if that was selected previously.</span>
+    <span class="k">if</span> <span class="n">new_sql_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;integer&quot;</span><span class="p">,</span> <span class="s2">&quot;bigint&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">old_sql_type</span> <span class="o">==</span> <span class="s2">&quot;bigint&quot;</span> <span class="ow">and</span> <span class="n">new_sql_type</span> <span class="o">==</span> <span class="s2">&quot;integer&quot;</span><span class="p">:</span>
+            <span class="n">new_column</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">sql_type</span><span class="o">=</span><span class="s2">&quot;bigint&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;long&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Keeping previous definition for column &#39;</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&#39;: &#39;</span><span class="si">%s</span><span class="s2">&#39; (please add a cast)&quot;</span><span class="p">,</span>
+                <span class="n">target_table</span><span class="p">,</span>
+                <span class="n">column_name</span><span class="p">,</span>
+                <span class="n">new_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">],</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_column</span>
+
+    <span class="n">numeric_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">r</span><span class="s2">&quot;(?:numeric|decimal)\(\s*(?P&lt;precision&gt;\d+),\s*(?P&lt;scale&gt;\d+)\)&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span>
+    <span class="p">)</span>
+    <span class="n">new_numeric</span> <span class="o">=</span> <span class="n">numeric_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">new_sql_type</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">new_numeric</span><span class="p">:</span>
+        <span class="n">old_numeric</span> <span class="o">=</span> <span class="n">numeric_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">old_sql_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">old_numeric</span> <span class="ow">and</span> <span class="n">new_numeric</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span> <span class="o">!=</span> <span class="n">old_numeric</span><span class="o">.</span><span class="n">groups</span><span class="p">():</span>
+            <span class="n">new_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;numeric(</span><span class="si">{precision}</span><span class="s2">,</span><span class="si">{scale}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format_map</span><span class="p">(</span><span class="n">new_numeric</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Updating definition for &#39;</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&#39; from &#39;</span><span class="si">%s</span><span class="s2">&#39; to &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                <span class="n">target_table</span><span class="p">,</span>
+                <span class="n">column_name</span><span class="p">,</span>
+                <span class="n">old_sql_type</span><span class="p">,</span>
+                <span class="n">new_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">],</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_column</span>
+
+    <span class="n">varchar_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?:varchar|character varying)\((?P&lt;size&gt;\d+)\)&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">new_text</span> <span class="o">=</span> <span class="n">varchar_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">new_sql_type</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">new_text</span><span class="p">:</span>
+        <span class="n">old_text</span> <span class="o">=</span> <span class="n">varchar_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">old_sql_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">old_text</span><span class="p">:</span>
+            <span class="n">new_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">new_text</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()[</span><span class="s2">&quot;size&quot;</span><span class="p">])</span>
+            <span class="n">old_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">old_text</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()[</span><span class="s2">&quot;size&quot;</span><span class="p">])</span>
+            <span class="c1"># This will always overwrite VARCHAR(100) with CHARACTER VARYING(100).</span>
+            <span class="n">new_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;character varying(</span><span class="si">{</span><span class="n">new_size</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="k">if</span> <span class="n">new_size</span> <span class="o">&lt;</span> <span class="n">old_size</span><span class="p">:</span>
+                <span class="c1"># Warn the user in case they made the column accidentally smaller.</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;Updating definition for &#39;</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&#39; from &#39;</span><span class="si">%s</span><span class="s2">&#39; to &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                    <span class="n">target_table</span><span class="p">,</span>
+                    <span class="n">column_name</span><span class="p">,</span>
+                    <span class="n">old_sql_type</span><span class="p">,</span>
+                    <span class="n">new_column</span><span class="p">[</span><span class="s2">&quot;sql_type&quot;</span><span class="p">],</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_column</span>
+
+    <span class="c1"># Those types above are all that we understand how to update.</span>
+    <span class="k">return</span> <span class="n">new_column</span></div>
+
+
+<div class="viewcode-block" id="create_table_design_for_ctas"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.create_table_design_for_ctas">[docs]</a><span class="k">def</span> <span class="nf">create_table_design_for_ctas</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">:</span> <span class="n">TempTableName</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create new table design for a CTAS.</span>
+
+<span class="sd">    If tables are referenced, they are added in the dependencies list.</span>
+<span class="sd">    If :update is True, try to merge additional information from any existing table design file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">update_keys</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;unload_target&quot;</span><span class="p">,</span> <span class="s2">&quot;columns&quot;</span><span class="p">,</span> <span class="s2">&quot;constraints&quot;</span><span class="p">,</span> <span class="s2">&quot;attributes&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">update</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="p">)</span>
+    <span class="n">table_design</span> <span class="o">=</span> <span class="n">create_partial_table_design_for_transformation</span><span class="p">(</span>
+        <span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">update_keys</span>
+    <span class="p">)</span>
+    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CTAS&quot;</span>
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="create_table_design_for_view"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.create_table_design_for_view">[docs]</a><span class="k">def</span> <span class="nf">create_table_design_for_view</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">:</span> <span class="n">TempTableName</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create (and return) new table design suited for a view.</span>
+
+<span class="sd">    Views are expected to always depend on some other relations. (Also, we only keep the names</span>
+<span class="sd">    for columns.)</span>
+
+<span class="sd">    If :update is True, try to merge additional information from any existing table design file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">update_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;unload_target&quot;</span><span class="p">,</span> <span class="s2">&quot;columns&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">update</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="c1"># This creates a full column description with types (testing the type-maps), then drops all of</span>
+    <span class="c1"># that except for names and descriptions.</span>
+    <span class="n">table_design</span> <span class="o">=</span> <span class="n">create_partial_table_design_for_transformation</span><span class="p">(</span>
+        <span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">update_keys</span>
+    <span class="p">)</span>
+    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">column</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">)}</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;columns&quot;</span><span class="p">]</span>
+    <span class="p">]</span>
+    <span class="n">table_design</span><span class="p">[</span><span class="s2">&quot;source_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;VIEW&quot;</span>
+    <span class="k">return</span> <span class="n">table_design</span></div>
+
+
+<div class="viewcode-block" id="create_table_design_for_transformation"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.create_table_design_for_transformation">[docs]</a><span class="k">def</span> <span class="nf">create_table_design_for_transformation</span><span class="p">(</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">RelationDescription</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="c1"># Use a quick check of the query plan whether we depend on external schemas.</span>
+    <span class="k">if</span> <span class="n">kind</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;CTAS&quot;</span><span class="p">,</span> <span class="s2">&quot;VIEW&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ETLSystemError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;unexpected source name: </span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">relation</span><span class="o">.</span><span class="n">matching_temporary_view</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">as_late_binding_view</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">tmp_view_name</span><span class="p">:</span>
+        <span class="n">dependencies</span> <span class="o">=</span> <span class="n">fetch_dependency_hints</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">query_stmt</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dependencies</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;failed to query for dependencies&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">dependencies</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Looks like </span><span class="si">%s</span><span class="s2"> has external dependencies, proceeding with caution&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;VIEW&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                    <span class="s2">&quot;VIEW not supported for transformations that depend on external tables&quot;</span>
+                <span class="p">)</span>
+            <span class="k">return</span> <span class="n">create_table_design_for_ctas</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">update</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">relation</span><span class="o">.</span><span class="n">matching_temporary_view</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">as_late_binding_view</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">as</span> <span class="n">tmp_view_name</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;VIEW&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">create_table_design_for_view</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">update</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">create_table_design_for_ctas</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tmp_view_name</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">update</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="save_table_design"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.save_table_design">[docs]</a><span class="k">def</span> <span class="nf">save_table_design</span><span class="p">(</span>
+    <span class="n">target_table_name</span><span class="p">:</span> <span class="n">TableName</span><span class="p">,</span>
+    <span class="n">table_design</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write new table design file to disk.</span>
+
+<span class="sd">    Although these files are generated by computers, they get read by humans. So we try to be nice</span>
+<span class="sd">    here and write them out with a specific order of the keys, like have name and description</span>
+<span class="sd">    towards the top.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Validate before writing to make sure we don&#39;t drift between bootstrap and JSON schema.</span>
+    <span class="n">etl</span><span class="o">.</span><span class="n">design</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">validate_table_design</span><span class="p">(</span><span class="n">table_design</span><span class="p">,</span> <span class="n">target_table_name</span><span class="p">)</span>
+    <span class="n">this_table</span> <span class="o">=</span> <span class="n">target_table_name</span><span class="o">.</span><span class="n">identifier</span>
+    <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Dry-run: Skipping writing table design file for &#39;</span><span class="si">%s</span><span class="s2">&#39; to &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">this_table</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">overwrite</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Skipping writing new table design for &#39;</span><span class="si">%s</span><span class="s2">&#39; since &#39;</span><span class="si">%s</span><span class="s2">&#39; already exists&quot;</span><span class="p">,</span> <span class="n">this_table</span><span class="p">,</span> <span class="n">filename</span>
+        <span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Writing new table design file for &#39;</span><span class="si">%s</span><span class="s2">&#39; to &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">this_table</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">o</span><span class="p">:</span>
+        <span class="n">o</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">TableDesign</span><span class="o">.</span><span class="n">as_string</span><span class="p">(</span><span class="n">table_design</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Completed writing &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="normalize_and_create"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.normalize_and_create">[docs]</a><span class="k">def</span> <span class="nf">normalize_and_create</span><span class="p">(</span><span class="n">directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Make sure the directory exists and return normalized path to it.</span>
+
+<span class="sd">    This will create all intermediate directories as needed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Dry-run: Skipping creation of directory &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Creating directory &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">name</span></div>
+
+
+<div class="viewcode-block" id="create_table_designs_from_source"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.create_table_designs_from_source">[docs]</a><span class="k">def</span> <span class="nf">create_table_designs_from_source</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">,</span> <span class="n">selector</span><span class="p">,</span> <span class="n">local_dir</span><span class="p">,</span> <span class="n">relations</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create table design files for tables from a single upstream source to local directory.</span>
+
+<span class="sd">    Whenever some table designs already exist locally, validate them, update them or replace</span>
+<span class="sd">    them against the information found from the upstream source.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">source_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">local_dir</span><span class="p">,</span> <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">normalize_and_create</span><span class="p">(</span><span class="n">source_dir</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">)</span>
+    <span class="n">relation_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">relation</span><span class="o">.</span><span class="n">source_table_name</span><span class="p">:</span> <span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span><span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Connecting to database source &#39;</span><span class="si">%s</span><span class="s2">&#39; to look for tables&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">connection</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">dsn</span><span class="p">,</span> <span class="n">autocommit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+            <span class="n">source_tables</span> <span class="o">=</span> <span class="n">fetch_tables</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">source_table_name</span> <span class="ow">in</span> <span class="n">source_tables</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">source_table_name</span> <span class="ow">in</span> <span class="n">relation_lookup</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">update</span> <span class="ow">or</span> <span class="n">replace</span><span class="p">):</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="s2">&quot;Skipping &#39;</span><span class="si">%s</span><span class="s2">&#39; from source &#39;</span><span class="si">%s</span><span class="s2">&#39; because table design already exists: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                        <span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                        <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                        <span class="n">relation_lookup</span><span class="p">[</span><span class="n">source_table_name</span><span class="p">]</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">,</span>
+                    <span class="p">)</span>
+                    <span class="k">continue</span>
+                <span class="n">relation</span> <span class="o">=</span> <span class="n">relation_lookup</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">source_table_name</span><span class="p">)</span> <span class="k">if</span> <span class="n">update</span> <span class="k">else</span> <span class="kc">None</span>
+                <span class="n">target_table_name</span> <span class="o">=</span> <span class="n">TableName</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">source_table_name</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+                <span class="n">table_design</span> <span class="o">=</span> <span class="n">create_table_design_for_source</span><span class="p">(</span>
+                    <span class="n">conn</span><span class="p">,</span> <span class="n">source_table_name</span><span class="p">,</span> <span class="n">target_table_name</span><span class="p">,</span> <span class="n">relation</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">relation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span> <span class="o">==</span> <span class="n">table_design</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;No updates detected in table design for </span><span class="si">{</span><span class="n">target_table_name</span><span class="si">:</span><span class="s2">x</span><span class="si">}</span><span class="s2">, skipping write&quot;</span>
+                    <span class="p">)</span>
+                    <span class="k">continue</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="n">source_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">schema</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">table</span><span class="si">}</span><span class="s2">.yaml&quot;</span>
+                <span class="p">)</span>
+                <span class="n">save_table_design</span><span class="p">(</span>
+                    <span class="n">target_table_name</span><span class="p">,</span>
+                    <span class="n">table_design</span><span class="p">,</span>
+                    <span class="n">filename</span><span class="p">,</span>
+                    <span class="n">overwrite</span><span class="o">=</span><span class="n">update</span> <span class="ow">or</span> <span class="n">replace</span><span class="p">,</span>
+                    <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Done with </span><span class="si">%d</span><span class="s2"> table(s) from source &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">source_tables</span><span class="p">),</span> <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error while processing source &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">raise</span>
+
+    <span class="n">existent</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">source_table_name</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">relations</span><span class="p">)</span>
+    <span class="n">upstream</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">identifier</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">source_tables</span><span class="p">)</span>
+    <span class="n">not_found</span> <span class="o">=</span> <span class="n">upstream</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">existent</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">not_found</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;New table(s) in source &#39;</span><span class="si">%s</span><span class="s2">&#39; without local design: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">not_found</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="n">too_many</span> <span class="o">=</span> <span class="n">existent</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">upstream</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">too_many</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+            <span class="s2">&quot;Local table design(s) without table in source &#39;</span><span class="si">%s</span><span class="s2">&#39;: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">join_with_single_quotes</span><span class="p">(</span><span class="n">too_many</span><span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">source_tables</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="bootstrap_sources"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.bootstrap_sources">[docs]</a><span class="k">def</span> <span class="nf">bootstrap_sources</span><span class="p">(</span>
+    <span class="n">selector</span><span class="p">,</span> <span class="n">table_design_dir</span><span class="p">,</span> <span class="n">local_files</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Download schemas from database tables and write or update local design files.</span>
+
+<span class="sd">    This will create new design files locally if they don&#39;t already exist for any relations tied</span>
+<span class="sd">    to upstream database sources. If one already exists locally, the file is update or replaced or</span>
+<span class="sd">    kept as-is depending on the &quot;update&quot; and &quot;replace&quot; arguments.</span>
+
+<span class="sd">    This is a callback of a command.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dw_config</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span>
+    <span class="n">selected_database_schemas</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">schema</span>
+        <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">dw_config</span><span class="o">.</span><span class="n">schemas</span>
+        <span class="k">if</span> <span class="n">schema</span><span class="o">.</span><span class="n">is_database_source</span> <span class="ow">and</span> <span class="n">selector</span><span class="o">.</span><span class="n">match_schema</span><span class="p">(</span><span class="n">schema</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">database_schema_names</span> <span class="o">=</span> <span class="p">{</span><span class="n">schema</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">selected_database_schemas</span><span class="p">}</span>
+    <span class="n">existing_relations</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">RelationDescription</span><span class="p">(</span><span class="n">file_set</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">local_files</span>
+        <span class="k">if</span> <span class="n">file_set</span><span class="o">.</span><span class="n">source_name</span> <span class="ow">in</span> <span class="n">database_schema_names</span> <span class="ow">and</span> <span class="n">file_set</span><span class="o">.</span><span class="n">design_file_name</span>
+    <span class="p">]</span>
+    <span class="k">if</span> <span class="n">existing_relations</span><span class="p">:</span>
+        <span class="n">RelationDescription</span><span class="o">.</span><span class="n">load_in_parallel</span><span class="p">(</span><span class="n">existing_relations</span><span class="p">)</span>
+
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">selected_database_schemas</span><span class="p">:</span>
+        <span class="n">relations</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">existing_relations</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_name</span> <span class="o">==</span> <span class="n">schema</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">create_table_designs_from_source</span><span class="p">(</span>
+            <span class="n">schema</span><span class="p">,</span> <span class="n">selector</span><span class="p">,</span> <span class="n">table_design_dir</span><span class="p">,</span> <span class="n">relations</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">total</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Found no matching tables in any upstream source for &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="bootstrap_transformations"><a class="viewcode-back" href="../../../etl/etl.design.bootstrap.html#etl.design.bootstrap.bootstrap_transformations">[docs]</a><span class="k">def</span> <span class="nf">bootstrap_transformations</span><span class="p">(</span>
+    <span class="n">local_dir</span><span class="p">,</span> <span class="n">local_files</span><span class="p">,</span> <span class="n">source_name</span><span class="p">,</span> <span class="n">check_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Download design information for transformations by test-running in the data warehouse.</span>
+
+<span class="sd">    &quot;source_name&quot; should be &quot;CTAS&quot; or &quot;VIEW or None (in which case the relation type currently</span>
+<span class="sd">    specified will continue to be used).</span>
+
+<span class="sd">    This is a callback of a command.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dw_config</span> <span class="o">=</span> <span class="n">etl</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_dw_config</span><span class="p">()</span>
+    <span class="n">transformation_schema</span> <span class="o">=</span> <span class="p">{</span><span class="n">schema</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">dw_config</span><span class="o">.</span><span class="n">schemas</span> <span class="k">if</span> <span class="n">schema</span><span class="o">.</span><span class="n">has_transformations</span><span class="p">}</span>
+    <span class="n">transforms</span> <span class="o">=</span> <span class="p">[</span><span class="n">file_set</span> <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">local_files</span> <span class="k">if</span> <span class="n">file_set</span><span class="o">.</span><span class="n">source_name</span> <span class="ow">in</span> <span class="n">transformation_schema</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">check_only</span> <span class="ow">or</span> <span class="n">replace</span> <span class="ow">or</span> <span class="n">update</span><span class="p">):</span>
+        <span class="c1"># Filter down to new transformations: SQL files without matching YAML file</span>
+        <span class="n">transforms</span> <span class="o">=</span> <span class="p">[</span><span class="n">file_set</span> <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">transforms</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">file_set</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">transforms</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Found no new queries without matching design files&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">relations</span> <span class="o">=</span> <span class="p">[</span><span class="n">RelationDescription</span><span class="p">(</span><span class="n">file_set</span><span class="p">)</span> <span class="k">for</span> <span class="n">file_set</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">check_only</span> <span class="ow">or</span> <span class="n">update</span> <span class="ow">or</span> <span class="p">(</span><span class="n">replace</span> <span class="ow">and</span> <span class="n">source_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Loading existing table design file(s)&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">RelationDescription</span><span class="o">.</span><span class="n">load_in_parallel</span><span class="p">(</span><span class="n">relations</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Make sure that table design files exist and are valid before trying to update&quot;</span>
+            <span class="p">)</span>
+            <span class="k">raise</span>
+
+    <span class="n">check_only_errors</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">etl</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">connection</span><span class="p">(</span><span class="n">dw_config</span><span class="o">.</span><span class="n">dsn_etl</span><span class="p">,</span> <span class="n">autocommit</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">relation</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">relations</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Working on transformation &#39;</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%d</span><span class="s2">/</span><span class="si">%d</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">relations</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="c1"># Be careful to not trigger a load of an unknown design file by accessing &quot;source_name&quot;.</span>
+            <span class="n">actual_kind</span> <span class="o">=</span> <span class="n">source_name</span> <span class="ow">or</span> <span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">source_type</span> <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">design_file_name</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">table_design</span> <span class="o">=</span> <span class="n">create_table_design_for_transformation</span><span class="p">(</span>
+                    <span class="n">conn</span><span class="p">,</span> <span class="n">actual_kind</span><span class="p">,</span> <span class="n">relation</span><span class="p">,</span> <span class="n">update</span> <span class="ow">or</span> <span class="n">check_only</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="ne">RuntimeError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">check_only</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to create table design for </span><span class="si">{</span><span class="n">relation</span><span class="si">:</span><span class="s2">x</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">check_only_errors</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">continue</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span>
+
+            <span class="k">if</span> <span class="n">check_only</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span> <span class="o">!=</span> <span class="n">table_design</span><span class="p">:</span>
+                    <span class="n">check_only_errors</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Change detected in table design for </span><span class="si">{</span><span class="n">relation</span><span class="si">:</span><span class="s2">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span>
+                        <span class="n">diff_table_designs</span><span class="p">(</span>
+                            <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span><span class="p">,</span> <span class="n">table_design</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">design_file_name</span><span class="p">,</span> <span class="s2">&quot;bootstrap&quot;</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">update</span> <span class="ow">and</span> <span class="n">relation</span><span class="o">.</span><span class="n">table_design</span> <span class="o">==</span> <span class="n">table_design</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No updates detected in table design for </span><span class="si">{</span><span class="n">relation</span><span class="si">:</span><span class="s2">x</span><span class="si">}</span><span class="s2">, skipping write&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="n">source_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">local_dir</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">source_name</span><span class="p">)</span>
+            <span class="c1"># Derive preferred name from the current design or SQL file.</span>
+            <span class="k">if</span> <span class="n">relation</span><span class="o">.</span><span class="n">design_file_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">relation</span><span class="o">.</span><span class="n">design_file_name</span>
+            <span class="k">elif</span> <span class="n">relation</span><span class="o">.</span><span class="n">sql_file_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;.sql$&quot;</span><span class="p">,</span> <span class="s2">&quot;.yaml&quot;</span><span class="p">,</span> <span class="n">relation</span><span class="o">.</span><span class="n">sql_file_name</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="n">source_dir</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">schema</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="o">.</span><span class="n">table</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="n">save_table_design</span><span class="p">(</span>
+                <span class="n">relation</span><span class="o">.</span><span class="n">target_table_name</span><span class="p">,</span>
+                <span class="n">table_design</span><span class="p">,</span>
+                <span class="n">filename</span><span class="p">,</span>
+                <span class="n">overwrite</span><span class="o">=</span><span class="n">update</span> <span class="ow">or</span> <span class="n">replace</span><span class="p">,</span>
+                <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_only_errors</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TableDesignValidationError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;found </span><span class="si">{</span><span class="n">check_only_errors</span><span class="si">}</span><span class="s2"> table design(s) that would be rewritten&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">check_only</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations. There were no changes in table design files.&quot;</span><span class="p">)</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

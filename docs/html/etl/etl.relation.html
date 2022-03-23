@@ -1,0 +1,995 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etl.relation module &#8212; Arthur ELT  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="etl.s3 module" href="etl.s3.html" />
+    <link rel="prev" title="etl.pipeline module" href="etl.pipeline.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Arthur ELT  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to Project Arthur!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   etl
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="etl.html">
+     etl package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.assets.html">
+       etl.assets package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.config.html">
+       etl.config package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.dw.html">
+         etl.config.dw module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.env.html">
+         etl.config.env module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.config.settings.html">
+         etl.config.settings module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.design.html">
+       etl.design package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.bootstrap.html">
+         etl.design.bootstrap module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.design.load.html">
+         etl.design.load module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.dialect.html">
+       etl.dialect package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.dialect.redshift.html">
+         etl.dialect.redshift module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.extract.html">
+       etl.extract package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.database_extractor.html">
+         etl.extract.database_extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.extractor.html">
+         etl.extract.extractor module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.manifest_only.html">
+         etl.extract.manifest_only module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.sqoop.html">
+         etl.extract.sqoop module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.extract.static.html">
+         etl.extract.static module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.logs.html">
+       etl.logs package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.cloudwatch.html">
+         etl.logs.cloudwatch module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.logs.formatter.html">
+         etl.logs.formatter module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.templates.html">
+       etl.templates package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="etl.util.html">
+       etl.util package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.retry.html">
+         etl.util.retry module
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="etl.util.timer.html">
+         etl.util.timer module
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.commands.html">
+       etl.commands module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.data_warehouse.html">
+       etl.data_warehouse module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.db.html">
+       etl.db module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.errors.html">
+       etl.errors module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.explain.html">
+       etl.explain module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.file_sets.html">
+       etl.file_sets module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.json_encoder.html">
+       etl.json_encoder module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.load.html">
+       etl.load module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.monitor.html">
+       etl.monitor module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.names.html">
+       etl.names module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.pipeline.html">
+       etl.pipeline module
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       etl.relation module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.s3.html">
+       etl.s3 module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.selftest.html">
+       etl.selftest module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.sync.html">
+       etl.sync module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.text.html">
+       etl.text module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.unload.html">
+       etl.unload module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="etl.validate.html">
+       etl.validate module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run_profiler.html">
+   How To Run The Profiler For Loading Relations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/etl/etl.relation.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/harrystech/arthur-redshift-etl"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>etl.relation module</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="module-etl.relation">
+<span id="etl-relation-module"></span><h1>etl.relation module<a class="headerlink" href="#module-etl.relation" title="Permalink to this headline">¶</a></h1>
+<p>Work with relations: tables, CTAS tables, or views.</p>
+<dl>
+<dt>Table descriptions – model around the notion of relations and their support files</dt><dd><p>“Table” relations are tables created based on data probably coming from an upstream source.
+“CTAS” relations are tables that are created using queries and transform data; unlike</p>
+<blockquote>
+<div><p>views they have disk storage and thus distributions and column encodings.</p>
+</div></blockquote>
+<p>“VIEW” relations are views that are queries but unlike CTAS don’t use disk space.</p>
+</dd>
+<dt>The descriptions of relations contain access to:</dt><dd><dl class="simple">
+<dt>“table designs” which describe the name and columns as well as constraints and attributes</dt><dd><p>for the table or its columns</p>
+</dd>
+</dl>
+<p>“queries” which are the SQL SELECT statements backing the CTAS or VIEW
+“manifests” which are lists of data files for tables backed by upstream sources</p>
+</dd>
+</dl>
+<p>When called as a module, dumps the current configuration of table designs.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">RelationDescription</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">discovered_files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handy object for working with relations (tables or views) created with Arthur.</p>
+<p>Created from a collection of files that pertain to the same table.
+Offers helpful properties for lazily loading contents of relation files.
+Modified by other functions in relations module to set attributes related to dependency graph.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.columns">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#etl.relation.RelationDescription.columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of delimited column names of this relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.data_directory">
+<span class="sig-name descname"><span class="pre">data_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.data_directory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.data_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full path to data files (in the schema’s data format).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.dependencies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">FrozenSet</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="etl.names.html#etl.names.TableName" title="etl.names.TableName"><span class="pre">etl.names.TableName</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#etl.relation.RelationDescription.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FrozenSet</span></code>[<a class="reference internal" href="etl.names.html#etl.names.TableName" title="etl.names.TableName"><code class="xref py py-class docutils literal notranslate"><span class="pre">TableName</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.description">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#etl.relation.RelationDescription.description" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.execution_level">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execution_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#etl.relation.RelationDescription.execution_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>All relations of the same level may be loaded in parallel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.execution_order">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execution_order</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#etl.relation.RelationDescription.execution_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>All relations can be ordered to load properly in series based on their dependencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.find_partition_key">
+<span class="sig-name descname"><span class="pre">find_partition_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.find_partition_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.find_partition_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return valid partition key for a relation.</p>
+<p>The partition key will fulfill these conditions:
+(1) the column is marked as a primary key
+(2) the table’s primary key is a single column
+(3) the column has a numeric type or can be cast into one (which currently only works for</p>
+<blockquote>
+<div><p>timestamps).</p>
+</div></blockquote>
+<p>If the table design provides extract_settings with a split_by column setting, provide that
+instead. The column will be numeric (int or long) or a timestamp in this case.</p>
+<p>If no partition key can be found, returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.from_file_sets">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_sets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_relation_selector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.from_file_sets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.from_file_sets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of relation descriptions based on a list of file sets.</p>
+<p>If there’s a file set without a table design file, then there’s a warning and that file set
+is skipped. (This comes in handy when creating the design file for a CTAS or VIEW
+automatically.)</p>
+<p>If provided, the required_relation_selector will be used to mark dependencies of
+high-priority. A failure to dump or load in these relations will end the ETL run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#etl.relation.RelationDescription" title="etl.relation.RelationDescription"><code class="xref py py-class docutils literal notranslate"><span class="pre">RelationDescription</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.get_columns_with_casts">
+<span class="sig-name descname"><span class="pre">get_columns_with_casts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.get_columns_with_casts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.get_columns_with_casts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pick columns and decide how they are selected (as-is or with an expression).</p>
+<p>Whether there’s an expression or just a name the resulting column is always
+called out delimited.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.get_columns_with_types">
+<span class="sig-name descname"><span class="pre">get_columns_with_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.get_columns_with_types"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.get_columns_with_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of dicts that describe non-skipped columns with their name and type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.has_identity_column">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_identity_column</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.relation.RelationDescription.has_identity_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether any of the columns is marked as identity column.</p>
+<p>This should only ever be possible for a CTAS, see validation code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.has_manifest">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_manifest</span></span><a class="headerlink" href="#etl.relation.RelationDescription.has_manifest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.identifier">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#etl.relation.RelationDescription.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.is_ctas_relation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_ctas_relation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.relation.RelationDescription.is_ctas_relation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.is_required">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_required</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.relation.RelationDescription.is_required" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.is_transformation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_transformation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.relation.RelationDescription.is_transformation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.is_unloadable">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_unloadable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.relation.RelationDescription.is_unloadable" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.is_view_relation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_view_relation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#etl.relation.RelationDescription.is_view_relation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.kind">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#etl.relation.RelationDescription.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return “kind” of a relation which is either TABlE or VIEW.</p>
+<p>See also etl.db.relation_kind which uses the existing relation to determine
+its kind instead of the table design file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force a loading of the table design (which is normally loaded “on demand”).</p>
+<p>Strictly speaking, this isn’t thread-safe. But if you worry about thread safety here,
+rethink your code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.load_in_parallel">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_in_parallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.load_in_parallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.load_in_parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load all relations’ table design file in parallel.</p>
+<p>If there no relation left which hasn’t loaded the table design, do nothing.
+If there is only one relation, then that one is loaded directly and without threads.
+If there are only two relations, then both are loaded directly and without threads.
+If there are more than two relations, then the first is loaded directly to validate
+our setup (in particular the schemas of table designs) and then rest is actually
+loaded in parallel using threads.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.matching_temporary_view">
+<span class="sig-name descname"><span class="pre">matching_temporary_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_late_binding_view</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#RelationDescription.matching_temporary_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.RelationDescription.matching_temporary_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a temporary view (with a name loosely based around the reference passed in).</p>
+<p>We look up which temp schema the view landed in so that we can use TableName.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.num_partitions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_partitions</span></span><a class="headerlink" href="#etl.relation.RelationDescription.num_partitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.partition_boundary_query">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">partition_boundary_query</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#etl.relation.RelationDescription.partition_boundary_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the optional boundary query specified in relation extract settings.</p>
+<p>Sqoop generates evenly-spaced buckets for map tasks in extraction. Users may provide
+a separate query that returns the min and max values in that range. The query should select
+one row with two fields; the first provides the lower bound, the second the upper bound.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.query_stmt">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query_stmt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#etl.relation.RelationDescription.query_stmt" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.schema_config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="etl.config.dw.html#etl.config.dw.DataWarehouseSchema" title="etl.config.dw.DataWarehouseSchema"><span class="pre">etl.config.dw.DataWarehouseSchema</span></a></em><a class="headerlink" href="#etl.relation.RelationDescription.schema_config" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="etl.config.dw.html#etl.config.dw.DataWarehouseSchema" title="etl.config.dw.DataWarehouseSchema"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataWarehouseSchema</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.source_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source_name</span></span><a class="headerlink" href="#etl.relation.RelationDescription.source_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.source_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#etl.relation.RelationDescription.source_type" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.table_design">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">table_design</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#etl.relation.RelationDescription.table_design" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.target_table_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target_table_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="etl.names.html#etl.names.TableName" title="etl.names.TableName"><span class="pre">etl.names.TableName</span></a></em><a class="headerlink" href="#etl.relation.RelationDescription.target_table_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="etl.names.html#etl.names.TableName" title="etl.names.TableName"><code class="xref py py-class docutils literal notranslate"><span class="pre">TableName</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.unload_target">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unload_target</span></span><a class="headerlink" href="#etl.relation.RelationDescription.unload_target" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="etl.relation.RelationDescription.unquoted_columns">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unquoted_columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#etl.relation.RelationDescription.unquoted_columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of the column names of this relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="etl.relation.SortableRelationDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">SortableRelationDescription</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_description</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#SortableRelationDescription"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.SortableRelationDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Facade to add modifiable list of dependencies.</p>
+<p>This adds decoration around relation descriptions so that we can easily
+compute the execution order by updating the “dependencies” list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.relation.create_index">
+<span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">create_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_columns</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#create_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.create_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an “index” page with Markdown that lists all schemas and their tables.</p>
+<p>The parameter groups filters schemas to those that can be accessed by those groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.relation.find_dependents">
+<span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">find_dependents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed_relations</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#find_dependents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.find_dependents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of relations that depend on the seed relations (directly or transitively).</p>
+<p>For this to really work, the list of relations should be sorted in “execution order”!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#etl.relation.RelationDescription" title="etl.relation.RelationDescription"><code class="xref py py-class docutils literal notranslate"><span class="pre">RelationDescription</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.relation.find_immediate_dependencies">
+<span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">find_immediate_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#find_immediate_dependencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.find_immediate_dependencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of VIEW relations that directly (or chained) hang off the selected relations.</p>
+<p>If you “DROP TABLE …” from the relations, then the returned views would get dropped as well.</p>
+<p>If the relations are: A (CTAS) -&gt; B (VIEW) -&gt; C (VIEW) -&gt; D (CTAS) and you pass in the
+list of A, B, C, D with a selector for A, then this will return the views B and C.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#etl.relation.RelationDescription" title="etl.relation.RelationDescription"><code class="xref py py-class docutils literal notranslate"><span class="pre">RelationDescription</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.relation.find_matches">
+<span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">find_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#find_matches"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.find_matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of matching relations.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.relation.order_by_dependencies">
+<span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">order_by_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relation_descriptions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#order_by_dependencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.order_by_dependencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort the relations such that any dependents surely are loaded afterwards.</p>
+<p>If a table (or view) depends on other tables, then its order is larger
+than any of its managed dependencies. Ties are resolved based on the initial order
+of the tables.</p>
+<p>If a table depends on some system catalogs (living in pg_catalog), then the table
+is treated as if it depended on all other tables.</p>
+<dl class="simple">
+<dt>Provides warnings about:</dt><dd><ul class="simple">
+<li><p>relations that directly depend on relations not in the input</p></li>
+<li><p>relations that are depended upon but are not in the input</p></li>
+</ul>
+</dd>
+</dl>
+<p>Side-effect: the order and level of the relations is set.
+(So should this be invoked a second time, we’ll skip computations if order is already set.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#etl.relation.RelationDescription" title="etl.relation.RelationDescription"><code class="xref py py-class docutils literal notranslate"><span class="pre">RelationDescription</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.relation.select_in_execution_order">
+<span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">select_in_execution_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_dependents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_immediate_views</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continue_from</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#select_in_execution_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.select_in_execution_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of relations that were selected, optionally adding dependents or skipping forward.</p>
+<dl class="simple">
+<dt>The values supported for skipping forward are:</dt><dd><ul class="simple">
+<li><p>‘*’ to start from the beginning</p></li>
+<li><p>‘:transformations’ to only run transformations of selected relations</p></li>
+<li><p>a specific relation to continue from that one in the original execution order</p></li>
+<li><dl class="simple">
+<dt>a specific schema to include all relations in that source schema as well as</dt><dd><p>any originally selected transformation</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p>Note that these operate on the list of relations selected by the selector patterns.
+The option of ‘*’ exists to we can have a default value in our pipeline definitions.
+The last option of specifying a schema is most useful with a source schema when you want
+to restart the load step followed by all transformations.</p>
+<p>No error is raised when the selector does not select any relations.
+An error is raised when the “continue from” condition does not resolve to a list of relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#etl.relation.RelationDescription" title="etl.relation.RelationDescription"><code class="xref py py-class docutils literal notranslate"><span class="pre">RelationDescription</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl.relation.set_required_relations">
+<span class="sig-prename descclassname"><span class="pre">etl.relation.</span></span><span class="sig-name descname"><span class="pre">set_required_relations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_selector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/etl/relation.html#set_required_relations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#etl.relation.set_required_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the “required” property based on the selector.</p>
+<p>The “required” property of the relations is set if they are directly or indirectly feeding
+into relations selected by the :required_selector.</p>
+<p>Side-effect: relations are sorted to determine dependencies and their order and level is set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="etl.pipeline.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">etl.pipeline module</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="etl.s3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">etl.s3 module</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Data Engineering at Harry's<br/>
+    
+        &copy; Copyright 2017-2022, Harry&#39;s, Inc..<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
