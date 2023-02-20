@@ -193,13 +193,14 @@ def restore_schemas(schemas: Iterable[DataWarehouseSchema], dry_run=False) -> No
     _promote_schemas(schemas, "backup", dry_run=dry_run)
 
 
-def publish_schemas(schemas: Sequence[DataWarehouseSchema], dry_run=False) -> None:
+def publish_schemas(schemas: Sequence[DataWarehouseSchema], dry_run=False, backup=True) -> None:
     """
     Backup current occupants of standard position and put staging schemas there.
 
     This is a callback of a command.
     """
-    backup_schemas(schemas, dry_run=dry_run)
+    if backup:
+        backup_schemas(schemas, dry_run=dry_run)
     _promote_schemas(schemas, "staging", dry_run=dry_run)
 
 
@@ -355,6 +356,7 @@ def initial_setup(with_user_creation=False, force=False, dry_run=False) -> None:
             )
             etl.db.drop_and_create_database(conn, database_name, config.owner.name)
 
+    # TODO(tom): This fails if database is not actually created.
     with closing(
         etl.db.connection(config.dsn_admin_on_etl_db, autocommit=True, readonly=dry_run)
     ) as conn:
